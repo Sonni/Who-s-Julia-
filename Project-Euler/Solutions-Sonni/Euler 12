@@ -1,0 +1,25 @@
+function numberOfDivisors(num)
+	numDivisors = 1 #1 is always a divisor
+	limit = sqrt(num)
+
+	for i=2:limit
+		if num % i == 0
+			numDivisors += 2
+		end
+	end
+
+	if num % limit == 0
+		numDivisors -= 1
+	end
+
+	return numDivisors
+end
+
+
+result = 0
+
+while numberOfDivisors(result) < 500
+	result += 1
+end
+
+println(result)

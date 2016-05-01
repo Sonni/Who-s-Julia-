@@ -1,0 +1,16 @@
+function sol(m, n)
+  solutions = 1;
+  if n > m
+     return solutions;
+  end
+
+ for start = 0: m - n
+   for blocklength = n: m - start
+     solutions += sol(m - start - blocklength - 1, n);
+   end
+ end
+
+ return solutions;
+end
+
+println(sol(7, 3))

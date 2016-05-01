@@ -1,0 +1,25 @@
+num = 1000000
+
+startingNum = 0
+sequenceLength = 0
+longestSequence = -1
+
+for i=1:num
+	curSequenceLength = 1
+	sequence = i
+	while sequence != 1
+		if sequence % 2 == 0
+			sequence = sequence / 2
+		else
+			sequence = sequence * 3 + 1
+		end
+		curSequenceLength += 1
+	end
+
+	if curSequenceLength > sequenceLength
+		sequenceLength = curSequenceLength
+		startingNum = i
+	end
+end
+
+println(startingNum)

@@ -1,0 +1,35 @@
+function isPrime(num)
+  if num <= 1
+    return false
+  end
+
+  if num == 2
+    return true
+  end
+
+  if num % 2 == 0
+    return false
+  end
+
+  counter = 3
+  while (counter * counter) <= num
+    if num % counter == 0
+      return false
+    else
+      counter += 2
+    end
+  end
+
+  return true
+end
+
+primeCounter = 1
+curPrime = 1
+while primeCounter < 10001
+  curPrime += 2
+  if isPrime(curPrime)
+    primeCounter += 1
+  end
+end
+
+println(curPrime)
