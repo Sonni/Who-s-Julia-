@@ -1,0 +1,20 @@
+Things i DON’T like about Julia:
+
+no way to increment and decrement ++ —-
+
+Syntax (brackets) (you have to use end every time)
+
+for loops (i=0;-1;limit  instead of   i=0;limit;-1)
+
+Documentation is somewhat bad
+
+Lag of stackoverflow ect.
+
+
+
+
+Things i LIKE about Julia:
+
+Easy to learn
+
+flexible (especially matrices)
