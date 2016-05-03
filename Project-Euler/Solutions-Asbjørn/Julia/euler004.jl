@@ -2,23 +2,21 @@ println("Finding the largest palindrome made from the product of two 3-digit num
 
 function palin()
 	n1 = 999
-	n2 = 999
 	p = 0
 	test = ""
-	while n1 >= 100
-		while true
-			p = n1 * n2
+	largest = 0
+	for i = n1 : -1 : 0
+		for j = n1 : -1 : 0
+			p = i * j
 			test = reverse(string(p))
-			if p == integer(test)
-				println(string("The numbers are: ", n1, " and ", n2))
-				return
+			if p == parse(Int, test)
+				if(p>largest)
+					println(string("Largest found: ", i, " * ", j, " = ", p))
+					largest = p
+				end
 			end
-			if n2 <= n1-1
-				break
-			end
-			n2 -= 1
 		end
-		n1 -= 1
 	end
+	return largest
 end
-@time df = palin()
+@time println(palin())

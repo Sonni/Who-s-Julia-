@@ -20,6 +20,6 @@ function difsumsqr(x::Int, y::Int)
 		end
 	end
 end
-#@time println(primes(999999)[10001])
+@time println(primes(999999)[10001])
 @time df = difsumsqr(10001, 999999)
 println(df)
