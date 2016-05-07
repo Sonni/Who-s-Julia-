@@ -24,12 +24,19 @@ function rg()
 	20 73 35 29 78 31 90 01 74 31 49 71 48 86 81 16 23 57 05 54;
 	01 70 54 71 83 51 54 69 16 92 33 48 61 43 52 01 89 19 67 48
 	]
-	h = size(g)[2]
 	v = size(g)[1]
+	h = size(g)[2]
 	lsum = 0
 	largest = [0, 0, 0, 0]
 	for i = 1 : v
 		for j = 1 : h
+			if i - 3 >= 1 && j + 3 <= h
+				tsum = g[i, j] * g[i - 1, j + 1] * g[i - 2, j + 2] * g[i - 3, j + 3]
+				if tsum > lsum
+					lsum = tsum
+					largest = [g[i, j], g[i - 1, j + 1], g[i - 2, j + 2], g[i - 3, j + 3]]
+				end
+			end
 			if j + 3 <= h
 				tsum = g[i, j] * g[i, j + 1] * g[i, j + 2] * g[i, j + 3]
 				if tsum > lsum
@@ -37,18 +44,18 @@ function rg()
 					largest = [g[i, j], g[i, j + 1], g[i, j + 2], g[i, j + 3]]
 				end
 			end
+			if i + 3 <= v && j + 3 <= h
+				tsum = g[i, j] * g[i + 1, j + 1] * g[i + 2, j + 2] * g[i + 3, j + 3]
+				if tsum > lsum
+					lsum = tsum
+					largest = [g[i, j], g[i + 1, j + 1], g[i + 2, j + 2], g[i + 3, j + 3]]
+				end
+			end
 			if i + 3 <= v
 				tsum = g[i, j] * g[i + 1, j] * g[i + 2, j] * g[i + 3, j]
 				if tsum > lsum
 					lsum = tsum
 					largest = [g[i, j], g[i + 1, j], g[i + 2, j], g[i + 3, j]]
-				end
-			end
-			if j + 3 <= h && i + 3 <= v
-				tsum = g[i, j] * g[i + 1, j + 1] * g[i + 2, j + 2] * g[i + 3, j + 3]
-				if tsum > lsum
-					lsum = tsum
-					largest = [g[i, j], g[i + 1, j + 1], g[i + 2, j + 2], g[i + 3, j + 3]]
 				end
 			end
 			
