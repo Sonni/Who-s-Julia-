@@ -1,0 +1,17 @@
+println("Enter input array to sort")
+input = readline(STDIN)
+
+stringArray = split(input)
+
+
+for i = 2 : length(stringArray)
+	for j = i : -1 : 2
+		if stringArray[j-1] > stringArray[j]
+			tmp = stringArray[j]
+			stringArray[j] = stringArray[j-1]
+			stringArray[j-1] = tmp
+		end
+	end
+end
+
+println(stringArray)

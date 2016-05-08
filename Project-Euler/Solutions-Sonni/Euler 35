@@ -1,0 +1,42 @@
+function isPrime(num)
+  if num <= 1
+    return false
+  end
+
+  if num == 2
+    return true
+  end
+
+  if num % 2 == 0
+    return false
+  end
+
+  counter = 3
+  while (counter * counter) <= num
+    if num % counter == 0
+      return false
+    else
+      counter += 2
+    end
+  end
+
+  return true
+end
+
+function isCircularPrime(num)
+
+  return false
+end
+
+limit = 100
+circularPrimes = 0
+
+for i=0:limit
+  if isPrime(i)
+    if isCircularPrime(i)
+      circularPrimes += 1
+    end
+  end
+end
+
+println(circularPrimes)
