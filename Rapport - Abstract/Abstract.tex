@@ -20,16 +20,6 @@
 \usepackage{setspace}
 \onehalfspacing
 
-\usepackage{multicol}
-\setlength{\columnsep}{1cm}
-
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-\fancyhf{}
-\lhead{FF501}
-\chead{Abstract}
-\rhead{simkn15, sonje15 \& asjen15}
-
 \definecolor{dkgreen}{rgb}{0,0.45,0}
 \definecolor{gray}{rgb}{0.5,0.5,0.5}
 \definecolor{mauve}{rgb}{0.30,0,0.30}
@@ -48,47 +38,40 @@
   stringstyle=\color{mauve},
   frame=single,
   breaklines=true,
-  tabsize=1,
-  captionpos=b 
+  breakatwhitespace=false
+  tabsize=1
 }
 
+\title{Concurrent Programming\\\rule{10cm}{0.5mm}}
+\author{Simon Lehmann Knudsen
+\\simkn15@student.sdu.dk\\ DM519\\\rule{5.5cm}{0.5mm}\\}
+\date{\today}
+
 \begin{document}
-\section*{Abstract}
+
+%\maketitle
+
+%\vfill
+
+\newpage
+\section{Abstract}
 Problemstatement:
 How does Julia perform compared to other languages, and is it easy to learn?
 
-\subsection*{Is Julia easy to learn?}
+For the comparison of other languages with Julia the following programming languages has been chosen: C++, Java and Python. Julia is very much a like Python, which made it an obvious choice, although Python is one of the slower languages. The team behind Julia says that the language is very fast, therefor C++ was chosen because it is one of the fastest languages available. Java is a very popular language, although it is not one of the fastest, but definately not one of the slowest either.
+
+\subsection{Projecteuler problem 11}
+Put in testdata here, and comment.
+
+\subsection{Is Julia easy to learn?}
 To determine if Julia is easy to learn, it's needed to keep some factors in mind. One of the factors is how much programming do you know pre-Julia. For each programming language you know, it will be easier to learn another language. The first programming language you learn, is more difficult to learn than your 11th language. If you know Python, it is very easy to convert over to Julia, since the syntax are very similar. Python and Julia are both quite easy to learn since the syntax is very minimalized.
 
-\subsection*{Is Julia faster than other languages?}
-Chosen languages and hypothesis:
-\begin{list}{}{}
-	\item C++: Expected to be faster than Julia.
-	\item Java: Expteced to be slower than Julia.
-	\item Python: Expected to be slower than Julia.
-\end{list}
-\begin{multicols}{2}
-\begin{lstlisting}[caption=Hello World in Julia, language=Python]
+\begin{lstlisting}[caption=Hello World in Julia, language=python]
 println("Hello World")
 \end{lstlisting}
 
-\begin{lstlisting}[caption=Hello World in C++, language=C++]
-#include <iostream>
-using namespace std; 
-int main()
-{
-	cout << "Hello World";
-}
-\end{lstlisting}
-\begin{lstlisting}[caption=Hello World in Python, language=Python]
+\begin{lstlisting}[caption=Hello World in Python, language=python]
 print("Hello World")
 \end{lstlisting}
-\begin{lstlisting}[caption=Hello World in Java, language=Java]
-public class Hello {
-	public static void main (String[] args) {
-		System.out.print("Hello World");
-	}
-}
-\end{lstlisting}
-\end{multicols}
+
 \end{document}
