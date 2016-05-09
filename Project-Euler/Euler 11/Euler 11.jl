@@ -1,12 +1,12 @@
 function a()
 
   maxProd = 0
-  matLength = 100
+  matLength = 20
   numProd = 4
 
   mat = reshape(1:(matLength*matLength), matLength, matLength)
 
-  f = open("mat100.txt")
+  f = open("20xgrid.txt")
 
   result = 0
   j = 0
@@ -14,7 +14,11 @@ function a()
     s = split(l)
     j += 1
     for i = 1 : length(s)
+<<<<<<< HEAD
       mat[j, i] = parse(Int32, s[i])
+=======
+      mat[j, i] = parse(Int, s[i])
+>>>>>>> e1c9370d7dd6dd48353297f43b103b07b38e0598
     end
   end
   close(f)
