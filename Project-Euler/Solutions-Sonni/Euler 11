@@ -1,7 +1,7 @@
 function a()
   mat = reshape(1:400, 20, 20)
 
-  f = open("/Users/sonni/Desktop/Who's\ Julia/Who-s-Julia-/Project-Euler/Solutions-Sonni/20xgrid.txt")
+  f = open("20xgrid.txt")
 
   result = 0
   j = 0
@@ -9,7 +9,7 @@ function a()
     s = split(l)
     j += 1
     for i = 1 : length(s)
-      mat[j, i] = parseint(s[i])
+      mat[j, i] = parse(Int, s[i])
     end
   end
   close(f)
