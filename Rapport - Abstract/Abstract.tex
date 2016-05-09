@@ -20,6 +20,14 @@
 \usepackage{setspace}
 \onehalfspacing
 
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{FF501}
+\chead{Abstract}
+\rhead{simkn15, sonje15 \& asjen15}
+
 \definecolor{dkgreen}{rgb}{0,0.45,0}
 \definecolor{gray}{rgb}{0.5,0.5,0.5}
 \definecolor{mauve}{rgb}{0.30,0,0.30}
@@ -38,29 +46,18 @@
   stringstyle=\color{mauve},
   frame=single,
   breaklines=true,
-  breakatwhitespace=false
   tabsize=1
 }
 
-\title{Concurrent Programming\\\rule{10cm}{0.5mm}}
-\author{Simon Lehmann Knudsen
-\\simkn15@student.sdu.dk\\ DM519\\\rule{5.5cm}{0.5mm}\\}
-\date{\today}
-
 \begin{document}
-
-\maketitle
-
-\vfill
-
-\newpage
-\section{Abstract}
+\section*{Abstract}
 Problemstatement:
 How does Julia perform compared to other languages, and is it easy to learn?
 
-Is Julia easy to learn?
+\subsection*{Is Julia easy to learn?}
 To determine if Julia is easy to learn, it's needed to keep some factors in mind. One of the factors is how much programming do you know pre-Julia. For each programming language you know, it will be easier to learn another language. The first programming language you learn, is more difficult to learn than your 11th language. If you know Python, it is very easy to convert over to Julia, since the syntax are very similar. Python and Julia are both quite easy to learn since the syntax is very minimalized.
 
+\subsection*{Is Julia faster than other languages?}
 Chosen languages and hypothesis:
 \begin{list}{}{}
 	\item C++: Expected to be faster than Julia.
@@ -75,8 +72,4 @@ println("Hello World")
 \begin{lstlisting}[caption=Hello World in Python, language=python]
 print("Hello World")
 \end{lstlisting}
-
-\section{Projecteuler problem 11}
-
-
 \end{document}
