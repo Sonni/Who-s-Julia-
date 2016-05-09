@@ -20,6 +20,8 @@
 \usepackage{setspace}
 \onehalfspacing
 
+\usepackage{multicol}
+\setlength{\columnsep}{1cm}
 
 \usepackage{fancyhdr}
 \pagestyle{fancy}
@@ -46,7 +48,8 @@
   stringstyle=\color{mauve},
   frame=single,
   breaklines=true,
-  tabsize=1
+  tabsize=1,
+  captionpos=b 
 }
 
 \begin{document}
@@ -64,12 +67,28 @@ Chosen languages and hypothesis:
 	\item Java: Expteced to be slower than Julia.
 	\item Python: Expected to be slower than Julia.
 \end{list}
-
-\begin{lstlisting}[caption=Hello World in Julia, language=python]
+\begin{multicols}{2}
+\begin{lstlisting}[caption=Hello World in Julia, language=Python]
 println("Hello World")
 \end{lstlisting}
 
-\begin{lstlisting}[caption=Hello World in Python, language=python]
+\begin{lstlisting}[caption=Hello World in C++, language=C++]
+#include <iostream>
+using namespace std; 
+int main()
+{
+	cout << "Hello World";
+}
+\end{lstlisting}
+\begin{lstlisting}[caption=Hello World in Python, language=Python]
 print("Hello World")
 \end{lstlisting}
+\begin{lstlisting}[caption=Hello World in Java, language=Java]
+public class Hello {
+	public static void main (String[] args) {
+		System.out.print("Hello World");
+	}
+}
+\end{lstlisting}
+\end{multicols}
 \end{document}
