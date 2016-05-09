@@ -1,0 +1,82 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[danish]{babel}
+\usepackage{mathptmx}
+
+\usepackage{color}
+\usepackage{float}
+\usepackage{fancyvrb}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{listings}
+\usepackage{comment} 
+
+\usepackage{graphicx}
+\DeclareGraphicsExtensions{.png}
+
+\usepackage{setspace}
+\onehalfspacing
+
+\definecolor{dkgreen}{rgb}{0,0.45,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.30,0,0.30}
+
+\lstset{frame=tb,
+  language=Java,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=left,
+  numberstyle=\footnotesize,
+  keywordstyle=\color{dkgreen}\bfseries,
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  frame=single,
+  breaklines=true,
+  breakatwhitespace=false
+  tabsize=1
+}
+
+\title{Concurrent Programming\\\rule{10cm}{0.5mm}}
+\author{Simon Lehmann Knudsen
+\\simkn15@student.sdu.dk\\ DM519\\\rule{5.5cm}{0.5mm}\\}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\vfill
+
+\newpage
+\section{Abstract}
+Problemstatement:
+How does Julia perform compared to other languages, and is it easy to learn?
+
+Is Julia easy to learn?
+To determine if Julia is easy to learn, it's needed to keep some factors in mind. One of the factors is how much programming do you know pre-Julia. For each programming language you know, it will be easier to learn another language. The first programming language you learn, is more difficult to learn than your 11th language. If you know Python, it is very easy to convert over to Julia, since the syntax are very similar. Python and Julia are both quite easy to learn since the syntax is very minimalized.
+
+Chosen languages and hypothesis:
+\begin{list}{}{}
+	\item C++: Expected to be faster than Julia.
+	\item Java: Expteced to be slower than Julia.
+	\item Python: Expected to be slower than Julia.
+\end{list}
+
+\begin{lstlisting}[caption=Hello World in Julia, language=python]
+println("Hello World")
+\end{lstlisting}
+
+\begin{lstlisting}[caption=Hello World in Python, language=python]
+print("Hello World")
+\end{lstlisting}
+
+\section{Projecteuler problem 11}
+
+
+\end{document}
