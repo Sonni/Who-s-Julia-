@@ -1,0 +1,15 @@
+Notes:
+
+Okay, but the problemstatement are not importent but we can use it in the presentation. We should show them what we are doing. Julia, Explain benchmarking, performance. 
+
+Computer specifications(Cores, heavy duty, etc.). Test on different computers, maybe compare AMD and Intel. Use virtual machine. OS and versions of programming language. Test RAM limits and Swapping. 
+
+Do not expect strong evidence and strong conclusions. 
+
+Time data does not seem right. Parting the code in File reading, iteration, sorting, etc.
+
+Change graph. Boxplot. compare runningtimes
+
+Graphtheory. Find closure of relation.
+
+Keep the Abstract simple. What we are going to do. we do this, this, this, this, this.. 
