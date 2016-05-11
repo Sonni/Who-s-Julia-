@@ -1,13 +1,13 @@
 def a():
-
+  import sys
   maxProd = 0
-  matLength = 20
-  numProd = 4
-
+  matLength = int(sys.argv[1])
+  numProd = int(sys.argv[2])
+  string = "mat%d.txt" % matLength
   mat = [[0 for i in xrange(matLength)] for i in xrange(matLength)]
-
+  
   result = 0
-  with open("mat20.txt") as f:
+  with open(string) as f:
     j = 0
     for line in f:
       s = line.split()
@@ -18,11 +18,14 @@ def a():
   for i in range(matLength):
     for j in range(matLength - numProd):
       #right/left
-      prod = mat[i][j] * mat[i][j + 1] * mat[i][j + 2] * mat[i][j + 3]
+      prod = 1
+      for k in range(0, numProd):
+        prod = prod * mat[i][j+k]
       if prod > maxProd:
         maxProd = prod
       #up/down
-      prod = mat[j][i] * mat[j + 1][i] * mat[j + 2][i] * mat[j + 3][i]
+      for k in range(0, numProd):
+        prod = prod * mat[j+k][i]
       if prod > maxProd:
         maxProd = prod
 
