@@ -7,6 +7,8 @@
 //
 
 #include <iostream>
+#include <fstream>
+#include <vector>
 
 void swap(int a[], int i, int j)
 {
@@ -41,7 +43,7 @@ void quicksortDualPivot(int a[], int s, int e) {
     {
         //use start and end elements as pivots (a[s] must be smaller than a[e])
         if (a[s] > a[e])
-        swap(a, s, e);
+            swap(a, s, e);
         
         const int leftPiv = a[s];
         const int rightPiv = a[e];
@@ -62,7 +64,7 @@ void quicksortDualPivot(int a[], int s, int e) {
             else if (a[curEle] >= rightPiv)
             {
                 while (a[rightPoi] > rightPiv && curEle < rightPoi)
-                rightPoi--;
+                    rightPoi--;
                 
                 swap(a, curEle, rightPoi);
                 rightPoi--;
@@ -87,27 +89,60 @@ void quicksortDualPivot(int a[], int s, int e) {
     }
 }
 
-int main(int argc, const char * argv[]) {
-    int a[10] = {};
+std::vector<std::string> split(std::string s, char delim)
+{
+    std::vector<std::string> elems;
     
-    a[0] = 5;
-    a[1] = 3;
-    a[2] = 100;
-    a[3] = -4032;
-    a[4] = 8;
-    a[5] = 10;
-    a[6] = -4;
-    a[7] = 59;
-    a[8] = 0;
-    a[9] = 6;
+    const char* cstr = s.c_str();
+    unsigned int strLength = (unsigned int)s.length();
+    unsigned int start = 0;
+    unsigned int end = 0;
     
-    quicksortDualPivot(a, 0, 9);
+    while(end <= strLength)
+    {
+        while(end <= strLength)
+        {
+            if(cstr[end] == delim)
+                break;
+            end++;
+        }
+        
+        elems.push_back(s.substr(start, end - start));
+        start = end + 1;
+        end = start;
+    }
     
-    for (int i = 0; i < 10; i++)
-        std::cout << a[i] << " ";
-    
-
-    return 0;
+    return elems;
 }
 
-
+int main(int argc, const char * argv[]) {
+    
+    int* a; // Don't forget to delete [] a; when you're done!
+    
+    std::ifstream infile(argv[2]);
+    
+    std::string line;
+    std::getline(infile, line);
+    
+    std::vector<std::string> v = split(line, ' ');
+    a = new int[v.size()];
+    
+    for (int i = 0; i < v.size(); i++)
+        a[i] = std::stoi(v[i]);
+    
+    infile.close();
+    
+    
+    if (!strcmp(argv[1], "quicksort"))
+        quicksort(a, 0, v.size());
+    
+    if (!strcmp(argv[1], "dualquicksort"))
+        quicksortDualPivot(a, 0, v.size());
+    
+    for (int i = 0; i < v.size() + 1; i++)
+        std::cout << a[i] << " ";
+    
+    delete [] a;
+    
+    return 0;
+}
