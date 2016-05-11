@@ -5,7 +5,7 @@ def a():
   numProd = int(sys.argv[2])
   string = "mat%d.txt" % matLength
   mat = [[0 for i in xrange(matLength)] for i in xrange(matLength)]
-  
+
   result = 0
   with open(string) as f:
     j = 0
@@ -24,6 +24,7 @@ def a():
       if prod > maxProd:
         maxProd = prod
       #up/down
+      prod = 1
       for k in range(0, numProd):
         prod = prod * mat[j+k][i]
       if prod > maxProd:
