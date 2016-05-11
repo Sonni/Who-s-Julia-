@@ -11,6 +11,7 @@
 #include <string>
 #include <fstream>
 #include <vector>
+#include <string>
 
 std::vector<int> split_string_to_ints(std::string s, char delim)
 {
@@ -38,9 +39,9 @@ std::vector<int> split_string_to_ints(std::string s, char delim)
     return elems;
 }
 
-std::vector<std::vector<int>> load_mat_to_vector()
+std::vector<std::vector<int>> load_mat_to_vector(std::string path)
 {
-    std::ifstream infile("20xgrid.txt");
+    std::ifstream infile(path);
     std::vector<std::vector<int>> mat;
     
     std::string line;
@@ -51,19 +52,19 @@ std::vector<std::vector<int>> load_mat_to_vector()
     return mat;
 }
 
-int** load_mat_to_multi_array()
+int** load_mat_to_multi_array(std::string path, int matLength)
 {
     int** a = 0;
-    a = new int*[20];
+    a = new int*[matLength];
     
-    std::ifstream infile("20xgrid.txt");
+    std::ifstream infile(path);
     std::vector<std::vector<int>> mat;
     
     std::string line;
     int counter = 0;
     while (std::getline(infile, line))
     {
-        a[counter] = new int[20];
+        a[counter] = new int[matLength];
         std::vector<int> tmpArray = split_string_to_ints(line, ' ');
         for (int i = 0; i < tmpArray.size(); i++)
             a[counter][i] = tmpArray[i];
@@ -76,12 +77,13 @@ int** load_mat_to_multi_array()
 
 int main(int argc, const char * argv[])
 {
-   // int** mat = load_mat_to_multi_array();
-    std::vector<std::vector<int>> mat = load_mat_to_vector();
-    
     int maxProd = 0;
-    const int matLength = 20;
-    const int numProd = 4;
+    const int matLength = atoi(argv[1]);;
+    const int numProd = atoi(argv[2]);
+    
+    int** mat = load_mat_to_multi_array("mat" + std::to_string(matLength) + ".txt", matLength);
+    //std::vector<std::vector<int>> mat = load_mat_to_vector("mat" + std::to_string(matLength) + ".txt");
+    
     
     for (int i = 0; i < matLength; i++)
     {
@@ -91,7 +93,7 @@ int main(int argc, const char * argv[])
             int prod = 1;
             for (int k = 0; k < numProd; k++)
                 prod *= mat[i][j + k];
-                
+            
             if (prod > maxProd)
                 maxProd = prod;
             
@@ -113,7 +115,7 @@ int main(int argc, const char * argv[])
             int prod = 1;
             for (int k = 0; k < numProd; k++)
                 prod *= mat[i + k][j + k];
-                
+            
             if (prod > maxProd)
                 maxProd = prod;
         }
@@ -127,7 +129,7 @@ int main(int argc, const char * argv[])
             int prod = 1;
             for (int k = 0; k < numProd; k++)
                 prod *= mat[i + k][j - k];
-                
+            
             if (prod > maxProd)
                 maxProd = prod;
         }
@@ -137,4 +139,3 @@ int main(int argc, const char * argv[])
     
     return 0;
 }
-
