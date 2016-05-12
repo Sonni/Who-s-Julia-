@@ -1,0 +1,32 @@
+Notes from midway seminar and short talk with Michal.
+
+Seminar went okay, good powerpoint. We could had been better prepared.
+Make sure everything is readable on slides, if there's too much lighting,
+or a bad projector.
+Animations on slides(how does a algorithm work) - especially when explaining
+a problem/algorithm.
+Show more code of Julia vs. Python, like loops, functions, initialize arrays.
+Explain projecteuler.
+Explain benchmarking the first it is mentioned.
+Explain: Real-time = walltime etc.
+Show how you actually measure time: in terminal: time julia name_of_program
+
+Either do many problems on projecteuler, or go deep into the design of
+the language, to explain why there's a difference between the running time
+of languages.
+
+Consider Javascript
+
+Go really deep in to the design and learning of Julia.
+What's is the difference in design compared to python?
+There must be some differences since there's a gap in the running
+time of these languages.
+Examine object oriented programming in Julia.
+
+
+Suggestions from seminar:
+- Optimize an algorithm in each specific language
+- Ruby - could be really fast on small/short algorithms.
+- Profiling in c#: ANTS Performance Profile
+- VM to run Java
+- Try code on different systems
