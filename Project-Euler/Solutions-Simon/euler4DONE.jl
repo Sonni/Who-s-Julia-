@@ -12,7 +12,7 @@ function digitsInArray(number)
   while number > 0
     d = number % 10
     push!(array, floor(Int, d))
-    number = number / 10
+    number = floor(number / 10)
   end
   reverse!(array)
   return array
