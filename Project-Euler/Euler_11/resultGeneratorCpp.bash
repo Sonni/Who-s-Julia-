@@ -1,9 +1,9 @@
-filetemp="raw_data/python1000-2.tmp" 							#Use as temporary storage
-filesave="raw_data/python1000-2.rslt"							#Saves results to this file
+filetemp="raw_data/cpp1000-2.tmp" 							#Use as temporary storage
+filesave="raw_data/cpp1000-2.rslt"							#Saves results to this file
 ARR=()
 for i in {1..10}												#Executes five times
 do
-	rslt=$(\time -f "\t%S \t%U" -o $filetemp python euler11.py 1000 2)	#Execute everything after $filetemp and saves time to temp storage
+	rslt=$(\time -f "\t%S \t%U" -o $filetemp ./euler11cpp 1000 2)	#Execute everything after $filetemp and saves time to temp storage
 	readarray timeResult < $filetemp							#Reads the two results to array
 	IFS=' ' read -r -a timeArr <<< $timeResult					#Removes spacing
 
@@ -25,12 +25,12 @@ do
 done
 echo $(julia -e "print(div(${mean}, ${#ARR[@]}))") &>> $filesave
 
-filetemp="raw_data/python1000-5.tmp" 							#Use as temporary storage
-filesave="raw_data/python1000-5.rslt"							#Saves results to this file
+filetemp="raw_data/cpp1000-5.tmp" 							#Use as temporary storage
+filesave="raw_data/cpp1000-5.rslt"							#Saves results to this file
 ARR=()
 for i in {1..10}												#Executes five times
 do
-	rslt=$(\time -f "\t%S \t%U" -o $filetemp python euler11.py 1000 5)	#Execute everything after $filetemp and saves time to temp storage
+	rslt=$(\time -f "\t%S \t%U" -o $filetemp ./euler11cpp 1000 5)	#Execute everything after $filetemp and saves time to temp storage
 	readarray timeResult < $filetemp							#Reads the two results to array
 	IFS=' ' read -r -a timeArr <<< $timeResult					#Removes spacing
 
@@ -52,12 +52,12 @@ do
 done
 echo $(julia -e "print(div(${mean}, ${#ARR[@]}))") &>> $filesave
 
-filetemp="raw_data/python1000-10.tmp" 							#Use as temporary storage
-filesave="raw_data/python1000-10.rslt"							#Saves results to this file
+filetemp="raw_data/cpp1000-10.tmp" 							#Use as temporary storage
+filesave="raw_data/cpp1000-10.rslt"							#Saves results to this file
 ARR=()
 for i in {1..10}												#Executes five times
 do
-	rslt=$(\time -f "\t%S \t%U" -o $filetemp python euler11.py 1000 10)	#Execute everything after $filetemp and saves time to temp storage
+	rslt=$(\time -f "\t%S \t%U" -o $filetemp ./euler11cpp 1000 10)	#Execute everything after $filetemp and saves time to temp storage
 	readarray timeResult < $filetemp							#Reads the two results to array
 	IFS=' ' read -r -a timeArr <<< $timeResult					#Removes spacing
 
@@ -80,12 +80,12 @@ done
 echo $(julia -e "print(div(${mean}, ${#ARR[@]}))") &>> $filesave
 
 #5000
-filetemp="raw_data/python5000-2.tmp" 							#Use as temporary storage
-filesave="raw_data/python5000-2.rslt"							#Saves results to this file
+filetemp="raw_data/cpp5000-2.tmp" 							#Use as temporary storage
+filesave="raw_data/cpp5000-2.rslt"							#Saves results to this file
 ARR=()
 for i in {1..10}												#Executes five times
 do
-	rslt=$(\time -f "\t%S \t%U" -o $filetemp python euler11.py 5000 2)	#Execute everything after $filetemp and saves time to temp storage
+	rslt=$(\time -f "\t%S \t%U" -o $filetemp ./euler11cpp 5000 2)	#Execute everything after $filetemp and saves time to temp storage
 	readarray timeResult < $filetemp							#Reads the two results to array
 	IFS=' ' read -r -a timeArr <<< $timeResult					#Removes spacing
 
@@ -107,12 +107,12 @@ do
 done
 echo $(julia -e "print(div(${mean}, ${#ARR[@]}))") &>> $filesave
 
-filetemp="raw_data/python5000-5.tmp" 							#Use as temporary storage
-filesave="raw_data/python5000-5.rslt"							#Saves results to this file
+filetemp="raw_data/cpp5000-5.tmp" 							#Use as temporary storage
+filesave="raw_data/cpp5000-5.rslt"							#Saves results to this file
 ARR=()
 for i in {1..10}												#Executes five times
 do
-	rslt=$(\time -f "\t%S \t%U" -o $filetemp python euler11.py 5000 5)	#Execute everything after $filetemp and saves time to temp storage
+	rslt=$(\time -f "\t%S \t%U" -o $filetemp ./euler11cpp 5000 5)	#Execute everything after $filetemp and saves time to temp storage
 	readarray timeResult < $filetemp							#Reads the two results to array
 	IFS=' ' read -r -a timeArr <<< $timeResult					#Removes spacing
 
@@ -134,12 +134,12 @@ do
 done
 echo $(julia -e "print(div(${mean}, ${#ARR[@]}))") &>> $filesave
 
-filetemp="raw_data/python5000-10.tmp" 							#Use as temporary storage
-filesave="raw_data/python5000-10.rslt"							#Saves results to this file
+filetemp="raw_data/cpp5000-10.tmp" 							#Use as temporary storage
+filesave="raw_data/cpp5000-10.rslt"							#Saves results to this file
 ARR=()
 for i in {1..10}												#Executes five times
 do
-	rslt=$(\time -f "\t%S \t%U" -o $filetemp python euler11.py 5000 10)	#Execute everything after $filetemp and saves time to temp storage
+	rslt=$(\time -f "\t%S \t%U" -o $filetemp ./euler11cpp 5000 10)	#Execute everything after $filetemp and saves time to temp storage
 	readarray timeResult < $filetemp							#Reads the two results to array
 	IFS=' ' read -r -a timeArr <<< $timeResult					#Removes spacing
 
@@ -162,12 +162,12 @@ done
 echo $(julia -e "print(div(${mean}, ${#ARR[@]}))") &>> $filesave
 
 #10000
-filetemp="raw_data/python10000-2.tmp" 							#Use as temporary storage
-filesave="raw_data/python10000-2.rslt"							#Saves results to this file
+filetemp="raw_data/cpp10000-2.tmp" 							#Use as temporary storage
+filesave="raw_data/cpp10000-2.rslt"							#Saves results to this file
 ARR=()
 for i in {1..10}												#Executes five times
 do
-	rslt=$(\time -f "\t%S \t%U" -o $filetemp python euler11.py 10000 2)	#Execute everything after $filetemp and saves time to temp storage
+	rslt=$(\time -f "\t%S \t%U" -o $filetemp ./euler11cpp 10000 2)	#Execute everything after $filetemp and saves time to temp storage
 	readarray timeResult < $filetemp							#Reads the two results to array
 	IFS=' ' read -r -a timeArr <<< $timeResult					#Removes spacing
 
@@ -189,12 +189,12 @@ do
 done
 echo $(julia -e "print(div(${mean}, ${#ARR[@]}))") &>> $filesave
 
-filetemp="raw_data/python10000-5.tmp" 							#Use as temporary storage
-filesave="raw_data/python10000-5.rslt"							#Saves results to this file
+filetemp="raw_data/cpp10000-5.tmp" 							#Use as temporary storage
+filesave="raw_data/cpp10000-5.rslt"							#Saves results to this file
 ARR=()
 for i in {1..10}												#Executes five times
 do
-	rslt=$(\time -f "\t%S \t%U" -o $filetemp python euler11.py 10000 5)	#Execute everything after $filetemp and saves time to temp storage
+	rslt=$(\time -f "\t%S \t%U" -o $filetemp ./euler11cpp 10000 5)	#Execute everything after $filetemp and saves time to temp storage
 	readarray timeResult < $filetemp							#Reads the two results to array
 	IFS=' ' read -r -a timeArr <<< $timeResult					#Removes spacing
 
@@ -216,12 +216,12 @@ do
 done
 echo $(julia -e "print(div(${mean}, ${#ARR[@]}))") &>> $filesave
 
-filetemp="raw_data/python10000-10.tmp" 							#Use as temporary storage
-filesave="raw_data/python10000-10.rslt"							#Saves results to this file
+filetemp="raw_data/cpp10000-10.tmp" 							#Use as temporary storage
+filesave="raw_data/cpp10000-10.rslt"							#Saves results to this file
 ARR=()
 for i in {1..10}												#Executes five times
 do
-	rslt=$(\time -f "\t%S \t%U" -o $filetemp python euler11.py 10000 10)	#Execute everything after $filetemp and saves time to temp storage
+	rslt=$(\time -f "\t%S \t%U" -o $filetemp ./euler11cpp 10000 10)	#Execute everything after $filetemp and saves time to temp storage
 	readarray timeResult < $filetemp							#Reads the two results to array
 	IFS=' ' read -r -a timeArr <<< $timeResult					#Removes spacing
 
