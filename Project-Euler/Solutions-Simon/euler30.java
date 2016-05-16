@@ -21,7 +21,7 @@ class euler30 {
 		System.out.println(total);
 	}
 
-	public static ArrayList<Integer> dig(int n) {
+	public static ArrayList<Integer> digs(int n) {
 		ArrayList<Integer> array = new ArrayList<>();
     while (n > 0) {
 			int d = n / 10;
