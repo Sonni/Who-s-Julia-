@@ -29,7 +29,7 @@ std::vector<std::string> split(std::string s, char delim)
         while(end <= strLength)
         {
             if(cstr[end] == delim)
-                break;
+            break;
             end++;
         }
         
@@ -77,7 +77,7 @@ float getTime(std::string out)
             timeKind += *it;
             counter++;
             if (counter == 3)
-                break;
+            break;
         }
         
         if (!timeKind.compare("use"))
@@ -107,7 +107,7 @@ float getTime(std::string out)
             finalTime += 60 * std::stof(min);
         }
         
-            
+        
     }
     
     return finalTime;
@@ -135,22 +135,58 @@ std::string exec(const char* cmd) {
     if (!pipe) throw std::runtime_error("popen() failed!");
     while (!feof(pipe.get())) {
         if (fgets(buffer, 128, pipe.get()) != NULL)
-            result += buffer;
+        result += buffer;
     }
     return result;
 }
 
+void doTest(std::string title, const char* command)
+{
+    int loopCount = 5;
+    
+    float sum = 0.0;
+    float median = 0.0;
+    
+    std::cout << title << " - Time is in seconds:" << std::endl;
+    for (int i = 0; i < loopCount; i++)
+    {
+        std::string out = exec(command);
+        
+        std::string outString = readOutput("out.txt");
+        float time = getTime(outString);
+        sum += time;
+        if (i == loopCount/2)
+        median = time;
+        
+        std::cout << time << std::endl;
+    }
+    
+    std::cout << "Average time is: " << sum / loopCount << " : Median is: " << median << std::endl;
+    std::cout << "____________________________________" << std::endl;
+}
 
 
-int main(int argc, const char * argv[]) {
-    
-    std::string out = exec("(time bash ./script.sh) 2> out.txt");
-    
-    std::string outString = readOutput("out.txt");
-    
-    float time = getTime(outString);
-    
-    std::cout << "Running time: " << time << " sec" << std::endl;
+int main(int argc, const char * argv[])
+{
+    if (argc != 0)
+    {
+        for (int i = 1; i < argc; i += 2)
+        {
+            std::string language = argv[i];
+            std::string programFile = argv[i + 1];
+            std::string command = "(time " + language + " " + programFile + ") 2> out.txt";
+            doTest("Test " + std::to_string(i / 2 + 1) + " for program " + programFile + " in " + language + " Took", command.c_str());
+        }
+    }
+    else
+    {
+        std::string language = "/Applications/Julia-0.4.5.app/Contents/Resources/julia/bin/julia";
+        std::string programFile = "test.txt";
+        std::string command = "(time " + language + " " + programFile + ") 2> out.txt";
+        
+        doTest("Test progrma", command.c_str());
+        //doTest("Test2 progrma", "(time bash ./script.sh) 2> out.txt");
+    }
     
     return 0;
 }
