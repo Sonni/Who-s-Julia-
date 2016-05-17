@@ -150,7 +150,8 @@ void doTest(std::string title, const char* command)
     std::cout << title << " - Time is in seconds:" << std::endl;
     for (int i = 0; i < loopCount; i++)
     {
-        std::string out = exec(command);
+        //std::string out = exec(command);
+        int retCode = system(command);
         
         std::string outString = readOutput("out.txt");
         float time = getTime(outString);
@@ -168,25 +169,55 @@ void doTest(std::string title, const char* command)
 
 int main(int argc, const char * argv[])
 {
-    if (argc != 0)
-    {
-        for (int i = 1; i < argc; i += 2)
-        {
-            std::string language = argv[i];
-            std::string programFile = argv[i + 1];
-            std::string command = "(time " + language + " " + programFile + ") 2> out.txt";
-            doTest("Test " + std::to_string(i / 2 + 1) + " for program " + programFile + " in " + language + " Took", command.c_str());
-        }
-    }
-    else
+    
+    std::ifstream infile("script.sh");
+    int counter = 0;
+    std::string line;
+    while (std::getline(infile, line))
     {
         std::string language = "/Applications/Julia-0.4.5.app/Contents/Resources/julia/bin/julia";
         std::string programFile = "test.txt";
-        std::string command = "(time " + language + " " + programFile + ") 2> out.txt";
+        std::string command = "(time " + line + ") 2> out.txt";
         
-        doTest("Test progrma", command.c_str());
-        //doTest("Test2 progrma", "(time bash ./script.sh) 2> out.txt");
+        doTest("Test " + std::to_string(counter), command.c_str());
+        counter++;
     }
+    infile.close();
+    
+    
+    //doTest("Test2 progrma", "(time bash ./script.sh) 2> out.txt");
     
     return 0;
 }
+
+
+/*
+ if (argc != 0)
+ {
+ for (int i = 1; i < argc; i += 2)
+ {
+ std::string language = argv[i];
+ std::string programFile = argv[i + 1];
+ std::string command;
+ std::cout << language;
+ if (language == "cpp")
+ {
+ command = "(time ./" + programFile + ") 2> out.txt";
+ 
+ }
+ else
+ command = "(time " + language + " " + programFile + ") 2> out.txt";
+ 
+ doTest("Test " + std::to_string(i / 2 + 1) + " for program " + programFile + " in " + language + " Took", command.c_str());
+ }
+ }
+ else
+ {
+ std::string language = "/Applications/Julia-0.4.5.app/Contents/Resources/julia/bin/julia";
+ std::string programFile = "test.txt";
+ std::string command = "(time " + language + " " + programFile + ") 2> out.txt";
+ 
+ doTest("Test progrma", command.c_str());
+ //doTest("Test2 progrma", "(time bash ./script.sh) 2> out.txt");
+ }
+ */
