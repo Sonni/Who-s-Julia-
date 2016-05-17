@@ -43,7 +43,7 @@ void quicksortDualPivot(int a[], int s, int e) {
     {
         //use start and end elements as pivots (a[s] must be smaller than a[e])
         if (a[s] > a[e])
-            swap(a, s, e);
+        swap(a, s, e);
         
         const int leftPiv = a[s];
         const int rightPiv = a[e];
@@ -64,7 +64,7 @@ void quicksortDualPivot(int a[], int s, int e) {
             else if (a[curEle] >= rightPiv)
             {
                 while (a[rightPoi] > rightPiv && curEle < rightPoi)
-                    rightPoi--;
+                rightPoi--;
                 
                 swap(a, curEle, rightPoi);
                 rightPoi--;
@@ -103,7 +103,7 @@ std::vector<std::string> split(std::string s, char delim)
         while(end <= strLength)
         {
             if(cstr[end] == delim)
-                break;
+            break;
             end++;
         }
         
@@ -115,9 +115,9 @@ std::vector<std::string> split(std::string s, char delim)
     return elems;
 }
 
-int main(int argc, const char * argv[]) {
+int main(int argc, const char * argv[])
+{
     
-    int* a; // Don't forget to delete [] a; when you're done!
     
     std::ifstream infile(argv[2]);
     
@@ -125,24 +125,24 @@ int main(int argc, const char * argv[]) {
     std::getline(infile, line);
     
     std::vector<std::string> v = split(line, ' ');
-    a = new int[v.size()];
+    const int size = v.size();
+    int a[size];
     
     for (int i = 0; i < v.size(); i++)
-        a[i] = std::stoi(v[i]);
+    a[i] = std::stoi(v[i]);
     
     infile.close();
     
     
     if (!strcmp(argv[1], "quicksort"))
-        quicksort(a, 0, v.size());
+    quicksort(a, 0, v.size());
     
     if (!strcmp(argv[1], "dualquicksort"))
-        quicksortDualPivot(a, 0, v.size());
+    quicksortDualPivot(a, 0, v.size());
     
-    for (int i = 0; i < v.size() + 1; i++)
-        std::cout << a[i] << " ";
+    //for (int i = 0; i < v.size(); i++)
+    // std::cout << a[i] << " ";
     
-    delete [] a;
     
     return 0;
 }

@@ -65,11 +65,10 @@ float getTime(std::string out)
 {
     std::vector<std::string> a = split(out, '\n');
     
-    float finalTime;
+    float finalTime = 0.0;
     
     for (int i = 0; i < a.size(); i++)
     {
-        
         int counter = 0;
         std::string timeKind = "";
         
@@ -84,13 +83,7 @@ float getTime(std::string out)
         {
             std::string time = a[i].substr(5, a[i].length());
             
-            std::string min = split(time, 'm')[0];
-            
-            std::string sec = split(time, 'm')[1];
-            sec = sec.substr(0, sec.length() - 1);
-            
-            finalTime += std::stof(sec);
-            finalTime += 60 * std::stof(min);
+            finalTime += std::stof(time);
             
         }
         
@@ -98,13 +91,8 @@ float getTime(std::string out)
         {
             std::string time = a[i].substr(4, a[i].length());
             
-            std::string min = split(time, 'm')[0];
+            finalTime += std::stof(time);
             
-            std::string sec = split(time, 'm')[1];
-            sec = sec.substr(0, sec.length() - 1);
-            
-            finalTime += std::stof(sec);
-            finalTime += 60 * std::stof(min);
         }
         
         
@@ -177,7 +165,7 @@ int main(int argc, const char * argv[])
     {
         std::string language = "/Applications/Julia-0.4.5.app/Contents/Resources/julia/bin/julia";
         std::string programFile = "test.txt";
-        std::string command = "(time " + line + ") 2> out.txt";
+        std::string command = "(time -p " + line + ") 2> out.txt";
         
         doTest("Test " + std::to_string(counter), command.c_str());
         counter++;
