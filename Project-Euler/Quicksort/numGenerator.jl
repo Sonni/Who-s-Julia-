@@ -1,6 +1,6 @@
 size = parse(Int, ARGS[1])
 
-a = rand(100:5000, size, size)
+a = rand(-99999:99999, size)
 
 name = "num$size.txt"
 println(name)
