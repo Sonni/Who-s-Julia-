@@ -1,17 +1,17 @@
 function quicksort(a, s, e)
   if s < e
     pivot = a[e]
-		pointer = s
-		for i = s: e - 1
-			if a[i] <= pivot
-				swap(a, pointer, i)
-				pointer += 1
-			end
+	pointer = s
+	for i = s: e - 1
+		if a[i] <= pivot
+			swap(a, pointer, i)
+			pointer += 1
 		end
-		swap(a, pointer, e)
+	end
+	swap(a, pointer, e)
 
-		quicksort(a, s, pointer - 1)
-		quicksort(a, pointer, e)
+	quicksort(a, s, pointer - 1)
+	quicksort(a, pointer, e)
   end
 end
 
