@@ -1,5 +1,5 @@
 from sys import argv
-def dig(n):
+def digs(n):
     array = []
     while n > 0:
         d = n / 10

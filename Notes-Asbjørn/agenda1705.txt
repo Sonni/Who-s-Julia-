@@ -1,0 +1,5 @@
+Agenda:
+
+- How to benchmark in Java
+- The report
+  What should be written in the report. What to include etc.

@@ -28,7 +28,6 @@ class euler30 {
     	int k = n - d * 10;
     	n = d;
     	array.add(k);
-			System.out.println("d = " + d + " : k = " + k + " : n = " + n);
     }
     Collections.reverse(array);
     return array;
