@@ -1,0 +1,23 @@
+function solve(m, n) #m=color block size  n = black box size
+  if m > n
+    return 0
+  end
+  solutions = 0
+
+  for i = m : n
+    solutions += 1
+    solutions += solve(m, n-i)
+  end
+
+  return solutions
+end
+
+function s()
+  red = solve(2, 50)
+  green = solve(3, 50)
+  blue = solve(4, 50)
+  return red
+end
+
+
+@time println(s())
