@@ -25,23 +25,15 @@ function isPalindrome(array)
   i = 1
   j = length(array)
   isPal = true
-  #s = ""
     while i <= j
       if array[i] == array[j]
         i += 1
         j -= 1
-        #a = array[i]
-        #b = array[j]
       else
         isPal = false
         return isPal
       end
     end
-  #=
-  for c in array
-    s = string(s, c)
-  end
-  =#
   return isPal
 end
 
