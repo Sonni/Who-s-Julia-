@@ -1,0 +1,40 @@
+Test 0 - Time is in seconds:
+ 10.003962 seconds (957 allocations: 86.952 KB)
+10.92
+ 10.002835 seconds (957 allocations: 86.952 KB)
+10.81
+ 10.003617 seconds (957 allocations: 86.952 KB)
+10.88
+ 10.003401 seconds (957 allocations: 86.952 KB)
+10.97
+ 10.003916 seconds (957 allocations: 86.952 KB)
+10.99
+Average time is: 10.914 : Median is: 10.88
+____________________________________
+Test 1 - Time is in seconds:
+time: 10001
+10.01
+time: 10001
+10.02
+time: 10001
+10
+time: 10001
+10.02
+time: 10001
+10
+Average time is: 10.01 : Median is: 10
+____________________________________
+Test 2 - Time is in seconds:
+10 second wait took 10001ms
+10.09
+10 second wait took 10001ms
+10.05
+10 second wait took 10001ms
+10.11
+10 second wait took 10001ms
+10.09
+10 second wait took 10001ms
+10.06
+Average time is: 10.08 : Median is: 10.11
+____________________________________
+Test 3 - Time is in seconds:

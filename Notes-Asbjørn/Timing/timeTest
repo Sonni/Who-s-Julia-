@@ -1,0 +1,52 @@
+Test 0 Julia - Time is in seconds:
+ 10.169556 seconds (68.95 k allocations: 2.972 MB)
+1.09
+ 10.165130 seconds (68.95 k allocations: 2.972 MB)
+1.15
+ 10.163770 seconds (68.95 k allocations: 2.972 MB)
+1.03
+ 10.162043 seconds (68.95 k allocations: 2.972 MB)
+1.18
+ 10.155912 seconds (68.95 k allocations: 2.972 MB)
+1
+Average time is: 1.09 : Median is: 1.03
+____________________________________
+Test 1 Python - Time is in seconds:
+time: 10010
+0
+time: 10011
+0.01
+time: 10008
+0.01
+time: 10000
+0.01
+time: 10010
+0.02
+Average time is: 0.01 : Median is: 0.01
+____________________________________
+Test 2 Java - Time is in seconds:
+10 second wait took 10000ms
+0.12
+10 second wait took 10001ms
+0.1
+10 second wait took 10000ms
+0.08
+10 second wait took 10000ms
+0.11
+10 second wait took 10000ms
+0.11
+Average time is: 0.104 : Median is: 0.08
+____________________________________
+Test 3 C++ - Time is in seconds:
+Time: 10 s
+0
+Time: 10 s
+0
+Time: 10 s
+0
+Time: 10 s
+0
+Time: 10 s
+0
+Average time is: 0 : Median is: 0
+____________________________________
