@@ -1,5 +1,7 @@
 
-
+#calculate 2^1000
+#args[1] = 2
+#args[2] = 1000
 
 num = parse(Int, ARGS[1])
 power = parse(Int, ARGS[2])
