@@ -4,51 +4,55 @@ from the product of two 2-digit numbers is 9009 = 91 × 99.
 Find the largest palindrome made from the product of two 3-digit numbers.
 =#
 
-#=
-  functions
-=#
-function digitsInArray(number)
-  array = Int64[]
-  while number > 0
-    d = number % 10
-    push!(array, floor(Int, d))
-    number = floor(number / 10)
+#Answer: 906609
+
+#Interval for calculating palindrome: 100-999 finds largest 3-digit palindrome.
+min = parse(Int, ARGS[1])
+max = parse(Int, ARGS[2])
+function digitsInArray(n)
+  arr = Int[]
+  while n > 0
+      d = round(Int, floor(n / 10))
+      k = n - d * 10
+      n = d
+      push!(arr, k)
   end
-  reverse!(array)
-  return array
+  b = reverse(arr)
+  return b
 end
-println(digitsInArray(090090))
 
 function isPalindrome(array)
   i = 1
   j = length(array)
   isPal = true
-  s = ""
+  #s = ""
     while i <= j
       if array[i] == array[j]
         i += 1
         j -= 1
-        a = array[i]
-        b = array[j]
+        #a = array[i]
+        #b = array[j]
       else
         isPal = false
-        break
+        return isPal
       end
     end
+  #=
   for c in array
     s = string(s, c)
   end
+  =#
   return isPal
 end
 
 function checkNumber()
-  resultArray = Int64[2]
+  resultArray = Int[]
   max = 0
   found = false
   cycleDone = false
   while !found
-    for x in 999:-1:100
-      for y in 999:-1:100
+    for x in max:-1:min
+      for y in max:-1:min
         k = x * y
         result = isPalindrome(digitsInArray(k))
         if result
@@ -65,8 +69,11 @@ function checkNumber()
       break
     end
   end
-  println(resultArray)
+  a = resultArray[1]
+  b = resultArray[2]
+  res = a * b
+  println("Largest palindrome: $a * $b = $res")
 end
 
 #println(@elapsed checkNumber())
-#@time checkNumber()
+checkNumber()
