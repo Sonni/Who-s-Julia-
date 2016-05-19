@@ -1,4 +1,6 @@
-
+//calculate 2^1000
+//args[0] = 2
+//args[1] = 1000
 public class euler16 {
   public static void main (String[] args) {
       int num = Integer.parseInt(args[0]);
@@ -9,7 +11,7 @@ public class euler16 {
       int carry = 0;
       int sum = 0;
 
-      for (int i = 1; i < 1000; i++) {
+      for (int i = 1; i < power; i++) {
         for (int j = 0; j < arr.length; j++) {
           int temp = arr[j] * 2;
           if (temp > 9) {

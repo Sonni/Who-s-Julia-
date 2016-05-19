@@ -12,7 +12,7 @@ arr = zeros(Int, 400)
 arr[1] = 2
 carry = 0
 
-for i = 1 : power
+for i = 2 : power
   #push!(arr, 0)
   for j = 1 : length(arr) #Something else here?
     temp = arr[j] * 2
