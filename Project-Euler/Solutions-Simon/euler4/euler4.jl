@@ -6,6 +6,7 @@ Find the largest palindrome made from the product of two 3-digit numbers.
 
 #Answer: 906609
 
+#Terminal: Julia euler4.jl 100 999
 #Interval for calculating palindrome: 100-999 finds largest 3-digit palindrome.
 min = parse(Int, ARGS[1])
 max = parse(Int, ARGS[2])
@@ -37,9 +38,9 @@ function isPalindrome(array)
   return isPal
 end
 
-function checkNumber()
-  resultArray = Int[]
-  max = 0
+function checkNumber(min, max)
+  #resultArray = Int[]
+  maxNum = 0
   found = false
   cycleDone = false
   while !found
@@ -47,10 +48,12 @@ function checkNumber()
       for y in max:-1:min
         k = x * y
         result = isPalindrome(digitsInArray(k))
+        #println(k)
         if result
-          if k > max
-            max = k
-            resultArray = [x, y]
+          if k > maxNum
+            maxNum = k
+            #println(max)
+            #resultArray = [x, y]
             found = true
           end
         end
@@ -61,11 +64,12 @@ function checkNumber()
       break
     end
   end
-  a = resultArray[1]
-  b = resultArray[2]
-  res = a * b
-  println("Largest palindrome: $a * $b = $res")
+  #a = resultArray[1]
+  #b = resultArray[2]
+  #res = a * b
+  #println("Largest palindrome: $a * $b = $res")
+  return maxNum
 end
 
 #println(@elapsed checkNumber())
-checkNumber()
+println(checkNumber(min, max))
