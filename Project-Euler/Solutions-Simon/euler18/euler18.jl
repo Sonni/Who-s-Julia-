@@ -32,6 +32,8 @@ trying every route. However, Problem 67, is the same challenge with a triangle
 containing one-hundred rows; it cannot be solved by brute force, and requires
 a clever method! ;o)
 =#
+
+#Terminal: Julia euler18.jl data.txt
 file = ARGS[1] #file with numbers as shown above
 f = open(file)
 lines = countlines(f) + 1 #returns number of lines-1, which is why +1 is added.
