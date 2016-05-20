@@ -18,35 +18,37 @@ We can see that 28 is the first triangle number to have over five divisors.
 What is the value of the first triangle number to have over five hundred divisors?
 
 =#
+#Answer: 76576500
 
+#Terminal: Julia euler12.jl 500
+numDiv = parse(Int, ARGS[1])
 function divisors(n)
-  NUMBER_OF_FACTORS = 0
+  numFactors = 0
   ceiling = typemax(Int32)
   for i in range(1, Int(ceil(sqrt(n)+1)))
     if n % i == 0
-      NUMBER_OF_FACTORS += 2
+      numFactors += 2
     end
     if i*i == n
-      NUMBER_OF_FACTORS -= 1
+      numFactors -= 1
     end
   end
-  return NUMBER_OF_FACTORS
+  return numFactors
 end
 
-function triangular()
-  ceiling2 = typemax(Int16)
-  for n in range(1, ceiling2)
-    tn = Int((n*(n+1))/2)
+function triangular(numDiv)
+  ceil = typemax(Int16)
+  for n = 1 : ceil
+    k = Int((n*(n+1))/2)
     if n % 2 == 0
-      count = divisors(n/2)*divisors(n+1)
+      count = divisors(n / 2) * divisors(n + 1)
     else
-      count = divisors(n)*divisors((n+1)/2)
+      count = divisors(n) * divisors((n + 1) / 2)
     end
-    if count > 500
-      println(tn)
-      break
+    if count > numDiv
+      return k
     end
   end
 end
 
-@time triangular()
+println(triangular(numDiv))
