@@ -9,24 +9,33 @@ Hence the difference between the sum of the squares of the first ten natural num
 
 Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.
 =#
-
 #Answer: 25_164_150
+
+#Terminal: Julia euler6.jl 100
+limit = parse(Int, ARGS[1])
+
 function diffe(n)
-  sumFirst = 0
-  sumSecond = 0
+  sumDigitsSquare = 0
+  sumNumberSquare = 0
   temp = 0
 
+  #sum of all i^2 to n^2
   for i=1:n
-    sumFirst += i^2
+    sumDigitsSquare += i^2
   end
+
+  #Square of the sum from 1-n
   for j=1:n
     temp += j
   end
-  sumSecond = temp^2
-  difference = sumSecond - sumFirst
-  println("sumFirst: $sumFirst")
-  println("sumSecond: $sumSecond")
-  println("Difference: $difference")
+  sumNumberSquare = temp^2
+
+  res = sumNumberSquare - sumDigitsSquare
+  if res < 0
+    return res += res * -2
+  else
+    return res
+  end
 end
 
-diffe(100)
+println(diffe(limit))
