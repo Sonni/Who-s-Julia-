@@ -1,15 +1,15 @@
 #=
 Work out the first ten digits of the sum of the following one-hundred 50-digit numbers.
 =#
+#Answer: 5537376230
+
+#Terminal: Julia euler13.jl data.txt
 data = ARGS[1]
-#numbers = BigInt[]
 function makeData(data)
   f = open(data)
   row = 1
   mat = zeros(Int, 100, 50)
-  #big = 0
   for l in eachline(f)
-  #  big += parse(BigInt, l)
     temp = digits(parse(BigInt, l))
     temp2 = reverse(temp)
     col = 1
@@ -19,7 +19,6 @@ function makeData(data)
     end
     row += 1
   end
-  #println(big)
   close(f)
   return mat
 end
