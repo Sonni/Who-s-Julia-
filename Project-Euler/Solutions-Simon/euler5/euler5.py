@@ -1,16 +1,18 @@
-def divisible():
+import sys
+
+def divisible(div, limit):
 	evenlyDivis = True
 	n = 0
-	for x in xrange(21, 500000000):
+	for x in xrange(div+1, limit):
 		evenlyDivis = True
-		if x == 500000000:
-			print "Done"
-		for i in range(2, 20):
+		for i in range(2, div):
 			n = x % i
 			if not(n == 0):
 				evenlyDivis = False
 				break
 		if evenlyDivis:
-			print "%d is evenly divisible" % x
+			return x
 
-divisible()
+div = int(sys.argv[1])
+limit = int(sys.argv[2])
+print divisible(div, limit)

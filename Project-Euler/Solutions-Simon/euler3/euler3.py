@@ -1,3 +1,5 @@
+import sys
+
 def prime_factors(n):
 	factors = []
 	d = 2
@@ -8,4 +10,4 @@ def prime_factors(n):
 		d += 1
 	return factors
 
-print prime_factors(600851475143)
+print prime_factors(int(sys.argv[1]))

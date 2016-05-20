@@ -2,21 +2,19 @@ public class euler5
 {
 	public static void main(String[] args)
 	{
-		divisible();
+		int div = Integer.parseInt(args[0]);
+		long limit = Long.parseLong(args[1]);
+		System.out.println(divisible(div, limit));
 	}
 	
-	private static void divisible()
+	private static long divisible(int div, long limit)
 	{
 		boolean evenlyDivis = true;
 		long n = 0;
-		for(long x = 21; x <= 500000000l; x++)
+		for(long x = div+1; x <= limit; x++)
 		{
 			evenlyDivis = true;
-			if(x == 500000000l)
-			{
-				System.out.println("Done");
-			}
-			for(long i = 2; i <= 20; i++)
+			for(long i = 2; i <= div; i++)
 			{
 				n = x % i;
 				if(n != 0)
@@ -27,8 +25,9 @@ public class euler5
 			}
 			if(evenlyDivis)
 			{
-				System.out.println(x + " is evenly divisible");
+				return(x);
 			}
 		}
+		return 0;
 	}
 }

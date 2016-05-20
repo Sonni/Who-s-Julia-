@@ -1,7 +1,7 @@
 public class euler1 {
 	public static void main (String[] args)
 	{
-		System.out.println(f1(1000));
+		System.out.println(f1(Integer.parseInt(args[0])));
 	}
 	
 	private static int f1 (int n)

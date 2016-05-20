@@ -1,3 +1,5 @@
+import sys
+
 def f1(n):
 	sum = 0
 	for i in range(1, n):
@@ -5,5 +7,5 @@ def f1(n):
 			sum += i
 	return sum
 
-print f1(1000)
+print f1(int(sys.argv[1]))
 

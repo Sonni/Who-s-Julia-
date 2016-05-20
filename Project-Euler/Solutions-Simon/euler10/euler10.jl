@@ -7,30 +7,30 @@ Find the sum of all the primes below two million.
 
 #Terminal: Julia euler10.jl 2000000
 limit = parse(Int, ARGS[1])
-function isPrime(x)
-  divisor = 2
-  prime = true
-  while divisor < x
-    if x % divisor == 0
-      #@printf "%d mod %d == 0\n" x divisor
-      prime = false
-      break
-    end
-    divisor += 1
-  end
-  return prime
-end
-
-function sumPrime(n)
-  sum = 0
-  for i=2:n
-    if isPrime(i)
-      sum += i
-      println(i)
-    end
-  end
-  return sum
-end
-println(sumPrime(limit))
-#test primes()
 #Sieve of Eratosthenes
+function getPrimes(size)
+	array = bitrand(size)
+	for i = 2 : size
+		array[i] = true
+	end
+	c = 1
+	for i = 2 : size
+		if array[i] == true
+			j = i + i
+			while j < size
+				array[j] = false
+				j += i
+			end
+			c += 1
+		end
+	end
+	primeArray = Int[]
+	for i = 1 : size
+		if(array[i])
+			push!(primeArray, i)
+		end
+	end
+	return primeArray
+end
+#println(sum(primes(limit)))
+println(sum(getPrimes(limit)))

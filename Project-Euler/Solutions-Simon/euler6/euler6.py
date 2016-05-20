@@ -1,15 +1,19 @@
+import sys
+
 def diffe(n):
-	sumFirst = 0
-	sumSecond = 0
+	sumDigitsSquare = 0
+	sumNumberSquare = 0
 	temp = 0
 	for i in range(1, n+1):
-		sumFirst += i**2
+		sumDigitsSquare += i**2
 	for j in range(1, n+1):
 		temp += j
-	sumSecond = temp**2
-	difference = sumSecond - sumFirst
-	print "sumFirst: %d" % sumFirst
-	print "sumSecond: %d" % sumSecond
-	print "Difference: %d" % difference
+	sumNumberSquare = temp**2
+	res = sumNumberSquare - sumDigitsSquare
+	if res < 0:
+		return res * -2
+	else:
+		return res
 	
-diffe(100)
+limit = int(sys.argv[1])
+print diffe(limit)

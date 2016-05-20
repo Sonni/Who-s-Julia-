@@ -2,26 +2,33 @@ public class euler6
 {
 	public static void main(String[] args)
 	{
-		diffe(100);
+		int limit = Integer.parseInt(args[0]);
+		System.out.println(diffe(limit));
 	}
 	
-	private static void diffe(int n)
+	private static int diffe(int n)
 	{
-		int sumFirst = 0;
+		int sumDigitsSquare = 0;
+		int sumNumberSquare = 0;
 		int temp = 0;
 		for(int i = 1; i <= n; i++)
 		{
-			sumFirst += pow(i, 2);
+			sumDigitsSquare += pow(i, 2);
 		}
 		for(int i = 1; i <= n; i++)
 		{
 			temp += i;
 		}
-		int sumSecond = pow(temp, 2);
-		int difference = sumSecond - sumFirst;
-		System.out.println("sumFirst: " + sumFirst);
-		System.out.println("sumSecond: " + sumSecond);
-		System.out.println("Difference: " + difference);
+		sumNumberSquare = pow(temp, 2);
+		int res = sumNumberSquare - sumDigitsSquare;
+		if(res < 0)
+		{
+			return res * -2;
+		}
+		else
+		{
+			return res;
+		}
 	}
 	
 	private static int pow(int a, int b)

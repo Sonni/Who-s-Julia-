@@ -1,3 +1,5 @@
+import sys
+
 def fibo(n):
 	array = [1, 1]
 	i = 2
@@ -15,4 +17,4 @@ def fibo(n):
 			
 	return s
 
-print(fibo(4000000))
+print(fibo(int(sys.argv[1])))

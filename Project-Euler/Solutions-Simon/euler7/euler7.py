@@ -1,3 +1,5 @@
+import sys
+
 def isPrime(x):
 	divisor = 2
 	prime = True
@@ -8,18 +10,18 @@ def isPrime(x):
 		divisor += 1
 	return prime
 	
-def findPrime():
+def findPrime(primeNumber):
 	arrayPrimes = []
 	counter = 0
 	number = 2
-	primeNumber = 10001
 	while counter < primeNumber:
 		if isPrime(number):
 			counter += 1
 			if counter == primeNumber:
 				break
     		number += 1
-	arrayPrimes.append(number)
-	print arrayPrimes[-1]
+	if counter == primeNumber:
+		return number
 
-findPrime()
+primeNumber = int(sys.argv[1])
+print findPrime(primeNumber)
