@@ -11,31 +11,35 @@ So, COLIN would obtain a score of 938 × 53 = 49714.
 
 What is the total of all the name scores in the file?
 =#
+#Answer: 871198282
 
-function split_to_array()
-  file = open("names.txt")
+#Terminal: Julia euler22.jl data.txt
+path = ARGS[1]
+file = open(path)
+
+function namesSorted(file)
   line = readline(file)
   line_new = replace(line, '"', "")
   array = split(line_new, [','])
-
   close(file)
-  return array
+  names = sort(array)
+  return names
 end
 
-#println(split_to_array())
-
-#still missing multiply
-function value_string()
+function letterValues()
   letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
-  names_sorted = sort(split_to_array())
   mapo = Dict{ASCIIString, Int}()
-  value = 0
   valueLetter = 1
-  mapo_index = 1
   for a in letters
     mapo[a] = valueLetter
     valueLetter += 1
   end
+  return mapo
+end
+
+function calc(mapo, names_sorted)
+  value = 0
+  mapo_index = 1
   for word in names_sorted
     value_word = 0
     for ch in word
@@ -47,4 +51,4 @@ function value_string()
   return value
 end
 
-println(value_string())
+println(calc(letterValues(), namesSorted(file)))
