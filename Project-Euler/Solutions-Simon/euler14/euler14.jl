@@ -20,7 +20,7 @@ limit = parse(Int, ARGS[1])
 function seq(n)
   max = 0
   maxNumber = 0
-  for i in range(1, n)
+  for i = 1 : n
     countSeq = 1
     temp = i
     while i != 1
