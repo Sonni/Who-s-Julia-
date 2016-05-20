@@ -3,7 +3,10 @@ The sum of the primes below 10 is 2 + 3 + 5 + 7 = 17.
 
 Find the sum of all the primes below two million.
 =#
+#Answer: 142913828922
 
+#Terminal: Julia euler10.jl 2000000
+limit = parse(Int, ARGS[1])
 function isPrime(x)
   divisor = 2
   prime = true
@@ -17,7 +20,6 @@ function isPrime(x)
   end
   return prime
 end
-println(isPrime(7))
 
 function sumPrime(n)
   sum = 0
@@ -29,6 +31,6 @@ function sumPrime(n)
   end
   return sum
 end
-println(sumPrime(2_000_000))
+println(sumPrime(limit))
 #test primes()
 #Sieve of Eratosthenes
