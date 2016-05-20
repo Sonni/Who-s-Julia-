@@ -13,32 +13,31 @@ Which starting number, under one million, produces the longest chain?
 
 NOTE: Once the chain starts the terms are allowed to go above one million.
 =#
+#Answer: 837799
 
+#Terminal: Julia euler14.jl
+limit = parse(Int, ARGS[1])
 function seq(n)
-  #n: starting number
   max = 0
-  max_number = 0
+  maxNumber = 0
   for i in range(1, n)
-    count_seq = 1
+    countSeq = 1
     temp = i
     while i != 1
       if i % 2 == 0
         i = i / 2
-        count_seq += 1
+        countSeq += 1
       else
         i = 3 * i + 1
-        count_seq += 1
+        countSeq += 1
       end
     end
-    if count_seq > max
-      max = count_seq
-      max_number = temp
-      #println("$max_number : $max")
+    if countSeq > max
+      max = countSeq
+      maxNumber = temp
     end
-    #println(count_seq)
   end
-  println(max)
-  println(max_number)
+  return maxNumber
 end
 
-seq(1_000_000)
+println(seq(limit))
