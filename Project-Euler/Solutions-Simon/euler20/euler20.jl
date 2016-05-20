@@ -20,3 +20,13 @@ function fact(n)
 end
 
 println(sum_digits(fact(100)))
+
+
+
+
+
+
+
+
+
+
