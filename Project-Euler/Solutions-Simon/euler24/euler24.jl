@@ -12,6 +12,9 @@ What is the millionth lexicographic permutation of the digits
 =#
 #Answer:
 
+
+#NOTE NOT WORKING
+
 #Terminal: Julia euler24.jl 1000000
 numPerm = parse(Int, ARGS[1])
 numbers = Int[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]

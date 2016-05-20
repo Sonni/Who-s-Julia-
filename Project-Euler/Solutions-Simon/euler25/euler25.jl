@@ -1,7 +1,10 @@
 #=
 What is the index of the first term in the Fibonacci sequence to contain 1000 digits?
 =#
-#Answer: 4782
+#Answer: 478
+
+
+#NOTE NOT WORKING
 
 fibTerm = parse(Int, ARGS[1])
 
