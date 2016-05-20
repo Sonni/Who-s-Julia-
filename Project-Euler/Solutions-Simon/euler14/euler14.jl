@@ -23,12 +23,13 @@ function seq(n)
   for i = 1 : n
     countSeq = 1
     temp = i
-    while i != 1
-      if i % 2 == 0
-        i = i / 2
+    current = i
+    while current != 1
+      if current % 2 == 0
+        current = current / 2
         countSeq += 1
       else
-        i = 3 * i + 1
+        current = 3 * current + 1
         countSeq += 1
       end
     end
