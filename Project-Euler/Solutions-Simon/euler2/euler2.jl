@@ -3,10 +3,10 @@
   By considering the terms in the Fibonacci sequence whose values
   do not exceed four million, find the sum of the even-valued terms.
 =#
-function printsum(a)
-    # summary generates a summary of an object
-    println(repr(a))
-end
+#Answer: 4613732
+
+#Terminal: Julia euler2.jl 4000000
+limit = parse(Int, ARGS[1])
 
 function fibo(n)
   array = Int64[1, 1]
@@ -25,16 +25,7 @@ function fibo(n)
       go = false
     end
   end
-#=
-  for temp in array
-    #println("hej")
-    if temp % 2 == 0
-      sum += temp
-    end
-  end
-=#
-println(sum)
-printsum(array)
+return sum
 end
 
-fibo(4_000_000)
+println(fibo(limit))
