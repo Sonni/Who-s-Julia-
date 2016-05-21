@@ -35,9 +35,8 @@ function calc(limit)
     q = false
     num = string(num)
     for i = 1 : length(num)
-      x = parse(Int, string(string(num)[i:end], string(num)[1:i-1]))
-      #println(x)
-      if primes[x] #first time = 22
+      index = parse(Int, string(string(num)[i:end], string(num)[1:i-1]))
+      if primes[index]
         q = true
       else
         q = false
@@ -51,8 +50,8 @@ function calc(limit)
   return count
 end
 
-#println(calc(limit))
-println(getPrimes(1000))
+println(calc(limit))
+#println(getPrimes(1000))
 
 
 
