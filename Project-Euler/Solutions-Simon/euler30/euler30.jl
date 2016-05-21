@@ -10,7 +10,11 @@ The sum of these numbers is 1634 + 8208 + 9474 = 19316.
 
 Find the sum of all the numbers that can be written as the sum of fifth powers of their digits.
 =#
+#Answer: 443839
 
+#Terminal: Julia euler30.jl 1000000 5
+number = parse(Int, ARGS[1])
+power = parse(Int, ARGS[2])
 
 function digs(n)
   arr = []
@@ -38,12 +42,9 @@ function calc(x, y)
       total += sum
     end
   end
-  println(total)
+  return total
 end
-
-number = parse(Int, ARGS[1])
-power = parse(Int, ARGS[2])
 
 #println(powers(number))
 #@time interval(number, powers)
-calc(number, power)
+println(calc(number, power))
