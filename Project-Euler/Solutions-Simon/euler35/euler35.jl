@@ -9,9 +9,8 @@ How many circular primes are there below one million?
 
 #Terminal: Julia Euler35.jl 1000000
 
-#NOTE NOT WORKING
-
 limit = parse(Int, ARGS[1])
+
 function getPrimes(size)
   array = fill(true, size)
 	c = 1
