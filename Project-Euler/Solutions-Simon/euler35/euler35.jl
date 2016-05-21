@@ -5,9 +5,11 @@ There are thirteen such primes below 100: 2, 3, 5, 7, 11, 13, 17, 31, 37, 71, 73
 
 How many circular primes are there below one million?
 =#
-#Answer:
+#Answer: 55
 
 #Terminal: Julia Euler35.jl 1000000
+
+#NOTE NOT WORKING
 
 limit = parse(Int, ARGS[1])
 function getPrimes(size)
@@ -40,11 +42,13 @@ function calc(limit)
 
   primes = getPrimes(limit)
 
+  #if primes(2) must be first iteration
+  #if primes(parse(Int, num[i:end]) + parse(Int, num[1:i])) #first time = 4
   for num = 2 : limit
     q = false
     num = string(num)
     for i = 1 : length(num)
-      if primes[Int(num[i:end]+num[1:i])]
+      if primes(parse(Int, string(num[i:end], num[1:i]))) #first time = 22
         q = true
       else
         q = false
