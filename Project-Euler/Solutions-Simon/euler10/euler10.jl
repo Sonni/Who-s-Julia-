@@ -25,7 +25,7 @@ function getPrimes(size)
 		end
 	end
 	primeArray = Int[]
-	for i = 1 : size
+	for i = 2 : size
 		if(array[i])
 			push!(primeArray, i)
 		end
