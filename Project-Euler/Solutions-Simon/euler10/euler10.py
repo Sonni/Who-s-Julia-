@@ -8,7 +8,7 @@ def getPrimes(size):
 	for i in range(2, size + 1):
 		if array[i]:
 			j = i + i
-			while j < size:
+			while j <= size:
 				array[j] = False
 				j += i
 			c += 1

@@ -18,3 +18,4 @@ def adja(str):
 	return maxProd
 
 print adja(str)
+close(file)
