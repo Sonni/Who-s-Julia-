@@ -13,42 +13,32 @@ How many circular primes are there below one million?
 
 limit = parse(Int, ARGS[1])
 function getPrimes(size)
-	array = bitrand(size)
-	for i = 2 : size
-		array[i] = true
-	end
+  array = fill(true, size)
 	c = 1
 	for i = 2 : size
 		if array[i] == true
 			j = i + i
-			while j < size
+			while j <= size
 				array[j] = false
 				j += i
 			end
 			c += 1
 		end
 	end
-	primeArray = Int[]
-	for i = 2 : size
-		if(array[i])
-			push!(primeArray, i)
-		end
-	end
-	return primeArray
+  return array
 end
 
 function calc(limit)
   count = 0
-
   primes = getPrimes(limit)
 
-  #if primes(2) must be first iteration
-  #if primes(parse(Int, num[i:end]) + parse(Int, num[1:i])) #first time = 4
   for num = 2 : limit
     q = false
     num = string(num)
     for i = 1 : length(num)
-      if primes(parse(Int, string(num[i:end], num[1:i]))) #first time = 22
+      x = parse(Int, string(string(num)[i:end], string(num)[1:i-1]))
+      #println(x)
+      if primes[x] #first time = 22
         q = true
       else
         q = false
@@ -62,7 +52,8 @@ function calc(limit)
   return count
 end
 
-println(calc(limit))
+#println(calc(limit))
+println(getPrimes(1000))
 
 
 

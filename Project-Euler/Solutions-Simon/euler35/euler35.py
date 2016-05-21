@@ -12,7 +12,7 @@ def sieve(limit):
 def main():
     """Main function"""
     print("Hello, world!")
-    limit = 1000000
+    limit = 10000
     count = 0
 
     primes = sieve(limit)
@@ -29,5 +29,6 @@ def main():
             count += 1
     print (count)
 
-if __name__ == "__main__":
-    main()
+print sieve(100)
+#if __name__ == "__main__":
+    #main()
