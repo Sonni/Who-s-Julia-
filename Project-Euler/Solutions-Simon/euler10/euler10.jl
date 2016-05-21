@@ -9,15 +9,12 @@ Find the sum of all the primes below two million.
 limit = parse(Int, ARGS[1])
 #Sieve of Eratosthenes
 function getPrimes(size)
-	array = bitrand(size)
-	for i = 2 : size
-		array[i] = true
-	end
+	array = fill(true, size)
 	c = 1
 	for i = 2 : size
 		if array[i] == true
 			j = i + i
-			while j < size
+			while j <= size
 				array[j] = false
 				j += i
 			end
