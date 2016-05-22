@@ -43,7 +43,8 @@ unsigned long getPrimeSum(unsigned int size)
     bool array[size];
     for (unsigned int i = 0; i <= size; i++)
         array[i] = true;
-    
+
+        array[1] = false;
     unsigned int c = 1;
     for (unsigned int i = 2; i <= size; i++)
     {
@@ -58,12 +59,12 @@ unsigned long getPrimeSum(unsigned int size)
             c += 1;
         }
     }
-    
+
     unsigned long sum = 0;
     for (unsigned int i = 2; i < size; i++)
         if (array[i])
             sum += i;
-    
+
     return sum;
 }
 

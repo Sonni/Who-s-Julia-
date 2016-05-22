@@ -10,6 +10,7 @@ limit = parse(Int, ARGS[1])
 #Sieve of Eratosthenes
 function getPrimes(size)
 	array = fill(true, size)
+	array[1] = false
 	c = 1
 	for i = 2 : size
 		if array[i] == true

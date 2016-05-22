@@ -12,7 +12,7 @@ public class euler10
 		}
 		System.out.println(sum);
 	}
-	
+
 	private static List<Integer> getPrimes(int size)
 	{
 		List<Boolean> array = new ArrayList<>();
@@ -20,6 +20,7 @@ public class euler10
 		{
 			array.add(true);
 		}
+		array[1] = false;
 		int c = 1;
 		for(int i = 2; i <= size; i++)
 		{
