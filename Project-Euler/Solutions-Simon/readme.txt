@@ -1,1 +1,1 @@
-28 euler problems done for statistics.
+29 euler problems done for statistics.
