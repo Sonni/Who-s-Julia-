@@ -10,7 +10,7 @@ It is possible to write five as a sum in exactly six different ways:
 
 How many different ways can one hundred be written as a sum of at least two positive integers?
 =#
-#Answer:
+#Answer: 190569291
 
 #Terminal: Julia euler76.jl 100
 
@@ -21,7 +21,7 @@ function calc(target)
 
   for i = 2 : target - 1
     for j = i : target
-      ways[j+1] += ways[j+1 - i]
+      ways[j + 1] += ways[j + 1 - i]
     end
   end
   return ways[end]
