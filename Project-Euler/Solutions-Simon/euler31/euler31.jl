@@ -9,27 +9,22 @@ How many different ways can £2 be made using any number of coins?
 =#
 #Answer: 73682
 
-#NOTE NOT WORKING
-
 #Terminal: Julia euler31.jl 200
 
 target = parse(Int, ARGS[1])
 
-coinSizes = Int[1, 2, 5, 10, 20, 50, 100, 200]
-ways = zeros(Int, target+4)
-ways[1] = 1
+function calc(target)
+  coinSizes = Int[1, 2, 5, 10, 20, 50, 100, 200]
+  ways = zeros(Int, target + 1)
+  ways[1] = 1
 
-#Something is messing with the index
-for i = 1 : length(coinSizes)
-  for j = coinSizes[i] : target
-    println("j:$j")
-    println("i:$i")
-    if j != 1
-      ways[j] += ways[j - coinSizes[i]]
-    else
-      ways[j] += ways[j]
+  for i = 1 : length(coinSizes)
+    for j = coinSizes[i] : target
+      ways[j+1] += ways[j+1 - coinSizes[i]]
     end
   end
+
+  return ways[end]
 end
 
-println(ways)
+println(calc(target))

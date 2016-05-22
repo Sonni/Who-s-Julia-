@@ -1,8 +1,13 @@
+#=
+2^15 = 32768 and the sum of its digits is 3 + 2 + 7 + 6 + 8 = 26.
 
-#calculate 2^1000
+What is the sum of the digits of the number 2^1000?
+=#
+#Answer: 1366
+
+#Terminal: Julia euler16.jl 2 1000
 #args[1] = 2
 #args[2] = 1000
-
 num = parse(Int, ARGS[1])
 power = parse(Int, ARGS[2])
 

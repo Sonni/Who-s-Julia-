@@ -32,27 +32,36 @@ trying every route. However, Problem 67, is the same challenge with a triangle
 containing one-hundred rows; it cannot be solved by brute force, and requires
 a clever method! ;o)
 =#
+#Answer: 1074
 
 #Terminal: Julia euler18.jl data.txt
 file = ARGS[1] #file with numbers as shown above
-f = open(file)
-lines = countlines(f) + 1 #returns number of lines-1, which is why +1 is added.
-f = open(file)
-rows = zeros(Int, lines, lines) #Fills a matrix with 0.
 
-#Fills matrix with numbers from file.
-r = 1
-for l in eachline(f)
-  s = split(l)
-  c = 1
-  for n in s
-    rows[r, c] = parse(Int, n)
-    c += 1
-  end
-  r += 1
+#Count lines in file
+function linesFile(file)
+  #returns number of lines-1, which is why +1 is added.
+  return countlines(open(file)) + 1
 end
 
-close(f)
+#Fills matrix with numbers from file.
+function makeData(file, lines)
+  f = open(file)
+  rows = zeros(Int, lines, lines)
+
+  r = 1
+  for l in eachline(f)
+    s = split(l)
+    c = 1
+    for n in s
+      rows[r, c] = parse(Int, n)
+      c += 1
+    end
+    r += 1
+  end
+
+  close(f)
+  return rows
+end
 
 #Recursively goes from bottom to top of pyramid. Starting at second last line.
 function sum(data, row)
@@ -67,5 +76,5 @@ function sum(data, row)
   end
 end
 
-result = sum(rows, lines-1)
-println(result)
+lines = linesFile(file)
+println(sum(makeData(file, lines), lines-1))

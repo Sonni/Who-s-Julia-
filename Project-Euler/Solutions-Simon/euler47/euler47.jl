@@ -12,7 +12,7 @@ The first three consecutive numbers to have three distinct prime factors are:
 
 Find the first four consecutive integers to have four distinct prime factors. What is the first of these numbers?
 =#
-#Answer:
+#Answer: 134043
 
 #Terminal: Julia euler47.jl 4 1000000
 cons = parse(Int, ARGS[1])

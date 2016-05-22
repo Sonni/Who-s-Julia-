@@ -5,36 +5,39 @@ What is the 10 001st prime number?
 =#
 #Answer = 104_743
 
-#Terminal: Julia euler7.jl 10001
-primeNumber = parse(Int, ARGS[1])
-function isPrime(x)
-  divisor = 2
-  prime = true
-  while divisor < x
-    if x % divisor == 0
-      prime = false
-      break
-    end
-    divisor += 1
-  end
-  return prime
+#Terminal: Julia euler7.jl 10001 1000000
+primeNumber = parse(Int, ARGS[1]) #prime number 10001
+limit = parse(Int, ARGS[2]) #get all primes < limit
+
+function getPrimes(size)
+	array = fill(true, size)
+	array[1] = false
+	c = 1
+	for i = 2 : size
+		if array[i] == true
+			j = i + i
+			while j <= size
+				array[j] = false
+				j += i
+			end
+			c += 1
+		end
+	end
+  return array
 end
 
-function findPrime(primeNumber)
-  counter = 0 #Counting primes
-  number = 2 #Start from 2 since 1 is not a prime.
-  while counter < primeNumber
-    if isPrime(number)
-      counter += 1
-      if counter == primeNumber
-        break
-      end
+function calc(primeNumber, limit)
+  primes = getPrimes(limit)
+  count = 0
+  k = 1
+  for i = 1 : length(primes)
+    if primes[i]
+      count += 1
     end
-    number += 1
-  end
-  if counter == primeNumber
-    return number
+    if count == primeNumber
+      return i
+    end
   end
 end
 
-println(findPrime(primeNumber))
+println(calc(primeNumber, limit))
