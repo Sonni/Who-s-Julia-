@@ -1,0 +1,113 @@
+\documentclass[a4paper,10pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[danish]{babel}
+
+\usepackage{color}
+\usepackage{float}
+\usepackage{fancyvrb}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{listings}
+\usepackage{comment} 
+
+\usepackage{graphicx}
+\DeclareGraphicsExtensions{.png}
+
+\definecolor{dkgreen}{rgb}{0,0.45,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.30,0,0.30}
+
+% Default settings for code listings
+% Default settings for code listings
+\lstset{frame=tb,
+  language=Java,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=left,
+  numberstyle=\footnotesize,
+  keywordstyle=\color{dkgreen}\bfseries,
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  frame=single,
+  breaklines=true,
+  breakatwhitespace=false
+  tabsize=1
+}
+
+%indsÃ¦tjeres navn herunder.
+\title{Introduction to Programming - Project Part 1 \\\rule{10cm}{0.5mm}}
+\author{Navn Navnesen 
+\\Supervisor: Peter Schneider-Kamp\\ DM536\\\rule{5.5cm}{0.5mm}\\}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\vfill
+
+\tableofcontents
+%laver forside og indholsfortegnelse
+
+\newpage
+\section{Specification} 
+%forklar hvad programmet skal gÃ¸re
+
+\section{Design}
+%hvordan projektet blev planlagt, hvilke tanker gik ind i hvordan problemet skulle lÃ¸ses
+\section{Implementation}
+%hvordan skrev du programmet
+%forklar hvordan delene af dit program virker
+
+
+\begin{lstlisting}[language=python]
+her kan i vise kode som i forklarer.
+	indryk virker fint her.
+\end{lstlisting}
+
+
+\section{Testing}
+
+\begin{comment}
+I testing skal i forklare jeres tests osv. udover det kan i have et billede med
+som i kan tilfÃ¸je ved at kopiere includegraphics som herunder.
+
+\begin{figure}[H]\center
+ \includegraphics[scale=1]{billede.png}
+ \caption{}
+\end{figure}
+
+udskift billede.png med jeres billede fil som skal ligge i samme mappe som .tex
+i kan Ã¦ndre pÃ¥ scale for at ÃƒÂ¦ndre pÃƒÂ¥ billede stÃ¸rrelse i pdfen.
+\end{comment}
+
+
+\section{Conclusion} 
+
+%hvad kom i frem til, gik noget galt? kunne noget gÃ¸res bedre?
+
+
+\newpage
+
+\section{Appendix (source code)}
+%lstinputlisting tilfÃ¸jer jeres sourcecode, jeres python fil skal bare ligge i samme mappe som .tex filen husk at fjerne %
+
+%\textbf{Sierpinski triangle program}
+%\lstinputlisting[language=python]{sierpinski.py}
+%\textbf{Binary tree program}
+%\lstinputlisting[language=python]{binary.py}
+
+\begin{comment}
+Hvis Fern Time er lavet tilfÃ¸jes det her og begin og end comment skal fjernes. 
+\textbf{Fern program}
+\lstinputlisting[language=python]{fern.py}
+
+\end{comment}
+
+\end{document}

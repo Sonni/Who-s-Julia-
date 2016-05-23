@@ -1,0 +1,30 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[danish]{babel}
+\usepackage{mathptmx}
+
+\usepackage{color}
+\usepackage{float}
+\usepackage{fancyvrb}
+
+\usepackage{setspace}
+\onehalfspacing
+
+\title{First year project\\Project 99: Who's Julia?\\\rule{10cm}{0.5mm}}
+\author{Group: 99a\\Simon Lehmann Knudsen, simkn15\\Sonni Hedelund Jensen, sonje15\\Asbjørn Mansa Jensen, asjen15
+\\ DM501\\\rule{5.5cm}{0.5mm}\\}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\vfill
+
+\newpage
+\section*{Abstract}
+Julia programming language is a recently-developed language, which was first presented in the public in 2012. The syntax of Julia resembles Python, in many cases code can almost be copy-pasted from Python to Julia and vice versa. Benchmarks published by the Julia development team suggest that for certain applications Julia is much faster than Python, and in some cases even on pair with the fastest languages for the problem. The main focus of our project will be to implement different algorithms in Julia, and benchmark these against similar implementations in C++, Java, and Python, where benchmarking is assessment of running times of different implementations on appropriate set of inputs. To achieve this goal, we will chose appropriate problems, develop solutions to these problems, implement them in all four languages, prepare the set of inputs for benchmarking, run tests, and analyze the resulting data. The problems we want to focus on are some of the problems from Project Euler (projecteuler.net) and standard algorithmic and data-structures related problems such as sorting and searching. We will analyze dependence and sensitivity of the measurements on the used hardware and software, tools used to perform the measurements (command-line tools vs. functions provided by the standard libraries of the respective languages), and other factors. Finally, we will focus on the effects of the choice of statistics on the comparisons, for example whether focusing on the median, best-, or worst time in the set of runs on the same input.
+
+\end{document}
