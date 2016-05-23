@@ -9,7 +9,7 @@ public class euler47
 		System.out.println(calc(limit, cons));
 	}
 	
-	private static int numFactors(int number, ArrayList<Integer> primeList)
+	private static int numFactors(int number, List<Integer> primeList)
 	{
 		int nod = 0;
 		boolean pf = false;
@@ -39,14 +39,14 @@ public class euler47
 		return nod;
 	}
 	
-	private static ArrayList<Integer> getPrimes(int size)
+	private static List<Integer> getPrimes(int size)
 	{
-		ArrayList<Boolean> array = new ArrayList<>();
+		List<Boolean> array = new ArrayList<>();
 		for(int i = 0; i <= size; i++)
 		{
 			array.add(true);
 		}
-		for(int i = 0; i <= size; i++)
+		for(int i = 2; i <= size; i++)
 		{
 			if(array.get(i))
 			{
@@ -54,11 +54,11 @@ public class euler47
 				while(j <= size)
 				{
 					array.set(j, false);
-					j += 1;
+					j += i;
 				}
 			}
 		}
-		ArrayList<Integer> primeArray = new ArrayList<>();
+		List<Integer> primeArray = new ArrayList<>();
 		for(int i = 2; i <= size; i++)
 		{
 			if(array.get(i))
@@ -71,7 +71,7 @@ public class euler47
 	
 	private static int calc(int limit, int consec)
 	{
-		ArrayList<Integer> primeList = getPrimes(limit);
+		List<Integer> primeList = getPrimes(limit);
 		int targetpf = consec;
 		int targetcons = consec;
 		int cons = 1;
