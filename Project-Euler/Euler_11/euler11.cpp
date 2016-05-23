@@ -1,3 +1,4 @@
+
 //
 //  main.cpp
 //  Euler 11
@@ -78,8 +79,8 @@ int** load_mat_to_multi_array(std::string path, int matLength)
 int main(int argc, const char * argv[])
 {
     unsigned int maxProd = 0;
-    const int matLength = atoi(argv[1]);;
-    const int numProd = atoi(argv[2]);
+    const int matLength = 20;//atoi(argv[1]);
+    const int numProd = 4;//atoi(argv[2]);
     
     int** mat = load_mat_to_multi_array("mat" + std::to_string(matLength) + ".txt", matLength);
     //std::vector<std::vector<int>> mat = load_mat_to_vector("mat" + std::to_string(matLength) + ".txt");
@@ -104,9 +105,15 @@ int main(int argc, const char * argv[])
             
             if (prod > maxProd)
                 maxProd = prod;
-            
-            //diagonal left->right
-            prod = 1;
+        }
+    }
+    
+    //diagonal left->right
+    for (int i = 0; i < matLength - numProd + 1; i++)
+    {
+        for (int j = 0; j < matLength - numProd + 1; j++)
+        {
+            int prod = 1;
             for (int k = 0; k < numProd; k++)
                 prod *= mat[i + k][j + k];
             
@@ -133,4 +140,6 @@ int main(int argc, const char * argv[])
     
     return 0;
 }
+
+
 
