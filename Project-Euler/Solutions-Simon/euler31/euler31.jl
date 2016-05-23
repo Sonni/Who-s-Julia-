@@ -20,6 +20,7 @@ function calc(target)
 
   for i = 1 : length(coinSizes)
     for j = coinSizes[i] : target
+      println(ways[j+1 - coinSizes[i]])
       ways[j+1] += ways[j+1 - coinSizes[i]]
     end
   end

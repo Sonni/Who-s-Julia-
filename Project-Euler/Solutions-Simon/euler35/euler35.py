@@ -1,34 +1,42 @@
-import math
+import sys
 
-def sieve(limit):
-    primes = [True] * limit
-    primes[0] = primes[1] = False
-    for i in range(2, int(math.floor(math.sqrt(limit)))):
-        if primes[i]:
-            for j in range(i*i, limit, i):
-                primes[j] = False
-    return primes
+limit = int(sys.argv[1])
 
-def main():
-    """Main function"""
-    print("Hello, world!")
-    limit = 10000
-    count = 0
+def getPrimes(size):
+  array = [True for i in range(size + 1)]
+  for i in range(2, size + 1):
+    if array[i] == True:
+      j = i + i
+      while j <= size:
+        array[j] = False
+        j += i
+  return array
 
-    primes = sieve(limit)
-    for num in range (2, limit):
+def calc(limit):
+  count = 0
+  primes = getPrimes(limit)
+
+  for num in range(2, limit + 1):
+    q = False
+    num = str(num)
+    for i in range(0, len(num)):
+      index = int(num[i:] + num[:-len(num) + i])
+      if primes[index]:
+        q = True
+      else:
         q = False
-        num = str(num)
-        for i in range(len(num)):
-            if primes[int(num[i:]+num[:i])]:
-                q = True
-            else:
-                q = False
-                break
-        if q:
-            count += 1
-    print (count)
+        break
+    if q:
+      count += 1
+  return count
 
-print sieve(100)
-#if __name__ == "__main__":
-    #main()
+print calc(limit)
+
+
+
+
+
+
+
+
+
