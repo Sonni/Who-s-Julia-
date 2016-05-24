@@ -4,7 +4,8 @@ function a()
   matLength = parse(Int, ARGS[1])
   numProd = parse(Int, ARGS[2])
 
-  mat = reshape(1:(matLength*matLength), matLength, matLength)
+  #mat = reshape(1:(matLength*matLength), matLength, matLength)
+  mat = zeros(Int, matLength, matLength)
 
   f = open(string("mat", matLength, ".txt"))
 
@@ -24,7 +25,7 @@ function a()
       #right/left
       prod = 1
       for k = 0 : numProd - 1
-      prod *= mat[i, j + k]
+        prod *= mat[i, j + k]
       end
       if prod > maxProd
         maxProd = prod
@@ -32,7 +33,7 @@ function a()
       #up/down
       prod = 1
       for k = 0 : numProd - 1
-      prod *= mat[j + k, i]
+        prod *= mat[j + k, i]
       end
       if prod > maxProd
         maxProd = prod
@@ -45,7 +46,7 @@ function a()
     for j = 1 : matLength - numProd
       prod = 1
       for k = 0 : numProd - 1
-      prod *= mat[i + k, j + k]
+        prod *= mat[i + k, j + k]
       end
       if prod > maxProd
         maxProd = prod
@@ -58,7 +59,7 @@ function a()
     for j = matLength : -1 : numProd
       prod = 1
       for k = 0 : numProd - 1
-      prod *= mat[i + k, j - k]
+        prod *= mat[i + k, j - k]
       end
       if prod > maxProd
         maxProd = prod
