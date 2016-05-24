@@ -1,21 +1,27 @@
 #include <stdio.h>
-#include <ctime>
 #include <iostream>
 #include <chrono>
 #include <thread>
 
 int main( int argc, const char* argv[] )
-{
-	std::clock_t    start;
-
-    start = time(0);
-    int goal = 10000;
+{	
+	using namespace std::chrono;
+	
+	milliseconds oldtime = duration_cast<milliseconds>(
+    	system_clock::now().time_since_epoch()
+	);
+    milliseconds goal = milliseconds(10000);
+    milliseconds newtime = milliseconds(0);
+    
     while(true)
     {
-    	if(time(0) - start > goal)
+    	newtime = duration_cast<milliseconds>(
+			system_clock::now().time_since_epoch()
+		);
+    	if(duration_cast<milliseconds>(newtime).count() - duration_cast<milliseconds>(oldtime).count() > duration_cast<milliseconds>(goal).count())
     	{
     		break;
     	}
     }
-    std::cout << "Time: " << (time(0) - start) << " s" << std::endl;
+    std::cout << "Time: " << (duration_cast<milliseconds>(newtime).count() - duration_cast<milliseconds>(oldtime).count()) << " s" << std::endl;
 }
