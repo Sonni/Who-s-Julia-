@@ -20,7 +20,7 @@ function quicksortDualPivot(a, s, e)
 
 	  if (a[s] > a[e])
 	    swap(a, s, e)
-    end
+      end
 
 	  leftPiv = a[s]
 	  rightPiv = a[e]
@@ -66,6 +66,20 @@ function swap(a, i, j)
   a[j] = tmp
 end
 
-a = [5 3 100 -4032 8 10 -4 59 0 6]
-quicksortDualPivot(a, 1, 10)
-println(a)
+
+f = open(ARGS[2])
+s = readall(f)
+ss = split(s)
+data = []
+for i = 1 : length(ss)
+	push!(data, parse(Int32, ss[i]))
+end
+close(f)
+
+#a = [5 3 100 -4032 8 10 -4 59 0 6]
+
+if ARGS[1] == "dualquicksort"
+	quicksortDualPivot(data, 1, length(data))
+elseif ARGS[1] == "quicksort"
+	quicksort(data, 1, length(data))
+end

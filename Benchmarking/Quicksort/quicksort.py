@@ -1,3 +1,5 @@
+import sys
+
 def quicksort(a, s, e):
 	if s < e:
 		pivot = a[e]
@@ -53,6 +55,17 @@ def swap(a, i, j):
 	a[i] = a[j]
 	a[j] = tmp
 
-a = [5, 3, 100, -4032, 8, 10, -4, 59, 0, 6]
-quicksortDualPivot(a, 0, 9)
-print(a)
+file = open(sys.argv[2], "r")
+str = file.readline()
+a = str.split()
+data = []
+for i in range(0, len(a)-1):
+	data.append(int(a[i]))
+
+file.close()
+if sys.argv[1] == "dualquicksort":
+	quicksortDualPivot(data, 0, len(data)-1)
+elif sys.argv[1] == "quicksort":
+	quicksort(data, 0, len(data)-1)
+
+#print(data)
