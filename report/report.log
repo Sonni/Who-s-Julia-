@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.12.7)  23 MAY 2016 13:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.12.7)  24 MAY 2016 17:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -519,27 +519,47 @@ rt.toc)
 \openout5 = `report.toc'.
 
 
-[2] [3] [4] (./report.aux) ) 
+[2] <11.jpg, id=14, 208.78pt x 81.30376pt>
+File: 11.jpg Graphic file (type jpg)
+ <use 11.jpg>
+Package pdftex.def Info: 11.jpg used on input line 79.
+(pdftex.def)             Requested size: 167.0242pt x 65.04308pt.
+
+Overfull \hbox (11.1366pt too wide) in paragraph at lines 78--80
+\T1/cmr/m/it/10.95 left, right, or di-a-go-nal-ly) in the 20x20 grid? [] 
+ []
+
+[3 <./11.jpg>] <116.jpg, id=23, 984.67876pt x 500.87125pt>
+File: 116.jpg Graphic file (type jpg)
+ <use 116.jpg>
+Package pdftex.def Info: 116.jpg used on input line 109.
+(pdftex.def)             Requested size: 344.64273pt x 175.30756pt.
+
+[4 <./116.jpg>] [5] [6] (./report.aux) ) 
 Here is how much of TeX's memory you used:
- 5137 strings out of 493089
- 68524 string characters out of 6134842
- 154826 words of memory out of 5000000
- 8521 multiletter control sequences out of 15000+600000
- 15236 words of font info for 45 fonts, out of 8000000 for 9000
+ 5150 strings out of 493089
+ 68656 string characters out of 6134842
+ 156826 words of memory out of 5000000
+ 8530 multiletter control sequences out of 15000+600000
+ 15925 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,7n,40p,232b,219s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips
-/cm-super/cm-super-t1.enc}</usr/local/texlive/2015/texmf-dist/fonts/type1/publi
-c/cm-super/sfbx1095.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/
-cm-super/sfbx1200.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm
--super/sfbx1440.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-s
-uper/sfrm1095.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-sup
-er/sfrm1200.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super
-/sfrm1728.pfb>
-Output written on report.pdf (4 pages, 109133 bytes).
+ 37i,7n,40p,841b,219s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2015/texmf-dist/fon
+ts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/texlive/2015/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2015/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015/texmf-dist/fonts/typ
+e1/public/cm-super/sfbx1095.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1
+/public/cm-super/sfbx1200.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/p
+ublic/cm-super/sfbx1440.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/pub
+lic/cm-super/sfrm1095.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/publi
+c/cm-super/sfrm1200.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/
+cm-super/sfrm1728.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm
+-super/sfti1095.pfb>
+Output written on report.pdf (6 pages, 294874 bytes).
 PDF statistics:
- 42 PDF objects out of 1000 (max. 8388607)
- 29 compressed objects within 1 object stream
+ 66 PDF objects out of 1000 (max. 8388607)
+ 45 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

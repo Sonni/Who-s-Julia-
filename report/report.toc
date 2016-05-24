@@ -3,10 +3,10 @@
 \contentsline {subsection}{\numberline {1.1}Julia}{3}
 \contentsline {subsection}{\numberline {1.2}Features of Julia}{3}
 \contentsline {subsection}{\numberline {1.3}Syntax differences}{3}
-\contentsline {section}{\numberline {2}Projecteuler 10}{3}
-\contentsline {section}{\numberline {3}Projecteuler 116}{3}
-\contentsline {section}{\numberline {4}Quicksort}{3}
-\contentsline {section}{\numberline {5}Statistics}{3}
-\contentsline {section}{\numberline {6}Learning / Personal experience}{3}
-\contentsline {section}{\numberline {7}Conclusion}{3}
-\contentsline {section}{\numberline {8}Appendix (source code)}{4}
+\contentsline {section}{\numberline {2}Projecteuler 11}{3}
+\contentsline {section}{\numberline {3}Projecteuler 116}{4}
+\contentsline {section}{\numberline {4}Quicksort}{5}
+\contentsline {section}{\numberline {5}Statistics}{5}
+\contentsline {section}{\numberline {6}Learning / Personal experience}{5}
+\contentsline {section}{\numberline {7}Conclusion}{5}
+\contentsline {section}{\numberline {8}Appendix (source code)}{6}
