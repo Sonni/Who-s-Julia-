@@ -14,7 +14,7 @@ end
 
 function s(size, numColors)
   result = 0;
-  for i = 0 : numColors
+  for i = 0 : numColors - 1
      result += solve(2+i, size)
   end
   return result
