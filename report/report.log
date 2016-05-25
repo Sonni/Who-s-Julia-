@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.12.7)  25 MAY 2016 13:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.12.7)  25 MAY 2016 17:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -547,84 +547,70 @@ rt.toc)
 
 
 [2]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 78.
- (/usr/local/texlive/2015/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 78.
- [3] [4]
-Overfull \hbox (4.54683pt too wide) in paragraph at lines 127--129
-[]\T1/cmr/m/n/10.95 Meta-programming and Macros Ju-lia al-lows the use of meta-
-programming.
- []
-
-[5] <11.jpg, id=24, 208.78pt x 81.30376pt>
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 86.
+ (/usr/local/texlive/2015/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+) [3]
+LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10> not available
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 99.
+ [4]
+[5] <11.jpg, id=28, 208.78pt x 81.30376pt>
 File: 11.jpg Graphic file (type jpg)
  <use 11.jpg>
-Package pdftex.def Info: 11.jpg used on input line 174.
+Package pdftex.def Info: 11.jpg used on input line 133.
 (pdftex.def)             Requested size: 167.0242pt x 65.04308pt.
- [6] [7 <./11.jpg>]
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 187.
-
-
-(/usr/local/texlive/2015/texmf-dist/tex/latex/base/t1cmtt.fd
-File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-) (./euler11.jl
-LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10> not available
-(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 22.
-)
-(./euler11.jl) [8] (./euler11.jl) [9]
-<1161.jpg, id=43, 568.1225pt x 93.34875pt>
+ [6 <./11.jpg>]
+(./euler11.jl) [7] (./euler11.jl) (./euler11.jl) [8]
+<1161.jpg, id=40, 568.1225pt x 93.34875pt>
 File: 1161.jpg Graphic file (type jpg)
  <use 1161.jpg>
-Package pdftex.def Info: 1161.jpg used on input line 215.
+Package pdftex.def Info: 1161.jpg used on input line 174.
 (pdftex.def)             Requested size: 216.0022pt x 35.4914pt.
 
-<1162.jpg, id=44, 420.57124pt x 39.14626pt>
+<1162.jpg, id=41, 420.57124pt x 39.14626pt>
 File: 1162.jpg Graphic file (type jpg)
  <use 1162.jpg>
-Package pdftex.def Info: 1162.jpg used on input line 221.
+Package pdftex.def Info: 1162.jpg used on input line 180.
 (pdftex.def)             Requested size: 216.0022pt x 20.10529pt.
 
-<1163.jpg, id=45, 273.02pt x 33.12375pt>
+<1163.jpg, id=42, 273.02pt x 33.12375pt>
 File: 1163.jpg Graphic file (type jpg)
  <use 1163.jpg>
-Package pdftex.def Info: 1163.jpg used on input line 227.
+Package pdftex.def Info: 1163.jpg used on input line 186.
 (pdftex.def)             Requested size: 216.0022pt x 26.20638pt.
-
+ [9]
 <qs.jpg, id=46, 245.91875pt x 501.875pt>
 File: qs.jpg Graphic file (type jpg)
  <use qs.jpg>
-Package pdftex.def Info: qs.jpg used on input line 245.
+Package pdftex.def Info: qs.jpg used on input line 204.
 (pdftex.def)             Requested size: 122.95906pt x 250.93687pt.
- [10 <./1161.jpg> <./1162.jpg> <./1163.jpg>] [11 <./qs.jpg>] [12] (./report.aux
-) ) 
+ [10 <./1161.jpg> <./1162.jpg> <./1163.jpg>] [11 <./qs.jpg>] [12] [13] [14] (./
+report.aux) ) 
 Here is how much of TeX's memory you used:
- 6597 strings out of 493089
- 91791 string characters out of 6134842
- 250602 words of memory out of 5000000
- 9949 multiletter control sequences out of 15000+600000
+ 6714 strings out of 493089
+ 92828 string characters out of 6134842
+ 279160 words of memory out of 5000000
+ 10069 multiletter control sequences out of 15000+600000
  17766 words of font info for 49 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,8n,40p,2138b,1331s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc
-}</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><
-/usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></
-usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></us
-r/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/
-local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/lo
-cal/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/loca
-l/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/
-texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/te
-xlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texl
-ive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/local/texliv
-e/2015/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb></usr/local/texlive/
-2015/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on report.pdf (12 pages, 356753 bytes).
+ 37i,8n,40p,2138b,1813s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/cm-super/cm-su
+per-t1.enc}</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cms
+y10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfbx109
+5.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfbx1200.
+pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pf
+b></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb>
+</usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></
+usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></us
+r/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/
+local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/lo
+cal/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb></usr/loca
+l/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
+Output written on report.pdf (14 pages, 363452 bytes).
 PDF statistics:
- 97 PDF objects out of 1000 (max. 8388607)
- 65 compressed objects within 1 object stream
+ 104 PDF objects out of 1000 (max. 8388607)
+ 70 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
