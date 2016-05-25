@@ -6,7 +6,7 @@
 \contentsline {section}{\numberline {2}Projecteuler 11}{3}
 \contentsline {section}{\numberline {3}Projecteuler 116}{6}
 \contentsline {section}{\numberline {4}Quicksort}{6}
-\contentsline {section}{\numberline {5}Statistics}{6}
-\contentsline {section}{\numberline {6}Learning / Personal experience}{6}
-\contentsline {section}{\numberline {7}Conclusion}{6}
-\contentsline {section}{\numberline {8}Appendix (source code)}{7}
+\contentsline {section}{\numberline {5}Statistics}{7}
+\contentsline {section}{\numberline {6}Learning / Personal experience}{7}
+\contentsline {section}{\numberline {7}Conclusion}{7}
+\contentsline {section}{\numberline {8}Appendix (source code)}{8}
