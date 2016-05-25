@@ -1,5 +1,15 @@
+#Meta-programming and Macros
 Julia allows the use of meta-programming. Meta-programming is a way to write programs in programs and let them use program code as data. In Julia meta-programming can be done by defining macros. For example, the @time macro was used extensively in the project. The @time is in the standard Julia library. The @time takes a function as an argument and sets a timer in the top of the code from the argument and stops the timer in the bottom and prints the time passed and memory allocated. Meta-programming and macros are known from Lisp, a programming language, and have been used in early AI research. 
 
+#Implementing code from other languages
 Julia is a new language which will mean there are not many libraries written in Julia. Julia has an import feature for both Python and C libraries to avoid this disadvantage. Import the library PyCall with the "using" operation to use python and import Python libraries via a macro @pyimport. To use C libraries or coding, simply run the function ccall(). The programming language C is a well known and used language. Many systems are based on C, which makes C an advantage for hardware programming. Another feature is to execute shell commands. Execute shell commands using run(``). An example would be running run(`echo Hello World`) which would return the output "Hello World".
+
+#Designed for parallelism and distributed computation
+Julia claims to be designed for parallelism and distributed computation. Parallel computing is dividing a problem into smaller problems and solve the smaller problems at the same time. Distributed computing is solving a problem using a network of computers working together to get to the solution. Julia have been trying to make this easier to achieve with different macros.
+
+#Automatic generation of efficient, specialized code for different argument types
+
+
+#Efficient support for Unicode, including but not limited to UTF-8
 
 
