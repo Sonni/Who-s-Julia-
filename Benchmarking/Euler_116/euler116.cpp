@@ -9,12 +9,12 @@
 #include <iostream>
 #include <vector>
 
-unsigned int solve(unsigned int m, unsigned int n)
+unsigned long solve(unsigned int m, unsigned int n)
 {
     if (m > n)
         return 0;
     
-    unsigned int solutions = 0;
+    unsigned long solutions = 0;
     
     for (unsigned int i = m; i <= n; i++)
     {
@@ -28,7 +28,7 @@ int main(int argc, const char * argv[]) {
     unsigned int size = atoi(argv[1]);
     unsigned int numColors = atoi(argv[2]);
     
-    unsigned int result;
+    unsigned long result;
     for (unsigned int i = 0; i < numColors; i++)
         result += solve(2+i, size);
     
