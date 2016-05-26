@@ -35,6 +35,7 @@ function calc(limit)
     q = false
     num = string(num)
     for i = 1 : length(num)
+	println(string(string(num)[i:end], string(num)[1:i-1]))
       index = parse(Int, string(string(num)[i:end], string(num)[1:i-1]))
       if primes[index]
         q = true
@@ -50,4 +51,4 @@ function calc(limit)
   return count
 end
 
-calc(limit)
+println(calc(limit))
