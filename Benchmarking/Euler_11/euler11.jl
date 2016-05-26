@@ -1,3 +1,4 @@
+#Terminal: Julia euler11.jl 1000 4
 function a()
 
   maxProd = 0
@@ -69,4 +70,5 @@ function a()
 
   println(maxProd)
 end
-a()
+
+@time a()
