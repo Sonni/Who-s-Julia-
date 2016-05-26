@@ -1,16 +1,16 @@
 \select@language {english}
 \contentsline {section}{\numberline {1}Introduction}{3}
 \contentsline {subsection}{\numberline {1.1}Syntax}{3}
-\contentsline {subsection}{\numberline {1.2}Features}{3}
-\contentsline {subsubsection}{\numberline {1.2.1}Garbage Collector}{4}
-\contentsline {subsubsection}{\numberline {1.2.2}Built-in package manager}{5}
-\contentsline {subsubsection}{\numberline {1.2.3}Lightweight green threading}{5}
-\contentsline {subsubsection}{\numberline {1.2.4}Meta-programming and Macros}{5}
-\contentsline {subsubsection}{\numberline {1.2.5}Implementing code from other languages}{6}
-\contentsline {section}{\numberline {2}Projecteuler 11}{6}
-\contentsline {section}{\numberline {3}Projecteuler 116}{9}
-\contentsline {section}{\numberline {4}Quicksort}{9}
-\contentsline {section}{\numberline {5}Statistics}{10}
-\contentsline {section}{\numberline {6}Learning / Personal experience}{10}
-\contentsline {section}{\numberline {7}Conclusion}{12}
-\contentsline {section}{\numberline {8}Appendix (source code)}{14}
+\contentsline {subsection}{\numberline {1.2}Features}{4}
+\contentsline {subsubsection}{\numberline {1.2.1}Garbage Collector}{6}
+\contentsline {subsubsection}{\numberline {1.2.2}Built-in package manager}{7}
+\contentsline {subsubsection}{\numberline {1.2.3}Lightweight green threading}{7}
+\contentsline {subsubsection}{\numberline {1.2.4}Meta-programming and Macros}{7}
+\contentsline {subsubsection}{\numberline {1.2.5}Implementing code from other languages}{7}
+\contentsline {section}{\numberline {2}Projecteuler 11}{8}
+\contentsline {section}{\numberline {3}Projecteuler 116}{10}
+\contentsline {section}{\numberline {4}Quicksort}{11}
+\contentsline {section}{\numberline {5}Statistics}{12}
+\contentsline {section}{\numberline {6}Learning / Personal experience}{12}
+\contentsline {section}{\numberline {7}Conclusion}{14}
+\contentsline {section}{\numberline {8}Appendix (source code)}{15}

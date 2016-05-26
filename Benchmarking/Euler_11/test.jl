@@ -8,6 +8,16 @@ function makeData(matLength)
   f = open(string("mat", matLength, ".txt"))
 
   j = 0
+
+  for l in eachline(f)
+    s = split(l)
+    j += 1
+    for i = 1 : length(s)
+      mat[i, j] = parse(Int32, s[i])
+    end
+  end
+
+  #=
   for l in eachline(f)
     s = split(l)
     j += 1
@@ -15,6 +25,8 @@ function makeData(matLength)
       mat[j, i] = parse(Int32, s[i])
     end
   end
+  =#
+
   close(f)
   return mat
 end

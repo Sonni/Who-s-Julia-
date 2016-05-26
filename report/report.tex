@@ -41,7 +41,7 @@
   frame=single,
   breaklines=true,
   breakatwhitespace=false,
-  tabsize=1
+  tabsize=4
 }
 
 \begin{comment}
@@ -68,9 +68,159 @@ indryk virker fint her.
 \newpage
 \section{Introduction}
 Julia is a new open source object orientated programming language which shares many similarities with python. The language is made for high performance and scientific computations while still supporting general purpose programming. 
+Programming in Julia can be done in the terminal like python:
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}[b]{0.8\textwidth}
+		\centering
+		\includegraphics
+		[width=\textwidth]{terminalj.jpg} 
+		\caption{Julia}.
+	\end{subfigure}	
+	\begin{subfigure}[b]{0.8\textwidth}
+		\centering
+		\includegraphics
+		[width=\textwidth]{terminalp.jpg} 
+		\caption{Python}.
+	\end{subfigure}
+	\caption{Julia in terminal}
+\end{figure}
+Making longer programs in the terminal might not be an optimal solution. The text editor Atom supports the Julia language. Atom has a package, \textbf{uber-juno}, which sets up Atom to act like an IDE, integrated development environment.
 
 \subsection{Syntax}
 \textit{Make examples of syntax between all the languages here}.
+
+\begin{figure}[H]
+	\begin{lstlisting}[language=python]
+	Julia:	    Python:      Java:            c++:
+	a = 10	    a = 10       int a = 10;      int a = 10;
+	\end{lstlisting}
+	\caption{Declaring variables}
+	\label{variables}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\begin{subfigure}[b]{0.7\textwidth}
+		\centering
+		\begin{lstlisting}
+		for i = 1 : 10
+			println(i)
+		end
+		\end{lstlisting}
+		\caption{Julia}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.7\textwidth}
+		\centering
+		\begin{lstlisting}
+		for i in range(1, 11)
+			print i
+		\end{lstlisting}
+		\caption{Python}
+	\end{subfigure}	
+	\begin{subfigure}[b]{0.7\textwidth}
+		\centering
+		\begin{lstlisting}
+		for (int i = 1; i < 11; i++){
+			System.out.println(i);
+		}
+		\end{lstlisting}
+		\caption{Java}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.7\textwidth}
+		\centering
+		\begin{lstlisting}
+		for (unsigned int i = 1; i <1 11; i++){
+			std::cout << i << "\n";
+		}
+		\end{lstlisting}
+		\caption{C++}
+	\end{subfigure}
+	\caption{For-loops: Incrementing}
+	\label{forloop+}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\begin{subfigure}[b]{0.7\textwidth}
+		\centering
+		\begin{lstlisting}
+		for i = 10 : -1 : 1
+			println(i)
+		end
+		\end{lstlisting}
+		\caption{Julia}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.7\textwidth}
+		\centering
+		\begin{lstlisting}
+		for i in range(10, 0, -1)
+			print i
+		\end{lstlisting}
+		\caption{Python}
+	\end{subfigure}	
+	\begin{subfigure}[b]{0.7\textwidth}
+		\centering
+		\begin{lstlisting}
+		for (int i = 10; i > 0; i--){
+			System.out.println(i);
+		}
+		\end{lstlisting}
+		\caption{Java}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.7\textwidth}
+		\centering
+		\begin{lstlisting}
+		for (unsigned int i = 10; i > 0; i--){
+			std::cout << i << "\n";
+		}
+		\end{lstlisting}
+		\caption{C++}
+	\end{subfigure}
+	\caption{For-loops: Decrementing}
+	\label{forloop-}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\begin{subfigure}[b]{0.7\textwidth}
+		\centering
+		\begin{lstlisting}
+		function hello(name)
+			println("Hello $name")
+		end
+		\end{lstlisting}
+		\caption{Julia}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.7\textwidth}
+		\centering
+		\begin{lstlisting}
+		def hello(name):
+			print "Hello", name
+		\end{lstlisting}
+		\caption{Python}
+	\end{subfigure}	
+	\begin{subfigure}[b]{0.7\textwidth}
+		\centering
+		\begin{lstlisting}
+		public static void hello(String name){
+			System.out.println("Hello " + name);
+		}
+		\end{lstlisting}
+		\caption{Java}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.7\textwidth}
+		\centering
+		\begin{lstlisting}
+		for (unsigned int i = 1; i <1 11; i++){
+			std::cout << i << "\n";
+		}
+		\end{lstlisting}
+		\caption{C++}
+	\end{subfigure}
+	\caption{Declaring functions}
+	\label{function}
+\end{figure}
 
 \subsection{Features}
 Julia supports the following: Multiple dispatch and dynamic typing. The dynamic type system is similar to python. A property of dynamic typing is the type checks which are performed at runtime, mostly - opposed to static typing which makes the type checks at compile time. In Julia it is possible to specify types but for the most part it is not necessary because of the dynamic type system. Julia makes decisions about what size to assign to the variables which does not change at run time and cannot be changed after initialization. The types that are supported in Julia:
