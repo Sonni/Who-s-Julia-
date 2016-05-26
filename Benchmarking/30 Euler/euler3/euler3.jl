@@ -19,4 +19,4 @@ function prime_factors(n)
   return factors[end]
 end
 
-println(prime_factors(limit))
+prime_factors(limit)

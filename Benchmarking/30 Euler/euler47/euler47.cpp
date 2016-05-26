@@ -86,7 +86,6 @@ unsigned int calc(unsigned int limit, unsigned int consec)
 }
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << calc(atoi(argv[2]), atoi(argv[1])) << std::endl;
+    calc(atoi(argv[2]), atoi(argv[1]));
     return 0;
 }

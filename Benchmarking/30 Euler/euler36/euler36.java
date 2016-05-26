@@ -3,7 +3,7 @@ public class euler36
 	public static void main(String[] args)
 	{
 		int limit = Integer.parseInt(args[0]);
-		System.out.println(calc(limit));
+		calc(limit);
 	}
 	
 	private static int createPalindrome(int input, int base, boolean isOdd)

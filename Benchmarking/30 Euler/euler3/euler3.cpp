@@ -9,11 +9,6 @@
 #include <iostream>
 #include <vector>
 
-void printVector(std::vector<unsigned int>& v)
-{
-    for (unsigned int i = 0; i < v.size(); i++)
-        std::cout << v[i] << ", ";
-}
 
 void prime_factors(unsigned long n)
 {
@@ -28,7 +23,6 @@ void prime_factors(unsigned long n)
         }
         d += 1;
     }
-    printVector(factors);
 }
 
 int main(int argc, const char * argv[]) {

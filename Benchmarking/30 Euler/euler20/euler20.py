@@ -13,7 +13,7 @@ def fact(n):
     res = res * i
   return res
   
-print sum_digits(fact(num))
+sum_digits(fact(num))
 
 
 

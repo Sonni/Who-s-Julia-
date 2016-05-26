@@ -24,4 +24,4 @@ def findPrime(primeNumber):
 		return number
 
 primeNumber = int(sys.argv[1])
-print findPrime(primeNumber)
+findPrime(primeNumber)

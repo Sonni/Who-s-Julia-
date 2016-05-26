@@ -8,7 +8,7 @@
 
 #include <iostream>
 
-void f1(unsigned int n)
+void unsigned int f1(unsigned int n)
 {
     unsigned int sum = 0;
     for (unsigned int i = 0; i < n; i++)
@@ -17,7 +17,7 @@ void f1(unsigned int n)
             sum += i;
     }
     
-    std::cout << sum << std::endl;
+    return sum;
 }
 
 int main(int argc, const char * argv[]) {

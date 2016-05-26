@@ -24,4 +24,4 @@ function divisible(div, limit)
   end
 end
 
-println(divisible(div, limit))
+divisible(div, limit)

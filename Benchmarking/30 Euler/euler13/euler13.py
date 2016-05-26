@@ -47,4 +47,4 @@ def calc(mat):
 		result = result + str(temp[-(1+i)])
 	return result
 
-print calc(makeData(data))
+calc(makeData(data))

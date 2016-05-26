@@ -10,4 +10,4 @@ def prime_factors(n):
 		d += 1
 	return factors
 
-print prime_factors(int(sys.argv[1]))
+prime_factors(int(sys.argv[1]))

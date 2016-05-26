@@ -6,7 +6,7 @@ public class euler13
 	public static void main(String[] args)
 	{
 		String data = args[0];
-		System.out.println(calc(makeData(data)));
+		calc(makeData(data));
 	}
 	
 	private static ArrayList<ArrayList<Integer>> makeData(String data)

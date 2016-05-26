@@ -18,7 +18,7 @@ class euler30 {
 				total += sum;
 			}
 		}
-		System.out.println(total);
+		//System.out.println(total);
 	}
 
 	public static ArrayList<Integer> digs(int n) {

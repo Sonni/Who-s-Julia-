@@ -23,4 +23,4 @@ def calc(minYear, maxYear):
       passed += daysMonth
   return count
 
-print calc(minYear, maxYear)
+calc(minYear, maxYear)

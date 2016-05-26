@@ -28,4 +28,4 @@ function calc(limit)
   return num
 end
 
-println(calc(limit))
+calc(limit)

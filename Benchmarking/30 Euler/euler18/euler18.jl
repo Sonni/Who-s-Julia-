@@ -77,4 +77,4 @@ function sum(data, row)
 end
 
 lines = linesFile(file)
-println(sum(makeData(file, lines), lines-1))
+sum(makeData(file, lines), lines-1)

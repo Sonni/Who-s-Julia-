@@ -16,7 +16,7 @@ public class euler15
 			}
 			grid.add(temp);
 		}
-		System.out.println(calc(grid, gridSize));
+		calc(grid, gridSize);
 	}
 	
 	private static long calc(ArrayList<ArrayList<Long>> grid, int gridSize)

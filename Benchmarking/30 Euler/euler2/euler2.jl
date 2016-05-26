@@ -28,4 +28,4 @@ function fibo(n)
 return sum
 end
 
-println(fibo(limit))
+fibo(limit)

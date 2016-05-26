@@ -63,6 +63,6 @@ unsigned int calc(unsigned int limit)
 }
 
 int main(int argc, const char * argv[]) {
-    std::cout << calc(atoi(argv[1])) << std::endl;;
+    calc(atoi(argv[1]));
     return 0;
 }

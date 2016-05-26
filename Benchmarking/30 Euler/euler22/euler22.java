@@ -17,7 +17,7 @@ public class euler22
 			br.close();
 			isr.close();
 			fis.close();
-			System.out.println(calc(letterValues(), namesSorted(line)));
+			calc(letterValues(), namesSorted(line));
 		}
 		catch(Exception e)
 		{

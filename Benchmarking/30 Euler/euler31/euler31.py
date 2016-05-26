@@ -13,4 +13,4 @@ def calc(target):
       
   return ways[-1]
 
-print calc(target)
+calc(target)

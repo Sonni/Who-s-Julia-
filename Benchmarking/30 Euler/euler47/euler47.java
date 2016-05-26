@@ -6,7 +6,7 @@ public class euler47
 	{
 		int cons = Integer.parseInt(args[0]);
 		int limit = Integer.parseInt(args[1]);
-		System.out.println(calc(limit, cons));
+		calc(limit, cons);
 	}
 	
 	private static int numFactors(int number, List<Integer> primeList)

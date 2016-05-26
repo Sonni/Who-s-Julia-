@@ -39,7 +39,6 @@ function isPalindrome(array)
 end
 
 function checkNumber(min, max)
-  #resultArray = Int[]
   maxNum = 0
   found = false
   cycleDone = false
@@ -64,12 +63,7 @@ function checkNumber(min, max)
       break
     end
   end
-  #a = resultArray[1]
-  #b = resultArray[2]
-  #res = a * b
-  #println("Largest palindrome: $a * $b = $res")
   return maxNum
 end
 
-#println(@elapsed checkNumber())
-println(checkNumber(min, max))
+checkNumber(min, max)

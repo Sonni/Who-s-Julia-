@@ -43,4 +43,4 @@ function calc(minYear, maxYear)
   return count
 end
 
-println(calc(minYear, maxYear))
+calc(minYear, maxYear)

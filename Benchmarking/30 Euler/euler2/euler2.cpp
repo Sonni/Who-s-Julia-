@@ -15,7 +15,7 @@ void printVector(std::vector<unsigned int>& array)
         std::cout << array[i] << ", ";
 }
 
-void fibo(unsigned int n)
+unsigned int fibo(unsigned int n)
 {
     std::vector<unsigned int> array;
     array.push_back(1); array.push_back(1);
@@ -38,8 +38,7 @@ void fibo(unsigned int n)
             go = false;
     }
     
-    std::cout << sum << std::endl;
-    printVector(array);
+    return sum;
 }
 
 int main(int argc, const char * argv[]) {

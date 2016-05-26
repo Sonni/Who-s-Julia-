@@ -33,6 +33,6 @@ unsigned int pytha(unsigned int number)
 }
 
 int main(int argc, const char * argv[]) {
-    std::cout << pytha(atoi(argv[1])) << std::endl;
+    pytha(atoi(argv[1]));
     return 0;
 }

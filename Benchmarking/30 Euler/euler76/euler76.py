@@ -9,4 +9,4 @@ def calc(target):
       ways[j + 1] += ways[j + 1 - i]
   return ways[-1]
 
-print calc(target)
+calc(target)

@@ -6,7 +6,7 @@ public class euler77
 	{
 		int ways = Integer.parseInt(args[0]);
 		int limit = Integer.parseInt(args[1]);
-		System.out.println(calc(ways, limit));
+		calc(ways, limit);
 	}
 	
 	private static List<Integer> getPrimes(int size)

@@ -3,7 +3,7 @@ public class euler12
 	public static void main(String[] args)
 	{
 		int numDiv = Integer.parseInt(args[0]);
-		System.out.println(triangular(numDiv));
+        triangular(numDiv);
 	}
 	
 	private static int divisors(int n)

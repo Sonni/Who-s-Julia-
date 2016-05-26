@@ -5,7 +5,7 @@ public class euler7
 	public static void main(String[] args)
 	{
 		int primeNumber = Integer.parseInt(args[0]);
-		System.out.println(findPrime(primeNumber));
+		findPrime(primeNumber);
 	}
 	
 	private static int findPrime(int primeNumber)

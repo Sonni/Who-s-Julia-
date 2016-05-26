@@ -60,6 +60,6 @@ unsigned int calc(unsigned int ways, unsigned int limit)
 }
 
 int main(int argc, const char * argv[]) {
-    std::cout << calc(atoi(argv[1]), atoi(argv[2])) << std::endl;;
+    calc(atoi(argv[1]), atoi(argv[2]));
     return 0;
 }

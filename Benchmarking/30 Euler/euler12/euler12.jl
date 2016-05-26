@@ -51,4 +51,4 @@ function triangular(numDiv)
   end
 end
 
-println(triangular(numDiv))
+triangular(numDiv)

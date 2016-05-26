@@ -10,6 +10,6 @@ function f1(n)
         sum += i
       end
   end
-  println(sum)
+  return sum
 end
 f1(limit)

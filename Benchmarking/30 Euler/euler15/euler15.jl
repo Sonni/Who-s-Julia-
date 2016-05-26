@@ -19,4 +19,4 @@ function calc(grid, gridSize)
   return grid[1, 1]
 end
 
-println(calc(grid, gridSize))
+calc(grid, gridSize)

@@ -10,7 +10,7 @@
 #include <string>
 #include <fstream>
 
-void adja(std::string n)
+unsigned int adja(std::string n)
 {
     unsigned int i = 0;
     unsigned long currentProd = 1;
@@ -31,7 +31,7 @@ void adja(std::string n)
         currentProd = 1;
         i += 1;
     }
-    std::cout << maxProd << std::endl;
+    return maxProd;
 }
 
 int main(int argc, const char * argv[]) {

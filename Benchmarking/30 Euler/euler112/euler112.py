@@ -34,4 +34,4 @@ def calc(limit):
       bouncies += 1
   return i
 
-print calc(limit)
+calc(limit)

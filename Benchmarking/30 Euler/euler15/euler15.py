@@ -10,4 +10,4 @@ def calc(grid, gridSize):
       grid[i][j] = grid[i+1][j] + grid[i][j+1]
   return grid[0][0]
 
-print calc(grid, gridSize)
+calc(grid, gridSize)

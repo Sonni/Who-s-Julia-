@@ -117,6 +117,6 @@ std::string calc(std::vector<std::vector<unsigned long>> mat)
 
 int main(int argc, const char * argv[]) {
     std::string data = (std::string) argv[1];
-    std::cout << calc(makeData(data)) << std::endl;;
+    calc(makeData(data));
     return 0;
 }

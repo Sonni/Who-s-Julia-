@@ -17,5 +17,5 @@ def adja(str):
 		i += 1
 	return maxProd
 
-print adja(str)
+adja(str)
 close(file)

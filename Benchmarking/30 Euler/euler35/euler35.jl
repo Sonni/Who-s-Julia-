@@ -50,14 +50,4 @@ function calc(limit)
   return count
 end
 
-println(calc(limit))
-#println(getPrimes(1000))
-
-
-
-
-
-
-
-
-
+calc(limit)

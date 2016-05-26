@@ -24,4 +24,4 @@ def triangular(numDiv):
 		if count > numDiv:
 			return k
 
-print triangular(numDiv) 
+triangular(numDiv) 

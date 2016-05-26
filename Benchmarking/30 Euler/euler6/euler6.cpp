@@ -30,6 +30,6 @@ int diffe(unsigned int n)
 }
 
 int main(int argc, const char * argv[]) {
-    std::cout << diffe(atoi(argv[1])) << std::endl;;
+    diffe(atoi(argv[1]));
     return 0;
 }

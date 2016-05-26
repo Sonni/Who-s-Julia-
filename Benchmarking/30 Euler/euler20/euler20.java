@@ -5,7 +5,7 @@ public class euler20
 	public static void main(String[] args)
 	{
 		int num = Integer.parseInt(args[0]);
-		System.out.println(sum_digits(fact(num)));
+		sum_digits(fact(num));
 	}
 	
 	private static int sum_digits(BigInteger l)

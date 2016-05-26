@@ -3,7 +3,7 @@ public class euler6
 	public static void main(String[] args)
 	{
 		int limit = Integer.parseInt(args[0]);
-		System.out.println(diffe(limit));
+		diffe(limit);
 	}
 	
 	private static int diffe(int n)

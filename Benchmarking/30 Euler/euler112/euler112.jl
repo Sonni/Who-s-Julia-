@@ -55,4 +55,4 @@ function calc(limit)
   return i
 end
 
-println(calc(limit))
+calc(limit)

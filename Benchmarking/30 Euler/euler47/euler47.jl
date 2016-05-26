@@ -85,4 +85,4 @@ function calc(limit, consec)
   return result-3
 end
 
-println(calc(limit, cons))
+calc(limit, cons)

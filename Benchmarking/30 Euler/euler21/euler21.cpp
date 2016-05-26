@@ -42,6 +42,6 @@ unsigned int amica(unsigned int a)
 
 int main(int argc, const char * argv[]) {
     unsigned int limit = atoi(argv[1]);
-    std::cout << amica(limit) << std::endl;
+    amica(limit);
     return 0;
 }

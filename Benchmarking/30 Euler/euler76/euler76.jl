@@ -27,4 +27,4 @@ function calc(target)
   return ways[end]
 end
 
-println(calc(target))
+calc(target)

@@ -4,7 +4,7 @@ public class euler2
 {
 	public static void main (String[] args)
 	{
-		System.out.println(fibo(Integer.parseInt(args[0])));
+		fibo(Integer.parseInt(args[0]));
 	}
 	
 	private static int fibo(int n)

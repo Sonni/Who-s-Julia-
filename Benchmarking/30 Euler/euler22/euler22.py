@@ -31,4 +31,4 @@ def calc(mapo, names_sorted):
     mapo_index += 1
   return value
 
-print calc(letterValues(), namesSorted(file))
+calc(letterValues(), namesSorted(file))

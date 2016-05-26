@@ -40,4 +40,4 @@ def calc(limit):
       i += 1
   return result
 
-print calc(limit)
+calc(limit)

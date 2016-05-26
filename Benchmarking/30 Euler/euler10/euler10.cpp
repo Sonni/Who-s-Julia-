@@ -49,6 +49,6 @@ int main(int argc, const char * argv[]) {
     {
         sum += i;
     }
-    std::cout << sum << std::endl;
+    //std::cout << sum << std::endl;
     return 0;
 }

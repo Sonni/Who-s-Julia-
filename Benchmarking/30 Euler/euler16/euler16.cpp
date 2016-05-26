@@ -50,9 +50,7 @@ int main(int argc, const char * argv[]) {
     unsigned int num = atoi(argv[1]);
     unsigned int power = atoi(argv[2]);
     
-    
-    
-    std::cout << calc(num, power) << std::endl;
+    calc(num, power);
     
     return 0;
 }

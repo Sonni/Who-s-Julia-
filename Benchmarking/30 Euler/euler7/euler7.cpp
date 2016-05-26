@@ -25,7 +25,7 @@ bool isPrime(unsigned int x)
     return prime;
 }
 
-void findPrime(unsigned int primeNumber)
+unsigned int findPrime(unsigned int primeNumber)
 {
     std::vector<unsigned int> arrayPrimes;
     unsigned int counter = 0;
@@ -42,7 +42,7 @@ void findPrime(unsigned int primeNumber)
         number++;
     }
     arrayPrimes.push_back(number);
-    std::cout << arrayPrimes[arrayPrimes.size()-1] << std::endl;
+    return arrayPrimes[arrayPrimes.size()-1];
 }
 
 int main(int argc, const char * argv[]) {

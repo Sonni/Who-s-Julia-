@@ -51,4 +51,4 @@ function adja(str)
   return maxProd
 end
 
-println(adja(str))
+adja(str)

@@ -34,4 +34,4 @@ def calc(ways, limit):
       return target - 1
     target += 1
 
-print calc(ways, limit)
+calc(ways, limit)

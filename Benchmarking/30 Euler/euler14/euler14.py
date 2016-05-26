@@ -20,4 +20,4 @@ def seq(n):
       maxNumber = temp
   return maxNumber
 
-print seq(limit)
+seq(limit)

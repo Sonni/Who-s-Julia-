@@ -46,7 +46,7 @@ int main(int argc, const char * argv[]) {
     unsigned int minYear = std::atoi(argv[1]);
     unsigned int maxYear = std::atoi(argv[2]);
     
-    std::cout << calc(minYear, maxYear) << std::endl;
+    calc(minYear, maxYear);
     
     return 0;
 }

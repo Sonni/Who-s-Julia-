@@ -6,7 +6,7 @@ public class euler4
 	{
 		int min = Integer.parseInt(args[0]);
 		int max = Integer.parseInt(args[1]);
-		System.out.println(checkNumber(min, max));
+		checkNumber(min, max);
 	}
 	
 	private static List<Integer> digitsInArray(int n)

@@ -51,4 +51,4 @@ def calc(limit, consec):
       cons = 0
   return result-3
 
-print calc(limit, cons)
+calc(limit, cons)

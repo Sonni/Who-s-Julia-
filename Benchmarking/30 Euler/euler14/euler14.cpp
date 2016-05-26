@@ -33,8 +33,8 @@ void seq(unsigned int n)
             max_number = temp;
         }
     }
-    std::cout << max << std::endl;
-    std::cout << max_number << std::endl;
+    
+    return max_number;
 }
 
 int main(int argc, const char * argv[]) {

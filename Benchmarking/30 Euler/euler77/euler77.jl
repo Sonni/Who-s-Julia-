@@ -58,4 +58,4 @@ function calc(ways, limit)
   end
 end
 
-println(calc(ways, limit))
+calc(ways, limit)

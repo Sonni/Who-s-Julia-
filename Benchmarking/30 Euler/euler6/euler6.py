@@ -16,4 +16,4 @@ def diffe(n):
 		return res
 	
 limit = int(sys.argv[1])
-print diffe(limit)
+diffe(limit)
