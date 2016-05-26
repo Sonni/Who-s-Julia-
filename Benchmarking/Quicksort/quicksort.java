@@ -1,3 +1,5 @@
+
+
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -13,6 +15,7 @@ public class quicksort
     {
         try {
             quicksort.run(args[0], args[1]);
+            //quicksort.run("dualquicksort", "data.txt");
         } catch (IOException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
@@ -31,13 +34,16 @@ public class quicksort
                 array[i] = Integer.parseInt(lines[i]);
             }
         }
+        System.out.println("Sorting");
         
-        if (arg1.equals("dualquicksort"))
-            quicksortDualPivot(array, 0, array.length - 1);
-        if (arg1.equals("quicksort"))
-            quicksort(array, 0, array.length - 1);
+        		if (arg1.equals("dualquicksort"))
+        			quicksortDualPivot(array, 0, array.length - 1);
+        		if (arg1.equals("quicksort"))
+        			quicksort(array, 0, array.length - 1);
         
-        //	System.out.println(Arrays.toString(a));
+        //Arrays.sort(array);
+        
+        	//System.out.println(Arrays.toString(array));
     }
     
     
