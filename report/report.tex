@@ -212,8 +212,9 @@ Making longer programs in the terminal might not be an optimal solution. The tex
 	\begin{subfigure}[b]{0.7\textwidth}
 		\centering
 		\begin{lstlisting}
-		for (unsigned int i = 1; i <1 11; i++){
-			std::cout << i << "\n";
+		void hello(std::string name)
+		{
+			std::cout << "Hello " << name << "\n";
 		}
 		\end{lstlisting}
 		\caption{C++}
@@ -274,6 +275,28 @@ Meta-programming is a way to write programs in programs and let them use program
 
 \subsubsection{Implementing code from other languages}
 Since Julia is a newer language there are not many written libraries yet. Julia has an import feature for both Python and C libraries to avoid this disadvantage. Import the library PyCall with the "using" operation to use python and import Python libraries via a macro @pyimport. To use C libraries or coding, simply run the function ccall(). The programming language C is a well known and used language. Many systems are based on C, which makes C an advantage for hardware programming. Another feature is to execute shell commands. Execute shell commands using run(``). An example would be running run(`echo Hello World`) which would return the output "Hello World".
+
+\section{Benchmarking}
+Benchmarking will depend on the running time of each individual problem. When looking at running time the most common terms are wall time (real time) and CPU time. Wall time is the time it took the program to terminate, from start to finish. CPU time is how much time the program used on the CPU. Wall time will always be equal or greater than the CPU time. Difference on time between wall time and CPU time is the fact that the program being benchmarked might get interrupted by the operating system, because other tasks needs to be handled. These tasks could be other programs, or something that the OS needs to get done. This time will be included in the wall time but excluded in the CPU time. In Unix based system, the time command is available from the terminal, used like this:
+
+\begin{lstlisting}
+time <COMMAND>
+\end{lstlisting}
+Where <COMMAND> can be any terminal command. The time command will return three different times.
+\begin{figure}[H]
+	\centering
+	\includegraphics
+	[width=0.3\textwidth]{time.jpg} 
+	\caption{Output of time}.
+\end{figure}
+\begin{description}
+	\item[$\cdot$] Real: This is the wall time mentioned above.
+	\item[$\cdot$] User: User time is how much time is spent in user mode.
+	\item[$\cdot$] Sys: System time is how much time is spent in kernel mode.
+\end{description}
+The difference between user- and kernel mode is the following:
+In most memory protected system there are some locked operations for security reasons. E.g. allocation of memory or accessing hardware requires kernel mode and cannot be done in user mode. Processes like malloc and reading / writing to file are done somewhere in the process as a request was sent to the kernel to do certain things and this is counted as system time. This doesn’t necessarily mean that, all time is spent in kernel mode when reading a file, since the only time that is spent in kernel mode is accessing the requested data in memory. User time + system time is an estimation of how much time is actually spent by a program on the CPU. To get an even better indication of the CPU time, multiple test are done and the average is calculated. The average run time is considered since there can be fluctuations in run time for every test. Another way to measure time spent on the CPU is to use the built in libraries for example System.currentTimeMillis() in Java. This is especially useful for profiling and figuring out which part of a program is time consuming.
+Benchmarking will be done by comparing CPU time of the same problem in different languages. The problems will be scaled to have smaller and larger inputs. However, in some situations a large input can cause memory problems, which will be addressed in the specific problem. The memory problems is unfortunately making an upper bound for how large our tests will be on a given problem. The algorithm used for a given problem is the same used in all compared languages. Extended tests will be included for which the algorithm is optimized for a given language.
 
 \section{Projecteuler 11}
 

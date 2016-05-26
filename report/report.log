@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.12.7)  26 MAY 2016 14:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.12.7)  26 MAY 2016 19:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -564,47 +564,53 @@ File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10> not available
 (Font)              Font shape `T1/cmtt/m/n' tried instead on input line 96.
- [3 <./terminalj.jpg> <./terminalp.jpg>] [4] [5] [6] [7] <11.jpg, id=38, 208.78
-pt x 81.30376pt>
+ [3 <./terminalj.jpg> <./terminalp.jpg>] [4] [5] [6] [7] [8]
+<time.jpg, id=41, 164.615pt x 60.225pt>
+File: time.jpg Graphic file (type jpg)
+ <use time.jpg>
+Package pdftex.def Info: time.jpg used on input line 289.
+(pdftex.def)             Requested size: 108.0011pt x 39.51335pt.
+ [9 <./time.jpg>]
+<11.jpg, id=45, 208.78pt x 81.30376pt>
 File: 11.jpg Graphic file (type jpg)
-
-<use 11.jpg>
-Package pdftex.def Info: 11.jpg used on input line 283.
+ <use 11.jpg>
+Package pdftex.def Info: 11.jpg used on input line 306.
 (pdftex.def)             Requested size: 167.0242pt x 65.04308pt.
- [8] [9 <./11.jpg>] (./euler11.jl) (./euler11.jl) (./euler11.jl)
-[10] <1161.jpg, id=49, 568.1225pt x 93.34875pt>
+ [10 <./11.jpg>]
+(./euler11.jl) [11] (./euler11.jl) (./euler11.jl) [12]
+<1161.jpg, id=56, 568.1225pt x 93.34875pt>
 File: 1161.jpg Graphic file (type jpg)
  <use 1161.jpg>
-Package pdftex.def Info: 1161.jpg used on input line 324.
+Package pdftex.def Info: 1161.jpg used on input line 347.
 (pdftex.def)             Requested size: 216.0022pt x 35.4914pt.
 
-<1162.jpg, id=50, 420.57124pt x 39.14626pt>
+<1162.jpg, id=57, 420.57124pt x 39.14626pt>
 File: 1162.jpg Graphic file (type jpg)
  <use 1162.jpg>
-Package pdftex.def Info: 1162.jpg used on input line 330.
+Package pdftex.def Info: 1162.jpg used on input line 353.
 (pdftex.def)             Requested size: 216.0022pt x 20.10529pt.
 
-<1163.jpg, id=51, 273.02pt x 33.12375pt>
+<1163.jpg, id=58, 273.02pt x 33.12375pt>
 File: 1163.jpg Graphic file (type jpg)
  <use 1163.jpg>
-Package pdftex.def Info: 1163.jpg used on input line 336.
+Package pdftex.def Info: 1163.jpg used on input line 359.
 (pdftex.def)             Requested size: 216.0022pt x 26.20638pt.
- [11]
-<qs.jpg, id=55, 245.91875pt x 501.875pt>
+ [13]
+<qs.jpg, id=63, 245.91875pt x 501.875pt>
 File: qs.jpg Graphic file (type jpg)
  <use qs.jpg>
-Package pdftex.def Info: qs.jpg used on input line 354.
+Package pdftex.def Info: qs.jpg used on input line 377.
 (pdftex.def)             Requested size: 122.95906pt x 250.93687pt.
- [12 <./1161.jpg> <./1162.jpg> <./1163.jpg>] [13 <./qs.jpg>] [14] [15] [16] (./
+ [14 <./1161.jpg> <./1162.jpg> <./1163.jpg>] [15 <./qs.jpg>] [16] [17] [18] (./
 report.aux) ) 
 Here is how much of TeX's memory you used:
- 6741 strings out of 493089
- 93164 string characters out of 6134842
+ 6748 strings out of 493089
+ 93251 string characters out of 6134842
  299160 words of memory out of 5000000
- 10094 multiletter control sequences out of 15000+600000
+ 10101 multiletter control sequences out of 15000+600000
  17766 words of font info for 49 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,9n,40p,2138b,1407s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,9n,40p,2138b,1701s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/cm-super/cm-su
 per-t1.enc}</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/c
 mr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cms
@@ -618,10 +624,10 @@ r/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/
 local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/lo
 cal/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb></usr/loca
 l/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on report.pdf (16 pages, 436277 bytes).
+Output written on report.pdf (18 pages, 456213 bytes).
 PDF statistics:
- 112 PDF objects out of 1000 (max. 8388607)
- 74 compressed objects within 1 object stream
+ 119 PDF objects out of 1000 (max. 8388607)
+ 78 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 36 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
 
