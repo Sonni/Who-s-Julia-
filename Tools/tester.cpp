@@ -29,7 +29,7 @@ std::vector<std::string> split(std::string s, char delim)
         while(end <= strLength)
         {
             if(cstr[end] == delim)
-            break;
+                break;
             end++;
         }
         
@@ -76,7 +76,7 @@ float getTime(std::string out)
             timeKind += *it;
             counter++;
             if (counter == 3)
-            break;
+                break;
         }
         
         if (!timeKind.compare("use"))
@@ -123,7 +123,7 @@ std::string exec(const char* cmd) {
     if (!pipe) throw std::runtime_error("popen() failed!");
     while (!feof(pipe.get())) {
         if (fgets(buffer, 128, pipe.get()) != NULL)
-        result += buffer;
+            result += buffer;
     }
     return result;
 }
@@ -139,13 +139,13 @@ void doTest(std::string title, const char* command)
     for (int i = 0; i < loopCount; i++)
     {
         //std::string out = exec(command);
-        int retCode = system(command);
+        system(command);
         
         std::string outString = readOutput("out.txt");
         float time = getTime(outString);
         sum += time;
         if (i == loopCount/2)
-        median = time;
+            median = time;
         
         std::cout << time << std::endl;
     }
@@ -163,49 +163,20 @@ int main(int argc, const char * argv[])
     std::string line;
     while (std::getline(infile, line))
     {
-        std::string language = "/Applications/Julia-0.4.5.app/Contents/Resources/julia/bin/julia";
-        std::string programFile = "test.txt";
+        
+        std::string language = split(line, ' ')[0];
+        if (!language.compare("/Applications/Julia-0.4.5.app/Contents/Resources/julia/bin/julia"))
+            language = "Julia";
+        
+        if (language[0] == '.' && language[1] == '/')
+            language = "C++";
+        
         std::string command = "(time -p " + line + ") 2> out.txt";
         
-        doTest("Test " + std::to_string(counter), command.c_str());
+        doTest(language + ":", command.c_str());
         counter++;
     }
     infile.close();
     
-    
-    //doTest("Test2 progrma", "(time bash ./script.sh) 2> out.txt");
-    
     return 0;
 }
-
-
-/*
- if (argc != 0)
- {
- for (int i = 1; i < argc; i += 2)
- {
- std::string language = argv[i];
- std::string programFile = argv[i + 1];
- std::string command;
- std::cout << language;
- if (language == "cpp")
- {
- command = "(time ./" + programFile + ") 2> out.txt";
- 
- }
- else
- command = "(time " + language + " " + programFile + ") 2> out.txt";
- 
- doTest("Test " + std::to_string(i / 2 + 1) + " for program " + programFile + " in " + language + " Took", command.c_str());
- }
- }
- else
- {
- std::string language = "/Applications/Julia-0.4.5.app/Contents/Resources/julia/bin/julia";
- std::string programFile = "test.txt";
- std::string command = "(time " + language + " " + programFile + ") 2> out.txt";
- 
- doTest("Test progrma", command.c_str());
- //doTest("Test2 progrma", "(time bash ./script.sh) 2> out.txt");
- }
- */
