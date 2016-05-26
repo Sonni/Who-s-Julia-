@@ -65,4 +65,4 @@ function a()
   println(maxProd)
 end
 
-@time a()
+a()
