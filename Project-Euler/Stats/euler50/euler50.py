@@ -4,7 +4,7 @@ limit = int(sys.argv[1])
 
 def getPrimes(size):
 	array = [True] * (size + 1)
-	for i in range(2, size + 1):
+	for i in xrange(2, size + 1):
 		if array[i]:
 			j = i + i
 			while j <= size:

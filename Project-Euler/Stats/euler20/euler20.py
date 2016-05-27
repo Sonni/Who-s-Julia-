@@ -9,7 +9,7 @@ def sum_digits(l):
 
 def fact(n):
   res = 1
-  for i in range(n, 0, -1):
+  for i in xrange(n, 0, -1):
     res = res * i
   return res
   

@@ -4,7 +4,7 @@ limit = int(sys.argv[1])
 def seq(n):
   max = 0
   maxNumber = 0
-  for i in range(1, n+1):
+  for i in xrange(1, n+1):
     countSeq = 1
     temp = i
     current = i

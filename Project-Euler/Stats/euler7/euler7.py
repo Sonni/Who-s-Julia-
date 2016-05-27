@@ -1,27 +1,29 @@
 import sys
 
-def isPrime(x):
-	divisor = 2
-	prime = True
-	while divisor < x:
-		if x % divisor == 0:
-			prime = False
-			break
-		divisor += 1
-	return prime
-	
-def findPrime(primeNumber):
-	arrayPrimes = []
-	counter = 0
-	number = 2
-	while counter < primeNumber:
-		if isPrime(number):
-			counter += 1
-			if counter == primeNumber:
-				break
-    		number += 1
-	if counter == primeNumber:
-		return number
-
 primeNumber = int(sys.argv[1])
-print findPrime(primeNumber)
+limit = int(sys.argv[2])
+
+def getPrimes(size):
+	array = [True for i in range(size + 1)]
+	array[1] = False
+	c = 1
+	for i in xrange(2, size + 1):
+		if array[i] == True:
+			j = i + i
+			while j <= size:
+				array[j] = False
+				j += i
+			c += 1
+	return array
+
+def calc(primeNumber, limit):
+  primes = getPrimes(limit)
+  count = 0
+  k = 1
+  for i in xrange(1, primes.size + 1):
+    if primes[i]:
+      count += 1
+    if count == primeNumber:
+      return i
+
+print calc(primeNumber, limit)

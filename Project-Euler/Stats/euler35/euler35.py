@@ -3,8 +3,8 @@ import sys
 limit = int(sys.argv[1])
 
 def getPrimes(size):
-  array = [True for i in range(size + 1)]
-  for i in range(2, size + 1):
+  array = [True for i in xrange(size + 1)]
+  for i in xrange(2, size + 1):
     if array[i] == True:
       j = i + i
       while j <= size:
@@ -16,10 +16,10 @@ def calc(limit):
   count = 0
   primes = getPrimes(limit)
 
-  for num in range(2, limit + 1):
+  for num in xrange(2, limit + 1):
     q = False
     num = str(num)
-    for i in range(0, len(num)):
+    for i in xrange(0, len(num)):
       index = int(num[i:] + num[:-len(num) + i])
       if primes[index]:
         q = True

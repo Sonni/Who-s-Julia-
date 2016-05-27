@@ -7,7 +7,7 @@ def numFactors(number, primeList):
   nod = 0
   pf = False
   remain = number
-  for i in range(0, len(primeList)):
+  for i in xrange(0, len(primeList)):
     if primeList[i] * primeList[i] > number:
       nod += 1
       return nod
@@ -22,9 +22,9 @@ def numFactors(number, primeList):
   return nod
 
 def getPrimes(size):
-	array = [True for i in range(size+1)]
+	array = [True for i in xrange(size+1)]
 	c = 1
-	for i in range(2, size):
+	for i in xrange(2, size):
 		if array[i]:
 			j = i + i
 			while j <= size:
@@ -32,7 +32,7 @@ def getPrimes(size):
 				j += i
 			c += 1
 	primeArray = []
-	for i in range(2, size+1):
+	for i in xrange(2, size+1):
 		if(array[i]):
 			primeArray.append(i)
 	return primeArray

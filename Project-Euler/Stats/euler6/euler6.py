@@ -4,9 +4,9 @@ def diffe(n):
 	sumDigitsSquare = 0
 	sumNumberSquare = 0
 	temp = 0
-	for i in range(1, n+1):
+	for i in xrange(1, n+1):
 		sumDigitsSquare += i**2
-	for j in range(1, n+1):
+	for j in xrange(1, n+1):
 		temp += j
 	sumNumberSquare = temp**2
 	res = sumNumberSquare - sumDigitsSquare

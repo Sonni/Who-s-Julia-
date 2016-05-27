@@ -12,13 +12,13 @@ def digs(n):
 def calc(x, y):
     temp = 0
     total = 0
-    for i in range(2, x):
+    for i in xrange(2, x):
         k = digs(i)
 
 def calc(x, y):
     temp = 0
     total = 0
-    for i in range(2, x):
+    for i in xrange(2, x):
         k = digs(i)
         temp = i
         sum = 0

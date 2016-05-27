@@ -3,7 +3,7 @@ import sys
 data = sys.argv[1]
 def makeData(data):
 	row = 0
-	mat = [ [ 0 for i in range(50) ] for j in range(100) ]
+	mat = [ [ 0 for i in xrange(50) ] for j in xrange(100) ]
 	with open(data, "r") as f:
 		for line in f:
 			temp = []
@@ -22,9 +22,9 @@ def calc(mat):
 	r = len(mat)
 	c = len(mat[0])
 	temp = []
-	for col in range(c-1, -1, -1):
+	for col in xrange(c-1, -1, -1):
 		s = 0
-		for row in range(r-1, -1, -1):
+		for row in xrange(r-1, -1, -1):
 			s += mat[row][col]
 		temp.append(s)
 	i = 0
@@ -43,7 +43,7 @@ def calc(mat):
 			break
 		i += 1
 	result = ""
-	for i in range(0, 10):
+	for i in xrange(0, 10):
 		result = result + str(temp[-(1+i)])
 	return result
 

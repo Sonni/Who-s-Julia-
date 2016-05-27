@@ -31,8 +31,8 @@ def checkNumber(min, max):
 	found = False
 	cycleDone = False
 	while not(found):
-		for x in range(max, min, -1):
-			for y in range(max, min, -1):
+		for x in xrange(max, min, -1):
+			for y in xrange(max, min, -1):
 				k = x * y
 				result = isPalindrome(digitsInArray(k))
 				if result:

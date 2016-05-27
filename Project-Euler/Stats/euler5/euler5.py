@@ -5,7 +5,7 @@ def divisible(div, limit):
 	n = 0
 	for x in xrange(div+1, limit):
 		evenlyDivis = True
-		for i in range(2, div):
+		for i in xrange(2, div):
 			n = x % i
 			if not(n == 0):
 				evenlyDivis = False

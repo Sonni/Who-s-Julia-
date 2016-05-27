@@ -9,7 +9,7 @@ def adja(str):
 	currentProd = 1
 	maxProd = 0
 	while i < len(str)-12:
-		for j in range(0, 13):
+		for j in xrange(0, 13):
 			currentProd = currentProd * int(str[i+j])
 		if currentProd > maxProd:
 			maxProd = currentProd

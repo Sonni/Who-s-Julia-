@@ -25,7 +25,7 @@ def isPalindrome(number, base):
 
 def calc(limit):
   result = 0
-  for j in range(1, 3):
+  for j in xrange(1, 3):
     if j % 2 == 0:
       isOdd = False
     else:

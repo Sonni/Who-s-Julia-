@@ -4,7 +4,7 @@ limit = int(sys.argv[1])
 
 def calc(limit):
   num = 0
-  for i in range(5, limit+1):
+  for i in xrange(5, limit+1):
     x1 = sorted(list(str(i)))
     x2 = sorted(list(str(i * 2)))
     x3 = sorted(list(str(i * 3)))

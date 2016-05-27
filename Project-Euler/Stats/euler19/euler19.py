@@ -7,8 +7,8 @@ def calc(minYear, maxYear):
   count = 0 #sundays occured on the first day of a month
   daysMonth = 0 #days in a month
   passed = 1 #days passed
-  for i in range(minYear, maxYear+1):
-    for j in range(1,12+1): #months in a year
+  for i in xrange(minYear, maxYear+1):
+    for j in xrange(1,12+1): #months in a year
       if (j == 4) or (j == 6) or (j == 9) or (j == 11):
         daysMonth = 30
       elif j == 2:
