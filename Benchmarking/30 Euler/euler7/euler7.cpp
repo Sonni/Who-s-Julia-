@@ -9,43 +9,44 @@
 #include <iostream>
 #include <vector>
 
-bool isPrime(unsigned int x)
+std::vector<bool> getPrimes(unsigned int size)
 {
-    unsigned int divisor = 2;
-    bool prime = true;
-    while (divisor < x)
+    std::vector<bool> array;
+    for(int i = 0; i <= size; i++)
+        array.push_back(true);
+    
+    array[1] = false;
+    for(unsigned int i = 2; i <= size; i++)
     {
-        if (x % divisor == 0)
+        if(array[i])
         {
-            prime = false;
-            break;
+            unsigned int j = i + i;
+            while(j <= size)
+            {
+                array[j] = false;
+                j += i;
+            }
         }
-        divisor++;
     }
-    return prime;
+    return array;
 }
 
-unsigned int findPrime(unsigned int primeNumber)
+unsigned int findPrime(unsigned int primeNumber, unsigned int limit)
 {
-    std::vector<unsigned int> arrayPrimes;
-    unsigned int counter = 0;
-    unsigned int number = 2;
-    
-    while (counter < primeNumber)
+    std::vector<bool> primes = getPrimes(limit);
+    unsigned int count = 0;
+    for (unsigned int i = 1; i <= primes.size(); i++)
     {
-        if (isPrime(number))
-        {
-            counter++;
-            if (counter == primeNumber)
-                break;
-        }
-        number++;
+        if (primes[i])
+            count++;
+        if (count == primeNumber)
+            return i;
     }
-    arrayPrimes.push_back(number);
-    return arrayPrimes[arrayPrimes.size()-1];
+    return -1;
+    
 }
 
 int main(int argc, const char * argv[]) {
-    findPrime(atoi(argv[1]));
+    std::cout << findPrime(atoi(argv[1]), atoi(argv[2])) << std::endl;;
     return 0;
 }
