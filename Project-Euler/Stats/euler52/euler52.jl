@@ -5,8 +5,7 @@ Find the smallest positive integer, x, such that 2x, 3x, 4x, 5x, and 6x, contain
 =#
 #Answer: 142857
 
-#Terminal: Julia euler52.jl 1000000
-
+#Terminal: julia euler52.jl 1000000
 limit = parse(Int, ARGS[1])
 
 function calc(limit)

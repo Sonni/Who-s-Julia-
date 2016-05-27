@@ -10,7 +10,7 @@ Which prime, below one-million, can be written as the sum of the most consecutiv
 =#
 #Answer: 997651
 
-#Terminal: Julia euler50.jl 1000000
+#Terminal: julia euler50.jl 1000000
 
 limit = parse(Int, ARGS[1])
 

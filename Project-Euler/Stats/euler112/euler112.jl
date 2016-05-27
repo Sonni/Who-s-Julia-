@@ -13,8 +13,7 @@ Find the least number for which the proportion of bouncy numbers is exactly 99%.
 =#
 #Answer: 1587000
 
-#Terminal: Julia euler112.jl 10000000
-
+#Terminal: julia euler112.jl 10000000
 limit = parse(Int, ARGS[1])
 
 function bouncy(number)

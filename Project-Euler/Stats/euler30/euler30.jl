@@ -12,7 +12,7 @@ Find the sum of all the numbers that can be written as the sum of fifth powers o
 =#
 #Answer: 443839
 
-#Terminal: Julia euler30.jl 1000000 5
+#Terminal: julia euler30.jl 1000000 5
 number = parse(Int, ARGS[1])
 power = parse(Int, ARGS[2])
 

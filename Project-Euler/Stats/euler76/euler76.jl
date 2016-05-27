@@ -12,8 +12,7 @@ How many different ways can one hundred be written as a sum of at least two posi
 =#
 #Answer: 190569291
 
-#Terminal: Julia euler76.jl 100
-
+#Terminal: julia euler76.jl 100
 target = parse(Int, ARGS[1])
 
 function calc(target)

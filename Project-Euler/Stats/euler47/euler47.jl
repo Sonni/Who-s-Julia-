@@ -14,7 +14,7 @@ Find the first four consecutive integers to have four distinct prime factors. Wh
 =#
 #Answer: 134043
 
-#Terminal: Julia euler47.jl 4 1000000
+#Terminal: julia euler47.jl 4 1000000
 cons = parse(Int, ARGS[1])
 limit = parse(Int, ARGS[2])
 

@@ -1,4 +1,3 @@
-echo Starting euler1
 javac euler1.java
 make euler1
 time julia euler1.jl 1000
@@ -119,4 +118,63 @@ time julia euler22.jl data.txt
 time python euler22.py data.txt
 time java euler22 data.txt
 time ./euler22 data.txt
-
+javac euler30.java
+make euler30
+time julia euler30.jl 1000000 5
+time python euler30.py 1000000 5
+time java euler30 1000000 5
+time ./euler30 1000000 5
+javac euler31.java
+make euler31
+time julia euler31.jl 200
+time python euler31.py 200
+time java euler31 200
+time ./euler31 200
+javac euler35.java
+make euler35
+time julia euler35.jl 1000000
+time python euler35.py 1000000
+time java euler35 1000000
+time ./euler35 1000000
+javac euler36.java
+make euler36
+time julia euler36.jl 1000000
+time python euler36.py 1000000
+time java euler36 1000000
+time ./euler36 1000000
+javac euler47.java
+make euler47
+time julia euler47.jl 4 1000000
+time python euler47.py 4 1000000
+time java euler47 4 1000000
+time ./euler47 4 1000000
+javac euler50.java
+make euler50
+time julia euler50.jl 1000000
+time python euler50.py 1000000
+time java euler50 1000000
+time ./euler50 1000000
+javac euler52.java
+make euler52
+time julia euler52.jl 1000000
+time python euler52.py 1000000
+time java euler52 1000000
+time ./euler52 1000000
+make euler76.java
+make euler76
+time julia euler76.jl 100
+time python euler76.py 100
+time java euler76 100
+time ./euler76 100
+make euler77.java
+make euler77
+time julia euler77.jl 5000 1000000
+time python euler77.py 5000 1000000
+time java euler77 5000 1000000
+time ./euler77 5000 1000000
+make euler112.java
+make euler112
+time julia euler112.jl 10000000
+time python euler112.py 10000000
+time java euler112 10000000
+time ./euler112 10000000

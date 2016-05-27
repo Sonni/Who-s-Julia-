@@ -7,8 +7,7 @@ Find the sum of all numbers, less than one million, which are palindromic in bas
 =#
 #Answer: 872187
 
-#Terminal: Julia euler36.jl 1000000
-
+#Terminal: julia euler36.jl 1000000
 limit = parse(Int, ARGS[1])
 
 function createPalindrome(input, base, isOdd)

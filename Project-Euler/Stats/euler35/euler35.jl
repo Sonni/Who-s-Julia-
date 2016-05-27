@@ -7,7 +7,7 @@ How many circular primes are there below one million?
 =#
 #Answer: 55
 
-#Terminal: Julia Euler35.jl 1000000
+#Terminal: julia Euler35.jl 1000000
 
 limit = parse(Int, ARGS[1])
 

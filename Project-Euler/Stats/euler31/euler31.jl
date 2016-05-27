@@ -9,7 +9,7 @@ How many different ways can £2 be made using any number of coins?
 =#
 #Answer: 73682
 
-#Terminal: Julia euler31.jl 200
+#Terminal: julia euler31.jl 200
 
 target = parse(Int, ARGS[1])
 
