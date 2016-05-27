@@ -3,7 +3,7 @@ public class euler1 {
 	{
 		System.out.println(f1(Integer.parseInt(args[0])));
 	}
-	
+
 	private static int f1 (int n)
 	{
 		int sum = 0;
@@ -12,7 +12,7 @@ public class euler1 {
 			if (i % 3 == 0 || i % 5 == 0)
 			{
 				sum += i;
-			} 
+			}
 		}
 		return sum;
 	}

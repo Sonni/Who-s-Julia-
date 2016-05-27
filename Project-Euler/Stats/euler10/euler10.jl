@@ -5,7 +5,7 @@ Find the sum of all the primes below two million.
 =#
 #Answer: 142913828922
 
-#Terminal: Julia euler10.jl 2000000
+#Terminal: julia euler10.jl 2000000
 limit = parse(Int64, ARGS[1])
 #Sieve of Eratosthenes
 function getPrimes(size)

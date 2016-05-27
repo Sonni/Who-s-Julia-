@@ -13,7 +13,7 @@ What is the total of all the name scores in the file?
 =#
 #Answer: 871198282
 
-#Terminal: Julia euler22.jl data.txt
+#Terminal: julia euler22.jl data.txt
 path = ARGS[1]
 file = open(path)
 

@@ -15,7 +15,7 @@ NOTE: Once the chain starts the terms are allowed to go above one million.
 =#
 #Answer: 837799
 
-#Terminal: Julia euler14.jl 1000000
+#Terminal: julia euler14.jl 1000000
 limit = parse(Int, ARGS[1])
 function seq(n)
   max = 0

@@ -20,7 +20,7 @@ What is the value of the first triangle number to have over five hundred divisor
 =#
 #Answer: 76576500
 
-#Terminal: Julia euler12.jl 500
+#Terminal: julia euler12.jl 500
 numDiv = parse(Int, ARGS[1])
 function divisors(n)
   numFactors = 0

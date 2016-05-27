@@ -5,7 +5,7 @@ What is the 10 001st prime number?
 =#
 #Answer = 104_743
 
-#Terminal: Julia euler7.jl 10001 1000000
+#Terminal: julia euler7.jl 10001 1000000
 primeNumber = parse(Int, ARGS[1]) #prime number 10001
 limit = parse(Int, ARGS[2]) #get all primes < limit
 

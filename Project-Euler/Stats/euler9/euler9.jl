@@ -9,7 +9,7 @@ Find the product abc.
 =#
 #Answer: 31875000
 
-#Terminal: Julia euler9.jl 1000
+#Terminal: julia euler9.jl 1000
 number = parse(Int, ARGS[1])
 function pytha(number)
   dicto = Dict{ASCIIString, Int64}()

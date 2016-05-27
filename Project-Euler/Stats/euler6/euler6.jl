@@ -11,7 +11,7 @@ Find the difference between the sum of the squares of the first one hundred natu
 =#
 #Answer: 25_164_150
 
-#Terminal: Julia euler6.jl 100
+#Terminal: julia euler6.jl 100
 limit = parse(Int, ARGS[1])
 
 function diffe(n)

@@ -9,7 +9,7 @@ Find the sum of the digits in the number 100!
 =#
 #Answer: 648
 
-#Terminal: Julia euler20.jl 100
+#Terminal: julia euler20.jl 100
 num = parse(Int, ARGS[1])
 
 arr = Int[]

@@ -5,7 +5,7 @@ What is the sum of the digits of the number 2^1000?
 =#
 #Answer: 1366
 
-#Terminal: Julia euler16.jl 2 1000
+#Terminal: julia euler16.jl 2 1000
 #args[1] = 2
 #args[2] = 1000
 num = parse(Int, ARGS[1])

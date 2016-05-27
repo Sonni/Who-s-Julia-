@@ -3,7 +3,7 @@ Work out the first ten digits of the sum of the following one-hundred 50-digit n
 =#
 #Answer: 5537376230
 
-#Terminal: Julia euler13.jl data.txt
+#Terminal: julia euler13.jl data.txt
 data = ARGS[1]
 function makeData(data)
   f = open(data)

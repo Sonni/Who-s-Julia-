@@ -34,7 +34,7 @@ a clever method! ;o)
 =#
 #Answer: 1074
 
-#Terminal: Julia euler18.jl data.txt
+#Terminal: julia euler18.jl data.txt
 file = ARGS[1] #file with numbers as shown above
 
 #Count lines in file

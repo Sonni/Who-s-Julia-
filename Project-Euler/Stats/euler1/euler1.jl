@@ -1,7 +1,7 @@
 #Find the sum of all the multiples of 3 or 5 below 1000.
 #Answer: 233168
 
-#Terminal: Julia euler1.jl 1000
+#Terminal: julia euler1.jl 1000
 limit = parse(Int, ARGS[1])
 function f1(n)
   sum = 0

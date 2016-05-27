@@ -13,7 +13,7 @@ Evaluate the sum of all the amicable numbers under 10000.
 =#
 #Answer: 31626
 
-#Terminal: Julia euler21.jl 10000
+#Terminal: julia euler21.jl 10000
 limit = parse(Int, ARGS[1])
 function sum_divisors(n)
   sum = 0

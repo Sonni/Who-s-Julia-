@@ -5,7 +5,7 @@
 =#
 #Answer: 4613732
 
-#Terminal: Julia euler2.jl 4000000
+  #Terminal: julia euler2.jl 4000000
 limit = parse(Int, ARGS[1])
 
 function fibo(n)

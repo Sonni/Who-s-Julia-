@@ -6,7 +6,7 @@ Find the largest palindrome made from the product of two 3-digit numbers.
 
 #Answer: 906609
 
-#Terminal: Julia euler4.jl 100 999
+#Terminal: julia euler4.jl 100 999
 #Interval for calculating palindrome: 100-999 finds largest 3-digit palindrome.
 min = parse(Int, ARGS[1])
 max = parse(Int, ARGS[2])

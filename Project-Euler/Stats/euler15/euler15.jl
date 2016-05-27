@@ -5,7 +5,7 @@ How many such routes are there through a 20×20 grid?
 =#
 #Answer: 137846528820
 
-#Terminal: Julia euler15.jl 20
+#Terminal: julia euler15.jl 20
 gridSize = parse(Int, ARGS[1])
 #Fill matrix with 1 of size gridSize + 1
 grid = ones(BigInt, gridSize+1, gridSize+1)

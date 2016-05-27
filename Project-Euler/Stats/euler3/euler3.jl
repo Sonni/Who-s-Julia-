@@ -4,7 +4,7 @@
 =#
 #Answer: 6857
 
-#Terminal: Julia euler3.jl 600851475143
+#Terminal: julia euler3.jl 600851475143
 limit = parse(Int, ARGS[1])
 function prime_factors(n)
   factors = Int[]

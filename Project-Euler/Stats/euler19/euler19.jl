@@ -13,7 +13,7 @@ How many Sundays fell on the first of the month during the twentieth century (1 
 =#
 #Answer: 171
 
-#Terminal: Julia euler19.jl 1901 2000
+#Terminal: julia euler19.jl 1901 2000
 minYear = parse(Int, ARGS[1]) #min year
 maxYear = parse(Int, ARGS[2]) #max year
 
