@@ -15,12 +15,12 @@ public class euler10
 
 	private static List<Integer> getPrimes(int size)
 	{
-		List<Boolean> array = new ArrayList<>();
+		ArrayList<Boolean> array = new ArrayList<Boolean>();
 		for(int i = 0; i <= size; i++)
 		{
 			array.add(true);
 		}
-		array[1] = false;
+		array.set(1, false);
 		int c = 1;
 		for(int i = 2; i <= size; i++)
 		{

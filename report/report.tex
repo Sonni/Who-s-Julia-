@@ -130,7 +130,7 @@ Making longer programs in the terminal might not be an optimal solution. The tex
 	\begin{subfigure}[b]{0.7\textwidth}
 		\centering
 		\begin{lstlisting}
-		for (unsigned int i = 1; i <1 11; i++){
+		for (unsigned int i = 1; i < 11; i++){
 			std::cout << i << "\n";
 		}
 		\end{lstlisting}
@@ -179,6 +179,47 @@ Making longer programs in the terminal might not be an optimal solution. The tex
 	\end{subfigure}
 	\caption{For-loops: Decrementing}
 	\label{forloop-}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\begin{subfigure}[b]{0.7\textwidth}
+		\centering
+		\begin{lstlisting}
+		while i < 10
+			a -= 1
+		end
+		\end{lstlisting}
+		\caption{Julia}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.7\textwidth}
+		\centering
+		\begin{lstlisting}
+		while (i < 10):
+			a -= 1
+		\end{lstlisting}
+		\caption{Python}
+	\end{subfigure}	
+	\begin{subfigure}[b]{0.7\textwidth}
+		\centering
+		\begin{lstlisting}
+		while (i < 10){
+			i--;
+		}
+		\end{lstlisting}
+		\caption{Java}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.7\textwidth}
+		\centering
+		\begin{lstlisting}
+		while (a < 10){
+			i--;
+		}
+		\end{lstlisting}
+		\caption{C++}
+	\end{subfigure}
+	\caption{while-loop}
+	\label{whileloop}
 \end{figure}
 
 \begin{figure}

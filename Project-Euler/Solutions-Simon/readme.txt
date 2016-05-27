@@ -1,1 +1,0 @@
-30 euler problems done for statistics.
