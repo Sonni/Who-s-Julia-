@@ -26,10 +26,9 @@ unsigned long solve(unsigned int m, unsigned int n)
 
 int main(int argc, const char * argv[]) {
     unsigned int size = atoi(argv[1]);
-    unsigned int numColors = atoi(argv[2]);
     
     unsigned long result;
-    for (unsigned int i = 0; i < numColors; i++)
+    for (unsigned int i = 0; i < 3; i++)
         result += solve(2+i, size);
     
     //std::cout << result << std::endl;

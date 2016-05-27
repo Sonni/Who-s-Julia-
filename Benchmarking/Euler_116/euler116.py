@@ -13,11 +13,10 @@ def solve(m, n): #m=color block size  n = black box size
 
 def s(size, numColors):
   result = 0;
-  for i in xrange(0, numColors):
+  for i in xrange(0, 3):
      result += solve(2+i, size)
   return result
 
 size = int(sys.argv[1])
-numColors = int(sys.argv[2])
 
 s(size, numColors)

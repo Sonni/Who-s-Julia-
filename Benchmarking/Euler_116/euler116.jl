@@ -14,13 +14,12 @@ end
 
 function s(size, numColors)
   result = 0;
-  for i = 0 : numColors - 1
+  for i = 0 : 2
      result += solve(2+i, size)
   end
   return result
 end
 
 size = parse(Int32, ARGS[1])
-numColors = parse(Int32, ARGS[2])
 
 s(size, numColors)
