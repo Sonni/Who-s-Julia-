@@ -12,7 +12,7 @@ function solve(m, n) #m=color block size  n = black box size
   return solutions
 end
 
-function s(size, numColors)
+function s(size)
   result = 0;
   for i = 0 : 2
      result += solve(2+i, size)
@@ -22,4 +22,4 @@ end
 
 size = parse(Int32, ARGS[1])
 
-s(size, numColors)
+s(size)
