@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.12.7)  26 MAY 2016 19:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.12.7)  27 MAY 2016 20:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -449,7 +449,11 @@ Package graphics Info: Driver file: pdftex.def on input line 94.
 (/usr/local/texlive/2015/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2014/09/06 1.5e listings language file
 )
-Excluding 'comment' comment. (./report.aux)
+Excluding 'comment' comment. (./report.aux
+
+LaTeX Warning: Label `whileloop' multiply defined.
+
+)
 \openout1 = `report.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 59.
@@ -464,8 +468,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 59.
 LaTeX Font Info:    ... okay on input line 59.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 59.
 LaTeX Font Info:    ... okay on input line 59.
-
-(/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
+ (/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count116
 \scratchdimen=\dimen126
@@ -564,70 +567,74 @@ File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10> not available
 (Font)              Font shape `T1/cmtt/m/n' tried instead on input line 96.
- [3 <./terminalj.jpg> <./terminalp.jpg>] [4] [5] [6] [7] [8]
-<time.jpg, id=41, 164.615pt x 60.225pt>
+ [3 <./terminalj.jpg> <./terminalp.jpg>] [4] [5] [6] [7] [8] [9]
+<time.jpg, id=44, 164.615pt x 60.225pt>
 File: time.jpg Graphic file (type jpg)
  <use time.jpg>
-Package pdftex.def Info: time.jpg used on input line 289.
+Package pdftex.def Info: time.jpg used on input line 407.
 (pdftex.def)             Requested size: 108.0011pt x 39.51335pt.
- [9 <./time.jpg>]
-<11.jpg, id=45, 208.78pt x 81.30376pt>
+ [10 <./time.jpg>]
+<11.jpg, id=48, 208.78pt x 81.30376pt>
 File: 11.jpg Graphic file (type jpg)
  <use 11.jpg>
-Package pdftex.def Info: 11.jpg used on input line 306.
+Package pdftex.def Info: 11.jpg used on input line 424.
 (pdftex.def)             Requested size: 167.0242pt x 65.04308pt.
- [10 <./11.jpg>]
-(./euler11.jl) [11] (./euler11.jl) (./euler11.jl) [12]
-<1161.jpg, id=56, 568.1225pt x 93.34875pt>
+ [11 <./11.jpg>]
+(./euler11.jl) [12] (./euler11.jl) (./euler11.jl) [13]
+<1161.jpg, id=60, 568.1225pt x 93.34875pt>
 File: 1161.jpg Graphic file (type jpg)
  <use 1161.jpg>
-Package pdftex.def Info: 1161.jpg used on input line 347.
+Package pdftex.def Info: 1161.jpg used on input line 465.
 (pdftex.def)             Requested size: 216.0022pt x 35.4914pt.
 
-<1162.jpg, id=57, 420.57124pt x 39.14626pt>
+<1162.jpg, id=61, 420.57124pt x 39.14626pt>
 File: 1162.jpg Graphic file (type jpg)
  <use 1162.jpg>
-Package pdftex.def Info: 1162.jpg used on input line 353.
+Package pdftex.def Info: 1162.jpg used on input line 471.
 (pdftex.def)             Requested size: 216.0022pt x 20.10529pt.
 
-<1163.jpg, id=58, 273.02pt x 33.12375pt>
+<1163.jpg, id=62, 273.02pt x 33.12375pt>
 File: 1163.jpg Graphic file (type jpg)
  <use 1163.jpg>
-Package pdftex.def Info: 1163.jpg used on input line 359.
+Package pdftex.def Info: 1163.jpg used on input line 477.
 (pdftex.def)             Requested size: 216.0022pt x 26.20638pt.
- [13]
-<qs.jpg, id=63, 245.91875pt x 501.875pt>
+ [14]
+<qs.jpg, id=66, 245.91875pt x 501.875pt>
 File: qs.jpg Graphic file (type jpg)
  <use qs.jpg>
-Package pdftex.def Info: qs.jpg used on input line 377.
+Package pdftex.def Info: qs.jpg used on input line 495.
 (pdftex.def)             Requested size: 122.95906pt x 250.93687pt.
- [14 <./1161.jpg> <./1162.jpg> <./1163.jpg>] [15 <./qs.jpg>] [16] [17] [18] (./
-report.aux) ) 
+ [15 <./1161.jpg> <./1162.jpg> <./1163.jpg>] [16 <./qs.jpg>] [17] [18] [19] (./
+report.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
- 6748 strings out of 493089
- 93251 string characters out of 6134842
- 299160 words of memory out of 5000000
- 10101 multiletter control sequences out of 15000+600000
+ 6755 strings out of 493089
+ 93334 string characters out of 6134842
+ 366160 words of memory out of 5000000
+ 10108 multiletter control sequences out of 15000+600000
  17766 words of font info for 49 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  37i,9n,40p,2138b,1701s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/cm-super/cm-su
-per-t1.enc}</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cms
-y10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfbx109
-5.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfbx1200.
-pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pf
-b></usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb>
-</usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></
-usr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></us
-r/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/
-local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/lo
-cal/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb></usr/loca
-l/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on report.pdf (18 pages, 456213 bytes).
+{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
+</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></
+usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></u
+sr/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfbx1095.pfb></usr
+/local/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/l
+ocal/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/loc
+al/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm0900.pfb></usr/local
+/texlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/t
+exlive/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/tex
+live/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texli
+ve/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/local/texlive
+/2015/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb></usr/local/texlive/2
+015/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
+Output written on report.pdf (19 pages, 458586 bytes).
 PDF statistics:
- 119 PDF objects out of 1000 (max. 8388607)
- 78 compressed objects within 1 object stream
+ 123 PDF objects out of 1000 (max. 8388607)
+ 81 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  41 words of extra memory for PDF output out of 10000 (max. 10000000)
 
