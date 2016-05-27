@@ -165,15 +165,20 @@ int main(int argc, const char * argv[])
     {
         
         std::string language = split(line, ' ')[0];
+        std::string programName = split(line, ' ')[1];
         if (!language.compare("/Applications/Julia-0.4.5.app/Contents/Resources/julia/bin/julia"))
             language = "Julia";
         
         if (language[0] == '.' && language[1] == '/')
+        {
             language = "C++";
+            programName = split(line, ' ')[0];
+        }
+        
         
         std::string command = "(time -p " + line + ") 2> out.txt";
         
-        doTest(language + ":", command.c_str());
+        doTest(language + " : " + programName, command.c_str());
         counter++;
     }
     infile.close();
