@@ -20,4 +20,4 @@ def s(size, numColors):
 size = int(sys.argv[1])
 numColors = int(sys.argv[2])
 
-print s(size, numColors)
+s(size, numColors)

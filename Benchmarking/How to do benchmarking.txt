@@ -1,0 +1,11 @@
+10-20 points (scale problem 10-20 times)
+use median
+Running time 5-15 min
+
+Copy ProgramTester.exe and script.sh to folder
+Open terminal
+Go to folder
+Change script.sh
+Run following command in terminal.
+./ProgramTester > output.txt
+Running times will end up in output.txt

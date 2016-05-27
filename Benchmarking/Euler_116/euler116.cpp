@@ -32,7 +32,7 @@ int main(int argc, const char * argv[]) {
     for (unsigned int i = 0; i < numColors; i++)
         result += solve(2+i, size);
     
-    std::cout << result << std::endl;
+    //std::cout << result << std::endl;
     return 0;
 }
 

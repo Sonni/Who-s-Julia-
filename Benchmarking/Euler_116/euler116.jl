@@ -23,4 +23,4 @@ end
 size = parse(Int32, ARGS[1])
 numColors = parse(Int32, ARGS[2])
 
-@time println(s(size, numColors))
+s(size, numColors)

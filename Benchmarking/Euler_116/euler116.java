@@ -8,7 +8,6 @@ public class euler116 {
         for (int i = 0; i < numColors; i++)
             result += solve(2+i, size);
         
-        System.out.println(result);
     }
     
     private static long solve(int m, int n)

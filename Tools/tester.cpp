@@ -135,7 +135,7 @@ void doTest(std::string title, const char* command)
     float sum = 0.0;
     float median = 0.0;
     
-    std::cout << title << " - Time is in seconds:" << std::endl;
+    std::cout << title << "" << std::endl;
     for (int i = 0; i < loopCount; i++)
     {
         //std::string out = exec(command);
@@ -166,6 +166,7 @@ int main(int argc, const char * argv[])
         
         std::string language = split(line, ' ')[0];
         std::string programName = split(line, ' ')[1];
+        std::string arguments = "";
         if (!language.compare("/Applications/Julia-0.4.5.app/Contents/Resources/julia/bin/julia"))
             language = "Julia";
         
@@ -173,12 +174,25 @@ int main(int argc, const char * argv[])
         {
             language = "C++";
             programName = split(line, ' ')[0];
+            std::vector<std::string> arg = split(line, ' ');
+            for (unsigned int i = 1; i < arg.size(); i++)
+                arguments += arg[i] + " ";
         }
+        else
+        {
+            std::vector<std::string> arg = split(line, ' ');
+            for (unsigned int i = 2; i < arg.size(); i++)
+                arguments += arg[i] + " ";
+        }
+        
+        
+        
+        
         
         
         std::string command = "(time -p " + line + ") 2> out.txt";
         
-        doTest(language + " : " + programName, command.c_str());
+        doTest(language + " : " + programName + " " + arguments, command.c_str());
         counter++;
     }
     infile.close();
