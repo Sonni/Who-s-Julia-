@@ -11,4 +11,5 @@ On many euler problems we have found algorithms found on the inthernet, should t
 We can only make the running time for quicksort with dual pivot about 2 min.
 Larger dataset will cause cause of out memory error.
 We've tried to parse the data to Javas sort function, the same error occurs.
+We really don't know how to make the dataset larger, should we just be be okay with not getting bigger run time?
 
