@@ -305,6 +305,42 @@ Making longer programs in the terminal might not be an optimal solution. The tex
 	\label{function}
 \end{figure}
 
+\begin{figure}
+	\centering
+	\begin{subfigure}[b]{0.7\textwidth}
+		\centering
+		\begin{lstlisting}
+		array = fill(0, 100)
+		\end{lstlisting}
+		\caption{Julia}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.7\textwidth}
+		\centering
+		\begin{lstlisting}
+		array = [0 for col in range(100)]
+		\end{lstlisting}
+		\caption{Python}
+	\end{subfigure}	
+	\begin{subfigure}[b]{0.7\textwidth}
+		\centering
+		\begin{lstlisting}
+		int[] array = new int[100];
+		Arrays.fill(array, 0);
+		\end{lstlisting}
+		\caption{Java}
+	\end{subfigure}
+	\begin{subfigure}[b]{0.7\textwidth}
+		\centering
+		\begin{lstlisting}
+		std::array<int,100> array;
+		myarray.fill(0);
+		\end{lstlisting}
+		\caption{C++}
+	\end{subfigure}
+	\caption{Declaring functions}
+	\label{Filling array with 0's}
+\end{figure}
+
 \subsection{Features}
 Julia supports the following: Multiple dispatch and dynamic typing. The dynamic type system is similar to python. A property of dynamic typing is the type checks which are performed at runtime, mostly - opposed to static typing which makes the type checks at compile time. In Julia it is possible to specify types but for the most part it is not necessary because of the dynamic type system. Julia makes decisions about what size to assign to the variables which does not change at run time and cannot be changed after initialization. The types that are supported in Julia:
 \begin{description}
