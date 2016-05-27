@@ -4,8 +4,7 @@ function a()
   maxProd = 0
   matLength = parse(Int, ARGS[1])
   numProd = parse(Int, ARGS[2])
-
-  #mat = reshape(1:(matLength*matLength), matLength, matLength)
+  
   mat = zeros(Int, matLength, matLength)
 
   f = open(string("mat", matLength, ".txt"))
