@@ -1,15 +1,13 @@
 #Terminal: Julia euler11.jl 1000 4
-function a()
+matLength = parse(Int, ARGS[1])
+numProd = parse(Int, ARGS[2])
 
-  maxProd = Int64(0)
-  matLength = parse(Int, ARGS[1])
-  numProd = parse(Int, ARGS[2])
-
-  mat = zeros(Int64, matLength, matLength)
-
+function makeData(matLength)
+  mat = zeros(Int, matLength, matLength)
   f = open(string("mat", matLength, ".txt"))
 
   j = 0
+
   for l in eachline(f)
     s = split(l)
     j += 1
@@ -17,7 +15,13 @@ function a()
       mat[j, i] = parse(Int32, s[i])
     end
   end
+
   close(f)
+  return mat
+end
+
+function a(mat, matLength, numProd)
+  maxProd = Int64(0)
 
   for i = 1 : matLength
     for j = 1 : matLength - numProd
@@ -66,7 +70,7 @@ function a()
     end
   end
 
-  println(maxProd)
+  return maxProd
 end
-
-a()
+data = makeData(matLength)
+println(a(data, matLength, numProd))

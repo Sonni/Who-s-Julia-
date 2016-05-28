@@ -1,6 +1,4 @@
-
 #Terminal: Julia euler11.jl 1000 4
-
 matLength = parse(Int, ARGS[1])
 numProd = parse(Int, ARGS[2])
 
@@ -17,29 +15,18 @@ function makeData(matLength)
       mat[i, j] = parse(Int32, s[i])
     end
   end
-
-  #=
-  for l in eachline(f)
-    s = split(l)
-    j += 1
-    for i = 1 : length(s)
-      mat[j, i] = parse(Int32, s[i])
-    end
-  end
-  =#
-
+  
   close(f)
   return mat
 end
 
 function a(mat, matLength, numProd)
-  maxProd = 0
-  result = 0
+  maxProd = Int64(0)
 
   for j = 1 : matLength - numProd
     for i = 1 : matLength
       #right/left
-      prod = 1
+      prod = Int64(1)
       for k = 0 : numProd - 1
         prod *= mat[i, j + k]
       end
@@ -47,7 +34,7 @@ function a(mat, matLength, numProd)
         maxProd = prod
       end
       #up/down
-      prod = 1
+      prod = Int64(1)
       for k = 0 : numProd - 1
         prod *= mat[j + k, i]
       end
@@ -60,7 +47,7 @@ function a(mat, matLength, numProd)
   #diagonal left->right
   for j = 1 : matLength - numProd
     for i = 1 : matLength - numProd
-      prod = 1
+      prod = Int64(1)
       for k = 0 : numProd - 1
         prod *= mat[i + k, j + k]
       end
@@ -73,7 +60,7 @@ function a(mat, matLength, numProd)
   #diagonal right->left
   for j = matLength : -1 : numProd
     for i = 1 : matLength - numProd
-      prod = 1
+      prod = Int64(1)
       for k = 0 : numProd - 1
         prod *= mat[i + k, j - k]
       end
@@ -85,5 +72,5 @@ function a(mat, matLength, numProd)
 
   return maxProd
 end
-data = makeData(matLength)
-println(a(data, matLength, numProd))
+@time data = makeData(matLength)
+@time println(a(data, matLength, numProd))
