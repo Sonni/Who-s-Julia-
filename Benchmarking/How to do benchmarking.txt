@@ -7,5 +7,5 @@ Open terminal
 Go to folder
 Change script.sh
 Run following command in terminal.
-./ProgramTester > output.txt
+./ProgramTester LOOPCOUNT > output.txt
 Running times will end up in output.txt

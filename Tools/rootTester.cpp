@@ -14,8 +14,6 @@
 #include <string>
 #include <vector>
 #include <fstream>
-#include <dirent.h>
-
 
 std::vector<std::string> split(std::string s, char delim)
 {
@@ -130,10 +128,8 @@ std::string exec(const char* cmd) {
     return result;
 }
 
-void doTest(std::string title, const char* command)
+void doTest(std::string title, const char* command, unsigned int loopCount)
 {
-    int loopCount = 5;
-    
     float sum = 0.0;
     float median = 0.0;
     
@@ -156,9 +152,11 @@ void doTest(std::string title, const char* command)
     std::cout << "____________________________________" << std::endl;
 }
 
-void doFolder(std::string path)
+
+int main(int argc, const char * argv[])
 {
-    std::ifstream infile(path + "/script.sh");
+    
+    std::ifstream infile("script.sh");
     int counter = 0;
     std::string line;
     while (std::getline(infile, line))
@@ -186,35 +184,16 @@ void doFolder(std::string path)
         }
         
         
+        
+        
+        
+        
         std::string command = "(time -p " + line + ") 2> out.txt";
         
-        doTest(language + " : " + programName + " " + arguments, command.c_str());
+        doTest(language + " : " + programName + " " + arguments, command.c_str(), atoi(argv[1]));
         counter++;
     }
     infile.close();
-}
-
-int main(int argc, const char * argv[])
-{
-    const char* PATH = ".";
-    
-    DIR *dir = opendir(PATH);
-    
-    struct dirent *entry = readdir(dir);
-    
-    while (entry != NULL)
-    {
-        if (entry->d_type == DT_DIR)
-            if (std::strcmp(entry->d_name, ".") && std::strcmp(entry->d_name, ".."))
-            {
-                std::cout << entry->d_name << " ";
-                doFolder(entry->d_name);
-            }
-        
-        entry = readdir(dir);
-    }
-    
-    closedir(dir);
     
     return 0;
 }
