@@ -1,4 +1,6 @@
 import sys
+import time
+from time import clock
 matLength = int(sys.argv[1])
 numProd = int(sys.argv[2])
 
@@ -53,5 +55,11 @@ def a(mat, matLength, numProd):
         maxProd = prod
 
   return maxProd
+startData = time.clock()
 data = makeData(matLength)
-print a(data, matLength, numProd)
+endData = time.clock() - startData
+print endData
+startCalc = time.clock()
+a(data, matLength, numProd)
+endCalc = time.clock() - startCalc
+print endCalc
