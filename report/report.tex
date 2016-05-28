@@ -343,7 +343,7 @@ Writing longer programs in the terminal might not be the preferred method. The t
 
 \subsection{Features}
 \subsubsection{Multiple dispatch and dynamic typing}
-A property of dynamic typing is the type checks are performed at runtime, mostly - opposed to static typing which makes the type checks at compile time. Dynamic typing allows the programmer to skip the type declaration and let the dynamic type system handle it. In Julia it is possible to specify types but for the most part it is not necessary. Julia also makes decisions about what size to assign to the variables and this will not change even if a big value which exceeds the memory of the variable are assigned to it. The memory size can be deceased and this will be addressed later under the section Garbage Collector. There is a range of memory sizes to chose from when initializing a variable, Julia will by default assign 32 bits to an integer or floating point if no more memory is needed at initialization, but it is possible to manually chose one of the following.
+Dynamic typing means that type checks are mostly performed at runtime - opposed to static typing which makes the type checks at compile time. Dynamic typing allows the programmer to skip the type declaration and let the dynamic type system handle it. In Julia it is possible to specify types but for the most part this is not necessary. Julia also makes decisions about how much memory to allocate for variables and this will not change even if a big value which exceeds the memory of the variable are assigned to it. The memory size can be deceased and this will be addressed later under the section Garbage Collector. There is a range of memory sizes to chose from when initializing a variable, Julia will by default assign 32 bits to an integer or a float if no more memory is needed at initialization, but it is possible to manually chose one of the following.
 \begin{description}
 	\item[$\cdot$] Signed / unsigned integers of; 8, 16, 32, 64 and 128 bits.
 	\item[$\cdot$] Floating points of 16, 32 and 64 bits.  
@@ -362,7 +362,7 @@ typeof(x) #Int8
 x = 4
 typeof(x) #Int32
 \end{lstlisting}
-If no certain memory size is needed but only a specific type then abstract types will come in handy. An abstract type is just some form of generalization of a certain type. For example 16, 32 and 64 bit floats are of type AbstractFloat. This is especially useful when the programmer doesn't know how much memory a certain variable may need. Too little memory will result in a bug and too much memory is a waste. 
+If no certain memory size is needed but only a specific type then abstract types will come in handy. An abstract type is just some form of generalization of a concrete type. For example 16, 32 and 64 bit floats are of type AbstractFloat. This is especially useful when the programmer do not know how much memory a certain variable may need. Too little memory will result in a bug and too much memory is a waste. 
 \\
 \\
 Multiple dispatch is used to determine which function to call by the type of one or more of the parsed argument(s). This is useful when, e.g. two functions with the same name are declared:
@@ -388,14 +388,14 @@ end
 If a variable in a composite type is not specified with any type, the default is ::Any which accepts any kinds of types. To initialize a composite type you can treat it like an object. Person = person(21, "Carl"), and the values can be changed with "Person.age = 25". The developers of Julia states that user defined types are as fast and compact as built in types. 
 
 \subsubsection{Garbage Collector}
-Julia uses a garbage collector to automatically free the memory when needed. There is no guarantee when the garbage collector will run, but is it possible to force garbage collection with a function call: \textbf{gc()}. One thing to keep in mind is that once a name is defined in Julia, it will always be present till termination. The garbage collector doesn't free the memory of unreachable object but rather reallocates memory for objects when memory size has changed. So the only way the garbage collector can free memory is when an object has been reduced in size, for example:
+Julia uses a garbage collector to automatically free the memory when needed. There is no guarantee when the garbage collector will run, but is it possible to force garbage collection with a function call: \textbf{gc()}. One thing to keep in mind is that once a name is defined in Julia, it will always be present till termination. The garbage collector do not free the memory of unreachable object but rather reallocates memory for objects when memory size has changed. So the only way the garbage collector can free memory is when an object has been reduced in size, for example:
 
 \begin{lstlisting}[language=python]
 A = rand(float32, 10000, 10000) 
 A = 0
 Gc() 
 \end{lstlisting}
-This code will generate a 10000x10000 matrix filled with random 32 bit floating points which consumes a bit of memory. \textbf{A} will be set to 0 but will keep the memory size of the 10000x10000 matrix until garbage collection is done either manually as in this example or somewhere in the future when it is done automatically. 
+This code will generate a 10000x10000 matrix filled with random 32 bit floats which consumes a bit of memory. \textbf{A} will be set to 0 but will keep the memory size of the 10000x10000 matrix until garbage collection is done either manually as in this example or somewhere in the future when it is done automatically. 
 
 \subsubsection{Built-in package manager}
 Julia comes with a built in package manager which keeps track of which packages that needs to be included in the users program to run, so is it not necessary to state which packages that need to be included. For example when the user calls the sort function, \textbf{sort()}, no package include statement or \textbf{math.sort()} is needed – this is done automatically by the package manager.
@@ -428,7 +428,7 @@ Where <COMMAND> can be any terminal command. The time command will return three 
 	\item[$\cdot$] Sys: System time is how much CPU time is spent in kernel mode.
 \end{description}
 The difference between user- and kernel mode is the following:\\
-In most memory protected system there are some locked operations for security reasons. E.g. allocation of memory or accessing hardware requires kernel mode and cannot be done in user mode. Processes like malloc and reading / writing to files will somewhere in the process sent a request to the kernel to do certain things and this is counted as system time. This doesn’t necessarily mean that all time is spent in kernel mode when reading a file, since the only time that is spent in kernel mode is accessing the requested data in memory the rest of the operation is counted towards user time.\\ 
+In most memory protected system there are some locked operations for security reasons. E.g. allocation of memory or accessing hardware requires kernel mode and cannot be done in user mode. Processes like malloc and reading / writing to files will somewhere in the process sent a request to the kernel to do certain things and this is counted as system time. This does not necessarily mean that all time is spent in kernel mode when reading a file, since the only time that is spent in kernel mode is accessing the requested data in memory the rest of the operation is counted towards user time.\\ 
 \\
 So to get much times is spent on the CPU, User time + system is a good estimation. To get an even better indication of the real CPU time, multiple test are done and the average is calculated. The average running time is considered since there can be fluctuations in run times for every test. \\
 \\
@@ -549,7 +549,7 @@ for i = n; i > 0; i--
 \end{lstlisting}
 In Julia the exit condition and incrementation / decrementation are swapped and there is no consistency. The decrementing for-loops both start at n, and stops at 0. This kind of syntax can again cause bugs, and is not that easy to get eyes on.\\
 \\
-The documentation of Julia is far from being great, which is a huge bump on the road to learn Julia. It feels far from complete. The documentation doesn’t explain much but instead gives some examples. Essential information are often lacking, e.g. what types is needed to parse for a given function. It might point out that these arguments are needed, but lacking to describe those arguments. An example from the documentation is the function \textbf{rand()} which is used to generate random numbers:
+The documentation of Julia is far from being great, which is a huge bump on the road to learn Julia. It feels far from complete. The documentation do not explain much but instead gives some examples. Essential information are often lacking, e.g. what types is needed to parse for a given function. It might point out that these arguments are needed, but lacking to describe those arguments. An example from the documentation is the function \textbf{rand()} which is used to generate random numbers:
 
 \begin{lstlisting}
 rand( [ rng ] [ ,S ] [ , dims... ] )
