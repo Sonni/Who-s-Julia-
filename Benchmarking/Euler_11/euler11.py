@@ -1,20 +1,24 @@
-def a():
-  import sys
-  maxProd = 0
-  matLength = int(sys.argv[1])
-  numProd = int(sys.argv[2])
-  string = "mat%d.txt" % matLength
-  mat = [[0 for i in xrange(matLength)] for i in xrange(matLength)]
+import sys
+matLength = int(sys.argv[1])
+numProd = int(sys.argv[2])
 
-  result = 0
-  with open(string) as f:
-    j = 0
-    for line in f:
-      s = line.split()
-      for i in range(0, len(s)):
-        mat[j][i] = int(s[i])
-      j += 1
-    f.close()
+def makeData(matLength):
+    string = "mat%d.txt" % matLength
+    mat = [[0 for i in xrange(matLength)] for i in xrange(matLength)]
+
+    with open(string) as f:
+      j = 0
+      for line in f:
+        s = line.split()
+        for i in range(0, len(s)):
+          mat[j][i] = int(s[i])
+        j += 1
+      f.close()
+    return mat
+
+def a(mat, matLength, numProd):
+  maxProd = 0
+
   for i in range(matLength):
     for j in range(matLength - numProd):
       #right/left
@@ -48,5 +52,6 @@ def a():
       if prod > maxProd:
         maxProd = prod
 
-  print(maxProd)
-a()
+  return maxProd
+data = makeData(matLength)
+print a(data, matLength, numProd)

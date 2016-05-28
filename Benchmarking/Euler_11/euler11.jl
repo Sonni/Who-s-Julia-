@@ -72,5 +72,5 @@ function a(mat, matLength, numProd)
 
   return maxProd
 end
-data = makeData(matLength)
-println(a(data, matLength, numProd))
+@time data = makeData(matLength)
+@time a(data, matLength, numProd)
