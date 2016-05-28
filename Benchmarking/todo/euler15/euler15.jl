@@ -9,8 +9,7 @@ How many such routes are there through a 20×20 grid?
 siz = parse(Int, ARGS[1])
 
 function calc(siz)
-  mat = fill(1, siz + 1, siz + 1)
-  routes = 0
+  mat = ones(UInt128, siz + 1, siz + 1)
 
   for j = siz : -1 : 1
     for i = siz : -1 : 1
