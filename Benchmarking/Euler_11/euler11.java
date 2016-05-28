@@ -3,32 +3,32 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
-public class euler011
+public class euler11
 {
 	public static void main (String[] args)
 	{
 		a(Integer.parseInt(args[0]), Integer.parseInt(args[1]));
 	}
-	
+
 	private static void a(int matsize, int seq)
 	{
         int[][] mat = new int[matsize][matsize];
-        
-        try (BufferedReader reader = Files.newBufferedReader(Paths.get("mat" + matsize + ".txt"))) 
+
+        try (BufferedReader reader = Files.newBufferedReader(Paths.get("mat" + matsize + ".txt")))
         {
             int h = 0;
             String read;
-            while((read = reader.readLine()) != null) 
+            while((read = reader.readLine()) != null)
             {
                 String[] words = read.split( "\\s+" );
                 int v = 0;
                 for (String s : words)
                 {
-                    try 
+                    try
                     {
                         int i = Integer.parseInt(s);
                         mat[h][v] = i;
-                    } catch (Exception e) 
+                    } catch (Exception e)
                     {
                         System.out.println("File is corrupt");
                     }
@@ -37,14 +37,14 @@ public class euler011
                 h += 1;
             }
             reader.close();
-        } catch (IOException ex) 
+        } catch (IOException ex)
         {
             System.out.println("File does not exist");
-        } 
+        }
 
-                
-		int maxProd = 0;
-        int prod;                
+
+				long maxProd = 0;
+        long prod;
         for (int i = 0; i < matsize - seq; i++)
         {
             for (int j = 0; j <= matsize - seq; j++)
@@ -59,7 +59,7 @@ public class euler011
                 {
                     maxProd = prod;
                 }
-                
+
                 //Up-Down
                 prod = 1;
                 for (int k = 0; k < seq; k++)
@@ -72,7 +72,7 @@ public class euler011
                 }
             }
         }
-        
+
         //Diagonal ->
         for (int i = 0; i <= matsize - seq; i++)
         {
@@ -106,7 +106,7 @@ public class euler011
                 }
             }
         }
-        
+
         System.out.println(maxProd);
 	}
 }
