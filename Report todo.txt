@@ -1,0 +1,11 @@
+Meta-programming is a way to write programs in programs and let them use program code as data.
+
+_______________________________
+Der mangler eksempler i Implementing code from other languages.
+
+______________________________
+
+Side 15 er meget forvirrende fordi der bliver referaret meget rundt og det er svært for læseren at følge med
+________
+The algorithm first reads through a file with the input and makes a ma- trix. To calculate products in all directions needed in the problem, the algorithm goes through the matrix a total of 3 times. A nested for loop is needed to go though a matrix, lines 1-2 at figure 10. The outer loop it- erates through the rows, and the inner loop iterates through the columns. Figure 10 calculates the horizontal and vertical directions, firgure 11 diag- onally from left to right(downwards) and figure 12 going diagonally from right to left(downwards). The algorithm starts in the most upper left cell, and iterates through all cells in the matrix. Lets have the first cell as (1,1), first number is row(i) and second number is column(j). Looking at figure 10, matLength is the size of the matrix, size = 100 would mean a matrix of size 100 · 100. numProd is the number of adjacent numbers multiplied together. For matrix with size 100, and multiplying four adjacent numbers, the algorithm would do the following in figure 10:
+_____________________

@@ -8,7 +8,11 @@ f = open(name, "w")
 
 for i=1: size
 	tmp = a[i]
-	write(f, "$tmp", " ")
+	if i != size 
+		write(f, "$tmp", " ")
+	else
+		write(f, "$tmp") 
+	end
 end
 
 close(f)

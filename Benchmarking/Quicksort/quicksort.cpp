@@ -117,8 +117,6 @@ std::vector<std::string> split(std::string s, char delim)
 
 int main(int argc, const char * argv[])
 {
-    
-    
     std::ifstream infile(argv[2]);
     
     std::string line;
