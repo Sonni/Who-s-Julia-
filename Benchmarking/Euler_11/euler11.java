@@ -12,21 +12,21 @@ public class euler11
     int matLength = Integer.parseInt(args[0]);
     int numProd = Integer.parseInt(args[1]);
 
-    long startData = System.currentTimeMillis();
+    //long startData = System.currentTimeMillis();
 
     int[][] data = makeData(matLength);
 
-    long endData = System.currentTimeMillis();
-    float elapsedData = endData - startData;
-    System.out.println(elapsedData / 1000);
+    //long endData = System.currentTimeMillis();
+    //float elapsedData = endData - startData;
+    //System.out.println(elapsedData / 1000);
 
-    long startCalc = System.currentTimeMillis();
+    //long startCalc = System.currentTimeMillis();
 
-    System.out.println(a(data, matLength, numProd));
-
-    long endCalc = System.currentTimeMillis();
-    float elapsedCalc = endCalc - startCalc;
-		System.out.println(elapsedCalc / 1000);
+    //System.out.println(a(data, matLength, numProd));
+		a(data, matLength, numProd);
+    //long endCalc = System.currentTimeMillis();
+    //float elapsedCalc = endCalc - startCalc;
+		//System.out.println(elapsedCalc / 1000);
 	}
 
   private static int[][] makeData(int matLength)

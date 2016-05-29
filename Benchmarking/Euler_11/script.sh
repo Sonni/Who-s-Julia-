@@ -58,3 +58,23 @@ java euler11 20000 4
 ./euler11 18000 4
 ./euler11 19000 4
 ./euler11 20000 4
+python euler11.py 1000 4
+python euler11.py 2000 4
+python euler11.py 3000 4
+python euler11.py 4000 4
+python euler11.py 5000 4
+python euler11.py 6000 4
+python euler11.py 7000 4
+python euler11.py 8000 4
+python euler11.py 9000 4
+python euler11.py 10000 4
+python euler11.py 11000 4
+python euler11.py 12000 4
+python euler11.py 13000 4
+python euler11.py 14000 4
+python euler11.py 15000 4
+python euler11.py 16000 4
+python euler11.py 17000 4
+python euler11.py 18000 4
+python euler11.py 19000 4
+python euler11.py 20000 4

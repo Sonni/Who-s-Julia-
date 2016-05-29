@@ -134,6 +134,6 @@ int main(int argc, const char * argv[])
                 maxProd = prod;
         }
     }
-    std::cout << maxProd << std::endl;
+    //std::cout << maxProd << std::endl;
     return 0;
 }

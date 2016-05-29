@@ -2,6 +2,8 @@ import sys
 import numpy as np
 from numpy import matrix
 from numpy import matlib
+import time
+from time import clock
 
 matLength = int(sys.argv[1])
 numProd = int(sys.argv[2])

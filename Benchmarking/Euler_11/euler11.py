@@ -55,11 +55,11 @@ def a(mat, matLength, numProd):
         maxProd = prod
 
   return maxProd
-startData = time.clock()
+#startData = time.clock()
 data = makeData(matLength)
-endData = time.clock() - startData
-print endData
-startCalc = time.clock()
+#endData = time.clock() - startData
+#print endData
+#startCalc = time.clock()
 a(data, matLength, numProd)
-endCalc = time.clock() - startCalc
-print endCalc
+#endCalc = time.clock() - startCalc
+#print endCalc
