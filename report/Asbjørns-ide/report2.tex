@@ -78,7 +78,7 @@ Julia is a new programming language. Through tests and benchmarking it is found 
 
 \section{Preface}
 This report has been written in May 2016 for a first year project in a Bachelor Degree of Computer Science. We thank our supervisor Michal Kotrbčík for his help and time.
-In this project we have been doing benchmarks to find out if Julia is as good as the developers claims it to be. 
+In this project we have been doing benchmarks to find out if Julia is as good as the developers claim it to be. 
 
 \newpage
 \tableofcontents
@@ -91,12 +91,12 @@ In this project we have been doing benchmarks to find out if Julia is as good as
 \rhead{Project 99: Who's Julia?}
 \cfoot{\thepage\ of \pageref{LastPage}}
 \section{Introduction}
-Java, C, C++, C\# and Python are on top five of the most used programming languages. There are hundreds of languages, but not minding the hard competition new languages are still created with the thought of doing better. Julia is a new programming language which has been developed to contain other languages best features.
+Java, C, C++, C\# and Python are on top five of the most used programming languages. There are hundreds of languages, but not minding the hard competition new languages are still created with the thought of doing better. Julia is a new programming language, which has been developed to contain other languages best features.
 
 The purpose of this report is to find out if the programming language Julia has a chance in the marked and if it is worth changing to. The languages Java, C++, Python and Julia will be compared on syntax and time performance.  
 
 \section{Julia}
-Julia is a programming language which has been under development since 2009. First released in 2012 and the newest stable version of Julia is version 0.4.5.  The language has been created because the developers wanted a language with all the features they like from different languages. The developers also wanted the language to be open source, which means everybody can read how it is made and change the language. Julia shares many similarities with python. One of the idea was to make the language as simple, readable and easy to learn as possible. The language is made for high performance and scientific computations while still supporting general purpose programming. 
+Julia is a programming language, which has been under development since 2009. First released in 2012 and the newest stable version of Julia is version 0.4.5.  The language has been created because the developers wanted a language with all the features they like from different languages. The developers also wanted the language to be open source, which means everybody can read how it is made and change the language. Julia shares many similarities with python. One of the idea was to make the language as simple, readable and easy to learn as possible. The language is made for high performance and scientific computations while still supporting general purpose programming. 
 Programming in Julia can be done in the terminal like python with interactive mode:
 \begin{figure}[H]
 	\centering
@@ -372,7 +372,7 @@ Writing longer programs in the terminal might not be the preferred method. The t
 
 \subsection{Features}
 \subsubsection{Multiple dispatch and dynamic typing}
-Dynamic typing means that type checks are mostly performed at runtime - opposed to static typing which makes the type checks at compile time. Dynamic typing allows the programmer to skip the type declaration and let the dynamic type system handle it. In Julia it is possible to specify types but for the most part this is not necessary. Julia also makes decisions about how much memory to allocate for variables and this will not change even if a big value which exceeds the memory of the variable are assigned to it. The memory size can be deceased and this will be addressed later under the section Garbage Collector. There is a range of memory sizes to chose from when initializing a variable, Julia will by default assign 32 bits to an integer or a float if no more memory is needed at initialization, but it is possible to manually chose one of the following.
+Dynamic typing means that type checks are mostly performed at runtime - opposed to static typing, which makes the type checks at compile time. Dynamic typing allows the programmer to skip the type declaration and let the dynamic type system handle it. In Julia it is possible to specify types, but for the most part this is not necessary. Julia also makes decisions about how much memory to allocate for variables and this will not change even if a big value, which exceeds the memory of the variable are assigned to it. The memory size can be deceased and this will be addressed later under the section Garbage Collector. There is a range of memory sizes to chose from when initializing a variable, Julia will by default assign 32 bits to an integer or a float if no more memory is needed at initialization, but it is possible to manually chose one of the following.
 \begin{description}
 	\item[$\cdot$] Signed / unsigned integers of; 8, 16, 32, 64 and 128 bits.
 	\item[$\cdot$] Floating points of 16, 32 and 64 bits.  
@@ -380,7 +380,7 @@ Dynamic typing means that type checks are mostly performed at runtime - opposed 
 	\item[$\cdot$] Char – 32 bits 
 \end{description}
 
-To initialize a variable with a give memory size:
+To initialize a variable with a given memory size:
 \begin{lstlisting}[language=python]
 x = Int8(10)
 \end{lstlisting}
@@ -391,10 +391,10 @@ typeof(x) #Int8
 x = 4
 typeof(x) #Int32
 \end{lstlisting}
-If no certain memory size is needed but only a specific type then abstract types will come in handy. An abstract type is just some form of generalization of a concrete type. For example 16, 32 and 64 bit floats are of type AbstractFloat. This is especially useful when the programmer do not know how much memory a certain variable may need. Too little memory will result in a bug and too much memory is a waste. 
+If no certain memory size is needed but only a specific type then abstract types will come in handy. An abstract type is just some form of generalization of a concrete type. For example 16, 32 and 64 bit floating points are of type AbstractFloat. This is especially useful when the programmer do not know how much memory a certain variable may need. Too little memory will result in a bug and too much memory is a waste. 
 \\
 \\
-Multiple dispatch is used to determine which function to call by the type of one or more of the parsed argument(s). This is useful when, e.g. two functions with the same name are declared:
+Multiple dispatch is used to determine, which function to call by the type of one or more of the parsed argument(s). This is useful for example when two functions with the same name are declared:
 
 \begin{lstlisting}[language=python]
 function a(arg1::Int8)
@@ -411,10 +411,10 @@ User defined types, also known as composite types gives the option to define new
 \begin{lstlisting}[language=python]
 type person 
 	age::Int16 
-	name 
+	name #a variable, which gets the assigned default type ::Any
 end    
 \end{lstlisting}
-If a variable in a composite type is not specified with any type, the default is ::Any which accepts any kinds of types. To initialize a composite type you can treat it like an object. Person = person(21, "Carl"), and the values can be changed with "Person.age = 25". The developers of Julia states that user defined types are as fast and compact as built in types. 
+If a variable in a composite type is not specified with any type, the default is ::Any, which accepts any kinds of types. To initialize a composite type, think of it like an object. Person = person(21, "Carl"), and the values can be changed with "Person.age = 25". The developers of Julia state that user defined types are as fast and compact as built in types. 
 
 \subsubsection{Garbage Collector}
 Julia uses a garbage collector to automatically free the memory when needed. There is no guarantee when the garbage collector will run, but is it possible to force garbage collection with a function call: \textbf{gc()}. One thing to keep in mind is that once a name is defined in Julia, it will always be present till termination. The garbage collector do not free the memory of unreachable object but rather reallocates memory for objects when memory size has changed. So the only way the garbage collector can free memory is when an object has been reduced in size, for example:
@@ -422,21 +422,21 @@ Julia uses a garbage collector to automatically free the memory when needed. The
 \begin{lstlisting}[language=python]
 A = rand(float32, 10000, 10000) 
 A = 0
-Gc() 
+gc() 
 \end{lstlisting}
-This code will generate a 10000x10000 matrix filled with random 32 bit floats which consumes a bit of memory. \textbf{A} will be set to 0 but will keep the memory size of the 10000x10000 matrix until garbage collection is done either manually as in this example or somewhere in the future when it is done automatically. 
+This code will generate a 10000x10000 matrix filled with random 32 bit floats, which consumes a bit of memory. \textbf{A} will be set to 0 but will keep the memory size of the 10000x10000 matrix until garbage collection is done either manually as in this example or somewhere in the future when it is done automatically. 
 
 \subsubsection{Built-in package manager}
-Julia comes with a built in package manager which keeps track of which packages that needs to be included in the users program to run, so is it not necessary to state which packages that need to be included. For example when the user calls the sort function, \textbf{sort()}, no package include statement or \textbf{math.sort()} is needed – this is done automatically by the package manager.
+Julia comes with a built in package manager, which keeps track of packages that needs to be included in the program to run. It is not necessary to state, which packages needs to be included. For example, when the user calls the sort function, \textbf{sort()}, no package include statement or \textbf{math.sort()} is needed – this is done automatically by the package manager.
 
 \subsubsection{Lightweight green threading}
-A thread is lightweight when it shares address space with other threads opposed to heavyweight threads which has its own address space. If threads share the same address space the communication between them is faster and much simpler. The communication between heavyweight threads have to go through pipes or sockets. Green threads are threads that are scheduled not by the operating system but rather by the runtime library or virtual machine. Green threads does not have to relay on the operating system and can be controlled much better – the threads are in user space and not kernel space. As of Julia 0.4.5 multithreading is not available but in the unstable version 0.5.0 an experimental support of multithreading is available but will be addressed no further. 
+A thread is lightweight when it shares address space with other threads opposed to heavyweight threads, which has its own address space. If threads share the same address space the communication between them is faster and much simpler. The communication between heavyweight threads have to go through pipes or sockets. Green threads are threads that are scheduled not by the operating system but rather by the runtime library or virtual machine. Green threads does not have to relay on the operating system and can be controlled much better – the threads are in user space and not kernel space. As of Julia 0.4.5 multithreading is not available but in the unstable version 0.5.0 an experimental support of multithreading is available but will be addressed no further. 
 
 \subsubsection{Meta-programming and Macros}
 Meta-programming is a way to write programs in programs and let them use program code as data. In Julia meta-programming can be done by defining macros. For example, the @time macro was used extensively in the project. The @time is in the standard Julia library. The @time takes a function as an argument and sets a timer in the top of the code from the argument and stops the timer in the bottom and prints the time passed and memory allocated. Meta-programming and macros are known from Lisp, a programming language, and have been used in early AI research. 
 
 \subsubsection{Implementing code from other languages}
-Since Julia is a newer language there are not many written libraries yet. Julia has an import feature for both Python and C libraries to avoid this disadvantage. Import the library PyCall with the "using" operation to use python and import Python libraries via a macro @pyimport. To use C libraries or coding, simply run the function ccall(). The programming language C is a well known and used language. Many systems are based on C, which makes C an advantage for hardware programming. Another feature is to execute shell commands. Execute shell commands using run(``). An example would be running run(`echo Hello World`) which would return the output "Hello World".
+Since Julia is a newer language there are not many written libraries yet. Julia has an import feature for both Python and C libraries to avoid this disadvantage. Import the library PyCall with the "using" operation to use python and import Python libraries via a macro @pyimport. To use C libraries or coding, simply run the function ccall(). The programming language C is a well known and used language. Many systems are based on C, which makes C an advantage for hardware programming. Another feature is to execute shell commands. Execute shell commands using run(``). An example would be running run(`echo Hello World`), which would return the output "Hello World".
 
 \subsubsection{Extensible conversions and promotions for numeric and other types.}
 
@@ -485,30 +485,29 @@ Vectorization of code is, for example, when a for loop is rewritten to sequentia
 \end{figure}
 
 \section{Project Euler}
-Project Euler is a website with a huge database of mathematical and programming challenges. In this report Project Euler has been used to find challenges for the testing of the different programming languages.
+Project Euler is a website with a huge database of mathematical and programming challenges. In this report Project Euler has been used to find challenges for testing the different programming languages.
 
 \section{Theory}
 \subsection{Benchmarking}
 Benchmarking is measuring the quality of a product. In this report we will be measuring the time it takes for a programming language to execute an algorithm.
 
 \subsection{Profiling}
-Profiling is a way to analyse code. For example the analysis could be to measuring the memory usage, time and function calls. The analysis now shows which part of the code took the longest time or used up all memory. Profiling is offen used for optimization.
+Profiling is a way to analyse code. For example, the analysis could be measuring the memory usage, time and function calls. The analysis shows, which part of the code took the longest time or used up all memory. Profiling is often used for optimization.
 
 \subsection{Time measurements}
 There are three types of time measurements. Wall, user and system time. Wall time is the time it takes in real time and wall time is affected if other program are running. System time is the cpu time used inside kernel. The time used inside kernel is for memory allocation, file reading, file writing and other thing going on outside the cpu and memory. User time is the time used calculating and comparing etc. In this report the sum of system and user time is used, because the system and user time are not affected by heavy loads on the machine and only shows the actual time taken for the Computer to solve the problem. 
-
 
 \section{Materials and methods}
 \subsection{Benchmarking}
 For the benchmarking we used: 
 Lenovo W530: Intel Core i5-3320M 2.60GHz x 4, 8GB RAM, Ubuntu 16.04 64-bit, Windows 10 64-bit, Windows XP 32-bit
-MacBook:
+MacBook: Intel Core i5 1,4GHz, 8GB RAM, OSX El Capitan 10.11.5
 MacBook:
 Julia 0.4.5
 Python 2.7.11+
 C++11
 Java 1.8.0\_92
-All time measurements are measured using the shell 'time' command which returns the three types of time taken for the algoritm to run. The problems are scaled in three different sizes and run in each language several times. A tool created for this project gather the data and calculates the average and median running time. 
+All time measurements are measured using the shell 'time' command that returns the three types of time taken for the algorithm to run. The problems are scaled in three different sizes and run in each language several times. A tool created for this project gather the data and calculates the average and median running time. 
 
 The benchmarking will be about the running time of each individual problem. When looking at running time the most common terms are wall time (real time) and CPU time. Wall time is the time it took the program to terminate, from start to finish. CPU time is how much time the program used on the CPU. The time difference between wall time and CPU time comes from the fact that the program being benchmarked might get interrupted by the operating system, because other tasks needs to be handled. These tasks could be other programs, or something that the OS needs to get done. The processing time of those tasks will be included in the wall time but excluded in the CPU time. To get the running times in Unix based system, the time command is available from the terminal:
 
@@ -532,10 +531,10 @@ In most memory protected system there are some locked operations for security re
 \\
 So to get much times is spent on the CPU, User time + system is a good estimation. To get an even better indication of the real CPU time, multiple test are done and the average is calculated. The average running time is considered since there can be fluctuations in run times for every test. \\
 \\
-Another way to measure time spent on the CPU is to use the built in libraries for example System.currentTimeMillis() in Java. This is especially useful for profiling and figuring out which part of a program is time consuming.
+Another way to measure time spent on the CPU is to use the built in libraries for example System.currentTimeMillis() in Java. This is especially useful for profiling and figuring out, which part of a program is time consuming.
 Benchmarking will be done by comparing CPU time of the same problem in different languages. The problems will be scaled to have smaller and larger inputs. However, in some situations a large input can cause memory problems, which will be addressed in the specific problem. The memory problems is unfortunately making an upper bound for how large data is possible to pass for certain problems. \\
 \\
-The algorithm used for a given problem is the same used in all compared languages. Extended tests will be included for which the algorithm is optimized for a given language.
+The algorithm used for a given problem is the same used in all compared languages. Extended tests will be included for, which the algorithm is optimized for a given language.
 
 \section{Problems}
 \subsection{Projecteuler 11}
@@ -553,7 +552,7 @@ This would make the program run with a matrix of size 100 and calculating produc
 \\
 The algorithm first reads through the input file and creates a matrix. To calculate products in all directions needed in the problem, the algorithm goes through the matrix a total of 3 times. A nested for loop is needed to go though a matrix, lines 1-2 at figure \ref{111}. The outer loop iterates through the rows, and the inner loop iterates through the columns. Figure \ref{111} calculates the horizontal and vertical directions, firgure \ref{112} diagonally from left to right(downwards) and figure \ref{113} going diagonally from right to left(downwards). The algorithm starts in the most upper left cell, and iterates through all cells in the matrix. Lets have the first cell as (1,1), first number is row(\textbf{i}) and second number is column(\textbf{j}). Looking at figure \ref{111}, \textbf{matLength} is the size of the matrix, size = 100 would mean a matrix of size $100 \cdot 100$. \textbf{numProd} is the number of adjacent numbers multiplied together. For matrix with size 100, and multiplying four adjacent numbers, the algorithm would do the following in figure \ref{111}: 
 \begin{list}{}{}
-	\item Starting at cell (1,1) to the end which is cell (100, 100 - 4).
+	\item Starting at cell (1,1) to the end, which is cell (100, 100 - 4).
 	\item Line 5-7: Loops over the adjacent cells and multiplies the numbers.
 	\item Line 8-10: Sets current product to max product, if current is larger than previously max product.
 \end{list}
@@ -652,7 +651,7 @@ for i = n; i > 0; i--
 \end{lstlisting}
 In Julia the exit condition and incrementation / decrementation are swapped and there is no consistency. The decrementing for-loops both start at n, and stops at 0. This kind of syntax can again cause bugs, and is not that easy to get eyes on.\\
 \\
-The documentation of Julia is far from being great, which is a huge bump on the road to learn Julia. It feels far from complete. The documentation do not explain much but instead gives some examples. Essential information are often lacking, e.g. what types is needed to parse for a given function. It might point out that these arguments are needed, but lacking to describe those arguments. An example from the documentation is the function \textbf{rand()} which is used to generate random numbers:
+The documentation of Julia is far from being great, which is a huge bump on the road to learn Julia. It feels far from complete. The documentation do not explain much but instead gives some examples. Essential information are often lacking, e.g. what types is needed to parse for a given function. It might point out that these arguments are needed, but lacking to describe those arguments. An example from the documentation is the function \textbf{rand()}, which is used to generate random numbers:
 
 \begin{lstlisting}
 rand( [ rng ] [ ,S ] [ , dims... ] )
@@ -692,10 +691,21 @@ http://radar.oreilly.com/2013/10/julias-role-in-data-science.html \\
 * Used too much times searching for articles.. *
 
 \newpage
-%\textbf{Sierpinski triangle program}
-%\lstinputlisting[language=python]{sierpinski.py}
-%\textbf{Binary tree program}
-%\lstinputlisting[language=python]{binary.py}
+\section{Appendix}
+\subsection{Process analysis}
+\subsubsection{Projectmanagement, organizing workflow and organizing process of learning}
+The first thing we agreed doing was getting to know Julia for the research. We used a lot of time solving problems in Julia and trying to figure out how to get a view of what was to be done and how to organize it. We mostly communicated through facebook and created a repository on github to share project files. We gathered our solutions to Project Euler and made comparisons. Gathering information about benchmarking we mostly ran into walls of text on how to do it properly, and did not know where to start. Every time we thought we were understanding benchmarking, our supervisor taught us something new. We created a board on Trello. We made a to-do list of cards so we knew what had to be done and started handing out tasks. We communicated more with our supervisor via email as we started writing the report. The group was really good at getting the tasks, we agreed on doing, done. We should have been using more tools for organizing and we did not set any deadlines for anything. Scrum is a tool, which would have helped us a lot, but it is not that easy to learn. We should have met and worked together, several times a week, discussing our problems and goals. 
+
+\subsubsection{Process of learning}
+We learn by both direct and indirect learning process. We learned Julia indirectly by solving Project Euler. We pretty much read about every topic, which is direct learning. We cannot think of another way to learn programming than reading, trying it out and reading to get a result. Project Euler was a good support for learning, since learning something new, is much easier, when there's a purpose or a goal. Programming is not as fun if there's no end goal in mind.
+
+\subsubsection{Cooperation, difficulties in group and with supervisor}
+We actually had a good idea about who was good at what and splitting the tasks between us with this in mind. The communication could have been better. It seemed that we worked on different times of the day, which made communication difficult. Our supervisor did his best and we think he did a good job.
+
+\subsubsection{Conclusion}
+Trello is a very good tool for organizing and we should have been using it from the beginning. Looking beyond the fact that some data was lost using Git, the tool is perfect for team programming. We have payed the price not making any deadlines. Deadlines seems useless when the focus is just on the project, but when the workload gets more intense, it can be very good to have smaller deadlines or milestones during a project. Meetings should have occured more often, and syncing the current progress. Overall collaboration was very well, taken into account what could have been improved.
+
+\subsection{Copy of poster in A4}
 
 \begin{thebibliography}{9}
 	
@@ -723,23 +733,6 @@ http://radar.oreilly.com/2013/10/julias-role-in-data-science.html \\
 	http://dictionary.cambridge.org/dictionary/english/benchmark
 	
 \end{thebibliography}
-
-\newpage
-\section{Appendix}
-\subsection{Process analysis}
-\subsubsection{Projectmanagement, organizing workflow and organizing process of learning}
-The first thing we agreed doing was getting to know Julia for the research. We used a lot of time solving problems in Julia and trying to figure out how to get a view of what was to be done and how to organize it. We mostly communicated through facebook and created a repository on github to share project files. We gathered our solutions to Project Euler in the repository so that we do comparison. We mostly run into walls of information on how to benchmark right and we did not know where to start. Everytime we thought we were about to get to understand benchmarking our supervisor taught us something new. We created a board on Trello. We made a to-do list of cards so we knew what to be done and started handing out tasks. We started communicating more with our supervisor via email as we started writing the report. The group was really good at getting the tasks, we agreed on doing, done. We should have been using more tools for organizing and we did not set any deadlines for anything. Scrum is a tool which would have helped us a lot, but it is not that easy to learn. We should have met and worked together, several times a week, discussing our problems and goals. 
-
-\subsubsection{Process of learning}
-We learn by both direct and indirect learning process. We learned Julia indirectly by solving Project Euler. We pretty much read about every topic which is direct learning. We cannot think of another way to learn programming than reading, trying it out, reading some more and get a result. Project Euler was a good support for learning, because when you are trying to learn something new, it is much easier, when you have a purpose for it. Programming is not as fun when you does not have a problem to solve. 
-
-\subsubsection{Cooperation, difficulties in group and with supervisor}
-We actually had a good idea about who was good at what and we split the tasks between us with this in mind. The communication could have been better. It seemed that we worked on different times of the day which made communication difficult. Our supervisor did his best and we think he did a good job.
-
-\subsubsection{Conclusion}
-Trello is a very good tool for organizing and we should have been using it from the beginning. Looking beyond the fact that some data was lost using Git, the tool is perfect for team programming. We have payed the price not making any deadlines. Deadlines seems useless when you got the project in your head, but when you loose track you wish you set some. We should have met and worked synced our progress. Overall we have done very well keeping the things we have done wrong in mind. 
-
-\subsection{Copy of poster in A4}
 
 \end{document}
 
