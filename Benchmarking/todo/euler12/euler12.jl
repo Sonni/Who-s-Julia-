@@ -27,7 +27,7 @@ function prime_factors(n)
   while n > 1
     while n % d == 0
       push!(factors, d)
-      n /= d
+      n = div(n, d)
     end
     d += 1
   end
