@@ -51,12 +51,10 @@ end
 
 function calc(limit)
   sum = UInt128(0)
-  numbers = Int[]
   for i = 1 : limit
     b = binary(i) #Binary representation of i
     if isPalindrome(i) && isPalindrome(b)
       sum += i
-      push!(numbers, i)
     end
   end
   return sum
