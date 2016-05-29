@@ -10,9 +10,11 @@ Find the sum of all numbers, less than one million, which are palindromic in bas
 #Terminal: julia euler36.jl 1000000
 limit = parse(Int, ARGS[1])
 
-function isPalindrome(num)
+function isPalindrome(s)
   #returns true if num is a palindrome
-  s = string(num)
+  if typeof(s) == Int
+    s = string(s)
+  end
   i = 1
   j = length(s)
   isPal = true
@@ -28,11 +30,30 @@ function isPalindrome(num)
   return isPal
 end
 
+function binary(n)
+  #Returns binary representation of n, as a string
+  bina = Int8[]
+  while n > 0
+    if n % 2 == 0
+      push!(bina, 0)
+    else
+      push!(bina, 1)
+    end
+    n = div(n, 2)
+  end
+  s = ""
+  for i in bina
+    s = string(i, s)
+  end
+  return s
+end
+
+
 function calc(limit)
   sum = UInt128(0)
   numbers = Int[]
   for i = 1 : limit
-    b = bin(i) #Binary representation of i
+    b = binary(i) #Binary representation of i
     if isPalindrome(i) && isPalindrome(b)
       sum += i
       push!(numbers, i)
