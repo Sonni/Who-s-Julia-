@@ -372,10 +372,10 @@ Writing longer programs in the terminal might not be the preferred method. The t
 
 \subsection{Features}
 \subsubsection{Multiple dispatch and dynamic typing}
-Dynamic typing means that type checks are mostly performed at runtime - opposed to static typing, which makes the type checks at compile time. Dynamic typing allows the programmer to skip the type declaration and let the dynamic type system handle it. In Julia it is possible to specify types, but for the most part this is not necessary. Julia also makes decisions about how much memory to allocate for variables and this will not change even if a big value, which exceeds the memory of the variable are assigned to it. The memory size can be deceased and this will be addressed later under the section Garbage Collector. There is a range of memory sizes to chose from when initializing a variable, Julia will by default assign 32 bits to an integer or a float if no more memory is needed at initialization, but it is possible to manually chose one of the following.
+Dynamic typing means that type checks are mostly performed at runtime - opposed to static typing, which makes the type checks at compile time. Dynamic typing allows the programmer to skip the type declaration and let the dynamic type system handle it. In Julia it is possible to specify types, but mostly is not necessary. Julia makes decisions about memory allocation for variables and will not change even if a big value, that exceeds the memory of the variable, is assigned to it. The memory size can be decreased and this will be addressed later under the section Garbage Collector. However, there is a range of memory sizes to chose from when initializing a variable. Julia will by default assign 32 bits to an integer or a floating point if no more memory is needed at initialization, but it is possible to manually chose one of the following:
 \begin{description}
 	\item[$\cdot$] Signed / unsigned integers of; 8, 16, 32, 64 and 128 bits.
-	\item[$\cdot$] Floating points of 16, 32 and 64 bits.  
+	\item[$\cdot$] Floating points of; 16, 32 and 64 bits.  
 	\item[$\cdot$] Boolean – 8 bits 
 	\item[$\cdot$] Char – 32 bits 
 \end{description}
@@ -424,7 +424,7 @@ A = rand(float32, 10000, 10000)
 A = 0
 gc() 
 \end{lstlisting}
-This code will generate a 10000x10000 matrix filled with random 32 bit floating points, which consumes a bit of memory. \textbf{A} will be set to 0 and will keep the memory size of the 10000x10000 matrix until garbage collection is done either manually as in this example, or somewhere in the future when it is done automatically. 
+This code will generate a 10.000x10.000 matrix filled with random 32 bit floating points, which consumes a bit of memory. \textbf{A} will be set to 0 and will keep the memory size of the 10.000x10.000 matrix until garbage collection is done either manually as in this example, or somewhere in the future when it is done automatically. 
 
 \subsubsection{Built-in package manager}
 Julia comes with a built in package manager, which keeps track of packages that needs to be included in the program to run. It is not necessary to state, which packages needs to be included. For example, when the user calls the sort function, \textbf{sort()}, no package include statement or \textbf{math.sort()} is needed – this is done automatically by the package manager.
