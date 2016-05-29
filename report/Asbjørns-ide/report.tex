@@ -1,4 +1,4 @@
-\documentclass[a4paper,11pt]{article}
+\documentclass[a4paper, 11pt, titlepage]{article}
 
 \usepackage{setspace}
 \onehalfspacing
@@ -53,8 +53,17 @@ indryk virker fint her.
 
 \title{First year project\\Project 99: Who's Julia?\\\rule{10cm}{0.5mm}}
 \author{Group: 99a\\Simon Lehmann Knudsen, simkn15\\Sonni Hedelund Jensen, sonje15\\Asbjørn Mansa Jensen, asjen15
-	\\ DM501\\\rule{5.5cm}{0.5mm}\\}
+	\\ FF501\\\rule{5.5cm}{0.5mm}\\}
 \date{\today}
+
+%Pagestyling
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{simkn15, sonje15, asjen15}
+\rhead{Project 99: Who's Julia?}
+\cfoot{\thepage}
 
 \begin{document}
 
@@ -63,6 +72,7 @@ indryk virker fint her.
 \vfill
 
 \newpage
+\pagenumbering{Roman}
 \section{Summary}
 Julia is a new programming language. Through tests and benchmarking it is found that * *
 
@@ -74,6 +84,12 @@ In this project we have been doing benchmarks to find out if Julia is as good as
 \tableofcontents
 
 \newpage
+\pagenumbering{arabic}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{simkn15, sonje15, asjen15}
+\rhead{Project 99: Who's Julia?}
+\cfoot{\thepage\ of \pageref{LastPage}}
 \section{Introduction}
 Java, C, C++, C\# and Python are on top five of the most used programming languages. There are hundreds of languages, but not minding the hard competition new languages are still created with the thought of doing better. Julia is a new programming language which has been developed to contain other languages best features.
 
