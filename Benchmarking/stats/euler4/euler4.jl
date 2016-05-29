@@ -26,15 +26,15 @@ function isPalindrome(array)
   i = 1
   j = length(array)
   isPal = true
-    while i <= j
-      if array[i] == array[j]
-        i += 1
-        j -= 1
-      else
-        isPal = false
-        return isPal
-      end
+  while i <= j
+    if array[i] == array[j]
+      i += 1
+      j -= 1
+    else
+      isPal = false
+      return isPal
     end
+  end
   return isPal
 end
 
