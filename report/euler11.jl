@@ -1,15 +1,13 @@
-function a()
+#Terminal: Julia euler11.jl 1000 4
+matLength = parse(Int, ARGS[1])
+numProd = parse(Int, ARGS[2])
 
-  maxProd = 0
-  matLength = parse(Int, ARGS[1])
-  numProd = parse(Int, ARGS[2])
-
-  mat = reshape(1:(matLength*matLength), matLength, matLength)
-
+function makeData(matLength)
+  mat = zeros(Int, matLength, matLength)
   f = open(string("mat", matLength, ".txt"))
 
-  result = 0
   j = 0
+
   for l in eachline(f)
     s = split(l)
     j += 1
@@ -17,12 +15,18 @@ function a()
       mat[j, i] = parse(Int32, s[i])
     end
   end
+
   close(f)
+  return mat
+end
+
+function a(mat, matLength, numProd)
+  maxProd = Int64(0)
 
   for i = 1 : matLength
     for j = 1 : matLength - numProd
       #right/left
-      prod = 1
+      prod = Int64(1)
       for k = 0 : numProd - 1
         prod *= mat[i, j + k]
       end
@@ -30,7 +34,7 @@ function a()
         maxProd = prod
       end
       #up/down
-      prod = 1
+      prod = Int64(1)
       for k = 0 : numProd - 1
         prod *= mat[j + k, i]
       end
@@ -43,7 +47,7 @@ function a()
   #diagonal left->right
   for i = 1 : matLength - numProd
     for j = 1 : matLength - numProd
-      prod = 1
+      prod = Int64(1)
       for k = 0 : numProd - 1
         prod *= mat[i + k, j + k]
       end
@@ -56,7 +60,7 @@ function a()
   #diagonal right->left
   for i = 1 : matLength - numProd
     for j = matLength : -1 : numProd
-      prod = 1
+      prod = Int64(1)
       for k = 0 : numProd - 1
         prod *= mat[i + k, j - k]
       end
@@ -66,6 +70,7 @@ function a()
     end
   end
 
-  println(maxProd)
+  return maxProd
 end
-a()
+data = makeData(matLength)
+a(data, matLength, numProd)

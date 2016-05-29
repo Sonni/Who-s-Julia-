@@ -405,7 +405,7 @@ function a(arg1::Float16)
 	println("Float")  
 end    
 \end{lstlisting}
-If a variable is declared with a type of Int8 and parsed to the function a(...), then it will print "Int", and if the variable is declared as Float16 it will print "Float". It is also possible to use abstract types here, so arg1::Float16 and arg1::Int8 could be changed to arg1::AbstractFloat and arg1::AbstractInt – this will make the function 'a' accept any kinds of floats and ints.  
+If a variable is declared with a type of Int8 and parsed to the function a(...), then it will print "Int", and if the variable is declared as Float16 it will print "Float". It is also possible to use abstract types here, so arg1::Float16 and arg1::Int8 could be changed to arg1::AbstractFloat and arg1::AbstractInt – this will make the function 'a' accept any kinds of floating points and integers.  
 \subsubsection{User defined types}
 User defined types, also known as composite types gives the option to define new types in Julia. A composite type in Julia may look something like the following: 
 \begin{lstlisting}[language=python]
@@ -424,7 +424,7 @@ A = rand(float32, 10000, 10000)
 A = 0
 gc() 
 \end{lstlisting}
-This code will generate a 10000x10000 matrix filled with random 32 bit floats, which consumes a bit of memory. \textbf{A} will be set to 0 but will keep the memory size of the 10000x10000 matrix until garbage collection is done either manually as in this example or somewhere in the future when it is done automatically. 
+This code will generate a 10000x10000 matrix filled with random 32 bit floating points, which consumes a bit of memory. \textbf{A} will be set to 0 and will keep the memory size of the 10000x10000 matrix until garbage collection is done either manually as in this example, or somewhere in the future when it is done automatically. 
 
 \subsubsection{Built-in package manager}
 Julia comes with a built in package manager, which keeps track of packages that needs to be included in the program to run. It is not necessary to state, which packages needs to be included. For example, when the user calls the sort function, \textbf{sort()}, no package include statement or \textbf{math.sort()} is needed – this is done automatically by the package manager.
@@ -558,7 +558,7 @@ The algorithm first reads through the input file and creates a matrix. To calcul
 \end{list}
 \begin{figure}[H]
 	\begin{center}
-		\lstinputlisting[linerange={22-38}]{euler11.jl}
+		\lstinputlisting[linerange={26-42}]{euler11.jl}
 		\caption{Horizontal and vertical}
 		\label{111}
 	\end{center}
@@ -566,14 +566,14 @@ The algorithm first reads through the input file and creates a matrix. To calcul
 Figure \ref{112} shows the loop that iterates over the matrix and calculating the product of the diagonal going downwards from left to right. Figure \ref{113} shows the diagonal product going upwards from left to right. The loop starts in the first row, and starting column is the last, not the first like the previously loops.
 \begin{figure}[H]
 	\begin{center}
-		\lstinputlisting[linerange={43-51}]{euler11.jl}
+		\lstinputlisting[linerange={47-55}]{euler11.jl}
 		\caption{Diagonal downwards left to right}
 		\label{112}
 	\end{center}
 \end{figure}
 \begin{figure}[H]
 	\begin{center}
-		\lstinputlisting[linerange={56-64}]{euler11.jl}
+		\lstinputlisting[linerange={60-68}]{euler11.jl}
 		\caption{Diagonal upwards left to right}
 		\label{113}
 	\end{center}
@@ -670,6 +670,7 @@ But this isn’t so obvious for new programmers. It is clear that something has 
 \\ 
 Another downside to Julia is its consistency. The developers has tried to remove some of the burden from the programmer with dynamic typing, package manager system etc., but with memory allocation and garbage collection it does not make much sense. The garbage collector does not free memory from unreachable object. Sizes of variables cannot be changed after declaration, and is not automatically increased if needed. If the programmer assign for example 8 bit memory to a variable and later change the value of that variable, then julia automatically assigns 32 bit or more if needed to that variable even if the 8 bits were enough. 
 \subsection{Simon}
+I personally see my self the one in the group with the least programming experience, and might needed more time learning Julia. I was not learning as fast as the others. I only know a few languages, and as many knows, the more languages you know, the easier it gets learning a new language. The documentation of Julia was not satisfying enough to me. I learn faster if I can visually see how a function is used, rather than reading a wall of text. The visualizations on the current documentation was not fulfilling my needs. The documentation also misses to explain crucial information to a function, like what a given argument is presenting. For that reason I often found myself looking through the documentation of Python, to read about a function, since the syntax is so similar. Nevertheless, for programming I keep finding Julia more satisfying as I learn more, and for future programming I will definitely use Julia over Python.
 
 \subsection{Asbjørn}
 I found the syntax a bit confusing at first. I am not used to Python and I missed code structure and forced typing, in Julia and Python it looks like the code is hovering. After some time I got used to it and I found it very easy to learn. It makes it a little hard to find answers with the documentation and community being a bit thinner than with other languages. I think the 1-indexing is a bit complicated because I had never thought any language would use this, but I found that a lot of languages actually use this, they just are not that popular.

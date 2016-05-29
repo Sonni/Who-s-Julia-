@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.12.7)  29 MAY 2016 13:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.12.7)  29 MAY 2016 13:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -677,14 +677,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 669--672
 
  []
 
-[22]
-Overfull \hbox (62.11838pt too wide) in paragraph at lines 686--692
+[22] [23]
+Overfull \hbox (62.11838pt too wide) in paragraph at lines 687--693
 \T1/cmr/m/n/10.95 http://www.nowozin.net/sebastian/blog/the-julia-language-for-
 scientific-computing.html 
  []
 
-[23] [24] [25]
-Overfull \hbox (63.00946pt too wide) in paragraph at lines 727--728
+[24] [25]
+Overfull \hbox (63.00946pt too wide) in paragraph at lines 728--729
 []\T1/cmr/m/n/10.95 http://www.cs.cornell.edu/courses/cs1112/2013fa/Exams/exam2
 /vectorizedCode.pdf 
  []
@@ -697,10 +697,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 6930 strings out of 493089
- 95471 string characters out of 6134842
- 279109 words of memory out of 5000000
- 10275 multiletter control sequences out of 15000+600000
+ 6931 strings out of 493089
+ 95481 string characters out of 6134842
+ 280109 words of memory out of 5000000
+ 10276 multiletter control sequences out of 15000+600000
  17766 words of font info for 49 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,12n,43p,1184b,1782s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -717,7 +717,7 @@ live/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texli
 ve/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/local/texlive
 /2015/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb></usr/local/texlive/2
 015/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on report.pdf (30 pages, 487955 bytes).
+Output written on report.pdf (30 pages, 488795 bytes).
 PDF statistics:
  158 PDF objects out of 1000 (max. 8388607)
  104 compressed objects within 2 object streams

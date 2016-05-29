@@ -34,8 +34,8 @@
 \contentsline {subsection}{\numberline {10.1}Sonni}{20}
 \contentsline {subsection}{\numberline {10.2}Simon}{23}
 \contentsline {subsection}{\numberline {10.3}Asbj\IeC {\o }rn}{23}
-\contentsline {section}{\numberline {11}Discussion}{23}
-\contentsline {section}{\numberline {12}Conclusion}{23}
+\contentsline {section}{\numberline {11}Discussion}{24}
+\contentsline {section}{\numberline {12}Conclusion}{24}
 \contentsline {section}{\numberline {13}Perspective}{24}
 \contentsline {section}{\numberline {14}Appendix}{25}
 \contentsline {subsection}{\numberline {14.1}Process analysis}{25}
