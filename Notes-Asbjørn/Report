@@ -1,0 +1,143 @@
+#Front page
+
+Topic
+Names
+Emails
+Supervisor
+
+#Summary
+Julia is a new programming language. Through tests and benchmarking it is found that * *
+
+#Preface
+This report has been written in May 2016 for a first year project in a Bachelor Degree of Computer Science. We thank our supervisor Michal Kotrbčík for his help and time.
+In this project we have been doing benchmarks to find out if Julia is as good as the developers claims it to be. 
+
+#Table of contents
+
+
+#Introduction with problem definition
+Java, C, C++, C# and Python are on top five of the most used programming languages. (ref: http://www.tiobe.com/tiobe_index) There are hundreds of languages, but not minding the hard competition new languages are still created with the thought of doing better. Julia is a new programming language which has been developed to contain other languages best features.
+
+The purpose of this report is to find out if the programming language Julia has a chance in the marked and if it is worth changing to. The languages Java, C++, Python and Julia will be compared on syntax and time performance.  
+
+#Introduction to Julia
+Julia is a programming language which has been under development since 2009. First released in 2012 and the newest stable version of Julia is version 0.4.5.  The language has been created because the developers wanted a language with all the features they like from different languages. The developers also wanted the language to be open source, which means everybody can read how it is made and change the language. One of the idea was to make the language as simple, readable and easy to learn as possible. 
+(ref: http://julialang.org/blog/2012/02/why-we-created-julia)
+
+##Multiple dispatch and Dynamic typing
+##User-defined types.
+##Garbage collector.
+##Built-in package manager
+##Lightweight green threading
+##Meta-programming and Macros.
+##Implementing code from other languages.
+##Extensible conversions and promotions for numeric and other types.
+
+##Designed for parallelism and distributed computation
+Julia claims to be designed for parallelism and distributed computation. Parallel computing is dividing a problem into smaller problems and solve the smaller problems at the same time. Distributed computing is solving a problem using a network of computers working together to get to the solution. Julia have been trying to make this easier to achieve with different macros.
+(ref: http://docs.julialang.org/en/latest/manual/parallel-computing/)
+
+##Automatic generation of efficient, specialized code for different argument types
+
+
+##Efficient support for Unicode, including but not limited to UTF-8
+The Unicode support globalize the language. Unicode is an encoding system for characters. Unicode supports a large range of characters and is designed to make it easier to read and write non-latin characters.
+(ref: http://unicode.org/standard/WhatIsUnicode.html)
+
+##No need to vectorize code for performance; devectorized code is fast
+Vectorization of code is, for example, when a for loop is rewritten to sequential operations. Figure ¤ shows an example of a non-vectorized for loop and the vectorized version. Vectorized code is usually faster. Julia claims that there is no reason to vectorize as the performance stays the same.
+(ref: http://www.cs.cornell.edu/courses/cs1112/2013fa/Exams/exam2/vectorizedCode.pdf)
+
+Figure ¤ 
+a = 1, 2, 3, 4
+b = 2, 3, 4, 5
+c is empty
+for i = 1 to 4
+begin
+	c[i] = a[i] + b[i]
+end
+
+a = [1, 2, 3, 4]
+b = [2, 3, 4, 5]
+c is empty
+c[1] = a[1] + b[1]
+c[2] = a[2] + b[2]
+c[3] = a[3] + b[3]
+c[4] = a[4] + b[4]
+
+#Introduction to Project Euler
+Project Euler is a website with a huge database of mathematical and programming challenges. In this report Project Euler has been used to find challenges for the testing of the different programming languages.
+(ref: https://projecteuler.net/)
+
+#Theory
+##Benchmarking
+Benchmarking is measuring the quality of a product. In this report we will be measuring the time it takes for a programming language to execute an algorithm.
+(ref: http://dictionary.cambridge.org/dictionary/english/benchmark)
+
+##Profiling
+Profiling is a way to analyse code. For example the analysis could be to measuring the memory usage, time and function calls. The analysis now shows which part of the code took the longest time or used up all memory. Profiling is offen used for optimization.
+
+##Time measurements
+There are three types of time measurements. Wall, user and system time. Wall time is the time it takes in real time and wall time is affected if other program are running. System time is the cpu time used inside kernel. The time used inside kernel is for memory allocation, file reading, file writing and other thing going on outside the cpu and memory. User time is the time used calculating and comparing etc. In this report the sum of system and user time is used, because the system and user time are not affected by heavy loads on the machine and only shows the actual time taken for the Computer to solve the problem. 
+
+#Materials and methods
+##Benchmarking
+For the benchmarking we used: 
+Lenovo W530: Intel Core i5-3320M 2.60GHz x 4, 8GB RAM, Ubuntu 16.04 64-bit, Windows 10 64-bit, Windows XP 32-bit
+MacBook:
+MacBook:
+Julia 0.4.5
+Python 2.7.11+
+C++11
+Java 1.8.0_92
+All time measurements are measured using the shell 'time' command which returns the three types of time taken for the algoritm to run. The problems are scaled in three different sizes and run in each language several times. A tool created for this project gather the data and calculates the average and median running time.
+
+#Results
+##Benchmarking
+
+#Personal experience with Julia
+##Simon
+
+
+##Sonni
+
+
+##Asbjørn
+I found the syntax a bit confusing at first. I am not used to Python and I missed code structure and forced typing, in Julia and Python it looks like the code is hovering. After some time I got used to it and I found it very easy to learn. It makes it a little hard to find answers with the documentation and community being a bit thinner than with other languages. I think the 1-indexing is a bit complicated because I had never thought any language would use this, but I found that a lot of languages actually use this, they just are not that popular.
+
+#Discussion
+*Pros and Cons with good arguments*
+
+#Conclusion
+*Is Julia a worthy competitor? Is it worth switching to Julia? Would we recommend Julia to anyone?*
+
+#Perspective
+Articles:
+http://www.evanmiller.org/why-im-betting-on-julia.html
+http://julialang.org/     *High-Performance JIT Compiler chart*
+http://www.nowozin.net/sebastian/blog/the-julia-language-for-scientific-computing.html
+http://radar.oreilly.com/2013/10/julias-role-in-data-science.html
+* Used too much times searching for articles.. *
+
+
+#List of literature
+
+
+#Appendix
+##Process analysis
+###Description and reflection of each
+###*Projectmanagement, organizing workflow and organizing process of learning
+The first thing we agreed doing was getting to know Julia for the research. We used a lot of time solving problems in Julia and trying to figure out how to get a view of what was to be done and how to organize it. We mostly communicated through facebook and created a repository on github to share project files. We gathered our solutions to Project Euler in the repository so that we do comparison. We mostly run into walls of information on how to benchmark right and we did not know where to start. Everytime we thought we were about to get to understand benchmarking our supervisor taught us something new. We created a board on Trello. We made a to-do list of cards so we knew what to be done and started handing out tasks. We started communicating more with our supervisor via email as we started writing the report. The group was really good at getting the tasks, we agreed on doing, done. We should have been using more tools for organizing and we did not set any deadlines for anything. Scrum is a tool which would have helped us a lot, but it is not that easy to learn. We should have met and worked together, several times a week, discussing our problems and goals. 
+
+###*Process of learning
+We learn by both direct and indirect learning process. We learned Julia indirectly by solving Project Euler. We pretty much read about every topic which is direct learning. We cannot think of another way to learn programming than reading, trying it out, reading some more and get a result. Project Euler was a good support for learning, because when you are trying to learn something new, it is much easier, when you have a purpose for it. Programming is not as fun when you does not have a problem to solve. 
+
+###*Cooperation, difficulties in group and with supervisor
+We actually had a good idea about who was good at what and we split the tasks between us with this in mind. The communication could have been better. It seemed that we worked on different times of the day which made communication difficult. Our supervisor did his best and we think he did a good job.
+
+###*Conclusion
+Trello is a very good tool for organizing and we should have been using it from the beginning. Looking beyond the fact that some data was lost using Git, the tool is perfect for team programming. We have payed the price not making any deadlines. Deadlines seems useless when you got the project in your head, but when you loose track you wish you set some. We should have met and worked synced our progress. Overall we have done very well keeping the things we have done wrong in mind. 
+
+##Copy of poster in A4
+
+
