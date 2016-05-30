@@ -50,6 +50,7 @@ function calc(prop)
   while currentProp < prop
     if kind(i)
       countBouncy += 1
+	println("Test")
     end
 
     currentProp = (countBouncy * 100) / i
