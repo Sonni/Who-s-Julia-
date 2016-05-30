@@ -319,3 +319,5 @@ python : ../euler116.py 49
 Average time is: 3387.64 : Median is: 3347.27
 ____________________________________
 python : ../euler116.py 50 
+4936.28
+4914.88

@@ -22,17 +22,17 @@ g++ -std=c++11 ../euler116.cpp -o ../ubeuler116
 ../ubeuler116 54
 ../ubeuler116 55
 javac ../euler116.java
-java ../euler116 45
-java ../euler116 46
-java ../euler116 47
-java ../euler116 48
-java ../euler116 49
-java ../euler116 50
-java ../euler116 51
-java ../euler116 52
-java ../euler116 53
-java ../euler116 54
-java ../euler116 55
+java -cp ../ euler116 45
+java -cp ../ euler116 46
+java -cp ../ euler116 47
+java -cp ../ euler116 48
+java -cp ../ euler116 49
+java -cp ../ euler116 50
+java -cp ../ euler116 51
+java -cp ../ euler116 52
+java -cp ../ euler116 53
+java -cp ../ euler116 54
+java -cp ../ euler116 55
 python ../euler116.py 45
 python ../euler116.py 46
 python ../euler116.py 47

@@ -19,26 +19,26 @@ julia ../euler11.jl 18000 4
 julia ../euler11.jl 19000 4
 julia ../euler11.jl 20000 4
 javac ../euler11.java
-java ../euler11 1000 4
-java ../euler11 2000 4
-java ../euler11 3000 4
-java ../euler11 4000 4
-java ../euler11 5000 4
-java ../euler11 6000 4
-java ../euler11 7000 4
-java ../euler11 8000 4
-java ../euler11 9000 4
-java ../euler11 10000 4
-java ../euler11 11000 4
-java ../euler11 12000 4
-java ../euler11 13000 4
-java ../euler11 14000 4
-java ../euler11 15000 4
-java ../euler11 16000 4
-java ../euler11 17000 4
-java ../euler11 18000 4
-java ../euler11 19000 4
-java ../euler11 20000 4
+java -cp ../ euler11 1000 4
+java -cp ../ euler11 2000 4
+java -cp ../ euler11 3000 4
+java -cp ../ euler11 4000 4
+java -cp ../ euler11 5000 4
+java -cp ../ euler11 6000 4
+java -cp ../ euler11 7000 4
+java -cp ../ euler11 8000 4
+java -cp ../ euler11 9000 4
+java -cp ../ euler11 10000 4
+java -cp ../ euler11 11000 4
+java -cp ../ euler11 12000 4
+java -cp ../ euler11 13000 4
+java -cp ../ euler11 14000 4
+java -cp ../ euler11 15000 4
+java -cp ../ euler11 16000 4
+java -cp ../ euler11 17000 4
+java -cp ../ euler11 18000 4
+java -cp ../ euler11 19000 4
+java -cp ../ euler11 20000 4
 g++ -std=c++11 ../euler11.cpp -o ../ubeuler11
 ../ubeuler11 1000 4
 ../ubeuler11 2000 4
