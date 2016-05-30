@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "euler11.py", line 59, in <module>
+    data = makeData(matLength)
+  File "euler11.py", line 11, in makeData
+    with open(string) as f:
+IOError: [Errno 2] No such file or directory: 'mat20000.txt'
+Command exited with non-zero status 1
+real 19.18
+user 18.29
+sys 0.86

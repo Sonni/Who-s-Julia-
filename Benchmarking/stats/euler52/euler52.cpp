@@ -7,6 +7,7 @@
 //
 
 #include <iostream>
+#include <algorithm>
 
 unsigned int calc(unsigned int limit)
 {

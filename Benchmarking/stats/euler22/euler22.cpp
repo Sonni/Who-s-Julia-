@@ -11,6 +11,7 @@
 #include <vector>
 #include <fstream>
 #include <map>
+#include <algorithm>
 
 std::vector<std::string> split(std::string s, char delim)
 {

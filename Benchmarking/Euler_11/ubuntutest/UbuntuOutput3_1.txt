@@ -1,0 +1,916 @@
+julia : ../matrixGenerator.jl 1000 
+mat1000.txt
+1.63
+mat1000.txt
+1.31
+mat1000.txt
+1.52
+mat1000.txt
+1.68
+mat1000.txt
+1.68
+Average time is: 1.564 : Median is: 1.52
+____________________________________
+julia : ../matrixGenerator.jl 2000 
+mat2000.txt
+4.18
+mat2000.txt
+4.17
+mat2000.txt
+2.89
+mat2000.txt
+4.13
+mat2000.txt
+4.08
+Average time is: 3.89 : Median is: 2.89
+____________________________________
+julia : ../matrixGenerator.jl 3000 
+mat3000.txt
+6
+mat3000.txt
+5.42
+mat3000.txt
+8.21
+mat3000.txt
+5.42
+mat3000.txt
+7.95
+Average time is: 6.6 : Median is: 8.21
+____________________________________
+julia : ../matrixGenerator.jl 4000 
+mat4000.txt
+12.35
+mat4000.txt
+11.23
+mat4000.txt
+13.02
+mat4000.txt
+13.95
+mat4000.txt
+13.58
+Average time is: 12.826 : Median is: 13.02
+____________________________________
+julia : ../matrixGenerator.jl 5000 
+mat5000.txt
+18.59
+mat5000.txt
+18.4
+mat5000.txt
+20.37
+mat5000.txt
+15.98
+mat5000.txt
+16.87
+Average time is: 18.042 : Median is: 20.37
+____________________________________
+julia : ../matrixGenerator.jl 6000 
+mat6000.txt
+31.36
+mat6000.txt
+33.15
+mat6000.txt
+28.68
+mat6000.txt
+24.37
+mat6000.txt
+20.83
+Average time is: 27.678 : Median is: 28.68
+____________________________________
+julia : ../matrixGenerator.jl 7000 
+mat7000.txt
+39.27
+mat7000.txt
+37.04
+mat7000.txt
+36.83
+mat7000.txt
+38.18
+mat7000.txt
+32.13
+Average time is: 36.69 : Median is: 36.83
+____________________________________
+julia : ../matrixGenerator.jl 8000 
+mat8000.txt
+52.89
+mat8000.txt
+52.68
+mat8000.txt
+51.95
+mat8000.txt
+49.53
+mat8000.txt
+54.2
+Average time is: 52.25 : Median is: 51.95
+____________________________________
+julia : ../matrixGenerator.jl 9000 
+mat9000.txt
+62.36
+mat9000.txt
+55.62
+mat9000.txt
+53.91
+mat9000.txt
+53.32
+mat9000.txt
+58.45
+Average time is: 56.732 : Median is: 53.91
+____________________________________
+julia : ../matrixGenerator.jl 10000 
+mat10000.txt
+65.76
+mat10000.txt
+63.87
+mat10000.txt
+61.21
+mat10000.txt
+62.79
+mat10000.txt
+58.73
+Average time is: 62.472 : Median is: 61.21
+____________________________________
+julia : ../matrixGenerator.jl 11000 
+mat11000.txt
+70.14
+mat11000.txt
+74.79
+mat11000.txt
+74.13
+mat11000.txt
+71.58
+mat11000.txt
+75.88
+Average time is: 73.304 : Median is: 74.13
+____________________________________
+julia : ../matrixGenerator.jl 12000 
+mat12000.txt
+87.34
+mat12000.txt
+89.85
+mat12000.txt
+85.1
+mat12000.txt
+93.4
+mat12000.txt
+93.6
+Average time is: 89.858 : Median is: 85.1
+____________________________________
+julia : ../matrixGenerator.jl 13000 
+mat13000.txt
+111.32
+mat13000.txt
+105.73
+mat13000.txt
+116.85
+mat13000.txt
+102.36
+mat13000.txt
+114.34
+Average time is: 110.12 : Median is: 116.85
+____________________________________
+julia : ../matrixGenerator.jl 14000 
+mat14000.txt
+131.5
+mat14000.txt
+133.69
+mat14000.txt
+129.45
+mat14000.txt
+126.2
+mat14000.txt
+121.43
+Average time is: 128.454 : Median is: 129.45
+____________________________________
+julia : ../matrixGenerator.jl 15000 
+mat15000.txt
+130.7
+mat15000.txt
+152.14
+mat15000.txt
+135.22
+mat15000.txt
+150.48
+mat15000.txt
+137.07
+Average time is: 141.122 : Median is: 135.22
+____________________________________
+julia : ../matrixGenerator.jl 16000 
+mat16000.txt
+183.71
+mat16000.txt
+196.67
+mat16000.txt
+191.07
+mat16000.txt
+160.69
+mat16000.txt
+158.47
+Average time is: 178.122 : Median is: 191.07
+____________________________________
+julia : ../matrixGenerator.jl 17000 
+mat17000.txt
+210.47
+mat17000.txt
+242.37
+mat17000.txt
+239.28
+mat17000.txt
+247.29
+mat17000.txt
+257.47
+Average time is: 239.376 : Median is: 239.28
+____________________________________
+julia : ../matrixGenerator.jl 18000 
+mat18000.txt
+286.36
+mat18000.txt
+279.8
+mat18000.txt
+300.68
+mat18000.txt
+301.05
+mat18000.txt
+291.2
+Average time is: 291.818 : Median is: 300.68
+____________________________________
+julia : ../matrixGenerator.jl 19000 
+mat19000.txt
+271.52
+mat19000.txt
+253.83
+mat19000.txt
+269.89
+mat19000.txt
+257.31
+mat19000.txt
+254.58
+Average time is: 261.426 : Median is: 269.89
+____________________________________
+julia : ../matrixGenerator.jl 20000 
+mat20000.txt
+350.99
+mat20000.txt
+373.03
+mat20000.txt
+379.12
+mat20000.txt
+368.76
+mat20000.txt
+377.09
+Average time is: 369.798 : Median is: 379.12
+____________________________________
+julia : ../euler11.jl 1000 4 
+1.13
+1.16
+1.1
+1.11
+1.1
+Average time is: 1.12 : Median is: 1.1
+____________________________________
+julia : ../euler11.jl 2000 4 
+1.18
+1.16
+1.1
+1.14
+1.13
+Average time is: 1.142 : Median is: 1.1
+____________________________________
+julia : ../euler11.jl 3000 4 
+1.16
+1.18
+1.2
+1.18
+1.17
+Average time is: 1.178 : Median is: 1.2
+____________________________________
+julia : ../euler11.jl 4000 4 
+1.13
+1.17
+1.2
+1.19
+1.16
+Average time is: 1.17 : Median is: 1.2
+____________________________________
+julia : ../euler11.jl 5000 4 
+1.15
+1.18
+1.16
+1.2
+1.19
+Average time is: 1.176 : Median is: 1.16
+____________________________________
+julia : ../euler11.jl 6000 4 
+1.21
+1.25
+1.14
+1.19
+1.22
+Average time is: 1.202 : Median is: 1.14
+____________________________________
+julia : ../euler11.jl 7000 4 
+1.16
+1.18
+1.2
+1.22
+1.21
+Average time is: 1.194 : Median is: 1.2
+____________________________________
+julia : ../euler11.jl 8000 4 
+1.22
+1.26
+1.24
+1.2
+1.2
+Average time is: 1.224 : Median is: 1.24
+____________________________________
+julia : ../euler11.jl 9000 4 
+1.2
+1.2
+1.2
+1.19
+1.18
+Average time is: 1.194 : Median is: 1.2
+____________________________________
+julia : ../euler11.jl 10000 4 
+1.22
+1.24
+1.26
+1.19
+1.2
+Average time is: 1.222 : Median is: 1.26
+____________________________________
+julia : ../euler11.jl 11000 4 
+1.23
+1.24
+1.23
+1.23
+1.25
+Average time is: 1.236 : Median is: 1.23
+____________________________________
+julia : ../euler11.jl 12000 4 
+1.29
+1.32
+1.27
+1.25
+1.3
+Average time is: 1.286 : Median is: 1.27
+____________________________________
+julia : ../euler11.jl 13000 4 
+1.33
+1.3
+1.29
+1.2
+1.26
+Average time is: 1.276 : Median is: 1.29
+____________________________________
+julia : ../euler11.jl 14000 4 
+1.24
+1.3
+1.13
+1.19
+1.3
+Average time is: 1.232 : Median is: 1.13
+____________________________________
+julia : ../euler11.jl 15000 4 
+1.32
+1.3
+1.27
+1.32
+1.34
+Average time is: 1.31 : Median is: 1.27
+____________________________________
+julia : ../euler11.jl 16000 4 
+1.37
+1.35
+1.31
+1.37
+1.37
+Average time is: 1.354 : Median is: 1.31
+____________________________________
+julia : ../euler11.jl 17000 4 
+1.4
+1.35
+1.34
+1.35
+1.32
+Average time is: 1.352 : Median is: 1.34
+____________________________________
+julia : ../euler11.jl 18000 4 
+1.35
+1.36
+1.26
+1.24
+1.34
+Average time is: 1.31 : Median is: 1.26
+____________________________________
+julia : ../euler11.jl 19000 4 
+1.4
+1.47
+1.28
+1.11
+1.47
+Average time is: 1.346 : Median is: 1.28
+____________________________________
+julia : ../euler11.jl 20000 4 
+204.19
+186.44
+145.84
+124.03
+127.24
+Average time is: 157.548 : Median is: 145.84
+____________________________________
+javac : ../euler11.java 
+1.45
+1.6
+1.84
+1.82
+1.47
+Average time is: 1.636 : Median is: 1.84
+____________________________________
+java : ../euler11 1000 4 
+0.06
+0.06
+0.06
+0.05
+0.06
+Average time is: 0.058 : Median is: 0.06
+____________________________________
+java : ../euler11 2000 4 
+0.06
+0.06
+0.06
+0.06
+0.06
+Average time is: 0.06 : Median is: 0.06
+____________________________________
+java : ../euler11 3000 4 
+0.06
+0.06
+0.06
+0.06
+0.06
+Average time is: 0.06 : Median is: 0.06
+____________________________________
+java : ../euler11 4000 4 
+0.06
+0.06
+0.06
+0.06
+0.05
+Average time is: 0.058 : Median is: 0.06
+____________________________________
+java : ../euler11 5000 4 
+0.06
+0.06
+0.06
+0.06
+0.06
+Average time is: 0.06 : Median is: 0.06
+____________________________________
+java : ../euler11 6000 4 
+0.06
+0.06
+0.06
+0.06
+0.06
+Average time is: 0.06 : Median is: 0.06
+____________________________________
+java : ../euler11 7000 4 
+0.06
+0.06
+0.06
+0.06
+0.06
+Average time is: 0.06 : Median is: 0.06
+____________________________________
+java : ../euler11 8000 4 
+0.06
+0.06
+0.06
+0.06
+0.06
+Average time is: 0.06 : Median is: 0.06
+____________________________________
+java : ../euler11 9000 4 
+0.06
+0.06
+0.06
+0.06
+0.06
+Average time is: 0.06 : Median is: 0.06
+____________________________________
+java : ../euler11 10000 4 
+0.06
+0.05
+0.05
+0.06
+0.06
+Average time is: 0.056 : Median is: 0.05
+____________________________________
+java : ../euler11 11000 4 
+0.06
+0.06
+0.06
+0.06
+0.06
+Average time is: 0.06 : Median is: 0.06
+____________________________________
+java : ../euler11 12000 4 
+0.06
+0.06
+0.06
+0.06
+0.06
+Average time is: 0.06 : Median is: 0.06
+____________________________________
+java : ../euler11 13000 4 
+0.06
+0.06
+0.06
+0.06
+0.06
+Average time is: 0.06 : Median is: 0.06
+____________________________________
+java : ../euler11 14000 4 
+0.06
+0.06
+0.06
+0.06
+0.06
+Average time is: 0.06 : Median is: 0.06
+____________________________________
+java : ../euler11 15000 4 
+0.06
+0.06
+0.06
+0.06
+0.06
+Average time is: 0.06 : Median is: 0.06
+____________________________________
+java : ../euler11 16000 4 
+0.06
+0.06
+0.06
+0.06
+0.06
+Average time is: 0.06 : Median is: 0.06
+____________________________________
+java : ../euler11 17000 4 
+0.06
+0.06
+0.06
+0.05
+0.06
+Average time is: 0.058 : Median is: 0.06
+____________________________________
+java : ../euler11 18000 4 
+0.06
+0.06
+0.06
+0.05
+0.06
+Average time is: 0.058 : Median is: 0.06
+____________________________________
+java : ../euler11 19000 4 
+0.06
+0.06
+0.06
+0.06
+0.06
+Average time is: 0.06 : Median is: 0.06
+____________________________________
+java : ../euler11 20000 4 
+0.06
+0.06
+0.06
+0.06
+0.06
+Average time is: 0.06 : Median is: 0.06
+____________________________________
+g++ : -std=c++11 ../euler11.cpp -o ../ubeuler11 
+0.4
+0.4
+0.39
+0.39
+0.39
+Average time is: 0.394 : Median is: 0.39
+____________________________________
+../ubeuler11 : 1000 4 
+0
+0
+0
+0
+0
+Average time is: 0 : Median is: 0
+____________________________________
+../ubeuler11 : 2000 4 
+0
+0
+0
+0
+0
+Average time is: 0 : Median is: 0
+____________________________________
+../ubeuler11 : 3000 4 
+0
+0
+0
+0
+0
+Average time is: 0 : Median is: 0
+____________________________________
+../ubeuler11 : 4000 4 
+0
+0
+0
+0
+0
+Average time is: 0 : Median is: 0
+____________________________________
+../ubeuler11 : 5000 4 
+0
+0
+0
+0
+0
+Average time is: 0 : Median is: 0
+____________________________________
+../ubeuler11 : 6000 4 
+0
+0
+0
+0
+0
+Average time is: 0 : Median is: 0
+____________________________________
+../ubeuler11 : 7000 4 
+0
+0
+0
+0
+0
+Average time is: 0 : Median is: 0
+____________________________________
+../ubeuler11 : 8000 4 
+0
+0
+0
+0
+0
+Average time is: 0 : Median is: 0
+____________________________________
+../ubeuler11 : 9000 4 
+0
+0
+0
+0
+0
+Average time is: 0 : Median is: 0
+____________________________________
+../ubeuler11 : 10000 4 
+0
+0
+0
+0
+0
+Average time is: 0 : Median is: 0
+____________________________________
+../ubeuler11 : 11000 4 
+0
+0
+0
+0
+0
+Average time is: 0 : Median is: 0
+____________________________________
+../ubeuler11 : 12000 4 
+0
+0
+0
+0
+0
+Average time is: 0 : Median is: 0
+____________________________________
+../ubeuler11 : 13000 4 
+0
+0
+0
+0
+0
+Average time is: 0 : Median is: 0
+____________________________________
+../ubeuler11 : 14000 4 
+0
+0
+0
+0
+0
+Average time is: 0 : Median is: 0
+____________________________________
+../ubeuler11 : 15000 4 
+0
+0
+0
+0
+0
+Average time is: 0 : Median is: 0
+____________________________________
+../ubeuler11 : 16000 4 
+0
+0
+0
+0
+0
+Average time is: 0 : Median is: 0
+____________________________________
+../ubeuler11 : 17000 4 
+0
+0
+0
+0
+0
+Average time is: 0 : Median is: 0
+____________________________________
+../ubeuler11 : 18000 4 
+0
+0
+0
+0
+0
+Average time is: 0 : Median is: 0
+____________________________________
+../ubeuler11 : 19000 4 
+0
+0
+0
+0
+0
+Average time is: 0 : Median is: 0
+____________________________________
+../ubeuler11 : 20000 4 
+119.76
+119.11
+119.8
+124.63
+120.02
+Average time is: 120.664 : Median is: 119.8
+____________________________________
+python : ../euler11.py 1000 4 
+0.04
+0.05
+0.04
+0.04
+0.04
+Average time is: 0.042 : Median is: 0.04
+____________________________________
+python : ../euler11.py 2000 4 
+0.19
+0.16
+0.16
+0.17
+0.16
+Average time is: 0.168 : Median is: 0.16
+____________________________________
+python : ../euler11.py 3000 4 
+0.41
+0.41
+0.41
+0.41
+0.42
+Average time is: 0.412 : Median is: 0.41
+____________________________________
+python : ../euler11.py 4000 4 
+0.72
+0.72
+0.69
+0.69
+0.69
+Average time is: 0.702 : Median is: 0.69
+____________________________________
+python : ../euler11.py 5000 4 
+1.07
+1.07
+1.08
+1.09
+1.07
+Average time is: 1.076 : Median is: 1.08
+____________________________________
+python : ../euler11.py 6000 4 
+1.55
+1.54
+1.54
+1.55
+1.8
+Average time is: 1.596 : Median is: 1.54
+____________________________________
+python : ../euler11.py 7000 4 
+2.12
+2.1
+2.1
+2.1
+2.21
+Average time is: 2.126 : Median is: 2.1
+____________________________________
+python : ../euler11.py 8000 4 
+2.75
+2.75
+2.81
+2.75
+2.74
+Average time is: 2.76 : Median is: 2.81
+____________________________________
+python : ../euler11.py 9000 4 
+3.46
+3.45
+3.44
+3.45
+3.48
+Average time is: 3.456 : Median is: 3.44
+____________________________________
+python : ../euler11.py 10000 4 
+4.28
+4.27
+4.31
+4.28
+4.31
+Average time is: 4.29 : Median is: 4.31
+____________________________________
+python : ../euler11.py 11000 4 
+5.54
+5.54
+5.56
+5.55
+5.57
+Average time is: 5.552 : Median is: 5.56
+____________________________________
+python : ../euler11.py 12000 4 
+6.54
+6.53
+6.52
+6.53
+6.52
+Average time is: 6.528 : Median is: 6.52
+____________________________________
+python : ../euler11.py 13000 4 
+7.73
+7.65
+7.72
+7.95
+7.65
+Average time is: 7.74 : Median is: 7.72
+____________________________________
+python : ../euler11.py 14000 4 
+8.81
+8.84
+8.82
+8.81
+8.84
+Average time is: 8.824 : Median is: 8.82
+____________________________________
+python : ../euler11.py 15000 4 
+10.23
+10.17
+10.12
+10.13
+10.1
+Average time is: 10.15 : Median is: 10.12
+____________________________________
+python : ../euler11.py 16000 4 
+11.38
+11.32
+11.37
+11.33
+11.32
+Average time is: 11.344 : Median is: 11.37
+____________________________________
+python : ../euler11.py 17000 4 
+12.74
+12.88
+12.73
+12.79
+13.7
+Average time is: 12.968 : Median is: 12.73
+____________________________________
+python : ../euler11.py 18000 4 
+14.35
+14.29
+14.47
+14.34
+14.29
+Average time is: 14.348 : Median is: 14.47
+____________________________________
+python : ../euler11.py 19000 4 
+18.76
+15.9
+15.84
+15.94
+15.94
+Average time is: 16.476 : Median is: 15.84
+____________________________________
+python : ../euler11.py 20000 4 
+92.29
+89.23
+89.37
+91.18
+88.57
+Average time is: 90.128 : Median is: 89.37
+____________________________________

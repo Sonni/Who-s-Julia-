@@ -10,11 +10,12 @@
 #include <vector>
 #include <math.h>
 #include <string>
+#include <algorithm>
 
 std::vector<unsigned int> digitsInArray(unsigned int n)
 {
     std::vector<unsigned int> array;
-    unsigned unsigned int d;
+    unsigned int d;
     unsigned int k;
     while (n > 0)
     {
