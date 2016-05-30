@@ -1,0 +1,4 @@
+Command terminated by signal 9
+real 174.64
+user 74.27
+sys 2.17

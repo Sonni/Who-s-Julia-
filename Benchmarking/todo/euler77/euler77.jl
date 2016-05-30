@@ -11,7 +11,7 @@ What is the first value which can be written as the sum of primes in over five t
 =#
 #Answer: 71
 
-#Terminal: julia euler77.jl 500
+#Terminal: julia euler77.jl 5000
 
 ways = parse(Int, ARGS[1])
 
