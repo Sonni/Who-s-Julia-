@@ -7,7 +7,6 @@
 
   #Terminal: julia euler2.jl 4000000
 limit = parse(Int, ARGS[1])
-println(typeof(limit))
 
 function fibo(n)
   array = Int64[1, 1]

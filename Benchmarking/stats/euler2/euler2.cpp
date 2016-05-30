@@ -37,9 +37,6 @@ void fibo(unsigned int n)
         else
             go = false;
     }
-    
-    std::cout << sum << std::endl;
-    printVector(array);
 }
 
 int main(int argc, const char * argv[]) {
