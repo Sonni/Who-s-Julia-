@@ -133,7 +133,7 @@ std::string exec(const char* cmd) {
 void doTest(std::string title, const char* command, unsigned int loopCount)
 {
     float sum = 0.0;
-    float median = 0.0;
+    std::vector<float> results;
     
     std::cout << title << "" << std::endl;
     for (int i = 0; i < loopCount; i++)
@@ -144,11 +144,14 @@ void doTest(std::string title, const char* command, unsigned int loopCount)
         std::string outString = readOutput("out.txt");
         float time = getTime(outString);
         sum += time;
-        if (i == loopCount/2)
-        median = time;
+        results.push_back(time);
+        
         
         std::cout << time << std::endl;
     }
+    
+    std::sort(results.begin(), results.end());
+    float median = results[results.size()/2];
     
     std::cout << "Average time is: " << sum / loopCount << " : Median is: " << median << std::endl;
     std::cout << "____________________________________" << std::endl;

@@ -14,6 +14,7 @@
 #include <string>
 #include <vector>
 #include <fstream>
+#include <math.h>
 
 std::vector<std::string> split(std::string s, char delim)
 {
@@ -29,7 +30,7 @@ std::vector<std::string> split(std::string s, char delim)
         while(end <= strLength)
         {
             if(cstr[end] == delim)
-                break;
+            break;
             end++;
         }
         
@@ -76,7 +77,7 @@ float getTime(std::string out)
             timeKind += *it;
             counter++;
             if (counter == 3)
-                break;
+            break;
         }
         
         if (!timeKind.compare("use"))
@@ -123,17 +124,15 @@ std::string exec(const char* cmd) {
     if (!pipe) throw std::runtime_error("popen() failed!");
     while (!feof(pipe.get())) {
         if (fgets(buffer, 128, pipe.get()) != NULL)
-            result += buffer;
+        result += buffer;
     }
     return result;
 }
 
-void doTest(std::string title, const char* command)
+void doTest(std::string title, const char* command, unsigned int loopCount)
 {
-    int loopCount = 5;
-    
     float sum = 0.0;
-    float median = 0.0;
+    std::vector<float> results;
     
     std::cout << title << "" << std::endl;
     for (int i = 0; i < loopCount; i++)
@@ -144,11 +143,13 @@ void doTest(std::string title, const char* command)
         std::string outString = readOutput("out.txt");
         float time = getTime(outString);
         sum += time;
-        if (i == loopCount/2)
-            median = time;
+        results.push_back(time);
         
         std::cout << time << std::endl;
     }
+    
+    std::sort(results.begin(), results.end());
+    float median = results[results.size()/2];
     
     std::cout << "Average time is: " << sum / loopCount << " : Median is: " << median << std::endl;
     std::cout << "____________________________________" << std::endl;
@@ -168,7 +169,7 @@ int main(int argc, const char * argv[])
         std::string programName = split(line, ' ')[1];
         std::string arguments = "";
         if (!language.compare("/Applications/Julia-0.4.5.app/Contents/Resources/julia/bin/julia"))
-            language = "Julia";
+        language = "Julia";
         
         if (language[0] == '.' && language[1] == '/')
         {
@@ -176,13 +177,13 @@ int main(int argc, const char * argv[])
             programName = split(line, ' ')[0];
             std::vector<std::string> arg = split(line, ' ');
             for (unsigned int i = 1; i < arg.size(); i++)
-                arguments += arg[i] + " ";
+            arguments += arg[i] + " ";
         }
         else
         {
             std::vector<std::string> arg = split(line, ' ');
             for (unsigned int i = 2; i < arg.size(); i++)
-                arguments += arg[i] + " ";
+            arguments += arg[i] + " ";
         }
         
         
@@ -192,7 +193,7 @@ int main(int argc, const char * argv[])
         
         std::string command = "(time -p " + line + ") 2> out.txt";
         
-        doTest(language + " : " + programName + " " + arguments, command.c_str());
+        doTest(language + " : " + programName + " " + arguments, command.c_str(), atoi(argv[1]));
         counter++;
     }
     infile.close();
