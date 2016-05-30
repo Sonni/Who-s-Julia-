@@ -27,7 +27,7 @@ the greatest product. What is the value of this product?
 =#
 #Answer: 23514624000
 
-#Terminal: julia euler8.jl data.txt
+#Terminal: julia euler8.jl data1.txt
 path = ARGS[1]
 file = open(path)
 str = readline(file)

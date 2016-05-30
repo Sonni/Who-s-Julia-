@@ -6,19 +6,19 @@ public class euler13
 	public static void main(String[] args)
 	{
 		String data = args[0];
-		calc(makeData(data));
+		System.out.println(a);
 	}
-	
+
 	private static ArrayList<ArrayList<Integer>> makeData(String data)
 	{
-		try 
+		try
 		(
 			InputStream fis = new FileInputStream(data);
 			InputStreamReader isr = new InputStreamReader(fis);
 			BufferedReader br = new BufferedReader(isr);
-		) 
+		)
 		{
-			int row = 0;
+
 			ArrayList<ArrayList<Integer>> mat = new ArrayList<ArrayList<Integer>>();
 			String str;
 			ArrayList<Integer> temp;
@@ -40,7 +40,7 @@ public class euler13
 		}
 		return null;
 	}
-	
+
 	private static String calc(ArrayList<ArrayList<Integer>> mat)
 	{
 		int r = mat.size();

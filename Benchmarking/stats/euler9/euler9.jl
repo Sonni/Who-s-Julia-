@@ -11,10 +11,11 @@ Find the product abc.
 
 #Terminal: julia euler9.jl 1000
 number = parse(Int, ARGS[1])
+
 function pytha(number)
   dicto = Dict{ASCIIString, Int64}()
-  for a = 1 : floor(number/3)
-    for b = a + 1 : floor(number / 2)
+  for a = 1 : div(number, 3)
+    for b = a + 1 : div(number, 2)
       c = number - a - b
       if a * a + b * b == c * c
         dicto["a"] = a

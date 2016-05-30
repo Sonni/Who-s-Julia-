@@ -3,7 +3,9 @@ import sys
 data = sys.argv[1]
 def makeData(data):
 	row = 0
-	mat = [ [ 0 for i in range(50) ] for j in range(100) ]
+	cols = first_line(data)
+	rows = file_len(data)
+	mat = [ [ 0 for i in range(cols) ] for j in range(rows) ]
 	with open(data, "r") as f:
 		for line in f:
 			temp = []
@@ -17,6 +19,17 @@ def makeData(data):
 				col += 1
 			row += 1
 	return mat
+
+def file_len(data):
+    with open(data) as f:
+        for i, l in enumerate(f):
+            pass
+    return i + 1
+
+def first_line(data):
+	with open(data, 'r') as f:
+		line = f.readline()
+		return len(line) - 1
 
 def calc(mat):
 	r = len(mat)

@@ -5,10 +5,21 @@ Work out the first ten digits of the sum of the following one-hundred 50-digit n
 
 #Terminal: julia euler13.jl data.txt
 data = ARGS[1]
+
+function linesFile(file)
+  #readline(f) reads first line, and makes countlines(f) start at line 2 instead of 1.
+  #returns number of lines-2, which is why +2 is added.
+  f = open(file)
+  len = length(readline(f))
+  return countlines(f) + 2, len - 1
+end
+#lines, len = linesFile(data)
+
 function makeData(data)
+  lines, len = linesFile(data)
   f = open(data)
   row = 1
-  mat = zeros(Int, 100, 50)
+  mat = zeros(Int, lines, len)
   for l in eachline(f)
     temp = digits(parse(BigInt, l))
     temp2 = reverse(temp)
@@ -62,4 +73,4 @@ function calc(mat)
   return result
 end
 
-calc(makeData(data))
+@time println(calc(makeData(data)))

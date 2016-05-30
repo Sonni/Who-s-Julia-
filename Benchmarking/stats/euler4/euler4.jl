@@ -10,6 +10,7 @@ Find the largest palindrome made from the product of two 3-digit numbers.
 #Interval for calculating palindrome: 100-999 finds largest 3-digit palindrome.
 min = parse(Int, ARGS[1])
 max = parse(Int, ARGS[2])
+
 function digitsInArray(n)
   arr = Int[]
   while n > 0

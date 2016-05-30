@@ -5,13 +5,13 @@ What is the smallest positive number that is evenly divisible by all of the numb
 #Answer = 232_792_560
 
 #Terminal: julia euler5.jl 20 5000000000
-div = parse(Int, ARGS[1])
+divi = parse(Int, ARGS[1])
 limit = parse(Int, ARGS[2])
 
-function divisible(div, limit)
-  for x = div + 1 : limit #start from above div
+function divisible(divi, limit)
+  for x = divi + 1 : limit #start from above div
     evenlyDivis = true
-    for i = 2 : div
+    for i = 2 : divi
       n = x % i
       if !(n == 0)
         evenlyDivis = false
@@ -24,4 +24,4 @@ function divisible(div, limit)
   end
 end
 
-divisible(div, limit)
+@time println(divisible(div, limit))
