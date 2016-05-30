@@ -13,7 +13,7 @@ function calc(siz)
 
   for j = siz : -1 : 1
     for i = siz : -1 : 1
-      mat[i, j] = mat[i, j+1] + mat[i+1, j]
+      mat[i, j] = mat[i, j + 1] + mat[i + 1, j]
     end
   end
   return mat[1][1]
