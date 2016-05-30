@@ -449,6 +449,23 @@ Meta-programming is a way to write programs in programs and let them use program
 \subsubsection{Implementing code from other languages}
 Since Julia is a newer language there are not many written libraries yet. Julia has an import feature for both Python and C libraries to avoid this disadvantage. Import the library PyCall with the "using" operation to use python and import Python libraries via a macro @pyimport. To use C libraries or coding, simply run the function ccall(). The programming language C is a well known and used language. Many systems are based on C, which makes C an advantage for hardware programming. Another feature is to execute shell commands. Execute shell commands using run(``). An example would be running run(`echo Hello World`), which would return the output "Hello World".
 
+\begin{figure}[H]
+		\centering
+		\begin{lstlisting}
+#Run Pkg.add("PyCall") for the first time.
+using PyCall
+
+@pyimport pylab #Import library pylab
+
+x = linspace(0, 4, 100); y = x + 1;
+pylab.plot(x, y)
+pylab.show() #Shows the graph x + 1
+
+println(pyeval("4*3+1")) #prints 13
+		\end{lstlisting}
+		\caption{Import of Python libraries.}
+\end{figure}
+
 \subsubsection{Extensible conversions and promotions for numeric and other types.}
 
 
@@ -506,7 +523,7 @@ Benchmarking is measuring the quality of a product. In this report we will be me
 Profiling is a way to analyse code. For example, the analysis could be measuring the memory usage, time and function calls. The analysis shows, which part of the code took the longest time or used up all memory. Profiling is often used for optimization.
 
 \subsection{Time measurements}
-Looking at running time the most common terms are wall time (real time) and CPU time. Wall time is the time it took the program to terminate, from start to finish. CPU time is how much time the program used on the CPU. The time difference between wall time and CPU time comes from the fact that the program being benchmarked might get interrupted by the operating system, because other tasks needs to be handled. These tasks could be other programs, or something that the OS needs to get done. The processing time of those tasks will be included in the wall time but excluded in the CPU time. To get the running times in Unix based system, the time command is available from the terminal:
+Looking at the run time the most common terms are wall time (real time) and CPU time. Wall time is the time it took the program to terminate, from start to finish. CPU time is how much time the program used on the CPU. The time difference between wall time and CPU time comes from the fact that the program being benchmarked might get interrupted by the operating system, because other tasks needs to be handled. These tasks could be other programs, or something that the OS needs to get done. The processing time of those tasks will be included in the wall time but excluded in the CPU time. To get the run times in Unix based system, the time command is available from the terminal:
 
 \begin{lstlisting}
 time <COMMAND>
@@ -526,21 +543,21 @@ Where <COMMAND> can be any terminal command. The time command will return three 
 The difference between user- and kernel mode is the following:\\
 In most memory protected system there are some locked operations for security reasons. E.g. allocation of memory or accessing hardware requires kernel mode and cannot be done in user mode. Processes like malloc and reading / writing to files will somewhere in the process sent a request to the kernel to do certain things and this is counted as system time. This does not necessarily mean that all time is spent in kernel mode when reading a file, since the only time that is spent in kernel mode is accessing the requested data in memory the rest of the operation is counted towards user time.\\ 
 \\
-So to get much times is spent on the CPU, User time + system is a good estimation. To get an even better indication of the real CPU time, multiple test are done and the average is calculated. The average running time is considered since there can be fluctuations in run times for every test. \\
+So to get much times is spent on the CPU, User time + system is a good estimation. To get an even better indication of the real CPU time, multiple test are done and the average is calculated. The average run time is considered since there can be fluctuations in run times for every test. \\
 \\
 Another way to measure time spent on the CPU is to use the built in libraries for example the ThreadMXBean in Java. This is especially useful for profiling.
 
 \section{Materials and methods}
 \subsection{Benchmarking}
-For the benchmarking we used: \\
-Lenovo W530: Intel Core i5-3320M 2.60GHz x 4, 8GB RAM, Ubuntu 16.04 64-bit, Windows 10 64-bit, Windows XP 32-bit \\
+Materials for benchmarking: \\
+Lenovo W530: Intel Core i5-3320M 2.60GHz x 4, 8GB RAM, Ubuntu 16.04 64-bit\\
 MacBook: Intel Core i5 1,4GHz, 8GB RAM, OSX El Capitan 10.11.5\\
 MacBook: \\
 Julia 0.4.5 \\
 Python 2.7.11+ \\
 C++11 \\
-Java 1.8.0\_92 \\ 
-Benchmarking will be done by comparing the running-time of the same algorithm in different languages. In this project we measure the running-time as the sum of system and user time, because the system and user time are not affected by heavy loads on the machine. All time measurements are measured using the shell 'time' command that returns the three types of time taken for the algorithm to run. The problems will be scaled to have smaller and larger inputs. However, in some situations a large input can cause memory problems, which will be addressed in the specific problem. The memory problems is unfortunately making an upper bound for how large data is possible to pass for certain problems. A tool created for this project gather the data and calculates the median of the running time. 
+Java 1.8.0\_92 \\\\
+Benchmarking will be done by comparing the run time of the same algorithm in different languages. In this project we measure the run time as the sum of system and user time, because the system and user time are not affected by heavy loads on the machine. All time measurements are measured using the shell 'time' command that returns the three types of time taken for the algorithm to run. The problems will be scaled to have smaller and larger inputs. However, in some situations a large input can cause memory problems, which will be addressed in the specific problem. The memory problems is unfortunately making an upper bound for how large data is possible to pass for certain problems. A tool created for this project gather the data and calculates the median of the run time. 
 
 \section{Problems}
 \subsection{Projecteuler 11}
