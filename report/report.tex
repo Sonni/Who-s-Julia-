@@ -77,7 +77,7 @@ indryk virker fint her.
 Julia is a new programming language. Through tests and benchmarking it is found that * *
 
 \section{Preface}
-This report has been written in May 2016 for a first year project in a Bachelor Degree of Computer Science. We thank our supervisor Michal Kotrbčík for his help and time.
+This report has been written in May 2016 as a first year project in the Bachelor Degree of Computer Science. We thank our supervisor Michal Kotrbčík for his help and time.
 In this project we have been doing benchmarks to find out if Julia is as good as the developers claim it to be. 
 
 \newpage
@@ -91,12 +91,12 @@ In this project we have been doing benchmarks to find out if Julia is as good as
 \rhead{Project 99: Who's Julia?}
 \cfoot{\thepage\ of \pageref{LastPage}}
 \section{Introduction}
-Java, C, C++, C\# and Python are on top five of the most used programming languages. There are hundreds of languages, but not minding the hard competition new languages are still created with the thought of doing better. Julia is a new programming language, which has been developed to contain other languages best features.
-
+Java, C, C++, C\# and Python are on top ten of the most used programming languages. There are hundreds of languages, but not minding the hard competition new languages are still created with the thought of doing better. Julia is a new programming language, which has been developed to contain other languages best features.
+\\
 The purpose of this report is to find out if the programming language Julia has a chance in the marked and if it is worth changing to. The languages Java, C++, Python and Julia will be compared on syntax and time performance.  
 
 \section{Julia}
-Julia is a programming language, which has been under development since 2009. First released in 2012 and the newest stable version of Julia is version 0.4.5.  The language has been created because the developers wanted a language with all the features they like from different languages. The developers also wanted the language to be open source, which means everybody can read how it is made and change the language. Julia shares many similarities with python. One of the idea was to make the language as simple, readable and easy to learn as possible. The language is made for high performance and scientific computations while still supporting general purpose programming. 
+Julia is a programming language, which has been under development since 2009. First released in 2012 and the newest stable version of Julia is version 0.4.5.  The language has been created because the developers wanted a language with all the features they like from different languages. The developers also wanted the language to be open source, which means everybody can read and modify the language. Julia shares many similarities with python. One of the idea was to make the language as simple, readable and easy to learn as possible. The language is made for high performance and scientific computations while still supporting general purpose programming. 
 Programming in Julia can be done in the terminal like python with interactive mode:
 \begin{figure}[H]
 	\centering
@@ -159,7 +159,7 @@ Writing longer programs in the terminal might not be the preferred method. The t
 	\begin{subfigure}[b]{0.7\textwidth}
 		\centering
 		\begin{lstlisting}
-		for (unsigned int i = 1; i < 11; i++){
+		for (int i = 1; i < 11; i++){
 			std::cout << i << "\n";
 		}
 		\end{lstlisting}
@@ -200,7 +200,7 @@ Writing longer programs in the terminal might not be the preferred method. The t
 	\begin{subfigure}[b]{0.7\textwidth}
 		\centering
 		\begin{lstlisting}
-		for (unsigned int i = 10; i > 0; i--){
+		for (int i = 10; i > 0; i--){
 			std::cout << i << "\n";
 		}
 		\end{lstlisting}
@@ -325,7 +325,7 @@ Writing longer programs in the terminal might not be the preferred method. The t
 		\begin{lstlisting}
 		void hello(std::string name)
 		{
-			std::cout << "Hello " << name << "\n";
+			std::cout << "Hello " << name << std::endl;
 		}
 		\end{lstlisting}
 		\caption{C++}
@@ -362,7 +362,7 @@ Writing longer programs in the terminal might not be the preferred method. The t
 		\centering
 		\begin{lstlisting}
 		std::array<int,100> array;
-		myarray.fill(0);
+		array.fill(0);
 		\end{lstlisting}
 		\caption{C++}
 	\end{subfigure}
@@ -371,15 +371,14 @@ Writing longer programs in the terminal might not be the preferred method. The t
 \end{figure}
 
 \subsection{Features}
-\subsubsection{Multiple dispatch and dynamic typing}
-Dynamic typing means that type checks are mostly performed at runtime - opposed to static typing, which makes the type checks at compile time. Dynamic typing allows the programmer to skip the type declaration and let the dynamic type system handle it. In Julia it is possible to specify types, but mostly is not necessary. Julia makes decisions about memory allocation for variables and will not change even if a big value, that exceeds the memory of the variable, is assigned to it. The memory size can be decreased and this will be addressed later under the section Garbage Collector. However, there is a range of memory sizes to chose from when initializing a variable. Julia will by default assign 32 bits to an integer or a floating point if no more memory is needed at initialization, but it is possible to manually chose one of the following:
+\subsubsection{Dynamic typing}
+Dynamic typing means that type checks are mostly performed at runtime - opposed to static typing, which makes the type checks at compile time. Dynamic typing allows the programmer to skip the type declaration and let the dynamic type system handle it. In Julia it is possible to specify types, but mostly is not necessary. Julia also makes decisions about how much memory to allocate for variables and the assigned memory size will not change later, not even if a big value, that exceeds the memory of the variable, is assigned to it. The memory size can be decreased and this will be addressed later under the section Garbage Collector. However, there is a range of memory sizes to chose from when initializing a variable. Julia will by default assign 32 bits to an integer or a float if no more memory is needed at initialization, but it is possible to manually chose one of the following:
 \begin{description}
-	\item[$\cdot$] Signed / unsigned integers of; 8, 16, 32, 64 and 128 bits.
-	\item[$\cdot$] Floating points of; 16, 32 and 64 bits.  
+	\item[$\cdot$] Signed / unsigned integers of: 8, 16, 32, 64 and 128 bits.
+	\item[$\cdot$] Floating points of: 16, 32 and 64 bits.  
 	\item[$\cdot$] Boolean – 8 bits 
 	\item[$\cdot$] Char – 32 bits 
 \end{description}
-
 To initialize a variable with a given memory size:
 \begin{lstlisting}[language=python]
 x = Int8(10)
@@ -392,8 +391,7 @@ x = 4
 typeof(x) #Int32
 \end{lstlisting}
 If no certain memory size is needed but only a specific type then abstract types will come in handy. An abstract type is just some form of generalization of a concrete type. For example 16, 32 and 64 bit floating points are of type AbstractFloat. This is especially useful when the programmer do not know how much memory a certain variable may need. Too little memory will result in a bug and too much memory is a waste. 
-\\
-\\
+\subsubsection{Multiple dispatch}
 Multiple dispatch is used to determine, which function to call by the type of one or more of the parsed argument(s). This is useful for example when two functions with the same name are declared:
 
 \begin{lstlisting}[language=python]
@@ -414,10 +412,21 @@ type person
 	name #a variable, which gets the assigned default type ::Any
 end    
 \end{lstlisting}
-If a variable in a composite type is not specified with any type, the default is ::Any, which accepts any kinds of types. To initialize a composite type, think of it like an object. Person = person(21, "Carl"), and the values can be changed with "Person.age = 25". The developers of Julia state that user defined types are as fast and compact as built in types. 
+If a variable in a composite type is not specified with any type, the default is ::Any, which accepts any kinds of types. To initialize a composite type, think of it like an object. Person = person(21, "Carl"), and the values can be changed with "Person.age = 25".
+In the example above, the type person can now be used as any other of the built in types in Julia.
+\begin{lstlisting}[language=python]
+function a(arg1::person)
+	println(arg1.age)
+end
+
+Person = person(21, "Carl")
+
+a(Person) #Will print 21
+\end{lstlisting}
+The developers of Julia state that user defined types are as fast and compact as built in types. 
 
 \subsubsection{Garbage Collector}
-Julia uses a garbage collector to automatically free the memory when needed. There is no guarantee when the garbage collector will run, but is it possible to force garbage collection with a function call: \textbf{gc()}. One thing to keep in mind is that once a name is defined in Julia, it will always be present till termination. The garbage collector do not free the memory of unreachable object but rather reallocates memory for objects when memory size has changed. So the only way the garbage collector can free memory is when an object has been reduced in size, for example:
+Julia uses a garbage collector to automatically free the memory when needed. There is no guarantee when the garbage collector will run, but is it possible to force garbage collection with a function call: \textbf{gc()}. One thing to keep in mind is that once a name is defined in Julia, it will always be present till termination. The garbage collector does not free the memory of unreachable object but rather reallocates memory for objects when memory size has changed. So the only way the garbage collector can free memory is when an object has been reduced in size, for example:
 
 \begin{lstlisting}[language=python]
 A = rand(float32, 10000, 10000) 
@@ -430,7 +439,9 @@ This code will generate a 10.000x10.000 matrix filled with random 32 bit floatin
 Julia comes with a built in package manager, which keeps track of packages that needs to be included in the program to run. It is not necessary to state, which packages needs to be included. For example, when the user calls the sort function, \textbf{sort()}, no package include statement or \textbf{math.sort()} is needed – this is done automatically by the package manager.
 
 \subsubsection{Lightweight green threading}
-A thread is lightweight when it shares address space with other threads opposed to heavyweight threads, which has its own address space. If threads share the same address space the communication between them is faster and much simpler. The communication between heavyweight threads have to go through pipes or sockets. Green threads are threads that are scheduled not by the operating system but rather by the runtime library or virtual machine. Green threads does not have to relay on the operating system and can be controlled much better – the threads are in user space and not kernel space. As of Julia 0.4.5 multithreading is not available but in the unstable version 0.5.0 an experimental support of multithreading is available but will be addressed no further. 
+A thread is lightweight when it shares address space with other threads opposed to heavyweight threads, which has its own address space. If threads share the same address space the communication between them is faster and much simpler. The communication between heavyweight threads have to go through pipes or sockets. \\
+\\
+Green threads are threads that are scheduled not by the operating system but rather by the runtime library or virtual machine. Green threads does not have to relay on the operating system and can be controlled much better – which means the threads are in user space and not kernel space, these terms will be adressed later in \textbf{Benchmarking}. As of Julia 0.4.5 multithreading is not available but in the unstable version 0.5.0 an experimental support of multithreading is available, therefore threadiing will be addressed no further. 
 
 \subsubsection{Meta-programming and Macros}
 Meta-programming is a way to write programs in programs and let them use program code as data. In Julia meta-programming can be done by defining macros. For example, the @time macro was used extensively in the project. The @time is in the standard Julia library. The @time takes a function as an argument and sets a timer in the top of the code from the argument and stops the timer in the bottom and prints the time passed and memory allocated. Meta-programming and macros are known from Lisp, a programming language, and have been used in early AI research. 

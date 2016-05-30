@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.22)  30 MAY 2016 18:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.22)  30 MAY 2016 19:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -573,7 +573,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [1] (./report.toc
-Overfull \hbox (0.86263pt too wide) in paragraph at lines 15--15
+Overfull \hbox (0.86263pt too wide) in paragraph at lines 16--16
  [][] []\T1/cmr/m/n/10.95 Extensible con-ver-sions and pro-mo-tions for nu-meri
 c and 
  []
@@ -602,13 +602,13 @@ File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10> not available
 (Font)              Font shape `T1/cmtt/m/n' tried instead on input line 125.
- [2 <./terminalj.jpg> <./terminalp.jpg>] [3] [4] [5] [6] [7] [8]
-Underfull \hbox (badness 10000) in paragraph at lines 394--398
+ [2 <./terminalj.jpg> <./terminalp.jpg>] [3] [4] [5] [6] [7] [8] [9] [10]
+Underfull \hbox (badness 10000) in paragraph at lines 442--445
 
  []
 
-[9] [10] [11]
-Overfull \hbox (6.07005pt too wide) in paragraph at lines 441--441
+[11]
+Overfull \hbox (6.07005pt too wide) in paragraph at lines 452--452
 []\T1/cmr/bx/n/10.95 Extensible con-ver-sions and pro-mo-tions for nu-meric and
  other
  []
@@ -616,30 +616,30 @@ Overfull \hbox (6.07005pt too wide) in paragraph at lines 441--441
 [12] [13] [14] <time.jpg, id=72, 164.615pt x 60.225pt>
 File: time.jpg Graphic file (type jpg)
  <use time.jpg>
-Package pdftex.def Info: time.jpg used on input line 521.
+Package pdftex.def Info: time.jpg used on input line 532.
 (pdftex.def)             Requested size: 108.0011pt x 39.51335pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 529--538
+Underfull \hbox (badness 10000) in paragraph at lines 540--549
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 529--538
+Underfull \hbox (badness 10000) in paragraph at lines 540--549
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 529--538
+Underfull \hbox (badness 10000) in paragraph at lines 540--549
 
  []
 
 [15 <./time.jpg>] <11.jpg, id=77, 208.78pt x 81.30376pt>
 File: 11.jpg Graphic file (type jpg)
  <use 11.jpg>
-Package pdftex.def Info: 11.jpg used on input line 545.
+Package pdftex.def Info: 11.jpg used on input line 556.
 (pdftex.def)             Requested size: 167.0242pt x 65.04308pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 549--554
+Underfull \hbox (badness 10000) in paragraph at lines 560--565
 
  []
 
@@ -647,45 +647,45 @@ Underfull \hbox (badness 10000) in paragraph at lines 549--554
 <1161.jpg, id=88, 568.1225pt x 93.34875pt>
 File: 1161.jpg Graphic file (type jpg)
  <use 1161.jpg>
-Package pdftex.def Info: 1161.jpg used on input line 589.
+Package pdftex.def Info: 1161.jpg used on input line 600.
 (pdftex.def)             Requested size: 216.0022pt x 35.4914pt.
 
 <1162.jpg, id=89, 420.57124pt x 39.14626pt>
 File: 1162.jpg Graphic file (type jpg)
  <use 1162.jpg>
-Package pdftex.def Info: 1162.jpg used on input line 595.
+Package pdftex.def Info: 1162.jpg used on input line 606.
 (pdftex.def)             Requested size: 216.0022pt x 20.10529pt.
 
 <1163.jpg, id=90, 273.02pt x 33.12375pt>
 File: 1163.jpg Graphic file (type jpg)
  <use 1163.jpg>
-Package pdftex.def Info: 1163.jpg used on input line 601.
+Package pdftex.def Info: 1163.jpg used on input line 612.
 (pdftex.def)             Requested size: 216.0022pt x 26.20638pt.
  [19 <./1161.jpg> <./1162.jpg> <./1163.jpg>] <qs.jpg, id=94, 245.91875pt x 501.
 875pt>
 File: qs.jpg Graphic file (type jpg)
  <use qs.jpg>
-Package pdftex.def Info: qs.jpg used on input line 619.
+Package pdftex.def Info: qs.jpg used on input line 630.
 (pdftex.def)             Requested size: 122.95906pt x 250.93687pt.
 
 [20] [21 <./qs.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 652--655
+Underfull \hbox (badness 10000) in paragraph at lines 663--666
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 669--672
+Underfull \hbox (badness 10000) in paragraph at lines 680--683
 
  []
 
 [22] [23]
-Overfull \hbox (62.11838pt too wide) in paragraph at lines 687--693
+Overfull \hbox (62.11838pt too wide) in paragraph at lines 698--704
 \T1/cmr/m/n/10.95 http://www.nowozin.net/sebastian/blog/the-julia-language-for-
 scientific-computing.html 
  []
 
 [24] [25]
-Overfull \hbox (63.00946pt too wide) in paragraph at lines 728--729
+Overfull \hbox (63.00946pt too wide) in paragraph at lines 739--740
 []\T1/cmr/m/n/10.95 http://www.cs.cornell.edu/courses/cs1112/2013fa/Exams/exam2
 /vectorizedCode.pdf 
  []
@@ -699,7 +699,7 @@ LaTeX Warning: There were multiply-defined labels.
  ) 
 Here is how much of TeX's memory you used:
  6931 strings out of 493089
- 95481 string characters out of 6134841
+ 95476 string characters out of 6134841
  280109 words of memory out of 5000000
  10276 multiletter control sequences out of 15000+600000
  17766 words of font info for 49 fonts, out of 8000000 for 9000
@@ -718,7 +718,7 @@ live/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texli
 ve/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/local/texlive
 /2015/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb></usr/local/texlive/2
 015/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on report.pdf (30 pages, 488999 bytes).
+Output written on report.pdf (30 pages, 489700 bytes).
 PDF statistics:
  158 PDF objects out of 1000 (max. 8388607)
  104 compressed objects within 2 object streams

@@ -5,22 +5,23 @@
 \contentsline {section}{\numberline {4}Julia}{1}
 \contentsline {subsection}{\numberline {4.1}Syntax}{2}
 \contentsline {subsection}{\numberline {4.2}Features}{8}
-\contentsline {subsubsection}{\numberline {4.2.1}Multiple dispatch and dynamic typing}{8}
-\contentsline {subsubsection}{\numberline {4.2.2}User defined types}{10}
-\contentsline {subsubsection}{\numberline {4.2.3}Garbage Collector}{10}
-\contentsline {subsubsection}{\numberline {4.2.4}Built-in package manager}{11}
-\contentsline {subsubsection}{\numberline {4.2.5}Lightweight green threading}{11}
-\contentsline {subsubsection}{\numberline {4.2.6}Meta-programming and Macros}{11}
-\contentsline {subsubsection}{\numberline {4.2.7}Implementing code from other languages}{11}
-\contentsline {subsubsection}{\numberline {4.2.8}Extensible conversions and promotions for numeric and other types.}{12}
-\contentsline {subsubsection}{\numberline {4.2.9}Designed for parallelism and distributed computation}{12}
-\contentsline {subsubsection}{\numberline {4.2.10}Automatic generation of specialized code for different argument types}{12}
-\contentsline {subsubsection}{\numberline {4.2.11}Supports Unicode}{12}
-\contentsline {subsubsection}{\numberline {4.2.12}Devectorized code is fast}{12}
+\contentsline {subsubsection}{\numberline {4.2.1}Dynamic typing}{8}
+\contentsline {subsubsection}{\numberline {4.2.2}Multiple dispatch}{9}
+\contentsline {subsubsection}{\numberline {4.2.3}User defined types}{10}
+\contentsline {subsubsection}{\numberline {4.2.4}Garbage Collector}{10}
+\contentsline {subsubsection}{\numberline {4.2.5}Built-in package manager}{11}
+\contentsline {subsubsection}{\numberline {4.2.6}Lightweight green threading}{11}
+\contentsline {subsubsection}{\numberline {4.2.7}Meta-programming and Macros}{11}
+\contentsline {subsubsection}{\numberline {4.2.8}Implementing code from other languages}{12}
+\contentsline {subsubsection}{\numberline {4.2.9}Extensible conversions and promotions for numeric and other types.}{12}
+\contentsline {subsubsection}{\numberline {4.2.10}Designed for parallelism and distributed computation}{12}
+\contentsline {subsubsection}{\numberline {4.2.11}Automatic generation of specialized code for different argument types}{12}
+\contentsline {subsubsection}{\numberline {4.2.12}Supports Unicode}{12}
+\contentsline {subsubsection}{\numberline {4.2.13}Devectorized code is fast}{13}
 \contentsline {section}{\numberline {5}Project Euler}{13}
 \contentsline {section}{\numberline {6}Theory}{13}
 \contentsline {subsection}{\numberline {6.1}Benchmarking}{13}
-\contentsline {subsection}{\numberline {6.2}Profiling}{13}
+\contentsline {subsection}{\numberline {6.2}Profiling}{14}
 \contentsline {subsection}{\numberline {6.3}Time measurements}{14}
 \contentsline {section}{\numberline {7}Materials and methods}{14}
 \contentsline {subsection}{\numberline {7.1}Benchmarking}{14}
