@@ -119,9 +119,8 @@ unsigned int calc(std::vector<unsigned int> arr, unsigned int num)
 }
 
 int main(int argc, const char * argv[]) {
-    //unsigned int num = std::atoi(argv[1]);
     std::vector<unsigned int> arr;
     arr.push_back(1);
-    std::cout << calc(arr, atoi(argv[1])) << std::endl;
+    calc(arr, atoi(argv[1]));
     return 0;
 }

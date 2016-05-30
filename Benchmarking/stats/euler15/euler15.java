@@ -6,7 +6,7 @@ public class euler15
 	public static void main(String[] args)
 	{
 		int siz = Integer.parseInt(args[0]);
-		System.out.println(calc(siz));
+		calc(siz);
 	}	
 	
 	private static BigInteger calc(int siz)

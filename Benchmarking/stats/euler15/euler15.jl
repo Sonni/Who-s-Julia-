@@ -19,4 +19,4 @@ function calc(siz)
   return mat[1][1]
 end
 
-println(calc(siz))
+calc(siz)

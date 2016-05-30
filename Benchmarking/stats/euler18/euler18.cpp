@@ -71,6 +71,6 @@ int main(int argc, const char * argv[])
     }
     infile.close();
     
-    std::cout << sum(rows, lines-2) << std::endl;
+    sum(rows, lines-2);
     return 0;
 }

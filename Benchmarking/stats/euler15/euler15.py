@@ -10,4 +10,4 @@ def calc(siz):
       mat[i][j] = mat[i][j+1] + mat[i+1][j]
   return mat[0][0]
 
-print calc(siz)
+calc(siz)

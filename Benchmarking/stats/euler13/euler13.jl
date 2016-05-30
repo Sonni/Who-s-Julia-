@@ -62,4 +62,4 @@ function calc(mat)
   return result
 end
 
-println(calc(makeData(data)))
+calc(makeData(data))

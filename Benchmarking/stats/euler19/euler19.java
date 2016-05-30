@@ -4,7 +4,7 @@ public class euler19
 	{
 		int minYear = Integer.parseInt(args[0]);
 		int maxYear = Integer.parseInt(args[1]);	
-		System.out.println(calc(minYear, maxYear));
+		calc(minYear, maxYear);
 	}
 	
 	private static int calc(int minYear, int maxYear)

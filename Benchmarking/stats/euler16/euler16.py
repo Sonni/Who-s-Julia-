@@ -24,7 +24,7 @@ def calc(arr):
     sum += arr[i]
   return sum
 
-print calc(arr)
+calc(arr)
 
 
 

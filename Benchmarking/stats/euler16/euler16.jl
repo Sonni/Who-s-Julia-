@@ -39,34 +39,5 @@ function calc(arr)
   return sum
 end
 
-println(calc(arr))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+calc(arr)
 

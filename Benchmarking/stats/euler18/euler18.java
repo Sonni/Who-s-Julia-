@@ -49,7 +49,7 @@ public class euler18
 				r += 1;
 			}
 			
-			System.out.println(sum(rows, lines-1));
+			sum(rows, lines-1);
 		}
 		catch(Exception e)
 		{

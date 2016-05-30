@@ -3,7 +3,7 @@ public class euler14
 	public static void main(String[] args)
 	{
 		int limit = Integer.parseInt(args[0]);
-		System.out.println(seq(limit));
+		seq(limit);
 	}
 	
 	private static long seq(int n)

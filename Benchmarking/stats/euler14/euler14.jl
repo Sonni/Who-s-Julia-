@@ -41,4 +41,4 @@ function seq(n)
   return maxNumber
 end
 
-println(seq(limit))
+seq(limit)

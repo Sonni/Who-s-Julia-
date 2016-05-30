@@ -30,4 +30,4 @@ def sum(data, row):
 		return sum(data, row-1)
 
 result = sum(rows, lines-1)
-print result
+#print result
