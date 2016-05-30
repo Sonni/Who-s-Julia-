@@ -56,7 +56,6 @@ unsigned int calc(unsigned int cons, unsigned int dist)
 }
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << calc(atoi(argv[1]), atoi(argv[2])) << std::endl;
+    calc(atoi(argv[1]), atoi(argv[2]));
     return 0;
 }

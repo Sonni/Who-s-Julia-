@@ -60,7 +60,7 @@ function calc(limit)
   return sum
 end
 
-println(calc(limit))
+calc(limit)
 
 
 

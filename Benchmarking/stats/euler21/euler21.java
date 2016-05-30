@@ -3,7 +3,7 @@ public class euler21
 	public static void main(String[] args)
 	{
 		int limit = Integer.parseInt(args[0]);
-		System.out.println(amica(limit));
+		amica(limit);
 	}
 	
 	private static int sum_divisors(int n)

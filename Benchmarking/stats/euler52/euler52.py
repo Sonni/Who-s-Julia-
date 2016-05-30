@@ -17,4 +17,4 @@ def calc(limit):
       num = i
   return num
 
-print calc(limit)
+calc(limit)

@@ -7,7 +7,7 @@ public class euler47
 	{
 		int cons = Integer.parseInt(args[0]);
 		int dist = Integer.parseInt(args[1]);
-		System.out.println(calc(cons, dist));
+		calc(cons, dist);
 	}
 	
 	private static List<Integer> prime_factors(int n)

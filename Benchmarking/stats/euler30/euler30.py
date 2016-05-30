@@ -30,4 +30,4 @@ def calc(x, y):
 
 number = int(argv[1])
 powers = int(argv[2])
-print calc(number, powers)
+calc(number, powers)

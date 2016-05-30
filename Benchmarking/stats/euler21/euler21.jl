@@ -40,4 +40,4 @@ function amica(a)
   return sum
 end
 
-println(amica(limit))
+amica(limit)

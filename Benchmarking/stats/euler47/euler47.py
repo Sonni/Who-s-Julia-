@@ -26,4 +26,4 @@ def calc(cons, dist):
       currentCons = 0
   return "$cons consecutive numbers was not found with $dist distinctive factors."
 
-print calc(cons, dist)
+calc(cons, dist)

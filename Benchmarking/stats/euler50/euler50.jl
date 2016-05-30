@@ -57,4 +57,4 @@ function calc(limit)
   return maxPrime
 end
 
-println(calc(limit))
+calc(limit)

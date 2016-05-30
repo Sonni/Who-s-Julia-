@@ -15,4 +15,4 @@ def calc(target):
                 result += 1;
   return result
 
-print calc(target)
+calc(target)

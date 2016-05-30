@@ -21,4 +21,4 @@ function calc(target)
   return result
 end
 
-println(calc(target))
+calc(target)

@@ -45,6 +45,4 @@ function calc(x, y)
   return total
 end
 
-#println(powers(number))
-#@time interval(number, powers)
-println(calc(number, power))
+calc(number, power)

@@ -81,6 +81,6 @@ unsigned long calc(unsigned int limit)
 }
 
 int main(int argc, const char * argv[]) {
-    std::cout << calc(1000000) << std::endl;;
+    calc(1000000);
     return 0;
 }

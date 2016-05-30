@@ -20,4 +20,4 @@ def amica(a):
       sum += i
   return sum
 
-print amica(limit)
+amica(limit)

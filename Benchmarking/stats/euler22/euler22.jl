@@ -51,4 +51,4 @@ function calc(mapo, names_sorted)
   return value
 end
 
-println(calc(letterValues(), namesSorted(file)))
+calc(letterValues(), namesSorted(file))

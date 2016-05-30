@@ -93,6 +93,6 @@ std::vector<std::string> namesSorted(std::string path)
 
 int main(int argc, const char * argv[]) {
     std::string file = argv[1];
-    std::cout << calc(letterValues(), namesSorted(file)) << std::endl;
+    calc(letterValues(), namesSorted(file));
     return 0;
 }

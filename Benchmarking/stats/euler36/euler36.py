@@ -39,4 +39,4 @@ def calc(limit):
       sum += i
   return sum
 
-print calc(limit)
+calc(limit)

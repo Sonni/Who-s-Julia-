@@ -48,4 +48,4 @@ function calc(cons, dist)
   return "$cons consecutive numbers was not found with $dist distinctive factors."
 end
 
-println(calc(cons, dist))
+calc(cons, dist)

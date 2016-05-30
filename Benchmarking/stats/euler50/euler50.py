@@ -31,4 +31,4 @@ def calc(limit):
             maxPrime = sum
   return maxPrime
 
-print calc(limit)
+calc(limit)
