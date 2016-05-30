@@ -15,7 +15,7 @@ def getPrimes(size):
 			c += 1
 	primeArray = []
 	for i in xrange(2, size + 1):
-		if(array[i])
+		if(array[i]):
 			primeArray.append(i)
 	return primeArray
 
