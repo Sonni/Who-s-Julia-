@@ -64,4 +64,4 @@ function calc(limit)
   end
   return count
 end
-println(calc(limit))
+calc(limit)

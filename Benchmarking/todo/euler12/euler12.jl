@@ -67,4 +67,4 @@ function calc(div)
 end
 
 
-println(calc(divisors))
+calc(divisors)

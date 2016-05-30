@@ -60,4 +60,4 @@ function calc(ways)
 	end
 end
 
-println(calc(ways))
+calc(ways)

@@ -3,7 +3,7 @@ public class euler76
 	public static void main(String[] args)
 	{
 		int target = Integer.parseInt(args[0]);
-		System.out.println(calc(target, target - 1));
+		calc(target, target - 1);
 	}
 	
 	private static int calc(int target, int k)

@@ -25,4 +25,4 @@ function calc(target, k)
   return calc(target,k-1) + calc(target-k,k);
 end
 
-println(calc(target, target-1))
+calc(target, target-1)

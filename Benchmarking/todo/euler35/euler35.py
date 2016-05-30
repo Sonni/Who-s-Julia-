@@ -41,4 +41,4 @@ def calc(limit):
       count += 1
   return count
   
-print calc(limit)
+calc(limit)

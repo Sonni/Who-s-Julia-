@@ -5,7 +5,7 @@ public class euler12
 	public static void main(String[] args)
 	{
 		int divisors = Integer.parseInt(args[0]);
-		System.out.println(calc(divisors));
+		calc(divisors);
 	}
 	
 	private static List<Integer> prime_factors(int n)

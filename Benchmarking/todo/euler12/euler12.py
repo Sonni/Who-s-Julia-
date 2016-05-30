@@ -36,4 +36,4 @@ def calc(div):
     if countDiv > div:
       return i
 
-print calc(divisors)
+calc(divisors)

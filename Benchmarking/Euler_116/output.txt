@@ -1,4 +1,4 @@
-Julia : euler116.jl 45 
+2Julia : euler116.jl 45 
 8.79
 8.95
 8.53

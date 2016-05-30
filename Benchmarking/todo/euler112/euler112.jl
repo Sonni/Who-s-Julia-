@@ -63,5 +63,5 @@ function calc(prop)
   return "Proportion was not reached."
 end
 
-println(calc(prop))
+calc(prop)
 

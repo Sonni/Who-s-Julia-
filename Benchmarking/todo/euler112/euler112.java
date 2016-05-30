@@ -3,7 +3,7 @@ public class euler112
 	public static void main(String[] args)
 	{
 		float prop = Float.parseFloat(args[0]);
-		System.out.println(calc(prop));
+		calc(prop);
 	}
 	
 	private static boolean kind(int n)

@@ -33,4 +33,4 @@ def calc(ways):
 	    return i
 	  i += 1
 
-print calc(ways)
+calc(ways)

@@ -34,4 +34,4 @@ def calc(prop):
     i += 1
   return "Proportion was not reached."
 
-print calc(prop)
+calc(prop)

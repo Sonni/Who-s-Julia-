@@ -9,4 +9,4 @@ def calc(target, k):
     return 0
   return calc(target,k-1) + calc(target-k,k);
 
-print calc(target, target-1)
+calc(target, target-1)
