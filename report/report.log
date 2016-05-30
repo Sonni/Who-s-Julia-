@@ -1,6 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.12.7)  29 MAY 2016 14:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.22)  30 MAY 2016 18:22
 entering extended mode
  restricted \write18 enabled.
+ file:line:error style messages enabled.
  %&-line parsing enabled.
 **report.tex
 (./report.tex
@@ -698,7 +699,7 @@ LaTeX Warning: There were multiply-defined labels.
  ) 
 Here is how much of TeX's memory you used:
  6931 strings out of 493089
- 95481 string characters out of 6134842
+ 95481 string characters out of 6134841
  280109 words of memory out of 5000000
  10276 multiletter control sequences out of 15000+600000
  17766 words of font info for 49 fonts, out of 8000000 for 9000
@@ -717,7 +718,7 @@ live/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texli
 ve/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/local/texlive
 /2015/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb></usr/local/texlive/2
 015/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on report.pdf (30 pages, 488780 bytes).
+Output written on report.pdf (30 pages, 488999 bytes).
 PDF statistics:
  158 PDF objects out of 1000 (max. 8388607)
  104 compressed objects within 2 object streams
