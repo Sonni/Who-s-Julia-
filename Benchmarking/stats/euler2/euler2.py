@@ -17,4 +17,4 @@ def fibo(n):
 			
 	return s
 
-print(fibo(int(sys.argv[1])))
+fibo(int(sys.argv[1]))

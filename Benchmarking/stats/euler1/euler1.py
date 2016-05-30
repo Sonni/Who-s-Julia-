@@ -7,5 +7,5 @@ def f1(n):
 			sum += i
 	return sum
 
-print f1(int(sys.argv[1]))
+f1(int(sys.argv[1]))
 

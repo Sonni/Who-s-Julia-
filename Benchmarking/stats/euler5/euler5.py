@@ -15,4 +15,4 @@ def divisible(div, limit):
 
 div = int(sys.argv[1])
 limit = int(sys.argv[2])
-print divisible(div, limit)
+divisible(div, limit)

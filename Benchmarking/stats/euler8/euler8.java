@@ -13,7 +13,7 @@ public class euler8
 		) 
 		{
 			str = br.readLine();
-			System.out.println(adja(str));
+			adja(str);
 		}
 		catch(Exception e)
 		{

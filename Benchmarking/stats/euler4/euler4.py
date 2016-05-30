@@ -44,4 +44,4 @@ def checkNumber(min, max):
 			break
 	return maxNum
 	
-print checkNumber(min, max)
+checkNumber(min, max)

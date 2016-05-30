@@ -71,5 +71,4 @@ function checkNumber(min, max)
   return maxNum
 end
 
-#println(@elapsed checkNumber())
-println(checkNumber(min, max))
+checkNumber(min, max)

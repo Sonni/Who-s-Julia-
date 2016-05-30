@@ -53,8 +53,7 @@ bool isPalindrome(std::vector<unsigned int> array)
 
  unsigned int checkNumber( unsigned int min,  unsigned int max)
 {
-    //unsigned int resultArray[2];
-     unsigned int maxNum = 0;
+    unsigned int maxNum = 0;
     bool found = false;
     bool cycleDone = false;
     
@@ -71,9 +70,6 @@ bool isPalindrome(std::vector<unsigned int> array)
                     if (k > maxNum)
                     {
                         maxNum = k;
-                        
-                        //resultArray[0] = x;
-                        //resultArray[1] = y;
                         found = true;
                     }
                 }
@@ -87,6 +83,6 @@ bool isPalindrome(std::vector<unsigned int> array)
 }
 
 int main(int argc, const char * argv[]) {
-    std::cout << checkNumber(atoi(argv[1]), atoi(argv[2])) << std::endl;
+    checkNumber(atoi(argv[1]), atoi(argv[2]));
     return 0;
 }

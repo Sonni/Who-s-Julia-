@@ -30,5 +30,4 @@ function getPrimes(size)
 	end
 	return primeArray
 end
-#println(sum(primes(limit)))
-println(sum(getPrimes(limit)))
+sum(getPrimes(limit))

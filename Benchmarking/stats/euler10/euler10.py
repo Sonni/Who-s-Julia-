@@ -19,4 +19,4 @@ def getPrimes(size):
 			primeArray.append(i)
 	return primeArray
 
-print sum(getPrimes(limit))
+sum(getPrimes(limit))

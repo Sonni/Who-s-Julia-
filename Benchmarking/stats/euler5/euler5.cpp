@@ -31,6 +31,6 @@ unsigned long divisible(unsigned int div, unsigned long limit)
 }
 
 int main(int argc, const char * argv[]) {
-    std::cout << divisible(atoi(argv[1]), atoi(argv[2])) << std::endl;;
+    divisible(atoi(argv[1]), atoi(argv[2]));
     return 0;
 }

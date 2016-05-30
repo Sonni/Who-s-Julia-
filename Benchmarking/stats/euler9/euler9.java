@@ -5,7 +5,7 @@ public class euler9
 	public static void main(String[] args)
 	{
 		long number = Long.parseLong(args[0]);
-		System.out.println(pytha(number));
+		pytha(number);
 	}
 	
 	private static long pytha(long number)

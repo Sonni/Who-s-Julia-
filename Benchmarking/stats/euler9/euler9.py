@@ -14,4 +14,4 @@ def pytha(number):
 	x = dicto["a"] * dicto["b"] * dicto["c"]
 	return int(x)
 	
-print pytha(number)
+pytha(number)

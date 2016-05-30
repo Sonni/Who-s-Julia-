@@ -4,7 +4,7 @@ public class euler5
 	{
 		int div = Integer.parseInt(args[0]);
 		long limit = Long.parseLong(args[1]);
-		System.out.println(divisible(div, limit));
+		divisible(div, limit);
 	}
 	
 	private static long divisible(int div, long limit)

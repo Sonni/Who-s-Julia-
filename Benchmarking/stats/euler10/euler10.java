@@ -10,7 +10,7 @@ public class euler10
 		{
 			sum += i;
 		}
-		System.out.println(sum);
+		
 	}
 
 	private static List<Integer> getPrimes(int size)

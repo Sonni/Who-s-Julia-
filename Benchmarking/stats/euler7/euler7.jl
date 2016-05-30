@@ -40,4 +40,4 @@ function calc(primeNumber, limit)
   end
 end
 
-println(calc(primeNumber, limit))
+calc(primeNumber, limit)

@@ -38,4 +38,4 @@ function diffe(n)
   end
 end
 
-println(diffe(limit))
+diffe(limit)

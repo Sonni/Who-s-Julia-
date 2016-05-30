@@ -4,7 +4,7 @@ public class euler3
 {
 	public static void main (String[] args)
 	{
-		System.out.println(prime_factors(Long.parseLong(args[0])));
+		prime_factors(Long.parseLong(args[0]));
 	}
 	
 	private static List<Long> prime_factors(long n)
