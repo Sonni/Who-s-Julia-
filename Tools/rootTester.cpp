@@ -31,7 +31,7 @@ std::vector<std::string> split(std::string s, char delim)
         while(end <= strLength)
         {
             if(cstr[end] == delim)
-                break;
+            break;
             end++;
         }
         
@@ -78,7 +78,7 @@ float getTime(std::string out)
             timeKind += *it;
             counter++;
             if (counter == 3)
-                break;
+            break;
         }
         
         if (!timeKind.compare("use"))
@@ -125,7 +125,7 @@ std::string exec(const char* cmd) {
     if (!pipe) throw std::runtime_error("popen() failed!");
     while (!feof(pipe.get())) {
         if (fgets(buffer, 128, pipe.get()) != NULL)
-            result += buffer;
+        result += buffer;
     }
     return result;
 }
@@ -145,7 +145,7 @@ void doTest(std::string title, const char* command, unsigned int loopCount)
         float time = getTime(outString);
         sum += time;
         if (i == loopCount/2)
-            median = time;
+        median = time;
         
         std::cout << time << std::endl;
     }
@@ -166,7 +166,7 @@ void doFolder(std::string path, unsigned int loopCount)
         std::string programName = split(line, ' ')[1];
         std::string arguments = "";
         if (!language.compare("/Applications/Julia-0.4.5.app/Contents/Resources/julia/bin/julia"))
-            language = "Julia";
+        language = "Julia";
         
         if (language[0] == '.' && language[1] == '/')
         {
@@ -174,13 +174,13 @@ void doFolder(std::string path, unsigned int loopCount)
             programName = split(line, ' ')[0];
             std::vector<std::string> arg = split(line, ' ');
             for (unsigned int i = 1; i < arg.size(); i++)
-                arguments += arg[i] + " ";
+            arguments += arg[i] + " ";
         }
         else
         {
             std::vector<std::string> arg = split(line, ' ');
             for (unsigned int i = 2; i < arg.size(); i++)
-                arguments += arg[i] + " ";
+            arguments += arg[i] + " ";
         }
         
         
@@ -203,11 +203,10 @@ int main(int argc, const char * argv[])
     while (entry != NULL)
     {
         if (entry->d_type == DT_DIR)
-            if (std::strcmp(entry->d_name, ".") && std::strcmp(entry->d_name, ".."))
-            {
-                std::cout << entry->d_name << " ";
-                doFolder(entry->d_name, atoi(argv[1]));
-            }
+        if (std::strcmp(entry->d_name, ".") && std::strcmp(entry->d_name, ".."))
+        {
+            doFolder(entry->d_name, atoi(argv[1]));
+        }
         
         entry = readdir(dir);
     }
