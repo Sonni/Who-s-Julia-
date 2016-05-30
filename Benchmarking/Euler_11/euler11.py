@@ -60,6 +60,8 @@ data = makeData(matLength)
 #endData = time.clock() - startData
 #print endData
 #startCalc = time.clock()
-a(data, matLength, numProd)
+
+#a(data, matLength, numProd)
+
 #endCalc = time.clock() - startCalc
 #print endCalc

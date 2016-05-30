@@ -23,8 +23,10 @@ public class euler11
     //long startCalc = System.currentTimeMillis();
 
     //System.out.println(a(data, matLength, numProd));
-		a(data, matLength, numProd);
-    //long endCalc = System.currentTimeMillis();
+
+		//a(data, matLength, numProd);
+
+		//long endCalc = System.currentTimeMillis();
     //float elapsedCalc = endCalc - startCalc;
 		//System.out.println(elapsedCalc / 1000);
 	}

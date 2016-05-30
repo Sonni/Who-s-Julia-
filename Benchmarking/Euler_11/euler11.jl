@@ -73,4 +73,4 @@ function a(mat, matLength, numProd)
   return maxProd
 end
 data = makeData(matLength)
-a(data, matLength, numProd)
+#a(data, matLength, numProd)

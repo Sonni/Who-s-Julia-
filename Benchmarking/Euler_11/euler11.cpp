@@ -84,7 +84,7 @@ int main(int argc, const char * argv[])
     //int** mat = load_mat_to_multi_array("mat" + std::to_string(matLength) + ".txt", matLength);
     std::vector<std::vector<unsigned int> > mat = load_mat_to_vector("mat" + std::to_string(matLength) + ".txt");
 
-
+    /*
     for (unsigned int i = 0; i < matLength; i++)
     {
         for (unsigned int j = 0; j < matLength - numProd + 1; j++)
@@ -135,5 +135,6 @@ int main(int argc, const char * argv[])
         }
     }
     //std::cout << maxProd << std::endl;
+    */
     return 0;
 }
