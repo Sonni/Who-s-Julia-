@@ -101,9 +101,9 @@ In this project we have been doing benchmarks to find out if Julia is as good as
 \rhead{Project 99: Who's Julia?}
 \cfoot{\thepage\ of \pageref{LastPage}}
 \section{Introduction}
-Java, C, C++, C\# and Python are on top ten of the most used programming languages. There are hundreds of languages, but not minding the hard competition new languages are still created with the thought of doing better. Julia is a new programming language, which has been developed to combine other languages best features.
+Java, C, C++, C\# and Python are on the top ten list of the most used programming languages. There are hundreds of languages, but not minding the hard competition new languages are still created with the thought of doing better. An example of this is the relativly new programming language Julia, which has been developed with the idea to combine the best features of other languages.\\
 \\
-The purpose of this report is to find out if the programming language Julia has a chance in the marked and if it is worth changing to. The languages Java, C++, Python and Julia will be compared on syntax and time performance.  
+The purpose of this report is to find out how well Julia performs compared to some of the standard languages as of 2016. One of those languages are Python which Julia has a lot of inspiration from - syntax wise and the dynamic type system. The second language that Julia will be compared with is Java, those two does share similaries but most of those are behind the scene stuff like garbage collection and compiler optimizations. The developers of Julia claims that Julia is as fast as c++ and therefor c++ is the last language that Julia will get compared with.
 
 \section{Julia}
 *in this section we* \\
@@ -122,7 +122,7 @@ Special Features in Julia:
 	\item[$\cdot$] Devectorized code is fast
 	\item[$\cdot$] Others we have not looked into
 \end{description}
-Julia is a programming language, which has been under development since 2009. First released in 2012 and the newest stable version of Julia is version 0.4.5.  The language has been created because the developers wanted a language with all the features they like from different languages. The developers also wanted the language to be open source, which means everybody can read and modify the language. Julia shares many similarities with python. One of the ideas was to make the language as simple, readable and easy to learn as possible. The language is made for high performance and scientific computations while still supporting general purpose programming. 
+Julia is a oriented orientated programming language, which has been under development since 2009. First released in 2012 and the newest stable version of Julia is version 0.4.5.  The language has been created because the developers wanted a language with all the features they like from different languages. The developers also wanted the language to be open source, which means everybody can read and modify the language. One of the ideas was to make the language as simple, readable and easy to learn as possible. The language is made for high performance and scientific computations while still supporting general purpose programming. 
 Programming in Julia can be done in the terminal like python with interactive mode:
 \begin{figure}[H]
 	\centering
@@ -140,7 +140,10 @@ Programming in Julia can be done in the terminal like python with interactive mo
 	\end{subfigure}
 	\caption{Julia and Python in terminal}
 \end{figure}
-Writing longer programs in the terminal might not be the preferred method. The text editor Atom supports the Julia language. Atom has a package, \textbf{uber-juno}, which sets up Atom to act like an IDE, integrated development environment for Julia.
+
+Writing longer programs in the terminal might not be the preferred method. Files containing Julia code can be interpreted by the Julias interpreter with the following command from terminal:\\
+\textbf{julia test.jl}\\
+The text editor Atom supports the Julia language. Atom has a package, \textbf{uber-juno}, which sets up Atom to act like an IDE, integrated development environment for Julia.
 
 \subsection{Syntax}
 \textit{Make examples of syntax between all the languages here}.
@@ -426,11 +429,7 @@ Writing longer programs in the terminal might not be the preferred method. The t
 * In this section we *
 \subsubsection{Dynamic typing and byte-related memory management}
 Dynamic typing is a type management approach where type checks are mostly performed at runtime, as opposed to static typing, where type checks are made at compile time. Dynamic typing allows the programmer to skip the type declaration and let the dynamic type system handle it. In Julia it is possible to specify types, but mostly it is not necessary. 
-
-* rephrase *
-Julia also makes decisions about how much memory to allocate for variables and the assigned memory size will not change later, not even if a big value, that exceeds the memory of the variable, is assigned to it. 
-
-The memory size can be decreased and this will be addressed later under the section Garbage Collector. However, there is a range of memory sizes to chose from when initializing a variable. Julia will by default assign 32 bits to an integer or a float if no more memory is needed at initialization, but it is possible to manually chose one of the following:
+Julia also makes decisions about how much memory to allocate for variables but the assigned memory size will not change later. This means that if a value, that exceeds the allocated memory, is assigned to the variable after initialization then an bug will occur. Another point to notice is that the memory size can be decreased and this will be addressed later under the section Garbage Collector. However, there is a range of memory sizes to chose from when initializing a variable. Julia will by default assign 32 bits to an integer or a float if no more memory is needed at initialization, but it is possible to manually chose one of the following:
 \begin{description}
 	\item[$\cdot$] Signed/unsigned integer – 8, 16, 32, 64 and 128 bits – Int8, UInt8, Int16, UInt16, Int32, UInt32, Int64, UInt64, Int128 and UInt128
 	\item[$\cdot$] Floating point – 16, 32 and 64 bits – Float16, Float32 and Float64
@@ -448,7 +447,10 @@ typeof(x) #Int8
 x = 4
 typeof(x) #Int32
 \end{lstlisting}
-If no certain memory size is needed but only a specific type then abstract types will come in handy. An abstract type is just some form of generalization of a concrete type. For example 16, 32 and 64 bit floating points are of type AbstractFloat. This is especially useful when the programmer do not know how much memory a certain variable may need. Too little memory will result in a bug and too much memory is a waste. * Example *
+If no certain memory size is needed but only a specific type then abstract types will come in handy. An abstract type is just some form of generalization of a concrete type. For example 16, 32 and 64 bit floating points are of type AbstractFloat. This is especially useful when the programmer do not know how much memory a certain variable may need. Too little memory will result in a bug and too much memory is a waste. 
+\begin{lstlisting}
+\end{lstlisting}
+* Example *
 \subsubsection{Multiple dispatch}
 Multiple dispatch is used to determine which function to call by the type of one or more of the parsed argument(s). This is useful for example when two functions, with the same name, are declared:
 
@@ -598,8 +600,8 @@ In most memory protected systems there are some locked operations for security r
 \subsection{Benchmarking}
 Materials for benchmarking: \\
 Lenovo W530: Intel Core i5-3320M 2.60GHz x 4, 8GB RAM, Ubuntu 16.04 64-bit\\
-MacBook: Intel Core i5 1,4GHz, 8GB RAM, OSX El Capitan 10.11.5\\
-MacBook: \\
+MacBook: Intel Core i5 1,4 GHz, 8 GB RAM, OS X El Capitan 10.11.5\\
+MacBook: Intel Core i5 1,8 GHz, 4 GB RAM, OS X El Capitan 10.11.5\\
 Julia 0.4.5 \\
 Python 2.7.11+ \\
 C++11 \\
@@ -674,8 +676,42 @@ Description: A row of five black square tiles is to have a number of its tiles r
 	\caption{Projecteuler: 116}
 	\label{116}
 \end{figure}
+\subsubsection{Solution}
+The solution of this problem is done recursively though the optimal solutions would be done iterative. The work being done in every recursive call is very simple opposed to quicksort. When the work in every recursive call is simple and similar, some sort of compiler optimization will most likely happen if supported by the language. This is a good way to test Julia’s tail recursion optimization against Java's, and comparing with Python and C++.\\
+\\
+The above code is the solution written in Julia
+\begin{lstlisting}
+function solve(m::Int, n::Int) #m=color block size  n = black box size
+  if m > n
+    return 0
+  end
+  solutions = 0
 
+  for i = m : n
+    solutions += 1
+    solutions += solve(m, n-i)
+  end
 
+  return solutions
+end
+
+function s(size::Int)
+  result = 0;
+  for i = 0 : 2
+     result += solve(2+i, size)
+  end
+  return result
+end
+
+size = parse(Int, ARGS[1])
+s(size)
+\end{lstlisting}
+\subsubsection{Results}
+It is clear that the graphs are exponential increasing. Another thing to notice is that the input is only increasing by one but is still making a huge difference in the run time. One of the reasons is that the problem is solved with recursion, for every extra one bit of space added to the black box a lot more recursive calls will have to be made.\\
+\\
+The difference in time between the four languages are as expected. Python does not support any form of tail recursion optimization and the result is really slow. Java and Julia on the other hand does a good job at optimizing the recursive calls and is actually faster than C++ - keep in mind that no compiler flags were used in C++, so the default optimization level is used.\\
+\\
+Julia and Java is close but Java is a bit faster, which is expected because of the fact that Java has been in development much longer than Julia and has a lot more optimization than Julia.
 \subsection{Quicksort}
 Quicksort applies the divide-and-conquer paradigm to sort numbers. Divide-and-conquer has three steps. \textbf{Divide} the problem into a number of subproblems that are smaller instances of the same problem. \textbf{Conquer} the subproblems by solving them recursively. If the subproblems sizes are small enough, however, just solve the subproblems in a straightforward manner. \textbf{Combine} the solutions to the subproblems into the solution for the original problem \cite[chapter 4, page 65]{cormen}. Description of quicksort: \cite[chapter 7, page 170-171]{cormen}
 \begin{list}{}{}
@@ -691,6 +727,93 @@ Figure \ref{qs} shows a visualization of quicksort.
 		\label{qs}
 	\end{center}
 \end{figure}
+\subsubsection{Solution}
+Dual pivot quicksort is so fast that it was not possible to get large enough data to get the running close to 15. With a data set of 20000000 numbers the loading time was a few minutes while the sorting was only a few seconds. Much larger data set will cause out of memory error so it was necessary to change the approach. instead of sorting one big array, the program will first sort the elements from 0-125, then sort 0-250 and keep increasing the end index until the array size has been reached. This approach cannot test how well quicksort performs with different inputs and this is the reason why only uniform random inputs are used.\\
+\\
+The data set start at 100000 numbers and increase by 30000 every test. The solution is below:
+\begin{lstlisting}
+function quicksortDualPivot(a, s, e)
+	if e > s
+
+		if (a[s] > a[e])
+	    	swap(a, s, e)
+	    end
+
+		leftPiv = a[s]
+		rightPiv = a[e]
+
+		leftPoi = s + 1
+		rightPoi = e - 1
+
+		curEle = leftPoi
+
+		while curEle <= rightPoi
+	    	if a[curEle] < leftPiv
+	        	swap(a, curEle, leftPoi)
+	        	leftPoi += 1
+	    	elseif a[curEle] >= rightPiv
+	        	while a[rightPoi] > rightPiv && curEle < rightPoi
+	           		rightPoi -= 1
+        		end
+
+	        	swap(a, curEle, rightPoi)
+	        	rightPoi -= 1
+	        	if (a[curEle] < leftPiv)
+	            	swap(a, curEle, leftPoi)
+	            	leftPoi += 1
+          		end
+        	end
+	        curEle += 1
+        end
+	    leftPoi -= 1
+	    rightPoi += 1
+
+	    swap(a, s, leftPoi)
+	    swap(a, e, rightPoi)
+
+	    quicksortDualPivot(a, s, leftPoi - 1)
+	    quicksortDualPivot(a, leftPoi + 1, rightPoi - 1)
+	    quicksortDualPivot(a, rightPoi + 1, e)
+    end
+end
+
+function swap(a, i, j)
+	tmp = a[i]
+	a[i] = a[j]
+	a[j] = tmp
+end
+
+#Load input
+f = open(ARGS[1])
+s = readall(f)
+ss = split(s)
+data = []
+for i = 1 : length(ss)
+	push!(data, parse(Int32, ss[i]))
+end
+close(f)
+
+
+jumpLength = 125
+i = 0
+shouldBreak = false;
+
+while true
+	i += jumpLength
+	if i > length(data)
+		i = length(data)
+		shouldBreak = true
+	end
+
+	quicksortDualPivot(data, 1, i)
+
+	if shouldBreak == true
+		break
+	end
+end
+\end{lstlisting}
+\subsubsection{Results}
+The fastest of the four languages is differently c++ and one of the reasons why c++ is faster than Java and Julia in quicksort but not in Euler 116 even though they both use recursion is because the recursion optimization breaks. The compiler can't make any guesses to what is going to happen because the swaps in the array depends on the input which is randomly generated. So the running time really depends on the language. C++ is known to be really fast when working with arrays opposed to python where it is actually best to avoid arrays and lists if possible.
 
 \section{Results}
 \subsection{Benchmarking}
@@ -754,7 +877,7 @@ http://radar.oreilly.com/2013/10/julias-role-in-data-science.html \\
 \section{Conclusion}
 *Is Julia a worthy competitor? Is it worth switching to Julia? Would we recommend Julia to anyone?*
 
-It can be difficult to make any conclusions by the benchmarking but it may give an idea of how Julia performs, compared to Java, Python and C++. One thing to keep in mind is that as of writing this report, Julia is in version 0.4.5 - it has yet to reach version 1.0.0 while the other languages are much older than Julia. This could mean that Julia might get even faster in the future.   
+It can be difficult to make any conclusions by the benchmarking but it may give an idea of how Julia performs, compared to Java, Python and C++. One thing to keep in mind is that as of writing this report, Julia is in version 0.4.5 - it has yet to reach version 1.0.0 while the other languages are much older than Julia. This could mean that Julia might get even faster in the future and by the benchmarking it could look like that Julia is already performing well. The idea of the developers is clear, they are trying to make a programming language that is as easy to learn and write as python but with a compiler that optimizes code like java and both of these goals have more or less been reached by the developers. Julia was differently easy to learn and by the benchmarking it does look like that the compiler is doing okay with the optimization when it is possible. It does also feels like that the Julia developers are playing with the idea of giving the user some control over what is happening behind the scene. ‘Playing’ because this does not feel even close to done. Examples are that they are giving the user an option to allocate memory for variables manually but as soon as a new value is assign to that variable then Julia will change the memory size. Also it is not possible to free a declared variables memory entirely and the only operation the user can do with the garbage collecter is force garbage collection and disable the garbage collector. Somewhat the same story goes for the option implement code from other languages this seems kind of buggy and not complete.
 
 \newpage
 \section{Appendix}
