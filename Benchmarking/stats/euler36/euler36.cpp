@@ -81,6 +81,6 @@ long long calc(long long limit)
 }
 
 int main(int argc, const char * argv[]) {
-    calc(atoi(arv[1]));
+    calc(atoi(argv[1]));
     return 0;
 }
