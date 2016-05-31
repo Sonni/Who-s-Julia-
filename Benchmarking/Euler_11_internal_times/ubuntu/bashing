@@ -1,8 +1,10 @@
 args="5000 4"
+loops="5"
 echo Julia
+for i in {1..loops}
+do
 julia ../euler11.jl ${args}
-julia ../euler11.jl ${args}
-julia ../euler11.jl ${args}
+done
 echo Python
 python ../euler11.py ${args}
 python ../euler11.py ${args}
