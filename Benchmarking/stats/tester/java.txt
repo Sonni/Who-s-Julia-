@@ -1,0 +1,20 @@
+java : euler1 1000 
+0.21
+Average time is: 0.21 : Median is: 0.21
+____________________________________
+java : euler1 499999998 
+0.19
+Average time is: 0.19 : Median is: 0.19
+____________________________________
+java : euler1 599999996 
+0.17
+Average time is: 0.17 : Median is: 0.17
+____________________________________
+java : euler1 699999992 
+0.21
+Average time is: 0.21 : Median is: 0.21
+____________________________________
+java : euler1 799999998 
+0.2
+Average time is: 0.2 : Median is: 0.2
+____________________________________

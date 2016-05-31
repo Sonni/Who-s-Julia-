@@ -1,0 +1,120 @@
+julia : euler1/euler1.jl 1000 
+0.46
+0.46
+0.46
+Average time is: 0.46 : Median is: 0.46
+____________________________________
+julia : euler1/euler1.jl 1999999998 
+4.93
+4.81
+4.8
+Average time is: 4.84667 : Median is: 4.81
+____________________________________
+julia : euler1/euler1.jl 3999999996 
+9.33
+9.3
+9.27
+Average time is: 9.3 : Median is: 9.3
+____________________________________
+julia : euler1/euler1.jl 7999999992 
+17.75
+18.56
+19.27
+Average time is: 18.5267 : Median is: 18.56
+____________________________________
+julia : euler1/euler1.jl 15999999984 
+37.87
+36.32
+36.22
+Average time is: 36.8033 : Median is: 36.32
+____________________________________
+java : euler1/euler1 1000 
+0.2
+0.19
+0.2
+Average time is: 0.196667 : Median is: 0.2
+____________________________________
+java : euler1/euler1 1999999998 
+0.18
+0.18
+0.18
+Average time is: 0.18 : Median is: 0.18
+____________________________________
+java : euler1/euler1 3999999996 
+0.19
+0.19
+0.19
+Average time is: 0.19 : Median is: 0.19
+____________________________________
+java : euler1/euler1 7999999992 
+0.19
+0.19
+0.21
+Average time is: 0.196667 : Median is: 0.19
+____________________________________
+java : euler1/euler1 15999999984 
+0.18
+0.19
+0.19
+Average time is: 0.186667 : Median is: 0.19
+____________________________________
+C++ : ./euler1/euler1 1000 
+0
+0
+0
+Average time is: 0 : Median is: 0
+____________________________________
+C++ : ./euler1/euler1 1999999998 
+13.29
+0.22
+0.01
+Average time is: 4.50667 : Median is: 0.22
+____________________________________
+C++ : ./euler1/euler1 3999999996 
+0.02
+0.02
+0.02
+Average time is: 0.02 : Median is: 0.02
+____________________________________
+C++ : ./euler1/euler1 7999999992 
+0.02
+0.02
+0.9
+Average time is: 0.313333 : Median is: 0.02
+____________________________________
+C++ : ./euler1/euler1 15999999984 
+0.15
+0.13
+0.14
+Average time is: 0.14 : Median is: 0.14
+____________________________________
+python : euler1/euler1.jl 1000 
+0.02
+0.02
+0.02
+Average time is: 0.02 : Median is: 0.02
+____________________________________
+python : euler1/euler1.jl 1999999998 
+0.02
+0
+0.02
+Average time is: 0.0133333 : Median is: 0.02
+____________________________________
+python : euler1/euler1.jl 3999999996 
+0.02
+0.02
+0.02
+Average time is: 0.02 : Median is: 0.02
+____________________________________
+python : euler1/euler1.jl 7999999992 
+0.02
+0
+0.02
+Average time is: 0.0133333 : Median is: 0.02
+____________________________________
+python : euler1/euler1.jl 15999999984 
+0.02
+0.02
+0.02
+Average time is: 0.02 : Median is: 0.02
+____________________________________

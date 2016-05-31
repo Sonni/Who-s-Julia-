@@ -8,16 +8,16 @@
 
 #include <iostream>
 
-void f1(long long n)
+void f1(unsigned long long n)
 {
-    long long sum = 0;
-    for (long long i = 0; i < n; i++)
+    unsigned long long sum = 0;
+    for (unsigned long long i = 0; i < n; i++)
     {
         if (i % 3 == 0 || i % 5 == 0)
             sum += i;
     }
 
-    std::cout << sum << std::endl;
+    //std::cout << sum << std::endl;
 }
 
 int main(int argc, const char * argv[]) {
