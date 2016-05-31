@@ -17,7 +17,7 @@ def letterValues():
   valueLetter = 1
   for a in letters:
     mapo[a] = valueLetter
-    valueLetter += 1
+    #valueLetter += 1 #For correct values
   return mapo
 
 def calc(mapo, names_sorted):

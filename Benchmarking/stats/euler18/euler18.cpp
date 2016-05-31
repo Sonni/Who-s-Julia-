@@ -14,12 +14,12 @@
 std::vector<unsigned int> split_string_to_ints(std::string s, char delim)
 {
     std::vector<unsigned int> elems;
-    
+
     const char* cstr = s.c_str();
     unsigned int strLength = (unsigned int)s.length();
     unsigned int start = 0;
     unsigned int end = 0;
-    
+
     while(end <= strLength)
     {
         while(end <= strLength)
@@ -28,22 +28,22 @@ std::vector<unsigned int> split_string_to_ints(std::string s, char delim)
                 break;
             end++;
         }
-        
+
         elems.push_back(std::stoi(s.substr(start, end - start)));
         start = end + 1;
         end = start;
     }
-    
+
     return elems;
 }
 
-unsigned int sum(std::vector<std::vector<unsigned int>> data, unsigned int row)
+unsigned int sum(std::vector<std::vector<unsigned int> > data, unsigned int row)
 {
     unsigned int c = data.size();
-    
+
     for (unsigned int i = 0; i < c; i++)
         data[row][i] += std::max(data[row+1][i], data[row+1][i+1]);
-   
+
     if (row == 0)
         return data[row][0];
     else
@@ -52,11 +52,11 @@ unsigned int sum(std::vector<std::vector<unsigned int>> data, unsigned int row)
 
 int main(int argc, const char * argv[])
 {
-    std::vector<std::vector<unsigned int>> rows;
-    
+    std::vector<std::vector<unsigned int> > rows;
+
     std::ifstream infile(argv[1]);
     unsigned int lines = 0;
-    
+
     std::string line;
     while (std::getline(infile, line))
     {
@@ -70,7 +70,7 @@ int main(int argc, const char * argv[])
         lines++;
     }
     infile.close();
-    
+
     sum(rows, lines-2);
     return 0;
 }

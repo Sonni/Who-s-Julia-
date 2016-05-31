@@ -19,7 +19,7 @@ power = parse(Int, ARGS[2])
 function digs(n)
   arr = []
   while n > 0
-      d = round(Int, floor(n / 10))
+      d = div(n, 10)
       k = n - d * 10
       n = d
       push!(arr, k)

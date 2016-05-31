@@ -15,14 +15,24 @@ What is the total of all the name scores in the file?
 
 #Terminal: julia euler22.jl data.txt
 path = ARGS[1]
-file = open(path)
 
-function namesSorted(file)
+function namesSorted(path)
+  file = open(path)
+  f = countlines(file)
+  file = open(path)
+  res = ASCIIString[]
+  for line in eachline(file)
+    line_new = replace(line, '"', "")
+    array = split(line_new, [','])
+    append!(res, array)
+  end
+  #=
   line = readline(file)
   line_new = replace(line, '"', "")
   array = split(line_new, [','])
+  =#
   close(file)
-  names = sort(array)
+  names = sort(res)
   return names
 end
 
@@ -32,13 +42,13 @@ function letterValues()
   valueLetter = 1
   for a in letters
     mapo[a] = valueLetter
-    valueLetter += 1
+    #valueLetter += 1 #For correct values
   end
   return mapo
 end
 
 function calc(mapo, names_sorted)
-  value = 0
+  value = Int64(0)
   mapo_index = 1
   for word in names_sorted
     value_word = 0
@@ -51,4 +61,4 @@ function calc(mapo, names_sorted)
   return value
 end
 
-calc(letterValues(), namesSorted(file))
+println(calc(letterValues(), namesSorted(path)))

@@ -6,7 +6,7 @@ public class euler16 {
       int num = Integer.parseInt(args[0]);
       int power = Integer.parseInt(args[1]);
 
-      int[] arr = new int[400];
+      int[] arr = new int[power];
       arr[0] = 2;
       int carry = 0;
       int sum = 0;

@@ -3,7 +3,7 @@ import sys
 num = int(sys.argv[1])
 power = int(sys.argv[2])
 
-arrSize = int((power / 10) * 4)
+arrSize = power
 arr = [0 for i in range(arrSize)]
 arr[0] = num
 

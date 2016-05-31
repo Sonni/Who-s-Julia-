@@ -12,7 +12,7 @@ num = parse(Int, ARGS[1])
 power = parse(Int, ARGS[2])
 
 #Guess on needed size for all inputs.
-arrSize = Int((power / 10) * 4)
+arrSize = power
 arr = zeros(Int, arrSize)
 #Setting number to num^1
 arr[1] = num
