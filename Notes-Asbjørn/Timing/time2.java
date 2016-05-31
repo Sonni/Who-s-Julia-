@@ -5,20 +5,24 @@ public class time2
 {
 	public static void main (String[] args) throws InterruptedException
 	{
+		ThreadMXBean threadMXBean = ManagementFactory.getThreadMXBean();
+        long tStart = threadMXBean.getCurrentThreadCpuTime();
 		long time = 0l;
 		for(int i = 0; i < 5; i++)
 		{
 			if(i % 2 == 0)
 			{
+				System.out.println(bababa());
 				time = bababa();
 			}
 			else
 			{
-				rarara();
+				System.out.println(rarara());
 			}
 		}
         
         System.out.println("10 second wait took " + time/1000000 + "ms" );
+        System.out.println("Full time " + (threadMXBean.getCurrentThreadCpuTime() - tStart)/1000000 + "ms" );
 	}
 	
 	private static long rarara()
