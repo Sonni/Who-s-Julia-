@@ -51,7 +51,7 @@ bool isPalindrome(std::vector<unsigned int> array)
     return isPal;
 }
 
- unsigned int checkNumber( unsigned int min,  unsigned int max)
+ unsigned int checkNumber(long long min, long long max)
 {
     unsigned int maxNum = 0;
     bool found = false;

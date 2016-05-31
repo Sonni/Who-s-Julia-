@@ -8,10 +8,10 @@
 
 #include <iostream>
 
-void seq(unsigned int n)
+void seq(long long n)
 {
-    unsigned int max = 0;
-    unsigned int max_number = 0;
+    long long max = 0;
+    long long max_number = 0;
     for (unsigned int i = 1; i <= n; i++)
     {
         unsigned int count_seq = 1;

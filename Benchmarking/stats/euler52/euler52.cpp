@@ -9,11 +9,11 @@
 #include <iostream>
 #include <algorithm>
 
-unsigned int calc(unsigned int limit)
+long long calc(long long limit)
 {
-    unsigned int num = 0;
+    long long num = 0;
     
-    for (unsigned int i = 5; i <= limit; i++)
+    for (long long i = 5; i <= limit; i++)
     {
         std::string x1 = std::to_string(i);
         std::sort(x1.begin(), x1.end());

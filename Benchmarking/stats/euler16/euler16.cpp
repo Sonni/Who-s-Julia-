@@ -8,7 +8,7 @@
 
 #include <iostream>
 #include <vector>
-unsigned int calc(unsigned int num, unsigned int power)
+unsigned int calc(long long num, long long power)
 {
     unsigned int arrSize = power;
     std::vector<unsigned int> arr;
@@ -47,8 +47,8 @@ unsigned int calc(unsigned int num, unsigned int power)
 }
 
 int main(int argc, const char * argv[]) {
-    unsigned int num = atoi(argv[1]);
-    unsigned int power = atoi(argv[2]);
+    long long num = atoi(argv[1]);
+    long long power = atoi(argv[2]);
 
     calc(num, power);
 

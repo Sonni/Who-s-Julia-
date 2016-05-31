@@ -30,12 +30,12 @@ std::vector<bool> getPrimes(unsigned int size)
     return array;
 }
 
-unsigned int calc(unsigned int limit)
+long long calc(long long limit)
 {
     std::vector<bool> primes = getPrimes(limit);
     
     unsigned int maxSeq = 0;
-    unsigned int maxPrime = 0;
+    long long maxPrime = 0;
     for (unsigned int i = 1; i < limit; i++)
     {
         unsigned int sum = 0;

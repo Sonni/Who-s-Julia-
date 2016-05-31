@@ -9,19 +9,13 @@
 #include <iostream>
 #include <vector>
 
-void printVector(std::vector<unsigned int>& array)
-{
-    for (int i = 0; i < array.size(); i++)
-        std::cout << array[i] << ", ";
-}
-
-void fibo(unsigned int n)
+void fibo(long long int n)
 {
     std::vector<unsigned int> array;
     array.push_back(1); array.push_back(1);
     unsigned int i = 2;
     bool go = true;
-    unsigned int sum = 0;
+    long long sum = 0;
     
     while (go)
     {

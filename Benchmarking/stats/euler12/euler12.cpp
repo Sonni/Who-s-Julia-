@@ -29,7 +29,7 @@ std::vector<int> prime_factors(unsigned int n)
     return factors;
 }
 
-unsigned int triangular(unsigned int div)
+unsigned int triangular(long long div)
 {
     unsigned int limit = std::numeric_limits<int16_t>::max();
     unsigned int i = 0;

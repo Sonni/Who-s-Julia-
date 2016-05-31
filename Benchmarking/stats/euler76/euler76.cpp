@@ -9,7 +9,7 @@
 #include <iostream>
 #include <vector>
 
-unsigned long calc(int target, int k)
+long long calc(long long target, long long k)
 {
     if (target == 0 || k == 1)
         return 1;

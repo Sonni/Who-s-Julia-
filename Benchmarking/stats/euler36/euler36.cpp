@@ -65,9 +65,9 @@ std::string binary(unsigned int n){
     return s;
 }
 
-unsigned long calc(unsigned int limit)
+long long calc(long long limit)
 {
-    unsigned long sum = 0;
+    long long sum = 0;
     std::vector<unsigned int> numbers;
     for (unsigned int i = 1; i <= limit; i++)
     {
@@ -81,6 +81,6 @@ unsigned long calc(unsigned int limit)
 }
 
 int main(int argc, const char * argv[]) {
-    calc(1000000);
+    calc(atoi(arv[1]));
     return 0;
 }

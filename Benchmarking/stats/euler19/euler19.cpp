@@ -10,13 +10,13 @@
 #include <sstream>
 #include <string>
 
-unsigned int calc(unsigned int minYear, unsigned int maxYear)
+long long calc(long long minYear, long long maxYear)
 {
-    unsigned int count = 0;
+    long long count = 0;
     unsigned int daysMonth = 0;
-    unsigned int passed = 1;
+    long long passed = 1;
     
-    for (unsigned int i = minYear; i <= maxYear; i++)
+    for (long long i = minYear; i <= maxYear; i++)
     {
         for (unsigned int j = 1; j <= 12; j++)
         {
@@ -43,8 +43,8 @@ unsigned int calc(unsigned int minYear, unsigned int maxYear)
 
 int main(int argc, const char * argv[]) {
     
-    unsigned int minYear = std::atoi(argv[1]);
-    unsigned int maxYear = std::atoi(argv[2]);
+    long long minYear = std::atoi(argv[1]);
+    long long maxYear = std::atoi(argv[2]);
     
     calc(minYear, maxYear);
     

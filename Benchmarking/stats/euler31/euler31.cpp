@@ -11,9 +11,9 @@
 //Run ./euler31 200
 // answer = 73682
 
-unsigned int calc(unsigned int target)
+long long calc(long long target)
 {
-    unsigned int result = 0;
+    long long result = 0;
     
     for (int i = target; i >= 0; i -= target) //2 Pounds
         for (int j = i; j >= 0; j -= 100) //1 pound

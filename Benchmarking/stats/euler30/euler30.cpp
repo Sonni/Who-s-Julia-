@@ -26,7 +26,7 @@ std::vector<unsigned int> digs(int n)
     return arr;
 }
 
-void calc(unsigned int x, unsigned int y)
+void calc(long long x, long long y)
 {
     unsigned int temp = 0;
     unsigned int total = 0;
@@ -46,8 +46,8 @@ void calc(unsigned int x, unsigned int y)
 }
 
 int main(int argc, const char * argv[]) {
-    unsigned int number = atoi(argv[1]);
-    unsigned int power = atoi(argv[2]);
+    long long number = atoi(argv[1]);
+    long long power = atoi(argv[2]);
     
     calc(number, power);
     return 0;

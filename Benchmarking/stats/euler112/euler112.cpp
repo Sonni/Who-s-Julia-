@@ -34,11 +34,11 @@ bool kind( int n)
     return false;
 }
 
-unsigned int calc(unsigned int prop)
+long long calc(long long prop)
 {
     int currentProb = 0;
     
-    int i = 100;
+    long long i = 100;
     int countBouncy = 0;
     
     while (currentProb < prop)

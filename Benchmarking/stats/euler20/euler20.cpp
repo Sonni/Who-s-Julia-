@@ -63,9 +63,9 @@ unsigned long fact(unsigned int n) //not big enough int
     return res;
 }
 
-unsigned int calc(std::vector<unsigned int> arr, unsigned int num)
+long long calc(std::vector<unsigned int> arr, long long num)
 {
-    unsigned int sum = 0;
+    long long sum = 0;
     unsigned int carry = 0;
     for (unsigned int i = 2; i <= num; i++)
     {

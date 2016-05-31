@@ -9,7 +9,7 @@
 #include <iostream>
 #include <map>
 
-unsigned int pytha(unsigned int number)
+unsigned int pytha(long long number)
 {
     std::map<std::string, unsigned int> map;
     for(unsigned int a = 1; a <= number / 3; a++)

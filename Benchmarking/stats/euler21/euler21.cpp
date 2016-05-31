@@ -21,10 +21,10 @@ unsigned int sum_divisors(unsigned int n)
     return sum;
 }
 
-unsigned int amica(unsigned int a)
+long long amica(long long a)
 {
     unsigned int amicable = 0;
-    unsigned int sum = 0;
+    long long sum = 0;
     
     for (unsigned int i = 1; i <= a; i++)
     {
@@ -41,7 +41,7 @@ unsigned int amica(unsigned int a)
 }
 
 int main(int argc, const char * argv[]) {
-    unsigned int limit = atoi(argv[1]);
+    long long limit = atoi(argv[1]);
     amica(limit);
     return 0;
 }
