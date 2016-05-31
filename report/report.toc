@@ -1,47 +1,47 @@
 \select@language {english}
-\contentsline {section}{\numberline {1}Summary}{I}
-\contentsline {section}{\numberline {2}Preface}{I}
+\contentsline {section}{\numberline {1}Summary}{i}
+\contentsline {section}{\numberline {2}Preface}{i}
 \contentsline {section}{\numberline {3}Introduction}{1}
 \contentsline {section}{\numberline {4}Julia}{1}
 \contentsline {subsection}{\numberline {4.1}Syntax}{2}
-\contentsline {subsection}{\numberline {4.2}Features}{8}
-\contentsline {subsubsection}{\numberline {4.2.1}Dynamic typing}{8}
-\contentsline {subsubsection}{\numberline {4.2.2}Multiple dispatch}{9}
-\contentsline {subsubsection}{\numberline {4.2.3}User defined types}{10}
-\contentsline {subsubsection}{\numberline {4.2.4}Garbage Collector}{10}
-\contentsline {subsubsection}{\numberline {4.2.5}Built-in package manager}{11}
-\contentsline {subsubsection}{\numberline {4.2.6}Lightweight green threading}{11}
-\contentsline {subsubsection}{\numberline {4.2.7}Meta-programming and Macros}{11}
-\contentsline {subsubsection}{\numberline {4.2.8}Implementing code from other languages}{12}
-\contentsline {subsubsection}{\numberline {4.2.9}Extensible conversions and promotions for numeric and other types.}{12}
-\contentsline {subsubsection}{\numberline {4.2.10}Designed for parallelism and distributed computation}{12}
-\contentsline {subsubsection}{\numberline {4.2.11}Automatic generation of specialized code for different argument types}{13}
-\contentsline {subsubsection}{\numberline {4.2.12}Supports Unicode}{13}
-\contentsline {subsubsection}{\numberline {4.2.13}Devectorized code is fast}{13}
-\contentsline {section}{\numberline {5}Project Euler}{14}
-\contentsline {section}{\numberline {6}Theory}{14}
-\contentsline {subsection}{\numberline {6.1}Benchmarking}{14}
-\contentsline {subsection}{\numberline {6.2}Profiling}{14}
-\contentsline {subsection}{\numberline {6.3}Time measurements}{14}
-\contentsline {section}{\numberline {7}Materials and methods}{15}
-\contentsline {subsection}{\numberline {7.1}Benchmarking}{15}
-\contentsline {section}{\numberline {8}Problems}{16}
-\contentsline {subsection}{\numberline {8.1}Projecteuler 11}{16}
-\contentsline {subsection}{\numberline {8.2}Projecteuler 116}{19}
-\contentsline {subsection}{\numberline {8.3}Quicksort}{20}
-\contentsline {section}{\numberline {9}Results}{20}
-\contentsline {subsection}{\numberline {9.1}Benchmarking}{20}
-\contentsline {section}{\numberline {10}Personal experience with Julia}{20}
-\contentsline {subsection}{\numberline {10.1}Sonni}{20}
-\contentsline {subsection}{\numberline {10.2}Simon}{23}
-\contentsline {subsection}{\numberline {10.3}Asbj\IeC {\o }rn}{23}
-\contentsline {section}{\numberline {11}Discussion}{24}
-\contentsline {section}{\numberline {12}Conclusion}{24}
-\contentsline {section}{\numberline {13}Perspective}{24}
-\contentsline {section}{\numberline {14}Appendix}{25}
-\contentsline {subsection}{\numberline {14.1}Process analysis}{25}
-\contentsline {subsubsection}{\numberline {14.1.1}Projectmanagement, organizing workflow and organizing process of learning}{25}
-\contentsline {subsubsection}{\numberline {14.1.2}Process of learning}{25}
-\contentsline {subsubsection}{\numberline {14.1.3}Cooperation, difficulties in group and with supervisor}{25}
-\contentsline {subsubsection}{\numberline {14.1.4}Conclusion}{26}
-\contentsline {subsection}{\numberline {14.2}Copy of poster in A4}{26}
+\contentsline {subsection}{\numberline {4.2}Features}{6}
+\contentsline {subsubsection}{\numberline {4.2.1}Dynamic typing}{7}
+\contentsline {subsubsection}{\numberline {4.2.2}Multiple dispatch}{8}
+\contentsline {subsubsection}{\numberline {4.2.3}User defined types}{8}
+\contentsline {subsubsection}{\numberline {4.2.4}Garbage Collector}{9}
+\contentsline {subsubsection}{\numberline {4.2.5}Built-in package manager}{9}
+\contentsline {subsubsection}{\numberline {4.2.6}Lightweight green threading}{10}
+\contentsline {subsubsection}{\numberline {4.2.7}Meta-programming and Macros}{10}
+\contentsline {subsubsection}{\numberline {4.2.8}Implementing code from other languages}{10}
+\contentsline {subsubsection}{\numberline {4.2.9}Extensible conversions and promotions for numeric and other types.}{11}
+\contentsline {subsubsection}{\numberline {4.2.10}Designed for parallelism and distributed computation}{11}
+\contentsline {subsubsection}{\numberline {4.2.11}Automatic generation of specialized code for different argument types}{11}
+\contentsline {subsubsection}{\numberline {4.2.12}Supports Unicode}{11}
+\contentsline {subsubsection}{\numberline {4.2.13}Devectorized code is fast}{12}
+\contentsline {section}{\numberline {5}Project Euler}{12}
+\contentsline {section}{\numberline {6}Theory}{12}
+\contentsline {subsection}{\numberline {6.1}Benchmarking}{12}
+\contentsline {subsection}{\numberline {6.2}Profiling}{13}
+\contentsline {subsection}{\numberline {6.3}Time measurements}{13}
+\contentsline {section}{\numberline {7}Materials and methods}{14}
+\contentsline {subsection}{\numberline {7.1}Benchmarking}{14}
+\contentsline {section}{\numberline {8}Problems}{15}
+\contentsline {subsection}{\numberline {8.1}Projecteuler 11}{15}
+\contentsline {subsection}{\numberline {8.2}Projecteuler 116}{17}
+\contentsline {subsection}{\numberline {8.3}Quicksort}{18}
+\contentsline {section}{\numberline {9}Results}{19}
+\contentsline {subsection}{\numberline {9.1}Benchmarking}{19}
+\contentsline {section}{\numberline {10}Personal experience with Julia}{19}
+\contentsline {subsection}{\numberline {10.1}Sonni}{19}
+\contentsline {subsection}{\numberline {10.2}Simon}{21}
+\contentsline {subsection}{\numberline {10.3}Asbj\IeC {\o }rn}{22}
+\contentsline {section}{\numberline {11}Discussion}{22}
+\contentsline {section}{\numberline {12}Conclusion}{22}
+\contentsline {section}{\numberline {13}Perspective}{22}
+\contentsline {section}{\numberline {14}Appendix}{24}
+\contentsline {subsection}{\numberline {14.1}Process analysis}{24}
+\contentsline {subsubsection}{\numberline {14.1.1}Projectmanagement, organizing workflow and organizing process of learning}{24}
+\contentsline {subsubsection}{\numberline {14.1.2}Process of learning}{24}
+\contentsline {subsubsection}{\numberline {14.1.3}Cooperation, difficulties in group and with supervisor}{24}
+\contentsline {subsubsection}{\numberline {14.1.4}Conclusion}{25}
+\contentsline {subsection}{\numberline {14.2}Copy of poster in A4}{25}

@@ -28,8 +28,8 @@
 
 \lstset{frame=tb,
   language=Python,
-  aboveskip=3mm,
-  belowskip=3mm,
+  aboveskip=4mm,
+  belowskip=5mm,
   showstringspaces=false,
   columns=flexible,
   basicstyle={\small\ttfamily},
@@ -41,8 +41,13 @@
   frame=single,
   breaklines=true,
   breakatwhitespace=false,
-  tabsize=4
+  tabsize=4,
 }
+
+\newsavebox{\mybox}
+\captionsetup[figure]{aboveskip=0mm}
+\captionsetup[subfigure]{aboveskip=0mm}
+
 
 \begin{comment}
 \begin{lstlisting}[language=python]
@@ -72,7 +77,7 @@ indryk virker fint her.
 \vfill
 
 \newpage
-\pagenumbering{Roman}
+\pagenumbering{roman}
 \section{Summary}
 Julia is a new programming language. Through tests and benchmarking it is found that * *
 
@@ -91,28 +96,29 @@ In this project we have been doing benchmarks to find out if Julia is as good as
 \rhead{Project 99: Who's Julia?}
 \cfoot{\thepage\ of \pageref{LastPage}}
 \section{Introduction}
-Java, C, C++, C\# and Python are on top ten of the most used programming languages. There are hundreds of languages, but not minding the hard competition new languages are still created with the thought of doing better. Julia is a new programming language, which has been developed to contain other languages best features.
+Java, C, C++, C\# and Python are on top ten of the most used programming languages. There are hundreds of languages, but not minding the hard competition new languages are still created with the thought of doing better. Julia is a new programming language, which has been developed to combine other languages best features.
 \\
 The purpose of this report is to find out if the programming language Julia has a chance in the marked and if it is worth changing to. The languages Java, C++, Python and Julia will be compared on syntax and time performance.  
 
 \section{Julia}
-Julia is a programming language, which has been under development since 2009. First released in 2012 and the newest stable version of Julia is version 0.4.5.  The language has been created because the developers wanted a language with all the features they like from different languages. The developers also wanted the language to be open source, which means everybody can read and modify the language. Julia shares many similarities with python. One of the idea was to make the language as simple, readable and easy to learn as possible. The language is made for high performance and scientific computations while still supporting general purpose programming. 
+*in this section we*
+Julia is a programming language, which has been under development since 2009. First released in 2012 and the newest stable version of Julia is version 0.4.5.  The language has been created because the developers wanted a language with all the features they like from different languages. The developers also wanted the language to be open source, which means everybody can read and modify the language. Julia shares many similarities with python. One of the ideas was to make the language as simple, readable and easy to learn as possible. The language is made for high performance and scientific computations while still supporting general purpose programming. 
 Programming in Julia can be done in the terminal like python with interactive mode:
 \begin{figure}[H]
 	\centering
-	\begin{subfigure}[b]{0.8\textwidth}
+	\begin{subfigure}[H]{0.8\textwidth}
 		\centering
 		\includegraphics
 		[width=\textwidth]{image/terminalj.jpg} 
 		\caption{Julia}.
 	\end{subfigure}	
-	\begin{subfigure}[b]{0.8\textwidth}
+	\begin{subfigure}[H]{0.8\textwidth}
 		\centering
 		\includegraphics
 		[width=\textwidth]{image/terminalp.jpg} 
 		\caption{Python}.
 	\end{subfigure}
-	\caption{Julia in terminal}
+	\caption{Julia and Python in terminal}
 \end{figure}
 Writing longer programs in the terminal might not be the preferred method. The text editor Atom supports the Julia language. Atom has a package, \textbf{uber-juno}, which sets up Atom to act like an IDE, integrated development environment for Julia.
 
@@ -124,42 +130,43 @@ Writing longer programs in the terminal might not be the preferred method. The t
 	Julia:	    Python:      Java:            c++:
 	a = 10	    a = 10       int a = 10;      int a = 10;
 	\end{lstlisting}
-	\caption{Declaring variables}
+	\caption{Declaring and assigning variables}
 	\label{variables}
 \end{figure}
 
+
 \begin{figure}[H]
 	\centering
-	\begin{subfigure}[b]{0.7\textwidth}
+	\begin{subfigure}[H]{0.7\textwidth}
 		\centering
-		\begin{lstlisting}
+		\begin{lstlisting}[belowskip=0.5mm]
 		for i = 1 : 10
 			println(i)
 		end
 		\end{lstlisting}
 		\caption{Julia}
 	\end{subfigure}
-	\begin{subfigure}[b]{0.7\textwidth}
+	\begin{subfigure}[H]{0.7\textwidth}
 		\centering
-		\begin{lstlisting}
-		for i in range(1, 11)
+		\begin{lstlisting}[belowskip=0.5mm]
+		for i in range(1, 11):
 			print i
 		\end{lstlisting}
 		\caption{Python}
 	\end{subfigure}	
-	\begin{subfigure}[b]{0.7\textwidth}
+	\begin{subfigure}[H]{0.7\textwidth}
 		\centering
-		\begin{lstlisting}
-		for (int i = 1; i < 11; i++){
+		\begin{lstlisting}[belowskip=0.5mm]
+		for (int i = 1; i <= 10; i++){
 			System.out.println(i);
 		}
 		\end{lstlisting}
 		\caption{Java}
 	\end{subfigure}
-	\begin{subfigure}[b]{0.7\textwidth}
+	\begin{subfigure}[H]{0.7\textwidth}
 		\centering
-		\begin{lstlisting}
-		for (int i = 1; i < 11; i++){
+		\begin{lstlisting}[belowskip=0.5mm]
+		for (int i = 1; i <= 1+; i++){
 			std::cout << i << "\n";
 		}
 		\end{lstlisting}
@@ -171,35 +178,35 @@ Writing longer programs in the terminal might not be the preferred method. The t
 
 \begin{figure}[H]
 	\centering
-	\begin{subfigure}[b]{0.7\textwidth}
+	\begin{subfigure}[H]{0.7\textwidth}
 		\centering
-		\begin{lstlisting}
+		\begin{lstlisting}[belowskip=0.5mm]
 		for i = 10 : -1 : 1
 			println(i)
 		end
 		\end{lstlisting}
 		\caption{Julia}
 	\end{subfigure}
-	\begin{subfigure}[b]{0.7\textwidth}
+	\begin{subfigure}[H]{0.7\textwidth}
 		\centering
-		\begin{lstlisting}
-		for i in range(10, 0, -1)
+		\begin{lstlisting}[belowskip=0.5mm]
+		for i in range(10, 0, -1):
 			print i
 		\end{lstlisting}
 		\caption{Python}
 	\end{subfigure}	
-	\begin{subfigure}[b]{0.7\textwidth}
+	\begin{subfigure}[H]{0.7\textwidth}
 		\centering
-		\begin{lstlisting}
+		\begin{lstlisting}[belowskip=0.5mm]
 		for (int i = 10; i > 0; i--){
 			System.out.println(i);
 		}
 		\end{lstlisting}
 		\caption{Java}
 	\end{subfigure}
-	\begin{subfigure}[b]{0.7\textwidth}
+	\begin{subfigure}[H]{0.7\textwidth}
 		\centering
-		\begin{lstlisting}
+		\begin{lstlisting}[belowskip=0.5mm]
 		for (int i = 10; i > 0; i--){
 			std::cout << i << "\n";
 		}
@@ -212,37 +219,103 @@ Writing longer programs in the terminal might not be the preferred method. The t
 
 \begin{figure}[H]
 	\centering
-	\begin{subfigure}[b]{0.7\textwidth}
+	\begin{subfigure}[H]{0.7\textwidth}
 		\centering
-		\begin{lstlisting}
-		while i < 10
-			a -= 1
+		\begin{lstlisting}[belowskip=0.5mm]
+		if i == a
+			println(a * b)
+		end
+		else if i == b
+			println(a / b)
+		else
+			println(a + b)
 		end
 		\end{lstlisting}
 		\caption{Julia}
 	\end{subfigure}
-	\begin{subfigure}[b]{0.7\textwidth}
+	\begin{subfigure}[H]{0.7\textwidth}
 		\centering
-		\begin{lstlisting}
-		while (i < 10):
-			a -= 1
+		\begin{lstlisting}[belowskip=0.5mm]
+		if i == a:
+			print a * b
+		elif i == b:
+			print a / b
+		else:
+			print a + b
 		\end{lstlisting}
 		\caption{Python}
 	\end{subfigure}	
-	\begin{subfigure}[b]{0.7\textwidth}
+	\begin{subfigure}[H]{0.7\textwidth}
 		\centering
-		\begin{lstlisting}
-		while (i < 10){
-			i--;
+		\begin{lstlisting}[belowskip=0.5mm]
+		if(i == a){
+			System.out.println(a * b);
+		}
+		else if(i == b){
+			System.out.println(a / b);
+		}
+		else{
+			System.out.println(a + b);
 		}
 		\end{lstlisting}
 		\caption{Java}
 	\end{subfigure}
-	\begin{subfigure}[b]{0.7\textwidth}
+	\begin{subfigure}[H]{0.7\textwidth}
 		\centering
-		\begin{lstlisting}
+		\begin{lstlisting}[belowskip=0.5mm]
+		if(i == a){
+			std::cout << a * b << "\n";
+		}
+		else if(i == b){
+			std::cout << a / b << "\n";
+		}
+		else{
+			std::cout << a + b << "\n";
+		}
+		\end{lstlisting}
+		\caption{C++}
+	\end{subfigure}
+	\caption{If statements}
+	\label{ifelse}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}[H]{0.7\textwidth}
+		\centering
+		\begin{lstlisting}[belowskip=0.5mm]
+		int i = 0
+		while i < 10
+		i += 1
+		end
+		\end{lstlisting}
+		\caption{Julia}
+	\end{subfigure}
+	\begin{subfigure}[H]{0.7\textwidth}
+		\centering
+		\begin{lstlisting}[belowskip=0.5mm]
+		int i = 0
+		while (i < 10):
+			i += 1
+		\end{lstlisting}
+		\caption{Python}
+	\end{subfigure}	
+	\begin{subfigure}[H]{0.7\textwidth}
+		\centering
+		\begin{lstlisting}[belowskip=0.5mm]
+		int i = 0;
+		while (i < 10){
+			i++;
+		}
+		\end{lstlisting}
+		\caption{Java}
+	\end{subfigure}
+	\begin{subfigure}[H]{0.7\textwidth}
+		\centering
+		\begin{lstlisting}[belowskip=0.5mm]
+		int i = 0;
 		while (a < 10){
-			i--;
+			i++;
 		}
 		\end{lstlisting}
 		\caption{C++}
@@ -253,76 +326,35 @@ Writing longer programs in the terminal might not be the preferred method. The t
 
 \begin{figure}[H]
 	\centering
-	\begin{subfigure}[b]{0.7\textwidth}
+	\begin{subfigure}[H]{0.7\textwidth}
 		\centering
-		\begin{lstlisting}
-		while i < 10
-		i -= 1
-		end
-		\end{lstlisting}
-		\caption{Julia}
-	\end{subfigure}
-	\begin{subfigure}[b]{0.7\textwidth}
-		\centering
-		\begin{lstlisting}
-		while (i < 10):
-		i -= 1
-		\end{lstlisting}
-		\caption{Python}
-	\end{subfigure}	
-	\begin{subfigure}[b]{0.7\textwidth}
-		\centering
-		\begin{lstlisting}
-		while (i < 10){
-		i--;
-		}
-		\end{lstlisting}
-		\caption{Java}
-	\end{subfigure}
-	\begin{subfigure}[b]{0.7\textwidth}
-		\centering
-		\begin{lstlisting}
-		while (a < 10){
-		i--;
-		}
-		\end{lstlisting}
-		\caption{C++}
-	\end{subfigure}
-	\caption{while-loop}
-	\label{whileloop}
-\end{figure}
-
-\begin{figure}[H]
-	\centering
-	\begin{subfigure}[b]{0.7\textwidth}
-		\centering
-		\begin{lstlisting}
+		\begin{lstlisting}[belowskip=0.5mm]
 		function hello(name)
 			println("Hello $name")
 		end
 		\end{lstlisting}
 		\caption{Julia}
 	\end{subfigure}
-	\begin{subfigure}[b]{0.7\textwidth}
+	\begin{subfigure}[H]{0.7\textwidth}
 		\centering
-		\begin{lstlisting}
+		\begin{lstlisting}[belowskip=0.5mm]
 		def hello(name):
 			print "Hello", name
 		\end{lstlisting}
 		\caption{Python}
 	\end{subfigure}	
-	\begin{subfigure}[b]{0.7\textwidth}
+	\begin{subfigure}[H]{0.7\textwidth}
 		\centering
-		\begin{lstlisting}
+		\begin{lstlisting}[belowskip=0.5mm]
 		public static void hello(String name){
 			System.out.println("Hello " + name);
 		}
 		\end{lstlisting}
 		\caption{Java}
 	\end{subfigure}
-	\begin{subfigure}[b]{0.7\textwidth}
+	\begin{subfigure}[H]{0.7\textwidth}
 		\centering
-		\begin{lstlisting}
+		\begin{lstlisting}[belowskip=0.5mm]
 		void hello(std::string name)
 		{
 			std::cout << "Hello " << name << std::endl;
@@ -336,31 +368,31 @@ Writing longer programs in the terminal might not be the preferred method. The t
 
 \begin{figure}[H]
 	\centering
-	\begin{subfigure}[b]{0.7\textwidth}
+	\begin{subfigure}[H]{0.7\textwidth}
 		\centering
-		\begin{lstlisting}
+		\begin{lstlisting}[belowskip=0.5mm]
 		array = fill(0, 100)
 		\end{lstlisting}
 		\caption{Julia}
 	\end{subfigure}
-	\begin{subfigure}[b]{0.7\textwidth}
+	\begin{subfigure}[H]{0.7\textwidth}
 		\centering
-		\begin{lstlisting}
+		\begin{lstlisting}[belowskip=0.5mm]
 		array = [0 for col in range(100)]
 		\end{lstlisting}
 		\caption{Python}
 	\end{subfigure}	
-	\begin{subfigure}[b]{0.7\textwidth}
+	\begin{subfigure}[H]{0.7\textwidth}
 		\centering
-		\begin{lstlisting}
+		\begin{lstlisting}[belowskip=0.5mm]
 		int[] array = new int[100];
 		Arrays.fill(array, 0);
 		\end{lstlisting}
 		\caption{Java}
 	\end{subfigure}
-	\begin{subfigure}[b]{0.7\textwidth}
+	\begin{subfigure}[H]{0.7\textwidth}
 		\centering
-		\begin{lstlisting}
+		\begin{lstlisting}[belowskip=0.5mm]
 		std::array<int,100> array;
 		array.fill(0);
 		\end{lstlisting}
@@ -371,11 +403,17 @@ Writing longer programs in the terminal might not be the preferred method. The t
 \end{figure}
 
 \subsection{Features}
+* In this section we *
 \subsubsection{Dynamic typing}
-Dynamic typing means that type checks are mostly performed at runtime - opposed to static typing, which makes the type checks at compile time. Dynamic typing allows the programmer to skip the type declaration and let the dynamic type system handle it. In Julia it is possible to specify types, but mostly is not necessary. Julia also makes decisions about how much memory to allocate for variables and the assigned memory size will not change later, not even if a big value, that exceeds the memory of the variable, is assigned to it. The memory size can be decreased and this will be addressed later under the section Garbage Collector. However, there is a range of memory sizes to chose from when initializing a variable. Julia will by default assign 32 bits to an integer or a float if no more memory is needed at initialization, but it is possible to manually chose one of the following:
+Dynamic typing is a type management approach where type checks are mostly performed at runtime, as opposed to static typing, where type checks are made at compile time. Dynamic typing allows the programmer to skip the type declaration and let the dynamic type system handle it. In Julia it is possible to specify types, but mostly it is not necessary. 
+
+* rephrase *
+Julia also makes decisions about how much memory to allocate for variables and the assigned memory size will not change later, not even if a big value, that exceeds the memory of the variable, is assigned to it. 
+
+The memory size can be decreased and this will be addressed later under the section Garbage Collector. However, there is a range of memory sizes to chose from when initializing a variable. Julia will by default assign 32 bits to an integer or a float if no more memory is needed at initialization, but it is possible to manually chose one of the following:
 \begin{description}
-	\item[$\cdot$] Signed / unsigned integers of: 8, 16, 32, 64 and 128 bits.
-	\item[$\cdot$] Floating points of: 16, 32 and 64 bits.  
+	\item[$\cdot$] Signed / unsigned integers of 8, 16, 32, 64 and 128 bits.
+	\item[$\cdot$] Floating points of 16, 32 and 64 bits.  
 	\item[$\cdot$] Boolean – 8 bits 
 	\item[$\cdot$] Char – 32 bits 
 \end{description}
@@ -482,9 +520,9 @@ Vectorization of code is, for example, when a for loop is rewritten to sequentia
 
 \begin{figure}[H]
 	\centering
-	\begin{subfigure}[b]{0.7\textwidth}
+	\begin{subfigure}[H]{0.7\textwidth}
 		\centering
-		\begin{lstlisting}
+		\begin{lstlisting}[belowskip=0.5mm]
 		a = 1, 2, 3, 4
 		b = 2, 3, 4, 5
 		c is empty
@@ -495,9 +533,9 @@ Vectorization of code is, for example, when a for loop is rewritten to sequentia
 		\end{lstlisting}
 		\caption{Devectorized code}
 	\end{subfigure}
-	\begin{subfigure}[b]{0.7\textwidth}
+	\begin{subfigure}[H]{0.7\textwidth}
 		\centering
-		\begin{lstlisting}
+		\begin{lstlisting}[belowskip=0.5mm]
 		a = [1, 2, 3, 4]
 		b = [2, 3, 4, 5]
 		c is empty
@@ -607,18 +645,18 @@ Description: A row of five black square tiles is to have a number of its tiles r
 
 \begin{figure}[H]
 	\centering
-	\begin{subfigure}[b]{0.6\textwidth}
+	\begin{subfigure}[H]{0.6\textwidth}
 		\includegraphics
 		[width=\textwidth]{image/1161.jpg}
 		\caption{Red tiles}.
 	\end{subfigure}
-	\begin{subfigure}[b]{0.6\textwidth}
+	\begin{subfigure}[H]{0.6\textwidth}
 		\centering
 		\includegraphics
 		[width=\textwidth]{image/1162.jpg} 
 		\caption{Green tiles}.
 	\end{subfigure}	
-	\begin{subfigure}[b]{0.6\textwidth}
+	\begin{subfigure}[H]{0.6\textwidth}
 		\centering
 		\includegraphics
 		[width=\textwidth]{image/1163.jpg} 

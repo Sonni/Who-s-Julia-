@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.5.29)  31 MAY 2016 15:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.5.29)  31 MAY 2016 16:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -551,6 +551,8 @@ Package graphics Info: Driver file: pdftex.def on input line 95.
 (/home/bamz/texmf/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
+\mybox=\box33
+
 Excluding 'comment' comment.
 (/usr/share/texlive/texmf-dist/tex/latex/lastpage/lastpage.sty
 Package: lastpage 2015/03/29 v1.2m Refers to last page's name (HMM; JPG)
@@ -567,31 +569,28 @@ Package: lastpage 2015/03/29 v1.2m Refers to last page's name (HMM; JPG)
 \f@ncyO@orf=\skip54
 ) (./report.aux
 
-LaTeX Warning: Label `whileloop' multiply defined.
-
-
 LaTeX Warning: Label `benchmark' multiply defined.
 
 )
 \openout1 = `report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 73.
+LaTeX Font Info:    ... okay on input line 73.
  (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count116
 \scratchdimen=\dimen126
-\scratchbox=\box33
+\scratchbox=\box34
 \nofMPsegments=\count117
 \nofMParguments=\count118
 \everyMPshowfont=\toks26
@@ -653,13 +652,13 @@ e
 ))
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
-(lastpage)             ! on input line 68.
-LaTeX Font Info:    Try loading font information for U+msa on input line 70.
+(lastpage)             ! on input line 73.
+LaTeX Font Info:    Try loading font information for U+msa on input line 75.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 70.
+LaTeX Font Info:    Try loading font information for U+msb on input line 75.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -686,129 +685,128 @@ c and
 File: image/terminalj.jpg Graphic file (type jpg)
 
 <use image/terminalj.jpg>
-Package pdftex.def Info: image/terminalj.jpg used on input line 106.
+Package pdftex.def Info: image/terminalj.jpg used on input line 112.
 (pdftex.def)             Requested size: 288.0011pt x 102.11629pt.
 
 <image/terminalp.jpg, id=21, 498.86375pt x 86.3225pt>
 File: image/terminalp.jpg Graphic file (type jpg)
 
 <use image/terminalp.jpg>
-Package pdftex.def Info: image/terminalp.jpg used on input line 112.
+Package pdftex.def Info: image/terminalp.jpg used on input line 118.
 (pdftex.def)             Requested size: 288.0011pt x 49.83656pt.
  [1]
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 123.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 129.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10> not available
-(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 125.
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 131.
  [2 <./image/terminalj.jpg> <./image/terminalp.jpg>] [3] [4] [5] [6] [7] [8] [9
-] [10]
-Underfull \hbox (badness 10000) in paragraph at lines 442--445
+]
+Underfull \hbox (badness 10000) in paragraph at lines 480--483
 
  []
 
-[11]
-Overfull \hbox (6.07005pt too wide) in paragraph at lines 469--469
+[10]
+Overfull \hbox (6.07005pt too wide) in paragraph at lines 507--507
 []\T1/cmr/bx/n/10.95 Extensible con-ver-sions and pro-mo-tions for nu-meric and
  other
  []
 
-[12] [13] <image/time.jpg, id=69, 164.615pt x 60.225pt>
+[11] [12] <image/time.jpg, id=66, 164.615pt x 60.225pt>
 File: image/time.jpg Graphic file (type jpg)
  <use image/time.jpg>
-Package pdftex.def Info: image/time.jpg used on input line 535.
+Package pdftex.def Info: image/time.jpg used on input line 573.
 (pdftex.def)             Requested size: 108.0011pt x 39.51335pt.
 
-[14]
-Underfull \hbox (badness 10000) in paragraph at lines 543--549
+Underfull \hbox (badness 10000) in paragraph at lines 581--587
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 543--549
+Underfull \hbox (badness 10000) in paragraph at lines 581--587
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 552--561
+[13 <./image/time.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 590--599
 
  []
 
-[15 <./image/time.jpg>] <image/11.jpg, id=77, 208.78pt x 81.30376pt>
+[14] <image/11.jpg, id=73, 208.78pt x 81.30376pt>
 File: image/11.jpg Graphic file (type jpg)
-
-<use image/11.jpg>
-Package pdftex.def Info: image/11.jpg used on input line 568.
+ <use image/11.jpg>
+Package pdftex.def Info: image/11.jpg used on input line 606.
 (pdftex.def)             Requested size: 167.0242pt x 65.04308pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 572--577
+Underfull \hbox (badness 10000) in paragraph at lines 610--615
 
  []
 
-[16 <./image/11.jpg>] (./euler11.jl) [17] (./euler11.jl) (./euler11.jl)
-[18] <image/1161.jpg, id=88, 568.1225pt x 93.34875pt>
+[15 <./image/11.jpg>] (./euler11.jl) (./euler11.jl) [16] (./euler11.jl)
+[17] <image/1161.jpg, id=85, 568.1225pt x 93.34875pt>
 File: image/1161.jpg Graphic file (type jpg)
  <use image/1161.jpg>
-Package pdftex.def Info: image/1161.jpg used on input line 612.
+Package pdftex.def Info: image/1161.jpg used on input line 650.
 (pdftex.def)             Requested size: 216.0022pt x 35.4914pt.
 
-<image/1162.jpg, id=89, 420.57124pt x 39.14626pt>
+<image/1162.jpg, id=86, 420.57124pt x 39.14626pt>
 File: image/1162.jpg Graphic file (type jpg)
  <use image/1162.jpg>
-Package pdftex.def Info: image/1162.jpg used on input line 618.
+Package pdftex.def Info: image/1162.jpg used on input line 656.
 (pdftex.def)             Requested size: 216.0022pt x 20.10529pt.
 
-<image/1163.jpg, id=90, 273.02pt x 33.12375pt>
+<image/1163.jpg, id=87, 273.02pt x 33.12375pt>
 File: image/1163.jpg Graphic file (type jpg)
  <use image/1163.jpg>
-Package pdftex.def Info: image/1163.jpg used on input line 624.
+Package pdftex.def Info: image/1163.jpg used on input line 662.
 (pdftex.def)             Requested size: 216.0022pt x 26.20638pt.
- [19 <./image/1161.jpg> <./image/1162.jpg> <./image/1163.jpg>]
-<image/qs.jpg, id=94, 245.91875pt x 501.875pt>
+
+<image/qs.jpg, id=88, 245.91875pt x 501.875pt>
 File: image/qs.jpg Graphic file (type jpg)
  <use image/qs.jpg>
-Package pdftex.def Info: image/qs.jpg used on input line 642.
+Package pdftex.def Info: image/qs.jpg used on input line 680.
 (pdftex.def)             Requested size: 122.95906pt x 250.93687pt.
- [20] [21 <./image/qs.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 675--678
+ [18 <./image/1161.jpg> <./image/1162.jpg> <./image/1163.jpg>] [19 <./image/qs.
+jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 713--716
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 692--695
+[20]
+Underfull \hbox (badness 10000) in paragraph at lines 730--733
 
  []
 
-[22] [23]
-Overfull \hbox (62.11838pt too wide) in paragraph at lines 710--716
+[21]
+Overfull \hbox (62.11838pt too wide) in paragraph at lines 748--754
 \T1/cmr/m/n/10.95 http://www.nowozin.net/sebastian/blog/the-julia-language-for-
 scientific-computing.html 
  []
 
-[24] [25]
-Overfull \hbox (63.00946pt too wide) in paragraph at lines 751--752
+[22] [23] [24]
+Overfull \hbox (63.00946pt too wide) in paragraph at lines 789--790
 []\T1/cmr/m/n/10.95 http://www.cs.cornell.edu/courses/cs1112/2013fa/Exams/exam2
 /vectorizedCode.pdf 
  []
 
 
 AED: lastpage setting LastPage
-[26] (./report.aux)
+[25] (./report.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 7066 strings out of 493029
- 96138 string characters out of 6136234
- 281791 words of memory out of 5000000
- 10458 multiletter control sequences out of 15000+600000
+ 7070 strings out of 493029
+ 96204 string characters out of 6136234
+ 329793 words of memory out of 5000000
+ 10462 multiletter control sequences out of 15000+600000
  17766 words of font info for 49 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,12n,43p,1184b,1782s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,12n,43p,1184b,1788s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf
 -dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/p
@@ -820,10 +818,10 @@ blic/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm10
 exmf/fonts/type1/public/cm-super/sfrm1728.pfb></usr/share/texmf/fonts/type1/pub
 lic/cm-super/sfti1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt100
 0.pfb>
-Output written on report.pdf (30 pages, 490127 bytes).
+Output written on report.pdf (29 pages, 490304 bytes).
 PDF statistics:
- 158 PDF objects out of 1000 (max. 8388607)
- 104 compressed objects within 2 object streams
+ 155 PDF objects out of 1000 (max. 8388607)
+ 102 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  41 words of extra memory for PDF output out of 10000 (max. 10000000)
 
