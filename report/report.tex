@@ -22,6 +22,9 @@
 \usepackage{graphicx}
 \DeclareGraphicsExtensions{.jpg}
 
+\usepackage{enumitem}
+\setlist[description]{itemsep=-2mm, topsep=0mm, itemindent=-4mm}
+
 \definecolor{dkgreen}{rgb}{0,0.45,0}
 \definecolor{gray}{rgb}{0.5,0.5,0.5}
 \definecolor{mauve}{rgb}{0.30,0,0.30}
@@ -44,10 +47,12 @@
   tabsize=4,
 }
 
-\newsavebox{\mybox}
 \captionsetup[figure]{aboveskip=0mm}
 \captionsetup[subfigure]{aboveskip=0mm}
 
+\usepackage{dirtytalk}
+
+\usepackage[hidelinks]{hyperref}
 
 \begin{comment}
 \begin{lstlisting}[language=python]
@@ -101,7 +106,22 @@ Java, C, C++, C\# and Python are on top ten of the most used programming languag
 The purpose of this report is to find out if the programming language Julia has a chance in the marked and if it is worth changing to. The languages Java, C++, Python and Julia will be compared on syntax and time performance.  
 
 \section{Julia}
-*in this section we*
+*in this section we* \\
+Special Features in Julia:
+\begin{description}
+	\item[$\cdot$] Dynamic typing and byte-related memory management
+	\item[$\cdot$] Multiple dispatch
+	\item[$\cdot$] User defined types
+	\item[$\cdot$] Garbage Collector
+	\item[$\cdot$] Built-in package manager
+	\item[$\cdot$] Lightweight green threading
+	\item[$\cdot$] Meta-programming and Macros
+	\item[$\cdot$] Implementing code from other languages
+	\item[$\cdot$] Designed for parallelism and distributed computation
+	\item[$\cdot$] Supports Unicode
+	\item[$\cdot$] Devectorized code is fast
+	\item[$\cdot$] Others we have not looked into
+\end{description}
 Julia is a programming language, which has been under development since 2009. First released in 2012 and the newest stable version of Julia is version 0.4.5.  The language has been created because the developers wanted a language with all the features they like from different languages. The developers also wanted the language to be open source, which means everybody can read and modify the language. Julia shares many similarities with python. One of the ideas was to make the language as simple, readable and easy to learn as possible. The language is made for high performance and scientific computations while still supporting general purpose programming. 
 Programming in Julia can be done in the terminal like python with interactive mode:
 \begin{figure}[H]
@@ -404,7 +424,7 @@ Writing longer programs in the terminal might not be the preferred method. The t
 
 \subsection{Features}
 * In this section we *
-\subsubsection{Dynamic typing}
+\subsubsection{Dynamic typing and byte-related memory management}
 Dynamic typing is a type management approach where type checks are mostly performed at runtime, as opposed to static typing, where type checks are made at compile time. Dynamic typing allows the programmer to skip the type declaration and let the dynamic type system handle it. In Julia it is possible to specify types, but mostly it is not necessary. 
 
 * rephrase *
@@ -412,25 +432,25 @@ Julia also makes decisions about how much memory to allocate for variables and t
 
 The memory size can be decreased and this will be addressed later under the section Garbage Collector. However, there is a range of memory sizes to chose from when initializing a variable. Julia will by default assign 32 bits to an integer or a float if no more memory is needed at initialization, but it is possible to manually chose one of the following:
 \begin{description}
-	\item[$\cdot$] Signed / unsigned integers of 8, 16, 32, 64 and 128 bits.
-	\item[$\cdot$] Floating points of 16, 32 and 64 bits.  
-	\item[$\cdot$] Boolean – 8 bits 
-	\item[$\cdot$] Char – 32 bits 
+	\item[$\cdot$] Signed/unsigned integer – 8, 16, 32, 64 and 128 bits – Int8, UInt8, Int16, UInt16, Int32, UInt32, Int64, UInt64, Int128 and UInt128
+	\item[$\cdot$] Floating point – 16, 32 and 64 bits – Float16, Float32 and Float64
+	\item[$\cdot$] Boolean – 8 bits – Bool
+	\item[$\cdot$] Character – 32 bits - Char
 \end{description}
 To initialize a variable with a given memory size:
 \begin{lstlisting}[language=python]
 x = Int8(10)
 \end{lstlisting}
-But if the variable is later assigned to a new value. Julia will automatically allocate 32 bits for the variable and more if needed:
+But if the variable is later assigned a new value, Julia will automatically allocate 32 bits for the variable or more if needed:
 \begin{lstlisting}[language=python]
 x = Int8(10)
 typeof(x) #Int8
 x = 4
 typeof(x) #Int32
 \end{lstlisting}
-If no certain memory size is needed but only a specific type then abstract types will come in handy. An abstract type is just some form of generalization of a concrete type. For example 16, 32 and 64 bit floating points are of type AbstractFloat. This is especially useful when the programmer do not know how much memory a certain variable may need. Too little memory will result in a bug and too much memory is a waste. 
+If no certain memory size is needed but only a specific type then abstract types will come in handy. An abstract type is just some form of generalization of a concrete type. For example 16, 32 and 64 bit floating points are of type AbstractFloat. This is especially useful when the programmer do not know how much memory a certain variable may need. Too little memory will result in a bug and too much memory is a waste. * Example *
 \subsubsection{Multiple dispatch}
-Multiple dispatch is used to determine, which function to call by the type of one or more of the parsed argument(s). This is useful for example when two functions with the same name are declared:
+Multiple dispatch is used to determine which function to call by the type of one or more of the parsed argument(s). This is useful for example when two functions, with the same name, are declared:
 
 \begin{lstlisting}[language=python]
 function a(arg1::Int8)
@@ -441,37 +461,35 @@ function a(arg1::Float16)
 	println("Float")  
 end    
 \end{lstlisting}
-If a variable is declared with a type of Int8 and parsed to the function a(...), then it will print "Int", and if the variable is declared as Float16 it will print "Float". It is also possible to use abstract types here, so arg1::Float16 and arg1::Int8 could be changed to arg1::AbstractFloat and arg1::AbstractInt – this will make the function 'a' accept any kinds of floating points and integers.  
+If a variable is declared as an Int8 and used as argument in function a(), then Julia will print "Int". If the variable is declared as a Float16 and used as argument in function a(), then Julia will print "Float". It is also possible to use abstract types here, so arg1::Float16 and arg1::Int8 could be changed to arg1::AbstractFloat and arg1::AbstractInt, which will make the function 'a' accept any type of floating points and integers.  
 \subsubsection{User defined types}
-User defined types, also known as composite types gives the option to define new types in Julia. A composite type in Julia may look something like the following: 
+User defined types, also known as composite types, give the programmer the option to define new types in Julia. A composite type in Julia could look as the following: 
 \begin{lstlisting}[language=python]
 type person 
 	age::Int16 
 	name #a variable, which gets the assigned default type ::Any
 end    
 \end{lstlisting}
-If a variable in a composite type is not specified with any type, the default is ::Any, which accepts any kinds of types. To initialize a composite type, think of it like an object. Person = person(21, "Carl"), and the values can be changed with "Person.age = 25".
+If a variable in a composite type is not specified with any type, the default is ::Any, which accept any type. To initialize a composite type, think of it like an object. Person = person(21, "Carl"), and the values can be changed with "Person.age = 25".
 In the example above, the type person can now be used as any other of the built in types in Julia.
 \begin{lstlisting}[language=python]
 function a(arg1::person)
 	println(arg1.age)
 end
-
 Person = person(21, "Carl")
-
 a(Person) #Will print 21
 \end{lstlisting}
-The developers of Julia state that user defined types are as fast and compact as built in types. 
+The developers of Julia claim that user defined types are as fast and compact as built in types. 
 
 \subsubsection{Garbage Collector}
-Julia uses a garbage collector to automatically free the memory when needed. There is no guarantee when the garbage collector will run, but is it possible to force garbage collection with a function call: \textbf{gc()}. One thing to keep in mind is that once a name is defined in Julia, it will always be present till termination. The garbage collector does not free the memory of unreachable object but rather reallocates memory for objects when memory size has changed. So the only way the garbage collector can free memory is when an object has been reduced in size, for example:
+Julia uses a garbage collector to automatically free the memory when needed. There is no guarantee when the garbage collector will run, but it is possible to force garbage collection with a function call \textbf{gc()}. One thing to keep in mind is that once a name is defined in Julia, it will always be present until program termination. The garbage collector does not free the memory of unreachable object, but rather reallocates memory for objects when memory size has changed. Therefore, the only way the garbage collector can free the memory is when an object has been reduced in size, for example:
 
 \begin{lstlisting}[language=python]
 A = rand(float32, 10000, 10000) 
 A = 0
 gc() 
 \end{lstlisting}
-This code will generate a 10.000x10.000 matrix filled with random 32 bit floating points, which consumes a bit of memory. \textbf{A} will be set to 0 and will keep the memory size of the 10.000x10.000 matrix until garbage collection is done either manually as in this example, or somewhere in the future when it is done automatically. 
+This code will generate a 10.000$\times$10.000 matrix filled with random 32 bit floating points, which consumes approximately 400MB of memory. When the value \textbf{A} is set to 0 the memory allocated will stay the same until the garbage collection is executed as in the example above, or on program termination. 
 
 \subsubsection{Built-in package manager}
 Julia comes with a built in package manager, which keeps track of packages that needs to be included in the program to run. It is not necessary to state, which packages needs to be included. For example, when the user calls the sort function, \textbf{sort()}, no package include statement or \textbf{math.sort()} is needed – this is done automatically by the package manager.
@@ -479,10 +497,10 @@ Julia comes with a built in package manager, which keeps track of packages that 
 \subsubsection{Lightweight green threading}
 A thread is lightweight when it shares address space with other threads opposed to heavyweight threads, which has its own address space. If threads share the same address space the communication between them is faster and much simpler. The communication between heavyweight threads have to go through pipes or sockets. \\
 \\
-Green threads are threads that are scheduled not by the operating system but rather by the runtime library or virtual machine. Green threads does not have to relay on the operating system and can be controlled much better – which means the threads are in user space and not kernel space, these terms will be adressed later in \textbf{Benchmarking}. As of Julia 0.4.5 multithreading is not available but in the unstable version 0.5.0 an experimental support of multithreading is available, therefore threadiing will be addressed no further. 
+Green threads are threads that are scheduled not by the operating system but rather by the runtime library or the virtual machine. Green threads do not have to rely on the operating system and can be controlled much better – which means the threads are in user space and not kernel space. (See section~\ref{sec:timemeasure} for explanation of time measurements) As of Julia 0.4.5 multithreading is not available but in the unstable version 0.5.0 an experimental support of multithreading is available, therefore threading will be addressed no further. 
 
 \subsubsection{Meta-programming and Macros}
-Meta-programming is a way to write programs in programs and let them use program code as data. In Julia meta-programming can be done by defining macros. For example, the @time macro was used extensively in the project. The @time is in the standard Julia library. The @time takes a function as an argument and sets a timer in the top of the code from the argument and stops the timer in the bottom and prints the time passed and memory allocated. Meta-programming and macros are known from Lisp, a programming language, and have been used in early AI research. 
+Meta-programming is a way to write programs in programs and let them use program code as data. In Julia meta-programming can be done by defining macros. For example, the @time macro was used extensively in the project. The @time macro is a part of the Julia standard library. The @time macro takes a function as an argument and starts a timer bafore the code execution and stops the timer after execution and prints the time passed and memory allocated. Meta-programming and macros are known from Lisp, a programming language, and have been used in early AI research. 
 
 \subsubsection{Implementing code from other languages}
 Since Julia is a newer language there are not many written libraries yet. Julia has an import feature for both Python and C libraries to avoid this disadvantage. Import the library PyCall with the "using" operation to use python and import Python libraries via a macro @pyimport. To use C libraries or coding, simply run the function ccall(). The programming language C is a well known and used language. Many systems are based on C, which makes C an advantage for hardware programming. Another feature is to execute shell commands. Execute shell commands using run(``). An example would be running run(`echo Hello World`), which would return the output "Hello World".
@@ -504,13 +522,8 @@ println(pyeval("4*3+1")) #prints 13
 		\caption{Import of Python libraries.}
 \end{figure}
 
-\subsubsection{Extensible conversions and promotions for numeric and other types.}
-
-
 \subsubsection{Designed for parallelism and distributed computation}
 Julia claims to be designed for parallelism and distributed computation. Parallel computing is dividing a problem into smaller problems and solve the smaller problems at the same time. Distributed computing is solving a problem using a network of computers working together to get to the solution. Julia have been trying to make this easier to achieve with different macros.
-
-\subsubsection{Automatic generation of specialized code for different argument types}
 
 \subsubsection{Supports Unicode}
 The Unicode support globalize the language. Unicode is an encoding system for characters. Unicode supports a large range of characters and is designed to make it easier to read and write non-latin characters.
@@ -551,18 +564,18 @@ Vectorization of code is, for example, when a for loop is rewritten to sequentia
 \end{figure}
 
 \section{Project Euler}
-Project Euler is a website with a huge database of mathematical and programming challenges. In this report Project Euler has been used to find challenges for testing the different programming languages.
+Project Euler is a website (\url{https://projecteuler.net/}) with a huge database of mathematical and programming challenges. In this report Project Euler has been used to find challenges for testing the different programming languages.
 
 \section{Theory}
 \subsection{Benchmarking}
-Benchmarking is measuring the quality of a product. In this report we will be measuring the time it takes for a programming language to execute an algorithm.
+**In computer science, benchmarking is experimental measuring the amount of performance crammed by a particular program**. In this report we will be measuring the time it takes for a programming language to execute a set of programs implemented in Julia, Python, C++ and Java. To get an indication of the real CPU time, multiple tests are done and the median is calculated. The median run time is considered since there can be fluctuations in run times for every test.
 
 \subsection{Profiling}
 Profiling is a way to analyse code. For example, the analysis could be measuring the memory usage, time and function calls. The analysis shows, which part of the code took the longest time or used up all memory. Profiling is often used for optimization.
 
 \subsection{Time measurements}
+\label{sec:timemeasure}
 Looking at the run time the most common terms are wall time (real time) and CPU time. Wall time is the time it took the program to terminate, from start to finish. CPU time is how much time the program used on the CPU. The time difference between wall time and CPU time comes from the fact that the program being benchmarked might get interrupted by the operating system, because other tasks needs to be handled. These tasks could be other programs, or something that the OS needs to get done. The processing time of those tasks will be included in the wall time but excluded in the CPU time. To get the run times in Unix based system, the time command is available from the terminal:
-
 \begin{lstlisting}
 time <COMMAND>
 \end{lstlisting}
@@ -571,7 +584,7 @@ Where <COMMAND> can be any terminal command. The time command will return three 
 	\centering
 	\includegraphics
 	[width=0.3\textwidth]{image/time.jpg} 
-	\caption{Output of time}.
+	\caption{Sample output of the time command}.
 \end{figure}
 \begin{description}
 	\item[$\cdot$] Real: This is the wall time mentioned above.
@@ -579,11 +592,7 @@ Where <COMMAND> can be any terminal command. The time command will return three 
 	\item[$\cdot$] Sys: System time is how much CPU time is spent in kernel mode.
 \end{description}
 The difference between user- and kernel mode is the following:\\
-In most memory protected system there are some locked operations for security reasons. E.g. allocation of memory or accessing hardware requires kernel mode and cannot be done in user mode. Processes like malloc and reading / writing to files will somewhere in the process sent a request to the kernel to do certain things and this is counted as system time. This does not necessarily mean that all time is spent in kernel mode when reading a file, since the only time that is spent in kernel mode is accessing the requested data in memory the rest of the operation is counted towards user time.\\ 
-\\
-So to get much times is spent on the CPU, User time + system is a good estimation. To get an even better indication of the real CPU time, multiple test are done and the average is calculated. The average run time is considered since there can be fluctuations in run times for every test. \\
-\\
-Another way to measure time spent on the CPU is to use the built in libraries for example the ThreadMXBean in Java. This is especially useful for profiling.
+In most memory protected systems there are some locked operations for security reasons. E.g. allocation of memory or accessing hardware requires kernel mode and cannot be done in user mode. Operations as malloc and reading/writing to files will be proccessed in the kernel and this is counted as system time. This does not necessarily mean that all time is spent in kernel mode operating with file data, since the only time that is spent in kernel mode is writing the data from the file to memory. The rest of the operation is counted towards user time. Therefore to get the amount of time spent by the CPU, User time + system time is a good estimation. Another way to measure time spent on the CPU is to use the built in libraries. For example the ThreadMXBean in Java. This is especially useful for profiling.
 
 \section{Materials and methods}
 \subsection{Benchmarking}
@@ -600,10 +609,10 @@ Benchmarking will be done by comparing the run time of the same algorithm in dif
 \section{Problems}
 \subsection{Projecteuler 11}
 
-\textit{In the 20x20 grid below, four numbers along a diagonal line have been marked in red. The product of these numbers is 26 x 63 x 78 x 14 = 1788696. What is the greatest product of four adjacent numbers in the same direction (up, down, left, right, or diagonally) in the 20x20 grid?}
+\textit{In the 20x20 grid below, four numbers along a diagonal line have been marked in red. The product of these numbers is 26$\times$63$\times$78$\times$14 = 1788696. What is the greatest product of four adjacent numbers in the same direction (up, down, left, right, or diagonally) in the 20x20 grid?}
 \begin{figure}[H]
 	\begin{center}
-	\includegraphics[scale=0.80]{image/11.jpg}
+	\includegraphics[scale=0.30]{image/11.jpg}
 	\label{11}
 	\end{center}
 \end{figure}
@@ -688,7 +697,7 @@ Figure \ref{qs} shows a visualization of quicksort.
 
 \section{Personal experience with Julia}
 \subsection{Sonni}
-Some of the design choices, in Julia, can be really frustrating for someone who is adapting to Julia. The indexes starts at 1 - this could be debatable because of the statement that Julia is used in a lot of scientific computations and many programming languages made for scientific computations starts at index 1. But as a programmer who is used to indexes starting at 0, this can cause a lot of unnecessary bugs. The developers of Julia also made a weird design choice with the for-loop syntax. A incrementing for loop looks like:
+Some of the design choices, in Julia, can be really frustrating for someone who is adapting to Julia. The indices starts at 1 - this could be debatable because of the statement that Julia is used in a lot of scientific computations and many programming languages made for scientific computations use 1-based indexing. But as a programmer who is used to indices starting at 0, this can cause a lot of unnecessary bugs. The developers of Julia also made unusual design choice with the for-loop syntax. A incrementing for loop looks like:
 \begin{lstlisting}[language=python]
 Julia:
 for i = 1 : n
@@ -699,7 +708,7 @@ General languages:
 for i = 1; i < n; i++
 	Some code ...
 \end{lstlisting}
-This is straightforward like many other languages, but take a look at the decrementing for-loop:
+This is straightforward many other languages, but take a look at the decrementing for-loop:
 \begin{lstlisting}[language=python]
 Julia:
 for i = n : -1 : 0
@@ -716,14 +725,13 @@ The documentation of Julia is far from being great, which is a huge bump on the 
 
 \begin{lstlisting}
 rand( [ rng ] [ ,S ] [ , dims... ] )
-
-	Pick a random element or array of random elements from the set of values specified by S; S can be:
-	- an indexable collection (for example 1:n or ['x','y','z']), or  
-	- a type: the set of values to pick from is then equivalent to typemin(S):typemax(S) for integers (this is not applicable to BigInt), and to [0,1) for floating point numbers;  
-	S defaults to Float64.
 \end{lstlisting} 
+\say{Pick a random element or array of random elements from the set of values specified by S; S can be:\\
+- an indexable collection (for example 1:n or ['x','y','z']), or  \\
+- a type: the set of values to pick from is then equivalent to typemin(S):typemax(S) for integers (this is not applicable to BigInt), and to [0,1) for floating point numbers;  \\
+S defaults to Float64.} \\
 The argument \textbf{S} is explained, but does not mention anything about \textbf{rng} or \textbf{dims}.\\
-Antoher example is how to access data within an array at a specific index. This should be one of the first things in the Array section, but is first described after about two pages of text. A person with experience in programming might know that to access an element in an array with an index is this simple line of code:
+Another example is how to access data within an array at a specific index. This should be one of the first things in the Array section, but is first described after about two pages of text. A person with experience in programming might know that to access an element in an array with an index is this simple line of code:
 \begin{lstlisting}
 a[index]
 \end{lstlisting} 
@@ -738,19 +746,15 @@ I found the syntax a bit confusing at first. I am not used to Python and I misse
 
 \section{Discussion}
 *Pros and Cons with good arguments*
+http://www.evanmiller.org/why-im-betting-on-julia.html \\
+High-Performance JIT Compiler chart at http://julialang.org/ \\
+http://www.nowozin.net/sebastian/blog/the-julia-language-for-scientific-computing.html \\
+http://radar.oreilly.com/2013/10/julias-role-in-data-science.html \\
 
 \section{Conclusion}
 *Is Julia a worthy competitor? Is it worth switching to Julia? Would we recommend Julia to anyone?*
 
 It can be difficult to make any conclusions by the benchmarking but it may give an idea of how Julia performs, compared to Java, Python and C++. One thing to keep in mind is that as of writing this report, Julia is in version 0.4.5 - it has yet to reach version 1.0.0 while the other languages are much older than Julia. This could mean that Julia might get even faster in the future.   
-
-\section{Perspective}
-Articles to perspectivate: \\
-http://www.evanmiller.org/why-im-betting-on-julia.html \\
-High-Performance JIT Compiler chart at http://julialang.org/ \\
-http://www.nowozin.net/sebastian/blog/the-julia-language-for-scientific-computing.html \\
-http://radar.oreilly.com/2013/10/julias-role-in-data-science.html \\
-* Used too much times searching for articles.. *
 
 \newpage
 \section{Appendix}
@@ -778,21 +782,15 @@ Trello is a very good tool for organizing and we should have been using it from 
 	third edition,
 	2009.
 	\bibitem{toplst}
-	http://www.tiobe.com/tiobe\_index
+	\url{http://www.tiobe.com/tiobe\_index}
 	\bibitem{ju-why}
-	http://julialang.org/blog/2012/02/why-we-created-julia
+	\url{http://julialang.org/blog/2012/02/why-we-created-julia}
 	\bibitem{ju-paral}
-	http://docs.julialang.org/en/latest/manual/parallel-computing/
+	\url{http://docs.julialang.org/en/latest/manual/parallel-computing/}
 	\bibitem{ju-uni}
-	http://unicode.org/standard/WhatIsUnicode.html
+	\url{http://unicode.org/standard/WhatIsUnicode.html}
 	\bibitem{ju-vec}
-	http://www.cs.cornell.edu/courses/cs1112/2013fa/Exams/exam2/vectorizedCode.pdf
-	\bibitem{pe}
-	https://projecteuler.net/
-	\bibitem{benchmark}
-	http://dictionary.cambridge.org/dictionary/english/benchmark
-	\bibitem{benchmark}
-	http://dictionary.cambridge.org/dictionary/english/benchmark
+	\url{http://www.cs.cornell.edu/courses/cs1112/2013fa/Exams/exam2/vectorizedCode.pdf}
 	
 \end{thebibliography}
 
