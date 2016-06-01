@@ -889,6 +889,26 @@ Figure \ref{graph112} and \ref{graph111} shows the test results of euler 11, kee
 	\caption{}
 	\label{graph112}
 \end{figure}
+\begin{figure}[H]
+	\centering
+		\begin{tikzpicture}
+			\begin{axis}[
+			title=Euler 11 - File to matrix,
+			xlabel={$Test Input$},
+			ylabel={$Time [ms]$},
+			grid=major,
+			legend entries={$Julia$,$Java$,$c++$,$Python$},
+			legend style={at={(1,1)},anchor=north west},
+			]
+			\addplot table {graphdata/euler11matmk-julia.dat};
+			\addplot table {graphdata/euler11matmk-java.dat};
+			\addplot table {graphdata/euler11matmk-cpp.dat};
+			\addplot table {graphdata/euler11matmk-python.dat};
+			\end{axis}
+		\end{tikzpicture}
+	\caption{}
+	\label{graph113}
+\end{figure}
 
 \subsection{Projecteuler 116}
 Description: \textit{A row of five black square tiles is to have a number of its tiles replaced with coloured oblong tiles from red(length two), green(length three), or blue(length four). If red tiles are chosen there are exactly seven ways. If green tiles are chosen there are three ways. And if blue tiles are chosen there are two ways. Figure \ref{116} is a visualization of how the tiles can be lain. Assuming that colours cannot be mixed there are $7+3+2=12$ ways of replacing the black tiles in a row measuring five units in length. How many different ways can the black tiles in a row measuring fifty units in length be replaced if colours cannot be mixed and at least one coloured tile must be used?}
