@@ -13,7 +13,7 @@
 \contentsline {subsubsection}{\numberline {3.2.7}Meta-programming and Macros}{11}{subsubsection.3.2.7}
 \contentsline {subsubsection}{\numberline {3.2.8}Implementing code from other languages}{12}{subsubsection.3.2.8}
 \contentsline {subsubsection}{\numberline {3.2.9}Designed for parallelism and distributed computation}{12}{subsubsection.3.2.9}
-\contentsline {subsubsection}{\numberline {3.2.10}Supports Unicode}{12}{subsubsection.3.2.10}
+\contentsline {subsubsection}{\numberline {3.2.10}Supports Unicode}{13}{subsubsection.3.2.10}
 \contentsline {subsubsection}{\numberline {3.2.11}Devectorized code is fast}{13}{subsubsection.3.2.11}
 \contentsline {section}{\numberline {4}Project Euler}{13}{section.4}
 \contentsline {section}{\numberline {5}Experimental evaluation}{14}{section.5}
@@ -23,7 +23,7 @@
 \contentsline {section}{\numberline {6}Materials and methods}{15}{section.6}
 \contentsline {subsection}{\numberline {6.1}Benchmarking}{15}{subsection.6.1}
 \contentsline {section}{\numberline {7}Problems}{16}{section.7}
-\contentsline {subsection}{\numberline {7.1}Projecteuler 11}{16}{subsection.7.1}
+\contentsline {subsection}{\numberline {7.1}Projecteuler 11}{17}{subsection.7.1}
 \contentsline {subsubsection}{\numberline {7.1.1}Solution}{17}{subsubsection.7.1.1}
 \contentsline {subsubsection}{\numberline {7.1.2}Results}{20}{subsubsection.7.1.2}
 \contentsline {subsection}{\numberline {7.2}Projecteuler 116}{23}{subsection.7.2}

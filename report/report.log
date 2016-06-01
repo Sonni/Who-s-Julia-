@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.12.7)  1 JUN 2016 21:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.12.7)  1 JUN 2016 21:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1790,12 +1790,12 @@ Overfull \hbox (7.30957pt too wide) in paragraph at lines 631--632
 ea-sur-ing of the amount
  []
 
-<image/time.jpg, id=530, 164.615pt x 60.225pt>
+[14] <image/time.jpg, id=535, 164.615pt x 60.225pt>
 File: image/time.jpg Graphic file (type jpg)
  <use image/time.jpg>
 Package pdftex.def Info: image/time.jpg used on input line 646.
 (pdftex.def)             Requested size: 108.0011pt x 39.51335pt.
- [14]
+
 Underfull \hbox (badness 10000) in paragraph at lines 660--669
 
  []
@@ -1889,7 +1889,7 @@ Package xcolor Warning: Incompatible color definition on input line 51.
 
 Package xcolor Warning: Incompatible color definition on input line 54.
 
-) (./euler11.jl
+) [18] (./euler11.jl
 
 Package xcolor Warning: Incompatible color definition on input line 60.
 
@@ -1923,7 +1923,7 @@ Package xcolor Warning: Incompatible color definition on input line 64.
 
 Package xcolor Warning: Incompatible color definition on input line 67.
 
-) [18] [19]
+) [19]
 PGFPlots: reading {graphdata/euler11-julia-box.dat}
 PGFPlots: reading {graphdata/euler11-julia-box.dat}
 PGFPlots: reading {graphdata/euler11-julia-box.dat}
@@ -2364,7 +2364,7 @@ ve/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive
 5/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb></usr/local/texlive/2015/
 texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb></usr/local/texlive/2015/te
 xmf-dist/fonts/type1/public/cm-super/sftt1095.pfb>
-Output written on report.pdf (44 pages, 1306601 bytes).
+Output written on report.pdf (44 pages, 1306582 bytes).
 PDF statistics:
  1052 PDF objects out of 1200 (max. 8388607)
  974 compressed objects within 10 object streams
