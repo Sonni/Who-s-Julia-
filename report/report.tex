@@ -56,7 +56,6 @@
 
 \usepackage{pgfplots}
 \pgfplotsset{
-	compat=1.13,
     box plot/.style={
         /pgfplots/.cd,
         black,
@@ -707,7 +706,7 @@ Figure \ref{112} shows the loop that iterates over the matrix and calculating th
 		\label{113}
 	\end{center}
 \end{figure}
-“Graph number” shows the test results of euler 11, keep in mind these results include the time for reading the input file and setting up the matrix. The test was made with 20 different inputs, matrices. Starting at 1000$\times$1000, increasing with 1000 in each test, and ending with 20.000$\times$20.000. Every test was with a product of 4 numbers. “Graph number” shows how much time is used creating the matrix. Julia, Java and C++ uses most of the time reading the file and creating matrix, and the actual work on the matrix is a small part of the total runtime. Python, on the other hand, uses most of the runtime working on the matrix. The test results of euler 11 shows that Java is the fastest, Julia is second, C++ third and Python fourth and last. Java is about 2-3 times faster than Julia and C++. Almost on all inputs Python is about ten times slower than Julia. In regards to “Graph making matrix” the time for Python uses to reading the file and creating the matrix is  This problem highlights one of the weaknesses of Python, arrays/lists. With Python being much slower than the rest of the languages, it was of course necessary to dig deeper to find out why. It turns out that arrays in Python are just really slow, and there is not much to do about it, unless external packages are included to help out. A package called \textbf{Numpy} should make operations on arrays much faster. The version in Python of euler 11 was tested with Python, and the results was worse than the regular version, and \textbf{Numpy} is not taken into account. Another thing to notice is that Julia is column-major when iterating over an matrix, where as the other languages are row-major. Column-major is that each column is loaded into memory, leading to iterating over a column is faster than iterating over a row. In this test Julia was implemented as iterating over rows before columns. For that reason a version of Julia was made that was column-major. This version also makes the matrix as column-major, meaning a row reading in the input file will become a column in the matrix. The mirroring of the matrix does not matter in this problem, as the product is calculated in all directions. On smaller inputs the runtime is lower, but not insignificantly lower. However, when the input increases in size, the difference between row-major and column-major becomes higher and higher. Looking at the six largest inputs, column-major is roughly 20\% faster than row-major, increasing the gap to Python.
+Figure \ref{graph112} and \ref{graph111} shows the test results of euler 11, keep in mind these results include the time for reading the input file and setting up the matrix. The test was made with 20 different inputs, matrices. Starting at 1000$\times$1000, increasing with 1000 in each test, and ending with 20.000$\times$20.000. Every test was with a product of 4 numbers. “Graph number” shows how much time is used creating the matrix. Julia, Java and C++ uses most of the time reading the file and creating matrix, and the actual work on the matrix is a small part of the total runtime. Python, on the other hand, uses most of the runtime working on the matrix. The test results of euler 11 shows that Java is the fastest, Julia is second, C++ third and Python fourth and last. Java is about 2-3 times faster than Julia and C++. Almost on all inputs Python is about ten times slower than Julia. In regards to “Graph making matrix” the time for Python uses to reading the file and creating the matrix is  This problem highlights one of the weaknesses of Python, arrays/lists. With Python being much slower than the rest of the languages, it was of course necessary to dig deeper to find out why. It turns out that arrays in Python are just really slow, and there is not much to do about it, unless external packages are included to help out. A package called \textbf{Numpy} should make operations on arrays much faster. The version in Python of euler 11 was tested with Python, and the results was worse than the regular version, and \textbf{Numpy} is not taken into account. Another thing to notice is that Julia is column-major when iterating over an matrix, where as the other languages are row-major. Column-major is that each column is loaded into memory, leading to iterating over a column is faster than iterating over a row. In this test Julia was implemented as iterating over rows before columns. For that reason a version of Julia was made that was column-major, figure \ref{graphopti} shows the comparison of regular version (row major), and the optimized version (column-major). This version also makes the matrix as column-major, meaning a row reading in the input file will become a column in the matrix. The mirroring of the matrix does not matter in this problem, as the product is calculated in all directions. On smaller inputs the runtime is lower, but not insignificantly lower. However, when the input increases in size, the difference between row-major and column-major becomes higher and higher. Looking at the six largest inputs, column-major is roughly 20\% faster than row-major, increasing the gap to Python.
 \subsubsection{Results}
 *****
 \begin{figure}[H]
@@ -730,7 +729,8 @@ Figure \ref{112} shows the loop that iterates over the matrix and calculating th
 			\end{axis}
 		\end{tikzpicture}
 		}
-		\label{boxplot}
+		\caption{}
+		\label{boxplotjulia}
 	\end{subfigure}
 	\hfill
 	\begin{subfigure}[b]{0.4\textwidth}
@@ -750,9 +750,11 @@ Figure \ref{112} shows the loop that iterates over the matrix and calculating th
 			\end{axis}
 		\end{tikzpicture}
 		}
-		\label{boxplot}
+		\caption{}
+		\label{boxplotpython}
 	\end{subfigure}
 	\hspace*{0.7in}
+	\caption{}
 \end{figure}
 \begin{figure}[H]
 	\centering
@@ -774,7 +776,8 @@ Figure \ref{112} shows the loop that iterates over the matrix and calculating th
 			\end{axis}
 		\end{tikzpicture}
 		}
-		\label{boxplot}
+		\caption{}
+		\label{boxplotjava}
 	\end{subfigure}
 	\hfill
 	\begin{subfigure}[H]{0.4\textwidth}
@@ -794,9 +797,11 @@ Figure \ref{112} shows the loop that iterates over the matrix and calculating th
 			\end{axis}
 		\end{tikzpicture}
 		}
-		\label{boxplot}
+		\caption{}
+		\label{boxplotcpp}
 	\end{subfigure}
 	\hspace*{0.7in}
+	\caption{}
 \end{figure}
 \begin{figure}[H]
 	\centering
@@ -818,7 +823,8 @@ Figure \ref{112} shows the loop that iterates over the matrix and calculating th
 			\end{axis}
 		\end{tikzpicture}
 		}
-		\label{boxplot}
+		\caption{}
+		\label{boxplotopti}
 	\end{subfigure}
 	\hfill
 	\begin{subfigure}[H]{0.4\textwidth}
@@ -830,7 +836,7 @@ Figure \ref{112} shows the loop that iterates over the matrix and calculating th
 			xlabel={$Test Input$},
 			ylabel={$Time [ms]$},
 			grid=major,
-			legend entries={$Julia$,$Julia optimized$},
+			legend entries={$Julia$,$Julia\ optimized$},
 			legend style={at={(1,1)},anchor=north west},
 			]
 			\addplot table {graphdata/euler11-julia.dat};
@@ -838,9 +844,11 @@ Figure \ref{112} shows the loop that iterates over the matrix and calculating th
 			\end{axis}
 		\end{tikzpicture}
 		}
-		\label{boxplot}
+		\caption{}
+		\label{graphopti}
 	\end{subfigure}
 	\hspace*{0.7in}
+	\caption{}
 \end{figure}
 \begin{figure}[H]
 	\centering
@@ -858,8 +866,8 @@ Figure \ref{112} shows the loop that iterates over the matrix and calculating th
 			\addplot table {graphdata/euler11-cpp.dat};
 			\end{axis}
 		\end{tikzpicture}
-	\caption{Graph}
-	\label{graph}
+	\caption{}
+	\label{graph111}
 \end{figure}
 \begin{figure}[H]
 	\centering
@@ -878,8 +886,8 @@ Figure \ref{112} shows the loop that iterates over the matrix and calculating th
 			\addplot table {graphdata/euler11-python.dat};
 			\end{axis}
 		\end{tikzpicture}
-	\caption{Graph}
-	\label{graph}
+	\caption{}
+	\label{graph112}
 \end{figure}
 
 \subsection{Projecteuler 116}
