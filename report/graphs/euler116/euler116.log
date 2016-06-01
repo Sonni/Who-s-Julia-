@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.5.29)  1 JUN 2016 14:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.5.29)  1 JUN 2016 14:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**boxplot
-(./boxplot.tex
+**euler116.tex
+(./euler116.tex
 LaTeX2e <2016/02/01>
 Babel <3.9q> and hyphenation patterns for 81 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -456,21 +456,25 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks32
 \@floatcapt=\box39
 )
-(./boxplot.aux)
-\openout1 = `boxplot.aux'.
+(./euler116.aux
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
+LaTeX Warning: Label `graph' multiply defined.
+
+)
+\openout1 = `euler116.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
  ABD: EveryShipout initializing macros
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -533,73 +537,41 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
+Package pgfplots notification 'compat/show suggested version=true': document ha
+s been generated with the most recent feature set (\pgfplotsset{compat=1.13}).
 
-Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
-ick labels; missing features). Consider writing \pgfplotsset{compat=1.13} into 
-your preamble.
- on input line 56.
-
-PGFPlots: reading {julia-box.dat}
-PGFPlots: reading {julia-box.dat}
-PGFPlots: reading {julia-box.dat}
-PGFPlots: reading {julia-box.dat}
-
-Package pgfplots Warning: Axis range for axis x is approximately empty; enlargi
-ng it (it is [1.0000000000:1.0000000000]) on input line 65.
-
- [warning /pgfplots/warning/approx empty range enlarged]
+PGFPlots: reading {euler116-julia.dat}
+PGFPlots: reading {euler116-java.dat}
+PGFPlots: reading {euler116-cpp.dat}
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 65.
+(Font)              <7> on input line 22.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 65.
-PGFPlots: reading {python-box.dat}
-PGFPlots: reading {python-box.dat}
-PGFPlots: reading {python-box.dat}
-PGFPlots: reading {python-box.dat}
-
-Package pgfplots Warning: Axis range for axis x is approximately empty; enlargi
-ng it (it is [1.0000000000:1.0000000000]) on input line 78.
-
- [warning /pgfplots/warning/approx empty range enlarged]
-PGFPlots: reading {java-box.dat}
-PGFPlots: reading {java-box.dat}
-PGFPlots: reading {java-box.dat}
-PGFPlots: reading {java-box.dat}
-
-Package pgfplots Warning: Axis range for axis x is approximately empty; enlargi
-ng it (it is [1.0000000000:1.0000000000]) on input line 91.
-
- [warning /pgfplots/warning/approx empty range enlarged]
-PGFPlots: reading {cpp-box.dat}
-PGFPlots: reading {cpp-box.dat}
-PGFPlots: reading {cpp-box.dat}
-PGFPlots: reading {cpp-box.dat}
-
-Package pgfplots Warning: Axis range for axis x is approximately empty; enlargi
-ng it (it is [1.0000000000:1.0000000000]) on input line 104.
-
- [warning /pgfplots/warning/approx empty range enlarged]
+(Font)              <5> on input line 22.
+PGFPlots: reading {euler116-julia.dat}
+PGFPlots: reading {euler116-java.dat}
+PGFPlots: reading {euler116-cpp.dat}
+PGFPlots: reading {euler116-python.dat}
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] (./boxplot.aux)
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./euler116.aux)
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 21186 strings out of 493029
- 560008 string characters out of 6136234
- 728223 words of memory out of 5000000
- 24388 multiletter control sequences out of 15000+600000
+ 21183 strings out of 493029
+ 559866 string characters out of 6136234
+ 730223 words of memory out of 5000000
+ 24385 multiletter control sequences out of 15000+600000
  3640 words of font info for 14 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,11n,116p,717b,2020s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,19n,103p,722b,2263s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
-Output written on boxplot.pdf (2 pages, 24481 bytes).
+Output written on euler116.pdf (1 page, 34764 bytes).
 PDF statistics:
- 22 PDF objects out of 1000 (max. 8388607)
- 15 compressed objects within 1 object stream
+ 19 PDF objects out of 1000 (max. 8388607)
+ 13 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

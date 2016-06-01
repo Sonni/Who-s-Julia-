@@ -1,0 +1,165 @@
+\documentclass{article}
+\usepackage{pgfplots}
+\usepackage{float}
+
+\pgfplotsset{
+	compat=1.13,
+    box plot/.style={
+        /pgfplots/.cd,
+        black,
+        only marks,
+        mark=-,
+        mark size=1em,
+        /pgfplots/error bars/.cd,
+        y dir=plus,
+        y explicit,
+    },
+    box plot box/.style={
+        /pgfplots/error bars/draw error bar/.code 2 args={%
+            \draw  ##1 -- ++(1em,0pt) |- ##2 -- ++(-1em,0pt) |- ##1 -- cycle;
+        },
+        /pgfplots/table/.cd,
+        y index=2,
+        y error expr={\thisrowno{3}-\thisrowno{2}},
+        /pgfplots/box plot
+    },
+    box plot top whisker/.style={
+        /pgfplots/error bars/draw error bar/.code 2 args={%
+            \pgfkeysgetvalue{/pgfplots/error bars/error mark}%
+            {\pgfplotserrorbarsmark}%
+            \pgfkeysgetvalue{/pgfplots/error bars/error mark options}%
+            {\pgfplotserrorbarsmarkopts}%
+            \path ##1 -- ##2;
+        },
+        /pgfplots/table/.cd,
+        y index=4,
+        y error expr={\thisrowno{2}-\thisrowno{4}},
+        /pgfplots/box plot
+    },
+    box plot bottom whisker/.style={
+        /pgfplots/error bars/draw error bar/.code 2 args={%
+            \pgfkeysgetvalue{/pgfplots/error bars/error mark}%
+            {\pgfplotserrorbarsmark}%
+            \pgfkeysgetvalue{/pgfplots/error bars/error mark options}%
+            {\pgfplotserrorbarsmarkopts}%
+            \path ##1 -- ##2;
+        },
+        /pgfplots/table/.cd,
+        y index=5,
+        y error expr={\thisrowno{3}-\thisrowno{5}},
+        /pgfplots/box plot
+    },
+    box plot median/.style={
+        /pgfplots/box plot
+    }
+}
+
+\begin{document}
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}
+		\begin{axis} [
+		title=Euler 11 internal timer - Julia,
+		xlabel={$Input$},
+		ylabel={$Time [s]$},
+		grid=major,]
+			\addplot [box plot median] table {euler11internal-julia-box.dat};
+			\addplot [box plot box] table {euler11internal-julia-box.dat};
+			\addplot [box plot top whisker] table {euler11internal-julia-box.dat};
+			\addplot [box plot bottom whisker] table {euler11internal-julia-box.dat};
+			\addplot table {euler11internal-julia.dat};
+		\end{axis}
+	\end{tikzpicture}
+	\label{boxplot}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}
+		\begin{axis} [
+		title=Euler 11 internal timer - Python,
+		xlabel={$Input$},
+		ylabel={$Time [s]$},
+		grid=major,]
+			\addplot [box plot median] table {euler11internal-python-box.dat};
+			\addplot [box plot box] table {euler11internal-python-box.dat};
+			\addplot [box plot top whisker] table {euler11internal-python-box.dat};
+			\addplot [box plot bottom whisker] table {euler11internal-python-box.dat};
+			\addplot table {euler11internal-python.dat};
+		\end{axis}
+	\end{tikzpicture}
+	\label{boxplot}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}
+		\begin{axis} [
+		title=Euler 11 internal timer - Java,
+		xlabel={$Input$},
+		ylabel={$Time [s]$},
+		grid=major,]
+			\addplot [box plot median] table {euler11internal-java-box.dat};
+			\addplot [box plot box] table {euler11internal-java-box.dat};
+			\addplot [box plot top whisker] table {euler11internal-java-box.dat};
+			\addplot [box plot bottom whisker] table {euler11internal-java-box.dat};
+			\addplot table {euler11internal-java.dat};
+		\end{axis}
+	\end{tikzpicture}
+	\label{boxplot}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}
+		\begin{axis} [
+		title=Euler 11 internal timer - C++,
+		xlabel={$Input$},
+		ylabel={$Time [s]$},
+		grid=major,]
+			\addplot [box plot median] table {euler11internal-cpp-box.dat};
+			\addplot [box plot box] table {euler11internal-cpp-box.dat};
+			\addplot [box plot top whisker] table {euler11internal-cpp-box.dat};
+			\addplot [box plot bottom whisker] table {euler11internal-cpp-box.dat};
+			\addplot table {euler11internal-cpp.dat};
+		\end{axis}
+	\end{tikzpicture}
+	\label{boxplot}
+\end{figure}
+\begin{figure}[H]
+	\centering
+		\begin{tikzpicture}
+			\begin{axis}[
+			title=Euler 11 internal timer - Python excluded,
+			xlabel={$Test Input$},
+			ylabel={$Time [ms]$},
+			grid=major,
+			legend entries={$Julia$,$Java$,$c++$},
+			legend style={at={(1,1)},anchor=north west},
+			]
+			\addplot table {euler11internal-julia.dat};
+			\addplot table {euler11internal-java.dat};
+			\addplot table {euler11internal-cpp.dat};
+			\end{axis}
+		\end{tikzpicture}
+	\caption{Graph}
+	\label{graph}
+\end{figure}
+\begin{figure}[H]
+	\centering
+		\begin{tikzpicture}
+			\begin{axis}[
+			title=Euler 11 internal timer,
+			xlabel={$Test Input$},
+			ylabel={$Time [ms]$},
+			grid=major,
+			legend entries={$Julia$,$Java$,$c++$,$Python$},
+			legend style={at={(1,1)},anchor=north west},
+			]
+			\addplot table {euler11internal-julia.dat};
+			\addplot table {euler11internal-java.dat};
+			\addplot table {euler11internal-cpp.dat};
+			\addplot table {euler11internal-python.dat};
+			\end{axis}
+		\end{tikzpicture}
+	\caption{Graph}
+	\label{graph}
+\end{figure}
+\end{document}

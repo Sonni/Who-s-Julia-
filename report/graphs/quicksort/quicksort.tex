@@ -58,53 +58,89 @@
 \begin{figure}[H]
 	\centering
 	\begin{tikzpicture}
-		\begin{axis} [enlarge x limits=0.5, xtick = data]
-			\addplot [box plot median] table {julia-box.dat};
-			\addplot [box plot box] table {julia-box.dat};
-			\addplot [box plot top whisker] table {julia-box.dat};
-			\addplot [box plot bottom whisker] table {julia-box.dat};
+		\begin{axis} [
+		title=Quicksort - Julia,
+		xlabel={$Input$},
+		ylabel={$Time [s]$},
+		grid=major,]
+			\addplot [box plot median] table {quicksort-julia-box.dat};
+			\addplot [box plot box] table {quicksort-julia-box.dat};
+			\addplot [box plot top whisker] table {quicksort-julia-box.dat};
+			\addplot [box plot bottom whisker] table {quicksort-julia-box.dat};
+			\addplot table {quicksort-julia.dat};
 		\end{axis}
 	\end{tikzpicture}
-	\caption{Julia}
 	\label{boxplot}
 \end{figure}
 \begin{figure}[H]
 	\centering
 	\begin{tikzpicture}
-		\begin{axis} [enlarge x limits=0.5, xtick = data]
-			\addplot [box plot median] table {python-box.dat};
-			\addplot [box plot box] table {python-box.dat};
-			\addplot [box plot top whisker] table {python-box.dat};
-			\addplot [box plot bottom whisker] table {python-box.dat};
+		\begin{axis} [
+		title=Quicksort - Python,
+		xlabel={$Input$},
+		ylabel={$Time [s]$},
+		grid=major,]
+			\addplot [box plot median] table {quicksort-python-box.dat};
+			\addplot [box plot box] table {quicksort-python-box.dat};
+			\addplot [box plot top whisker] table {quicksort-python-box.dat};
+			\addplot [box plot bottom whisker] table {quicksort-python-box.dat};
+			\addplot table {quicksort-python.dat};
 		\end{axis}
 	\end{tikzpicture}
-	\caption{Python}
 	\label{boxplot}
 \end{figure}
 \begin{figure}[H]
 	\centering
 	\begin{tikzpicture}
-		\begin{axis} [enlarge x limits=0.5, xtick = data]
-			\addplot [box plot median] table {java-box.dat};
-			\addplot [box plot box] table {java-box.dat};
-			\addplot [box plot top whisker] table {java-box.dat};
-			\addplot [box plot bottom whisker] table {java-box.dat};
+		\begin{axis} [
+		title=Quicksort - Java,
+		xlabel={$Input$},
+		ylabel={$Time [s]$},
+		grid=major,]
+			\addplot [box plot median] table {quicksort-java-box.dat};
+			\addplot [box plot box] table {quicksort-java-box.dat};
+			\addplot [box plot top whisker] table {quicksort-java-box.dat};
+			\addplot [box plot bottom whisker] table {quicksort-java-box.dat};
+			\addplot table {quicksort-java.dat};
 		\end{axis}
 	\end{tikzpicture}
-	\caption{Java}
 	\label{boxplot}
 \end{figure}
 \begin{figure}[H]
 	\centering
 	\begin{tikzpicture}
-		\begin{axis} [enlarge x limits=0.5, xtick = data]
-			\addplot [box plot median] table {cpp-box.dat};
-			\addplot [box plot box] table {cpp-box.dat};
-			\addplot [box plot top whisker] table {cpp-box.dat};
-			\addplot [box plot bottom whisker] table {cpp-box.dat};
+		\begin{axis} [
+		title=Quicksort - C++,
+		xlabel={$Input$},
+		ylabel={$Time [s]$},
+		grid=major,]
+			\addplot [box plot median] table {quicksort-cpp-box.dat};
+			\addplot [box plot box] table {quicksort-cpp-box.dat};
+			\addplot [box plot top whisker] table {quicksort-cpp-box.dat};
+			\addplot [box plot bottom whisker] table {quicksort-cpp-box.dat};
+			\addplot table {quicksort-cpp.dat};
 		\end{axis}
 	\end{tikzpicture}
-	\caption{C++}
 	\label{boxplot}
+\end{figure}
+\begin{figure}[H]
+	\centering
+		\begin{tikzpicture}
+			\begin{axis}[
+			title=Quicksort,
+			xlabel={$Test Input$},
+			ylabel={$Time [ms]$},
+			grid=major,
+			legend entries={$Julia$,$Java$,$c++$,$Python$},
+			legend style={at={(1,1)},anchor=north west},
+			]
+			\addplot table {quicksort-julia.dat};
+			\addplot table {quicksort-java.dat};
+			\addplot table {quicksort-cpp.dat};
+			\addplot table {quicksort-python.dat};
+			\end{axis}
+		\end{tikzpicture}
+	\caption{Graph}
+	\label{graph}
 \end{figure}
 \end{document}

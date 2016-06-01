@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.5.29)  1 JUN 2016 14:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.5.29)  1 JUN 2016 14:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**boxplot
-(./boxplot.tex
+**quicksort.tex
+(./quicksort.tex
 LaTeX2e <2016/02/01>
 Babel <3.9q> and hyphenation patterns for 81 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -456,8 +456,18 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks32
 \@floatcapt=\box39
 )
-(./boxplot.aux)
-\openout1 = `boxplot.aux'.
+(./quicksort.aux
+
+LaTeX Warning: Label `boxplot' multiply defined.
+
+
+LaTeX Warning: Label `boxplot' multiply defined.
+
+
+LaTeX Warning: Label `boxplot' multiply defined.
+
+)
+\openout1 = `quicksort.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 56.
 LaTeX Font Info:    ... okay on input line 56.
@@ -539,67 +549,68 @@ ick labels; missing features). Consider writing \pgfplotsset{compat=1.13} into
 your preamble.
  on input line 56.
 
-PGFPlots: reading {julia-box.dat}
-PGFPlots: reading {julia-box.dat}
-PGFPlots: reading {julia-box.dat}
-PGFPlots: reading {julia-box.dat}
-
-Package pgfplots Warning: Axis range for axis x is approximately empty; enlargi
-ng it (it is [1.0000000000:1.0000000000]) on input line 65.
-
- [warning /pgfplots/warning/approx empty range enlarged]
+PGFPlots: reading {quicksort-julia-box.dat}
+PGFPlots: reading {quicksort-julia-box.dat}
+PGFPlots: reading {quicksort-julia-box.dat}
+PGFPlots: reading {quicksort-julia-box.dat}
+PGFPlots: reading {quicksort-julia.dat}
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 65.
+(Font)              <7> on input line 70.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 65.
-PGFPlots: reading {python-box.dat}
-PGFPlots: reading {python-box.dat}
-PGFPlots: reading {python-box.dat}
-PGFPlots: reading {python-box.dat}
+(Font)              <5> on input line 70.
+PGFPlots: reading {quicksort-python-box.dat}
+PGFPlots: reading {quicksort-python-box.dat}
+PGFPlots: reading {quicksort-python-box.dat}
+PGFPlots: reading {quicksort-python-box.dat}
+PGFPlots: reading {quicksort-python.dat}
 
 Package pgfplots Warning: Axis range for axis x is approximately empty; enlargi
-ng it (it is [1.0000000000:1.0000000000]) on input line 78.
+ng it (it is [100000.00000:100000.00000]) on input line 87.
 
  [warning /pgfplots/warning/approx empty range enlarged]
-PGFPlots: reading {java-box.dat}
-PGFPlots: reading {java-box.dat}
-PGFPlots: reading {java-box.dat}
-PGFPlots: reading {java-box.dat}
 
-Package pgfplots Warning: Axis range for axis x is approximately empty; enlargi
-ng it (it is [1.0000000000:1.0000000000]) on input line 91.
+Package pgfplots Warning: Axis range for axis y is approximately empty; enlargi
+ng it (it is [4022.38000000000:4022.38000000000]) on input line 87.
 
  [warning /pgfplots/warning/approx empty range enlarged]
-PGFPlots: reading {cpp-box.dat}
-PGFPlots: reading {cpp-box.dat}
-PGFPlots: reading {cpp-box.dat}
-PGFPlots: reading {cpp-box.dat}
-
-Package pgfplots Warning: Axis range for axis x is approximately empty; enlargi
-ng it (it is [1.0000000000:1.0000000000]) on input line 104.
-
- [warning /pgfplots/warning/approx empty range enlarged]
+PGFPlots: reading {quicksort-java-box.dat}
+PGFPlots: reading {quicksort-java-box.dat}
+PGFPlots: reading {quicksort-java-box.dat}
+PGFPlots: reading {quicksort-java-box.dat}
+PGFPlots: reading {quicksort-java.dat}
+PGFPlots: reading {quicksort-cpp-box.dat}
+PGFPlots: reading {quicksort-cpp-box.dat}
+PGFPlots: reading {quicksort-cpp-box.dat}
+PGFPlots: reading {quicksort-cpp-box.dat}
+PGFPlots: reading {quicksort-cpp.dat}
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] (./boxplot.aux)
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+PGFPlots: reading {quicksort-julia.dat}
+PGFPlots: reading {quicksort-java.dat}
+PGFPlots: reading {quicksort-cpp.dat}
+PGFPlots: reading {quicksort-python.dat}
+ [2] [3] (./quicksort.aux)
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 21186 strings out of 493029
- 560008 string characters out of 6136234
- 728223 words of memory out of 5000000
- 24388 multiletter control sequences out of 15000+600000
+ 21346 strings out of 493029
+ 563654 string characters out of 6136234
+ 736223 words of memory out of 5000000
+ 24540 multiletter control sequences out of 15000+600000
  3640 words of font info for 14 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,11n,116p,717b,2020s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,19n,116p,723b,2238s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
-Output written on boxplot.pdf (2 pages, 24481 bytes).
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on quicksort.pdf (3 pages, 51956 bytes).
 PDF statistics:
- 22 PDF objects out of 1000 (max. 8388607)
- 15 compressed objects within 1 object stream
+ 33 PDF objects out of 1000 (max. 8388607)
+ 23 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
