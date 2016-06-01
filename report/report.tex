@@ -84,7 +84,7 @@ indryk virker fint her.
 \newpage
 \pagenumbering{roman}
 \section{Summary}
-Julia is a new programming language. Through tests and benchmarking it is found that * *
+Julia is a new programming language. Through tests and benchmarking it is found that Julia tries to do some optimizations behind the scene but these optimizations does not seem as developed as Javas optimizations. In most of the test in this report and the Project Euler solutions that was not include in the report showed that Julia is relatively fast even in this early stage of development. This is also what the developer states and with what seems like a lot of inspiration from python, they managed to create an easy to learn and write programming language.
 
 \section{Preface}
 This report has been written in May 2016 as a first year project in the Bachelor Degree of Computer Science. We thank our supervisor Michal Kotrbčík for his help and time.
@@ -103,7 +103,7 @@ In this project we have been doing benchmarks to find out if Julia is as good as
 \section{Introduction}
 Java, C, C++, C\# and Python are on the top ten list of the most used programming languages. There are hundreds of languages, but not minding the hard competition new languages are still created with the thought of doing better. An example of this is the relativly new programming language Julia, which has been developed with the idea to combine the best features of other languages.\\
 \\
-The purpose of this report is to find out how well Julia performs compared to some of the standard languages as of 2016. One of those languages are Python which Julia has a lot of inspiration from - syntax wise and the dynamic type system. The second language that Julia will be compared with is Java, those two does share similaries but most of those are behind the scene stuff like garbage collection and compiler optimizations. The developers of Julia claims that Julia is as fast as c++ and therefor c++ is the last language that Julia will get compared with.
+The purpose of this report is to find out how well Julia performs compared to some of the standard languages as of 2016. One of those languages are Python which Julia has a lot of inspiration from - syntax wise and the dynamic type system. The second language that Julia will be compared with is Java, those two does share similaries but most of those are behind the scene stuff like garbage collection and compiler optimizations. The developers of Julia claims that Julia is as fast as C++ and therefor C++ is the last language that Julia will get compared with.
 
 \section{Julia}
 *in this section we* \\
@@ -429,10 +429,10 @@ The text editor Atom supports the Julia language. Atom has a package, \textbf{ub
 * In this section we *
 \subsubsection{Dynamic typing and byte-related memory management}
 Dynamic typing is a type management approach where type checks are mostly performed at runtime, as opposed to static typing, where type checks are made at compile time. Dynamic typing allows the programmer to skip the type declaration and let the dynamic type system handle it. In Julia it is possible to specify types, but mostly it is not necessary. 
-Julia also makes decisions about how much memory to allocate for variables but the assigned memory size will not change later. This means that if a value, that exceeds the allocated memory, is assigned to the variable after initialization then an bug will occur. Another point to notice is that the memory size can be decreased and this will be addressed later under the section Garbage Collector. However, there is a range of memory sizes to chose from when initializing a variable. Julia will by default assign 32 bits to an integer or a float if no more memory is needed at initialization, but it is possible to manually chose one of the following:
+Julia also makes decisions about how much memory to allocate for variables but the assigned memory size will not change. This means that if a value, that exceeds the allocated memory, is assigned to the variable after initialization then an bug will occur. Another point to notice is that the memory size can be decreased and this will be addressed later under the section Garbage Collector. However, there is a range of memory sizes to chose from when initializing a variable. Julia will by default assign 32 bits to an integer or a float if no more memory is needed at initialization, but it is possible to manually chose one of the following:
 \begin{description}
 	\item[$\cdot$] Signed/unsigned integer – 8, 16, 32, 64 and 128 bits – Int8, UInt8, Int16, UInt16, Int32, UInt32, Int64, UInt64, Int128 and UInt128
-	\item[$\cdot$] Floating point – 16, 32 and 64 bits – Float16, Float32 and Float64
+	\item[$\cdot$] Floats – 16, 32 and 64 bits – Float16, Float32 and Float64
 	\item[$\cdot$] Boolean – 8 bits – Bool
 	\item[$\cdot$] Character – 32 bits - Char
 \end{description}
@@ -447,7 +447,7 @@ typeof(x) #Int8
 x = 4
 typeof(x) #Int32
 \end{lstlisting}
-If no certain memory size is needed but only a specific type then abstract types will come in handy. An abstract type is just some form of generalization of a concrete type. For example 16, 32 and 64 bit floating points are of type AbstractFloat. This is especially useful when the programmer do not know how much memory a certain variable may need. Too little memory will result in a bug and too much memory is a waste. 
+If no certain memory size is needed but only a specific type then abstract types will come in handy. An abstract type is just some form of generalization of a concrete type. For example 16, 32 and 64 bit floats are of type AbstractFloat. This is especially useful when the programmer do not know how much memory a certain variable may need. Too little memory will result in a bug and too much memory is a waste. 
 \begin{lstlisting}
 \end{lstlisting}
 * Example *
@@ -463,7 +463,7 @@ function a(arg1::Float16)
 	println("Float")  
 end    
 \end{lstlisting}
-If a variable is declared as an Int8 and used as argument in function a(), then Julia will print "Int". If the variable is declared as a Float16 and used as argument in function a(), then Julia will print "Float". It is also possible to use abstract types here, so arg1::Float16 and arg1::Int8 could be changed to arg1::AbstractFloat and arg1::AbstractInt, which will make the function 'a' accept any type of floating points and integers.  
+If a variable is declared as an Int8 and used as argument in function a(), then Julia will print "Int". If the variable is declared as a Float16 and used as argument in function a(), then Julia will print "Float". It is also possible to use abstract types here, so arg1::Float16 and arg1::Int8 could be changed to arg1::AbstractFloat and arg1::AbstractInt, which will make the function 'a' accept any type of floats and integers.  
 \subsubsection{User defined types}
 User defined types, also known as composite types, give the programmer the option to define new types in Julia. A composite type in Julia could look as the following: 
 \begin{lstlisting}[language=python]
@@ -494,7 +494,7 @@ gc()
 This code will generate a 10.000$\times$10.000 matrix filled with random 32 bit floating points, which consumes approximately 400MB of memory. When the value \textbf{A} is set to 0 the memory allocated will stay the same until the garbage collection is executed as in the example above, or on program termination. 
 
 \subsubsection{Built-in package manager}
-Julia comes with a built in package manager, which keeps track of packages that needs to be included in the program to run. It is not necessary to state, which packages needs to be included. For example, when the user calls the sort function, \textbf{sort()}, no package include statement or \textbf{math.sort()} is needed – this is done automatically by the package manager.
+Julia comes with a built in package manager, which keeps track of packages that needs to be included for the program to able to run. It is not necessary to state, which packages needs to be included. For example, when the user calls the sort function, \textbf{sort()}, no package include statement or \textbf{math.sort()} is needed – this is done automatically by the package manager.
 
 \subsubsection{Lightweight green threading}
 A thread is lightweight when it shares address space with other threads opposed to heavyweight threads, which has its own address space. If threads share the same address space the communication between them is faster and much simpler. The communication between heavyweight threads have to go through pipes or sockets. \\
@@ -577,7 +577,7 @@ Profiling is a way to analyse code. For example, the analysis could be measuring
 
 \subsection{Time measurements}
 \label{sec:timemeasure}
-Looking at the run time the most common terms are wall time (real time) and CPU time. Wall time is the time it took the program to terminate, from start to finish. CPU time is how much time the program used on the CPU. The time difference between wall time and CPU time comes from the fact that the program being benchmarked might get interrupted by the operating system, because other tasks needs to be handled. These tasks could be other programs, or something that the OS needs to get done. The processing time of those tasks will be included in the wall time but excluded in the CPU time. To get the run times in Unix based system, the time command is available from the terminal:
+When looking at the running time the most common terms are wall time (real time) and CPU time. Wall time is the time it took the program to terminate, from start to finish. CPU time is how much time the program used on the CPU. The time difference between wall time and CPU time comes from the fact that the program being benchmarked or profiled might get interrupted by the operating system, because other tasks needs to be handled. These tasks could be other programs, or something that the OS needs to get done. The processing time of those tasks will be included in the wall time but excluded in the CPU time. To get the run times in Unix based system, the time command is available from the terminal:
 \begin{lstlisting}
 time <COMMAND>
 \end{lstlisting}
@@ -606,7 +606,7 @@ Julia 0.4.5 \\
 Python 2.7.11+ \\
 C++11 \\
 Java 1.8.0\_92 \\\\
-Benchmarking will be done by comparing the run time of the same algorithm in different languages. In this project we measure the run time as the sum of system and user time, because the system and user time are not affected by heavy loads on the machine. All time measurements are measured using the shell 'time' command that returns the three types of time taken for the algorithm to run. The problems will be scaled to have smaller and larger inputs. However, in some situations a large input can cause memory problems, which will be addressed in the specific problem. The memory problems is unfortunately making an upper bound for how large data is possible to pass for certain problems. A tool created for this project gather the data and calculates the median of the run time. 
+Benchmarking will be done by comparing the running time of the same algorithm in different languages. In this project the run time is measured as the sum of system and user time, because the system and user time are not affected by heavy loads on the machine. All time measurements are measured using the shell 'time' command that returns the three types of time taken for the algorithm to run. The problems will be scaled to have smaller and larger inputs. However, in some situations a large input can cause memory problems, which will be addressed in the specific problem. The memory problems is unfortunately making an upper bound for how large data is possible to pass for certain problems. A tool created for this project gather the data and calculates the median of the run time. 
 
 \section{Problems}
 \subsection{Projecteuler 11}
@@ -620,8 +620,8 @@ Benchmarking will be done by comparing the run time of the same algorithm in dif
 \end{figure}
 The program runs from command-line/terminal with command line arguments in order to be able to test on different inputs and amount of adjacent numbers multiplied. To run the Julia version from the terminal: \\
 \textbf{Julia euler11.jl 100 4}. \\
-This would make the program run with a matrix of size 100 and calculating product of 4 adjacent numbers. A matrix generator was created, which can be found in appendix, to produce the matrix data. The matrix generator requires one argument, which is the size of the matrix. So if 500 is passed to the matrix generator, a file named 500mat.txt will be created containing 500x500 digits ranging from 100-9999.\\
-\\
+This would make the program run with a matrix of size 100 and calculating product of 4 adjacent numbers. A matrix generator was created, which can be found in appendix, to produce the matrix data. The matrix generator requires one argument, which is the size of the matrix. So if 500 is passed to the matrix generator, a file named 500mat.txt will be created containing 500x500 digits ranging from 100-9999.
+\subsubsection{Solution}
 The algorithm first reads through the input file and creates a matrix. To calculate products in all directions needed in the problem, the algorithm goes through the matrix a total of 3 times. A nested for loop is needed to go though a matrix, lines 1-2 at figure \ref{111}. The outer loop iterates through the rows, and the inner loop iterates through the columns. Figure \ref{111} calculates the horizontal and vertical directions, firgure \ref{112} diagonally from left to right(downwards) and figure \ref{113} going diagonally from right to left(downwards). The algorithm starts in the most upper left cell, and iterates through all cells in the matrix. Lets have the first cell as (1,1), first number is row(\textbf{i}) and second number is column(\textbf{j}). Looking at figure \ref{111}, \textbf{matLength} is the size of the matrix, size = 100 would mean a matrix of size $100 \cdot 100$. \textbf{numProd} is the number of adjacent numbers multiplied together. For matrix with size 100, and multiplying four adjacent numbers, the algorithm would do the following in figure \ref{111}: 
 \begin{list}{}{}
 	\item Starting at cell (1,1) to the end, which is cell (100, 100 - 4).
@@ -650,7 +650,7 @@ Figure \ref{112} shows the loop that iterates over the matrix and calculating th
 		\label{113}
 	\end{center}
 \end{figure}
-
+\subsubsection{Results}
 \subsection{Projecteuler 116}
 Description: A row of five black square tiles is to have a number of its tiles replaced with coloured oblong tiles from red(length two), green(length three), or blue(length four). If red tiles are chosen there are exactly seven ways. If green tiles are chosen there are three ways. And if blue tiles are chosen there are two ways. Figure \ref{116} is a visualization of how the tiles can be lain. Assuming that colours cannot be mixed there are $7+3+2=12$ ways of replacing the black tiles in a row measuring five units in length. How many different ways can the black tiles in a row measuring fifty units in length be replaced if colours cannot be mixed and at least one coloured tile must be used?
 
@@ -706,29 +706,15 @@ end
 size = parse(Int, ARGS[1])
 s(size)
 \end{lstlisting}
+The input that is changing when doing the benchmark is the size of the black box that's get filled with the three different sized blocks. The input will start at size 45 and increase by one every test. This will be done 10 times for each language. The result is a the following:
 \subsubsection{Results}
 It is clear that the graphs are exponential increasing. Another thing to notice is that the input is only increasing by one but is still making a huge difference in the run time. One of the reasons is that the problem is solved with recursion, for every extra one bit of space added to the black box a lot more recursive calls will have to be made.\\
 \\
 The difference in time between the four languages are as expected. Python does not support any form of tail recursion optimization and the result is really slow. Java and Julia on the other hand does a good job at optimizing the recursive calls and is actually faster than C++ - keep in mind that no compiler flags were used in C++, so the default optimization level is used.\\
 \\
 Julia and Java is close but Java is a bit faster, which is expected because of the fact that Java has been in development much longer than Julia and has a lot more optimization than Julia.
-\subsection{Quicksort}
-Quicksort applies the divide-and-conquer paradigm to sort numbers. Divide-and-conquer has three steps. \textbf{Divide} the problem into a number of subproblems that are smaller instances of the same problem. \textbf{Conquer} the subproblems by solving them recursively. If the subproblems sizes are small enough, however, just solve the subproblems in a straightforward manner. \textbf{Combine} the solutions to the subproblems into the solution for the original problem \cite[chapter 4, page 65]{cormen}. Description of quicksort: \cite[chapter 7, page 170-171]{cormen}
-\begin{list}{}{}
-	\item \textbf{Divide}: Partition (rearrange) the array A[p..r] into two (possible empty) subarrays A[p..q-1] and A[q+1..r] such that each element of A[p--q1] is less than or equal to A[q], which is, in turn, less than or equal to each element of A[q+1..r]. Compute the index q as part of this partitioning procedure.
-	\item \textbf{Conquer}: Sort the two subarrays A[p..q-1] and A[q+1..r] by recursive calls to quicksort.
-	\item \textbf{Combine}: Because the subarrays are already sorted, no work is needed to combine them: the entire array A[p..r] is now sorted.
-\end{list}
-Figure \ref{qs} shows a visualization of quicksort.
-\begin{figure}
-	\begin{center}	
-		\includegraphics[scale=0.5]{image/qs.jpg}
-		\caption{Quicksort}
-		\label{qs}
-	\end{center}
-\end{figure}
-\subsubsection{Solution}
-Dual pivot quicksort is so fast that it was not possible to get large enough data to get the running close to 15. With a data set of 20000000 numbers the loading time was a few minutes while the sorting was only a few seconds. Much larger data set will cause out of memory error so it was necessary to change the approach. instead of sorting one big array, the program will first sort the elements from 0-125, then sort 0-250 and keep increasing the end index until the array size has been reached. This approach cannot test how well quicksort performs with different inputs and this is the reason why only uniform random inputs are used.\\
+\subsection{Dual Piviot Quicksort}
+Quicksort applies the divide-and-conquer paradigm to sort numbers. Dual pivot quicksort is very similar to the standard quicksort, the only difference is that instread of one pivot there are two pivots and three recursive calls. The first recursive call is the numbers that are less than the first pivot (which also must be the smalleste of the two pivots). The second recursive call is with the numbers that are greater than the first pivot but less than the second pivot. The last recursive call is with the numbers greater than the second pivot. Dual pivot quicksort is so fast that it was not possible to get large enough data to get the running close to 15 minutes. With a data set of 20000000 numbers the loading time was a few minutes while the sorting was only a few seconds. Much larger data set will cause out of memory error so it was necessary to change the approach. instead of sorting one big array, the program will first sort the elements from 0-125, then sort 0-250 and keep increasing the end index until the array size has been reached. This approach insures that the loading time of the data is so low that it does not matter in the full picture, but this way of doing quicksort cannot test how well quicksort performs with different inputs and this is the reason why only uniform random inputs are used. \\
 \\
 The data set start at 100000 numbers and increase by 30000 every test. The solution is below:
 \begin{lstlisting}
@@ -813,11 +799,10 @@ while true
 end
 \end{lstlisting}
 \subsubsection{Results}
-The fastest of the four languages is differently c++ and one of the reasons why c++ is faster than Java and Julia in quicksort but not in Euler 116 even though they both use recursion is because the recursion optimization breaks. The compiler can't make any guesses to what is going to happen because the swaps in the array depends on the input which is randomly generated. So the running time really depends on the language. C++ is known to be really fast when working with arrays opposed to python where it is actually best to avoid arrays and lists if possible.
+The fastest of the four languages is differently Java, which is kind of surprising as an expectation was that the compiler optimization would break with this kind of work in every recursive call - to check if Java was over optimizing a few elements from the sorted list was printed at the end of the program, to insure that java did not just terminate because it found that the array was not going to be used further after the sorting. Though Javas optimization is still present the optimization of Julias breaks and it has a hard time to complete the first few input. C++ seems pretty slow compared to Java but keep in mind that this is without much optimization - C++ is known for the fast speed performance when working with arrays and this is why it does manage to get almost all inputs opposed to Python, which has no recursion optimization and is really slow when working with arrays and lists.
 
-\section{Results}
-\subsection{Benchmarking}
-
+\subsection{Statistics}
+* Insert introduction, results and conclusion *
 \section{Personal experience with Julia}
 \subsection{Sonni}
 Some of the design choices, in Julia, can be really frustrating for someone who is adapting to Julia. The indices starts at 1 - this could be debatable because of the statement that Julia is used in a lot of scientific computations and many programming languages made for scientific computations use 1-based indexing. But as a programmer who is used to indices starting at 0, this can cause a lot of unnecessary bugs. The developers of Julia also made unusual design choice with the for-loop syntax. A incrementing for loop looks like:
@@ -886,7 +871,7 @@ It can be difficult to make any conclusions by the benchmarking but it may give 
 The first thing we agreed doing was getting to know Julia for the research. We used a lot of time solving problems in Julia and trying to figure out how to get a view of what was to be done and how to organize it. We mostly communicated through facebook and created a repository on github to share project files. We gathered our solutions to Project Euler and made comparisons. Gathering information about benchmarking we mostly ran into walls of text on how to do it properly, and did not know where to start. Every time we thought we were understanding benchmarking, our supervisor taught us something new. We created a board on Trello. We made a to-do list of cards so we knew what had to be done and started handing out tasks. We communicated more with our supervisor via email as we started writing the report. The group was really good at getting the tasks, we agreed on doing, done. We should have been using more tools for organizing and we did not set any deadlines for anything. Scrum is a tool, which would have helped us a lot, but it is not that easy to learn. We should have met and worked together, several times a week, discussing our problems and goals. 
 
 \subsubsection{Process of learning}
-We learn by both direct and indirect learning process. We learned Julia indirectly by solving Project Euler. We pretty much read about every topic, which is direct learning. We cannot think of another way to learn programming than reading, trying it out and reading to get a result. Project Euler was a good support for learning, since learning something new, is much easier, when there's a purpose or a goal. Programming is not as fun if there's no end goal in mind.
+We learned by both direct and indirect learning process. We learned Julia indirectly by solving Project Euler. We pretty much read about every topic, which is direct learning. We cannot think of another way to learn programming than reading, trying it out and reading to get a result. Project Euler was a good support for learning, since learning something new, is much easier, when there's a purpose or a goal. Programming is not as fun if there's no end goal in mind.
 
 \subsubsection{Cooperation, difficulties in group and with supervisor}
 We actually had a good idea about who was good at what and splitting the tasks between us with this in mind. The communication could have been better. It seemed that we worked on different times of the day, which made communication difficult. Our supervisor did his best and we think he did a good job.

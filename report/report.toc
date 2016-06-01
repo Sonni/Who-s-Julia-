@@ -25,24 +25,24 @@
 \contentsline {subsection}{\numberline {7.1}Benchmarking}{14}{subsection.7.1}
 \contentsline {section}{\numberline {8}Problems}{15}{section.8}
 \contentsline {subsection}{\numberline {8.1}Projecteuler 11}{15}{subsection.8.1}
+\contentsline {subsubsection}{\numberline {8.1.1}Solution}{15}{subsubsection.8.1.1}
+\contentsline {subsubsection}{\numberline {8.1.2}Results}{17}{subsubsection.8.1.2}
 \contentsline {subsection}{\numberline {8.2}Projecteuler 116}{17}{subsection.8.2}
 \contentsline {subsubsection}{\numberline {8.2.1}Solution}{18}{subsubsection.8.2.1}
 \contentsline {subsubsection}{\numberline {8.2.2}Results}{19}{subsubsection.8.2.2}
-\contentsline {subsection}{\numberline {8.3}Quicksort}{19}{subsection.8.3}
-\contentsline {subsubsection}{\numberline {8.3.1}Solution}{21}{subsubsection.8.3.1}
-\contentsline {subsubsection}{\numberline {8.3.2}Results}{23}{subsubsection.8.3.2}
-\contentsline {section}{\numberline {9}Results}{23}{section.9}
-\contentsline {subsection}{\numberline {9.1}Benchmarking}{23}{subsection.9.1}
-\contentsline {section}{\numberline {10}Personal experience with Julia}{23}{section.10}
-\contentsline {subsection}{\numberline {10.1}Sonni}{23}{subsection.10.1}
-\contentsline {subsection}{\numberline {10.2}Simon}{25}{subsection.10.2}
-\contentsline {subsection}{\numberline {10.3}Asbj\IeC {\o }rn}{26}{subsection.10.3}
-\contentsline {section}{\numberline {11}Discussion}{26}{section.11}
-\contentsline {section}{\numberline {12}Conclusion}{26}{section.12}
-\contentsline {section}{\numberline {13}Appendix}{28}{section.13}
-\contentsline {subsection}{\numberline {13.1}Process analysis}{28}{subsection.13.1}
-\contentsline {subsubsection}{\numberline {13.1.1}Projectmanagement, organizing workflow and organizing process of learning}{28}{subsubsection.13.1.1}
-\contentsline {subsubsection}{\numberline {13.1.2}Process of learning}{28}{subsubsection.13.1.2}
-\contentsline {subsubsection}{\numberline {13.1.3}Cooperation, difficulties in group and with supervisor}{28}{subsubsection.13.1.3}
-\contentsline {subsubsection}{\numberline {13.1.4}Conclusion}{29}{subsubsection.13.1.4}
-\contentsline {subsection}{\numberline {13.2}Copy of poster in A4}{29}{subsection.13.2}
+\contentsline {subsection}{\numberline {8.3}Dual Piviot Quicksort}{20}{subsection.8.3}
+\contentsline {subsubsection}{\numberline {8.3.1}Results}{22}{subsubsection.8.3.1}
+\contentsline {subsection}{\numberline {8.4}Statistics}{23}{subsection.8.4}
+\contentsline {section}{\numberline {9}Personal experience with Julia}{23}{section.9}
+\contentsline {subsection}{\numberline {9.1}Sonni}{23}{subsection.9.1}
+\contentsline {subsection}{\numberline {9.2}Simon}{25}{subsection.9.2}
+\contentsline {subsection}{\numberline {9.3}Asbj\IeC {\o }rn}{25}{subsection.9.3}
+\contentsline {section}{\numberline {10}Discussion}{26}{section.10}
+\contentsline {section}{\numberline {11}Conclusion}{26}{section.11}
+\contentsline {section}{\numberline {12}Appendix}{27}{section.12}
+\contentsline {subsection}{\numberline {12.1}Process analysis}{27}{subsection.12.1}
+\contentsline {subsubsection}{\numberline {12.1.1}Projectmanagement, organizing workflow and organizing process of learning}{27}{subsubsection.12.1.1}
+\contentsline {subsubsection}{\numberline {12.1.2}Process of learning}{27}{subsubsection.12.1.2}
+\contentsline {subsubsection}{\numberline {12.1.3}Cooperation, difficulties in group and with supervisor}{27}{subsubsection.12.1.3}
+\contentsline {subsubsection}{\numberline {12.1.4}Conclusion}{28}{subsubsection.12.1.4}
+\contentsline {subsection}{\numberline {12.2}Copy of poster in A4}{28}{subsection.12.2}

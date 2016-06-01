@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.22)  1 JUN 2016 01:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.22)  1 JUN 2016 10:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -763,24 +763,20 @@ File: image/11.jpg Graphic file (type jpg)
 Package pdftex.def Info: image/11.jpg used on input line 617.
 (pdftex.def)             Requested size: 291.79237pt x 182.78427pt.
  [14]
-Underfull \hbox (badness 10000) in paragraph at lines 621--626
-
- []
-
 [15 <./image/11.jpg>] (./euler11.jl) (./euler11.jl) [16] (./euler11.jl)
-[17] <image/1161.jpg, id=607, 568.1225pt x 93.34875pt>
+[17] <image/1161.jpg, id=606, 568.1225pt x 93.34875pt>
 File: image/1161.jpg Graphic file (type jpg)
  <use image/1161.jpg>
 Package pdftex.def Info: image/1161.jpg used on input line 661.
 (pdftex.def)             Requested size: 216.0022pt x 35.4914pt.
 
-<image/1162.jpg, id=608, 420.57124pt x 39.14626pt>
+<image/1162.jpg, id=607, 420.57124pt x 39.14626pt>
 File: image/1162.jpg Graphic file (type jpg)
  <use image/1162.jpg>
 Package pdftex.def Info: image/1162.jpg used on input line 667.
 (pdftex.def)             Requested size: 216.0022pt x 20.10529pt.
 
-<image/1163.jpg, id=609, 273.02pt x 33.12375pt>
+<image/1163.jpg, id=608, 273.02pt x 33.12375pt>
 File: image/1163.jpg Graphic file (type jpg)
  <use image/1163.jpg>
 Package pdftex.def Info: image/1163.jpg used on input line 673.
@@ -791,88 +787,79 @@ Underfull \hbox (badness 10000) in paragraph at lines 680--683
  []
 
 [18 <./image/1161.jpg> <./image/1162.jpg> <./image/1163.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 710--715
+Underfull \hbox (badness 10000) in paragraph at lines 711--716
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 710--715
+Underfull \hbox (badness 10000) in paragraph at lines 711--716
 
  []
 
-[19] <image/qs.jpg, id=649, 245.91875pt x 501.875pt>
-File: image/qs.jpg Graphic file (type jpg)
- <use image/qs.jpg>
-Package pdftex.def Info: image/qs.jpg used on input line 725.
-(pdftex.def)             Requested size: 122.95906pt x 250.93687pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 731--734
+[19]
+Underfull \hbox (badness 10000) in paragraph at lines 717--720
 
  []
 
-[20 <./image/qs.jpg>] [21] [22] [23]
-Underfull \hbox (badness 10000) in paragraph at lines 845--848
+[20] [21] [22] [23]
+Underfull \hbox (badness 10000) in paragraph at lines 830--833
 
  []
 
-[24]
-Overfull \hbox (24.33185pt too wide) in paragraph at lines 855--858
+
+Overfull \hbox (24.33185pt too wide) in paragraph at lines 840--843
 \T1/cmr/m/n/10.95 - a type: the set of val-ues to pick from is then equiv-a-len
 t to type-min(S):typemax(S)
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 861--864
+Underfull \hbox (badness 10000) in paragraph at lines 846--849
 
  []
 
-[25]
-Overfull \hbox (62.11838pt too wide) in paragraph at lines 871--876
+[24]
+Overfull \hbox (62.11838pt too wide) in paragraph at lines 856--861
 \T1/cmr/m/n/10.95 http://www.nowozin.net/sebastian/blog/the-julia-language-for-
 scientific-computing.html 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 871--876
+Underfull \hbox (badness 10000) in paragraph at lines 856--861
 
  []
 
-[26] [27] [28]
-Underfull \hbox (badness 10000) in paragraph at lines 912--913
+[25] [26] [27]
+Underfull \hbox (badness 10000) in paragraph at lines 897--898
 [][]$\T1/cmtt/m/n/10.95 http : / / docs . julialang . org / en / latest / manua
 l /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 916--917
+Underfull \hbox (badness 10000) in paragraph at lines 901--902
 [][]$\T1/cmtt/m/n/10.95 http : / / www . cs . cornell . edu / courses / cs1112 
 / 2013fa / Exams / exam2 /
  []
 
 
 AED: lastpage setting LastPage
-[29]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 920.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 920.
+[28]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 905.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 905.
  (./report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 920.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 920.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 905.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 905.
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: 864CB78E45A4D1BBC2BDB890F5B07391;3185.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 920.
+(rerunfilecheck)             Checksum: A67CE4E1942FD2DF95FF0DA66BC58CB8;3212.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 905.
  ) 
 Here is how much of TeX's memory you used:
- 11250 strings out of 493089
- 162256 string characters out of 6134841
- 404251 words of memory out of 5000000
- 14106 multiletter control sequences out of 15000+600000
+ 11242 strings out of 493089
+ 162167 string characters out of 6134841
+ 404208 words of memory out of 5000000
+ 14101 multiletter control sequences out of 15000+600000
  18080 words of font info for 50 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,12n,43p,1622b,1878s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,12n,43p,1622b,1922s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></
 usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></u
@@ -887,10 +874,10 @@ ve/2015/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb></usr/local/texlive
 /2015/texmf-dist/fonts/type1/public/cm-super/sfti1095.pfb></usr/local/texlive/2
 015/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb></usr/local/texlive/201
 5/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb>
-Output written on report.pdf (33 pages, 1245459 bytes).
+Output written on report.pdf (32 pages, 1198298 bytes).
 PDF statistics:
- 957 PDF objects out of 1000 (max. 8388607)
- 892 compressed objects within 9 object streams
- 444 named destinations out of 1000 (max. 500000)
- 417 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 947 PDF objects out of 1000 (max. 8388607)
+ 884 compressed objects within 9 object streams
+ 442 named destinations out of 1000 (max. 500000)
+ 412 words of extra memory for PDF output out of 10000 (max. 10000000)
 
