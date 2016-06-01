@@ -32,16 +32,16 @@
 \contentsline {subsection}{\numberline {7.3}Dual Piviot Quicksort}{27}{subsection.7.3}
 \contentsline {subsubsection}{\numberline {7.3.1}Results}{30}{subsubsection.7.3.1}
 \contentsline {subsection}{\numberline {7.4}Statistics}{32}{subsection.7.4}
-\contentsline {section}{\numberline {8}Personal experience with Julia}{33}{section.8}
-\contentsline {subsection}{\numberline {8.1}Sonni}{33}{subsection.8.1}
-\contentsline {subsection}{\numberline {8.2}Simon}{35}{subsection.8.2}
-\contentsline {subsection}{\numberline {8.3}Asbj\IeC {\o }rn}{36}{subsection.8.3}
-\contentsline {section}{\numberline {9}Discussion}{36}{section.9}
-\contentsline {section}{\numberline {10}Conclusion}{36}{section.10}
-\contentsline {section}{\numberline {11}Appendix}{38}{section.11}
-\contentsline {subsection}{\numberline {11.1}Process analysis}{38}{subsection.11.1}
-\contentsline {subsubsection}{\numberline {11.1.1}Projectmanagement, organizing workflow and organizing process of learning}{38}{subsubsection.11.1.1}
-\contentsline {subsubsection}{\numberline {11.1.2}Process of learning}{38}{subsubsection.11.1.2}
-\contentsline {subsubsection}{\numberline {11.1.3}Cooperation, difficulties in group and with supervisor}{39}{subsubsection.11.1.3}
-\contentsline {subsubsection}{\numberline {11.1.4}Conclusion}{39}{subsubsection.11.1.4}
-\contentsline {subsection}{\numberline {11.2}Copy of poster in A4}{39}{subsection.11.2}
+\contentsline {section}{\numberline {8}Personal experience with Julia}{35}{section.8}
+\contentsline {subsection}{\numberline {8.1}Sonni}{35}{subsection.8.1}
+\contentsline {subsection}{\numberline {8.2}Simon}{37}{subsection.8.2}
+\contentsline {subsection}{\numberline {8.3}Asbj\IeC {\o }rn}{37}{subsection.8.3}
+\contentsline {section}{\numberline {9}Discussion}{37}{section.9}
+\contentsline {section}{\numberline {10}Conclusion}{38}{section.10}
+\contentsline {section}{\numberline {11}Appendix}{39}{section.11}
+\contentsline {subsection}{\numberline {11.1}Process analysis}{39}{subsection.11.1}
+\contentsline {subsubsection}{\numberline {11.1.1}Projectmanagement, organizing workflow and organizing process of learning}{39}{subsubsection.11.1.1}
+\contentsline {subsubsection}{\numberline {11.1.2}Process of learning}{39}{subsubsection.11.1.2}
+\contentsline {subsubsection}{\numberline {11.1.3}Cooperation, difficulties in group and with supervisor}{40}{subsubsection.11.1.3}
+\contentsline {subsubsection}{\numberline {11.1.4}Conclusion}{40}{subsubsection.11.1.4}
+\contentsline {subsection}{\numberline {11.2}Copy of poster in A4}{40}{subsection.11.2}

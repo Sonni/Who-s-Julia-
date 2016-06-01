@@ -1314,6 +1314,121 @@ If a test exceeds the time limit of five minutes, it will not be included in the
 \\
 Some of the problems had to be altered in order to being able to handle large inputs. Problem 8, 13, 18 and 22 all reads their inputs from a .txt file, before doing any computations. The time for reading data from a file and setting up the data, is included in the run time of the tests. 
 
+\begin{figure}[H]
+	\centering
+	\hspace*{-0.35in}
+	\begin{subfigure}[b]{0.4\textwidth}
+		\centering
+		\scalebox{.8}{
+		\begin{tikzpicture}
+			\begin{axis} [enlarge x limits=0.5, xtick = data]
+				\addplot [box plot median] table {graphdata/stats-julia.dat};
+				\addplot [box plot box] table {graphdata/stats-julia.dat};
+				\addplot [box plot top whisker] table {graphdata/stats-julia.dat};
+				\addplot [box plot bottom whisker] table {graphdata/stats-julia.dat};
+			\end{axis}
+		\end{tikzpicture}
+		}
+		\caption{Stats: Julia}
+		\label{boxplot}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.4\textwidth}
+		\centering
+		\scalebox{.8}{
+		\begin{tikzpicture}
+			\begin{axis} [enlarge x limits=0.5, xtick = data]
+				\addplot [box plot median] table {graphdata/stats-python.dat};
+				\addplot [box plot box] table {graphdata/stats-python.dat};
+				\addplot [box plot top whisker] table {graphdata/stats-python.dat};
+				\addplot [box plot bottom whisker] table {graphdata/stats-python.dat};
+			\end{axis}
+		\end{tikzpicture}
+		}
+		\caption{Stats: Python}
+		\label{boxplot}
+	\end{subfigure}
+	\hspace*{0.53in}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\hspace*{-0.35in}
+	\begin{subfigure}[b]{0.4\textwidth}
+		\centering
+		\scalebox{.8}{
+		\begin{tikzpicture}
+			\begin{axis} [enlarge x limits=0.5, xtick = data]
+				\addplot [box plot median] table {graphdata/stats-java.dat};
+				\addplot [box plot box] table {graphdata/stats-java.dat};
+				\addplot [box plot top whisker] table {graphdata/stats-java.dat};
+				\addplot [box plot bottom whisker] table {graphdata/stats-java.dat};
+			\end{axis}
+		\end{tikzpicture}
+		}
+		\caption{Stats: Java}
+		\label{boxplot}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.4\textwidth}
+		\centering
+		\scalebox{.8}{
+		\begin{tikzpicture}
+			\begin{axis} [enlarge x limits=0.5, xtick = data]
+				\addplot [box plot median] table {graphdata/stats-cpp.dat};
+				\addplot [box plot box] table {graphdata/stats-cpp.dat};
+				\addplot [box plot top whisker] table {graphdata/stats-cpp.dat};
+				\addplot [box plot bottom whisker] table {graphdata/stats-cpp.dat};
+			\end{axis}
+		\end{tikzpicture}
+		}
+		\caption{Stats: C++}
+		\label{boxplot}
+	\end{subfigure}
+	\hspace*{0.53in}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}
+		\begin{axis} [enlarge x limits=0.5, xtick = data]
+			\addplot [box plot median] table {graphdata/stats-julia.dat};
+			\addplot [box plot median] table {graphdata/stats-python.dat};
+			\addplot [box plot median] table {graphdata/stats-java.dat};
+			\addplot [box plot median] table {graphdata/stats-cpp.dat};
+			\addplot [box plot box] table {graphdata/stats-julia.dat};
+			\addplot [box plot box] table {graphdata/stats-python.dat};
+			\addplot [box plot box] table {graphdata/stats-java.dat};
+			\addplot [box plot box] table {graphdata/stats-cpp.dat};
+		\end{axis}
+	\end{tikzpicture}
+	\caption{Stats without whiskers: 1 Julia, 2 Python, 3 Java and 4 C++}
+	\label{boxplot}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}
+		\begin{axis} [enlarge x limits=0.5, xtick = data]
+			\addplot [box plot median] table {graphdata/stats-julia.dat};
+			\addplot [box plot median] table {graphdata/stats-python.dat};
+			\addplot [box plot median] table {graphdata/stats-java.dat};
+			\addplot [box plot median] table {graphdata/stats-cpp.dat};
+			\addplot [box plot box] table {graphdata/stats-julia.dat};
+			\addplot [box plot box] table {graphdata/stats-python.dat};
+			\addplot [box plot box] table {graphdata/stats-java.dat};
+			\addplot [box plot box] table {graphdata/stats-cpp.dat};
+			\addplot [box plot top whisker] table {graphdata/stats-julia.dat};
+			\addplot [box plot top whisker] table {graphdata/stats-python.dat};
+			\addplot [box plot top whisker] table {graphdata/stats-java.dat};
+			\addplot [box plot top whisker] table {graphdata/stats-cpp.dat};
+			\addplot [box plot bottom whisker] table {graphdata/stats-julia.dat};
+			\addplot [box plot bottom whisker] table {graphdata/stats-python.dat};
+			\addplot [box plot bottom whisker] table {graphdata/stats-java.dat};
+			\addplot [box plot bottom whisker] table {graphdata/stats-cpp.dat};
+		\end{axis}
+	\end{tikzpicture}
+	\caption{Stats with whiskers: 1 Julia, 2 Python, 3 Java and 4 C++}
+	\label{boxplot}
+\end{figure}
+
 \section{Personal experience with Julia}
 In this section we each wrote about our personal experience with Julia.
 \subsection{Sonni}
@@ -1365,11 +1480,10 @@ I personally see my self the one in the group with the least programming experie
 I found the syntax a bit confusing at first. I am not used to Python and I missed code structure and forced typing, in Julia and Python it looks like the code is hovering. After some time I got used to it and I found it very easy to learn. It makes it a little hard to find answers with the documentation and community being a bit thinner than with other languages. I think the 1-indexing is a bit complicated because I had never thought any language would use this, but I found that a lot of languages actually use this, they just are not that popular.
 
 \section{Discussion}
-*Pros and Cons with good arguments*
-http://www.evanmiller.org/why-im-betting-on-julia.html \\
-High-Performance JIT Compiler chart at http://julialang.org/ \\
-http://www.nowozin.net/sebastian/blog/the-julia-language-for-scientific-computing.html \\
-http://radar.oreilly.com/2013/10/julias-role-in-data-science.html \\
+From personal experience we found that Julia is easy to learn even for beginners. For a programmer who is familiar with Python should not have a hard time getting used to Julia. The easy to learn syntax might have had a cost. Again, from our personal experience some of us find the syntax less readable than programming languages with parenthesis/bracket structure. A lot of people seem excited about the new language. 
+In out tests Julia is much faster than Python, but does this mean Julia is better? In out test it would be yes, but the fact that Julia is still young and Python have a lot of useful libraries developed over the years makes Python a little more useful. A programmer who got a lot of experience in Python knows how to make it almost as fast as C. Julia is better at being simple and nobody knows what the developers can accomplish before Julia hit full version.
+Why should a programmer choose julia for his project? One of the reasons to use Julia is the wide range of features and the fact that it should take long to develop a prototype. The reason not to is mostly personal reasons or the fact that their documentation is very poor. Julia is so far a useful language, but it needs the same community and trust as many of the larger languages to break through.
+ 
 
 \section{Conclusion}
 It can be difficult to make any conclusions by the benchmarking but it may give an idea of how Julia performs, compared to Java, Python and C++. One thing to keep in mind is that as of writing this report, Julia is in version 0.4.5 - it has yet to reach version 1.0.0 while the other languages are much older than Julia. This could mean that Julia might get even faster in the future and by the benchmarking it does look like that Julia is already performing well. The idea of the developers is clear, they are trying to make a programming language that is as easy to learn and write as Python but with a compiler that optimizes code like Java and both of these goals have more or less been reached by the developers. Julia was definitely easy to learn and by the benchmarking it does look like that the compiler is doing okay with the optimization when it is possible. It does also feels like that the Julia developers are playing with the idea of giving the user some control over what is happening behind the scene. ‘Playing’ because this does not feel even close to done. Examples are that they are giving the user an option to allocate memory for variables manually but as soon as a new value is assign to that variable then Julia will change the memory size. Also it is not possible to free a declared variables memory entirely and the only operation the user can do with the garbage collecter is force garbage collection and disable the garbage collector. Somewhat the same story goes for the option to implement code from other languages this seems kind of buggy and not complete.
@@ -1389,8 +1503,6 @@ We actually had a good idea about who was good at what and splitting the tasks b
 
 \subsubsection{Conclusion}
 Trello is a very good tool for organizing and we should have been using it from the beginning. Looking beyond the fact that some data was lost using Git, the tool is perfect for team programming. We have payed the price not making any deadlines. Deadlines seems useless when the focus is just on the project, but when the workload gets more intense, it can be very good to have smaller deadlines or milestones during a project. Meetings should have occured more often, and syncing the current progress. Overall collaboration was very well, taken into account what could have been improved.
-
-\subsection{Copy of poster in A4}
 
 \begin{thebibliography}{9}
 	
@@ -1414,6 +1526,10 @@ Trello is a very good tool for organizing and we should have been using it from 
 	\url{https://www.techopedia.com/definition/24784/lightweight-thread}
 	\bibitem{user-sys}
 	\url{http://stackoverflow.com/questions/556405/what-do-real-user-and-sys-mean-in-the-output-of-time1}
+	\url{http://www.evanmiller.org/why-im-betting-on-julia.html}
+	\url{http://julialang.org/}
+	\url{http://www.nowozin.net/sebastian/blog/the-julia-language-for-scientific-computing.html}
+	\url{http://radar.oreilly.com/2013/10/julias-role-in-data-science.html}
 \end{thebibliography}
 
 \end{document}
