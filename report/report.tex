@@ -1308,7 +1308,233 @@ Starting with 60 programs, each is tested with ten different inputs and each inp
 Therefore, the testing was divided to run on three computers. The specifications of the computers can be seen in section \textbf{6.1 Benchmarking}. MacOne tested eulers: 1, 4, 8, 9, 12 and 13. Lenovo tested eulers: 14, 16 and 21. MacTwo tested eulers: 30, 31, 36, 50, 52, 76 and 112.
 One problem which we have encountered and which turned out to be time consuming is that the inputs had only been properly tested on the Julia versions, before making the final tests. In some cases, the other languages, opposed to Julia, had trouble going through all inputs within the time limit. All programs were implemented in Julia as the first language, and implemented in Python, Java and C++. A consequence is that the problems are not optimized in a certain language, possibly giving Julia an advantage over the other languages. This advantage might be true, since Julia is the only language to finish all the programs with all inputs.
 If a test exceeds the time limit of five minutes, it will not be included in the graphs shown.
-Some of the problems had to be altered in order to being able to handle large inputs. Problem 8 and 13 all reads their inputs from a .txt file, before doing any computations. The time for reading data from a file and setting up the data, is included in the run time of the tests.
+Some of the problems had to be altered in order to being able to handle large inputs. Problem 8 and 13 all reads their inputs from a .txt file, before doing any computations. The time for reading data from a file and setting up the data, is 
+included in the run time of the tests.
+
+\begin{figure}[H]
+	\centering
+	\hspace*{-0.65in}
+	\begin{subfigure}[b]{0.4\textwidth}
+		\centering
+		\scalebox{.8}{
+		\begin{tikzpicture}
+			\begin{axis} [
+			title=Euler 1,
+			xlabel={$Input$},
+			ylabel={$Time [s]$},
+			grid=major,]
+			\addplot table {graphdata/euler1-julia.dat};
+			\addplot table {graphdata/euler1-java.dat};
+			\addplot table {graphdata/euler1-cpp.dat};
+			\addplot table {graphdata/euler1-python.dat};
+			\end{axis}
+		\end{tikzpicture}
+		}
+		\label{boxplot}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.4\textwidth}
+		\centering
+		\scalebox{.8}{
+		\begin{tikzpicture}
+			\begin{axis} [
+			title=Euler 4,
+			xlabel={$Input$},
+			ylabel={$Time [s]$},
+			grid=major,
+			legend entries={$Julia$,$Java$,$c++$,$Python$},
+			legend style={at={(1,1)},anchor=north west},
+			]
+			\addplot table {graphdata/euler4-julia.dat};
+			\addplot table {graphdata/euler4-java.dat};
+			\addplot table {graphdata/euler4-cpp.dat};
+			\addplot table {graphdata/euler4-python.dat};
+			\end{axis}
+		\end{tikzpicture}
+		}
+		\label{boxplot}
+	\end{subfigure}
+	\hspace*{0.7in}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\hspace*{-0.65in}
+	\begin{subfigure}[b]{0.4\textwidth}
+		\centering
+		\scalebox{.8}{
+		\begin{tikzpicture}
+			\begin{axis} [
+			title=Euler 8,
+			xlabel={$Input$},
+			ylabel={$Time [s]$},
+			grid=major,]
+			\addplot table {graphdata/euler8-julia.dat};
+			\addplot table {graphdata/euler8-java.dat};
+			\addplot table {graphdata/euler8-cpp.dat};
+			\end{axis}
+		\end{tikzpicture}
+		}
+		\label{boxplot}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.4\textwidth}
+		\centering
+		\scalebox{.8}{
+		\begin{tikzpicture}
+			\begin{axis} [
+			title=Euler 9,
+			xlabel={$Input$},
+			ylabel={$Time [s]$},
+			grid=major,
+			legend entries={$Julia$,$Java$,$c++$,$Python$},
+			legend style={at={(1,1)},anchor=north west},
+			]
+			\addplot table {graphdata/euler9-julia.dat};
+			\addplot table {graphdata/euler9-java.dat};
+			\addplot table {graphdata/euler9-cpp.dat};
+			\addplot table {graphdata/euler9-python.dat};
+			\end{axis}
+		\end{tikzpicture}
+		}
+		\label{boxplot}
+	\end{subfigure}
+	\hspace*{0.7in}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\hspace*{-0.65in}
+	\begin{subfigure}[b]{0.4\textwidth}
+		\centering
+		\scalebox{.8}{
+		\begin{tikzpicture}
+			\begin{axis} [
+			title=Euler 13,
+			xlabel={$Input$},
+			ylabel={$Time [s]$},
+			grid=major,]
+			\addplot table {graphdata/euler13-julia.dat};
+			\addplot table {graphdata/euler13-java.dat};
+			\addplot table {graphdata/euler13-cpp.dat};
+			\addplot table {graphdata/euler13-python.dat};
+			\end{axis}
+		\end{tikzpicture}
+		}
+		\label{boxplot}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.4\textwidth}
+		\centering
+		\scalebox{.8}{
+		\begin{tikzpicture}
+			\begin{axis} [
+			title=Euler 14,
+			xlabel={$Input$},
+			ylabel={$Time [s]$},
+			grid=major,
+			legend entries={$Julia$,$Java$,$c++$,$Python$},
+			legend style={at={(1,1)},anchor=north west},
+			]
+			\addplot table {graphdata/euler14-julia.dat};
+			\addplot table {graphdata/euler14-java.dat};
+			\addplot table {graphdata/euler14-cpp.dat};
+			\addplot table {graphdata/euler14-python.dat};
+			\end{axis}
+		\end{tikzpicture}
+		}
+		\label{boxplot}
+	\end{subfigure}
+	\hspace*{0.7in}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\hspace*{-0.65in}
+	\begin{subfigure}[b]{0.4\textwidth}
+		\centering
+		\scalebox{.8}{
+		\begin{tikzpicture}
+			\begin{axis} [
+			title=Euler 16,
+			xlabel={$Input$},
+			ylabel={$Time [s]$},
+			grid=major,]
+			\addplot table {graphdata/euler16-julia.dat};
+			\addplot table {graphdata/euler16-java.dat};
+			\addplot table {graphdata/euler16-cpp.dat};
+			\addplot table {graphdata/euler16-python.dat};
+			\end{axis}
+		\end{tikzpicture}
+		}
+		\label{boxplot}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.4\textwidth}
+		\centering
+		\scalebox{.8}{
+		\begin{tikzpicture}
+			\begin{axis} [
+			title=Euler 21,
+			xlabel={$Input$},
+			ylabel={$Time [s]$},
+			grid=major,
+			legend entries={$Julia$,$Java$,$c++$,$Python$},
+			legend style={at={(1,1)},anchor=north west},
+			]
+			\addplot table {graphdata/euler21-julia.dat};
+			\addplot table {graphdata/euler21-java.dat};
+			\addplot table {graphdata/euler21-cpp.dat};
+			\addplot table {graphdata/euler21-python.dat};
+			\end{axis}
+		\end{tikzpicture}
+		}
+		\label{boxplot}
+	\end{subfigure}
+	\hspace*{0.7in}
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\hspace*{-0.65in}
+	\begin{subfigure}[b]{0.4\textwidth}
+		\centering
+		\scalebox{.8}{
+		\begin{tikzpicture}
+			\begin{axis} [
+			title=Euler 30,
+			xlabel={$Input$},
+			ylabel={$Time [s]$},
+			grid=major,]
+			\addplot table {graphdata/euler30-julia.dat};
+			\addplot table {graphdata/euler30-java.dat};
+			\addplot table {graphdata/euler30-cpp.dat};
+			\addplot table {graphdata/euler30-python.dat};
+			\end{axis}
+		\end{tikzpicture}
+		}
+		\label{boxplot}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[b]{0.4\textwidth}
+		\centering
+		\scalebox{.8}{
+		\begin{tikzpicture}
+			\begin{axis} [
+			title=Euler 31,
+			xlabel={$Input$},
+			ylabel={$Time [s]$},
+			grid=major,
+			legend entries={$Julia$,$Java$,$c++$,$Python$},
+			legend style={at={(1,1)},anchor=north west},
+			]
+			\addplot table {graphdata/euler31-julia.dat};
+			\addplot table {graphdata/euler31-java.dat};
+			\addplot table {graphdata/euler31-cpp.dat};
+			\addplot table {graphdata/euler31-python.dat};
+			\end{axis}
+		\end{tikzpicture}
+		}
+		\label{boxplot}
+	\end{subfigure}
+	\hspace*{0.7in}
+\end{figure}
 
 \begin{figure}[H]
 	\centering
@@ -1317,7 +1543,7 @@ Some of the problems had to be altered in order to being able to handle large in
 		\centering
 		\scalebox{.8}{
 		\begin{tikzpicture}
-			\begin{axis} [enlarge x limits=0.5, xtick = data]
+			\begin{axis} [enlarge x limits=0.5, xtick = data, ylabel={$Time [s]$},]
 				\addplot [box plot median] table {graphdata/stats-julia.dat};
 				\addplot [box plot box] table {graphdata/stats-julia.dat};
 				\addplot [box plot top whisker] table {graphdata/stats-julia.dat};
@@ -1333,7 +1559,7 @@ Some of the problems had to be altered in order to being able to handle large in
 		\centering
 		\scalebox{.8}{
 		\begin{tikzpicture}
-			\begin{axis} [enlarge x limits=0.5, xtick = data]
+			\begin{axis} [enlarge x limits=0.5, xtick = data, ylabel={$Time [s]$},]
 				\addplot [box plot median] table {graphdata/stats-python.dat};
 				\addplot [box plot box] table {graphdata/stats-python.dat};
 				\addplot [box plot top whisker] table {graphdata/stats-python.dat};
@@ -1353,7 +1579,7 @@ Some of the problems had to be altered in order to being able to handle large in
 		\centering
 		\scalebox{.8}{
 		\begin{tikzpicture}
-			\begin{axis} [enlarge x limits=0.5, xtick = data]
+			\begin{axis} [enlarge x limits=0.5, xtick = data, ylabel={$Time [s]$},]
 				\addplot [box plot median] table {graphdata/stats-java.dat};
 				\addplot [box plot box] table {graphdata/stats-java.dat};
 				\addplot [box plot top whisker] table {graphdata/stats-java.dat};
@@ -1369,7 +1595,7 @@ Some of the problems had to be altered in order to being able to handle large in
 		\centering
 		\scalebox{.8}{
 		\begin{tikzpicture}
-			\begin{axis} [enlarge x limits=0.5, xtick = data]
+			\begin{axis} [enlarge x limits=0.5, xtick = data, ylabel={$Time [s]$},]
 				\addplot [box plot median] table {graphdata/stats-cpp.dat};
 				\addplot [box plot box] table {graphdata/stats-cpp.dat};
 				\addplot [box plot top whisker] table {graphdata/stats-cpp.dat};
@@ -1385,7 +1611,7 @@ Some of the problems had to be altered in order to being able to handle large in
 \begin{figure}[H]
 	\centering
 	\begin{tikzpicture}
-		\begin{axis} [enlarge x limits=0.5, xtick = data]
+		\begin{axis} [enlarge x limits=0.5, xtick = data, ylabel={$Time [s]$},]
 			\addplot [box plot median] table {graphdata/stats-julia.dat};
 			\addplot [box plot median] table {graphdata/stats-python.dat};
 			\addplot [box plot median] table {graphdata/stats-java.dat};
@@ -1402,7 +1628,7 @@ Some of the problems had to be altered in order to being able to handle large in
 \begin{figure}[H]
 	\centering
 	\begin{tikzpicture}
-		\begin{axis} [enlarge x limits=0.5, xtick = data]
+		\begin{axis} [enlarge x limits=0.5, xtick = data, ylabel={$Time [s]$},]
 			\addplot [box plot median] table {graphdata/stats-julia.dat};
 			\addplot [box plot median] table {graphdata/stats-python.dat};
 			\addplot [box plot median] table {graphdata/stats-java.dat};

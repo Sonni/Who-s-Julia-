@@ -1,0 +1,28 @@
+\documentclass{article}
+\usepackage{pgfplots}
+\usepackage{float}
+
+\pgfplotsset{compat=1.13}
+
+\begin{document}
+\begin{figure}[H]
+	\centering
+		\begin{tikzpicture}
+			\begin{axis}[
+			title=Euler 1,
+			xlabel={$File Input$},
+			ylabel={$Time [s]$},
+			grid=major,
+			legend entries={$Julia$,$Java$,$c++$,$Python$},
+			legend style={at={(1,1)},anchor=north west},
+			]
+			\addplot table {euler1-julia.dat};
+			\addplot table {euler1-java.dat};
+			\addplot table {euler1-cpp.dat};
+			\addplot table {euler1-python.dat};
+			\end{axis}
+		\end{tikzpicture}
+	\caption{Graph}
+	\label{graph}
+\end{figure}
+\end{document}
