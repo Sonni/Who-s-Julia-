@@ -32,9 +32,9 @@
 \contentsline {subsection}{\numberline {7.3}Dual Piviot Quicksort}{27}{subsection.7.3}
 \contentsline {subsubsection}{\numberline {7.3.1}Results}{30}{subsubsection.7.3.1}
 \contentsline {subsection}{\numberline {7.4}Statistics}{32}{subsection.7.4}
-\contentsline {section}{\numberline {8}Personal experience with Julia}{35}{section.8}
-\contentsline {subsection}{\numberline {8.1}Sonni}{35}{subsection.8.1}
-\contentsline {subsection}{\numberline {8.2}Simon}{37}{subsection.8.2}
+\contentsline {section}{\numberline {8}Personal experience with Julia}{34}{section.8}
+\contentsline {subsection}{\numberline {8.1}Sonni}{34}{subsection.8.1}
+\contentsline {subsection}{\numberline {8.2}Simon}{36}{subsection.8.2}
 \contentsline {subsection}{\numberline {8.3}Asbj\IeC {\o }rn}{37}{subsection.8.3}
 \contentsline {section}{\numberline {9}Discussion}{37}{section.9}
 \contentsline {section}{\numberline {10}Conclusion}{38}{section.10}
@@ -44,4 +44,3 @@
 \contentsline {subsubsection}{\numberline {11.1.2}Process of learning}{39}{subsubsection.11.1.2}
 \contentsline {subsubsection}{\numberline {11.1.3}Cooperation, difficulties in group and with supervisor}{40}{subsubsection.11.1.3}
 \contentsline {subsubsection}{\numberline {11.1.4}Conclusion}{40}{subsubsection.11.1.4}
-\contentsline {subsection}{\numberline {11.2}Copy of poster in A4}{40}{subsection.11.2}
