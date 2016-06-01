@@ -14,7 +14,7 @@ public class quicksort
     public static void main(String[] args)
     {
         try {
-            quicksort.run(args[0]);
+            quicksort.run(args[0], args[1]);
             //quicksort.run("dualquicksort", "data.txt");
         } catch (IOException e) {
             // TODO Auto-generated catch block
@@ -22,10 +22,10 @@ public class quicksort
         }
     }
     
-    private static void run(String arg1) throws FileNotFoundException, IOException
+    private static void run(String arg1, String arg2) throws FileNotFoundException, IOException
     {
         int[] array;
-        try (BufferedReader br = new BufferedReader(new FileReader(arg1))) {
+        try (BufferedReader br = new BufferedReader(new FileReader(arg2))) {
             String line = br.readLine();
             String[] lines = line.split(" ");
             array = new int[lines.length];
@@ -34,30 +34,12 @@ public class quicksort
                 array[i] = Integer.parseInt(lines[i]);
             }
         }
-
+        System.out.println("Sorting");
         
-        int jumpLength = 125;
-        int i = 0;
-        boolean shouldBreak = false;
-        while (true)
-        {
-            i += jumpLength;
-            if (i > array.length - 1)
-            {
-                i = array.length - 1;
-                shouldBreak = true;
-            }
-            quicksortDualPivot(array, 0, i);
-            
-            
-            if (shouldBreak)
-                break;
-        }
-        /*
         		if (arg1.equals("dualquicksort"))
         			quicksortDualPivot(array, 0, array.length - 1);
         		if (arg1.equals("quicksort"))
-        			quicksort(array, 0, array.length - 1);*/
+        			quicksort(array, 0, array.length - 1);
         
         //Arrays.sort(array);
         

@@ -1,5 +1,18 @@
 import sys
 
+def quicksort(a, s, e):
+	if s < e:
+		pivot = a[e]
+		pointer = s
+		for i in range(s, e): 
+			if a[i] <= pivot:
+				swap(a, pointer, i)
+				pointer += 1
+		swap(a, pointer, e)
+
+		quicksort(a, s, pointer-1)
+		quicksort(a, pointer, e)
+
 def quicksortDualPivot(a, s, e):
 	if s < e:
 		if (a[s] > a[e]):
@@ -42,7 +55,7 @@ def swap(a, i, j):
 	a[i] = a[j]
 	a[j] = tmp
 
-file = open(sys.argv[1], "r")
+file = open(sys.argv[2], "r")
 str = file.readline()
 a = str.split()
 data = []
@@ -50,16 +63,9 @@ for i in range(0, len(a)-1):
 	data.append(int(a[i]))
 
 file.close()
+if sys.argv[1] == "dualquicksort":
+	quicksortDualPivot(data, 0, len(data)-1)
+elif sys.argv[1] == "quicksort":
+	quicksort(data, 0, len(data)-1)
 
-jumpLength = 125
-i = 0
-shouldBreak = 0
-
-while 1==1:
-    i += jumpLength
-    if i > len(data) - 1:
-        i = len(data) - 1
-        shouldBreak = 1
-    quicksortDualPivot(data, 0, i)
-    if shouldBreak == 1:
-        break
+#print(data)

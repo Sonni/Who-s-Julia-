@@ -1,0 +1,126 @@
+java : quicksort num100000.txt 
+33.61
+32.77
+33.1
+Average time is: 33.16 : Median is: 33.1
+____________________________________
+java : quicksort num130000.txt 
+74.45
+75.97
+74.78
+Average time is: 75.0667 : Median is: 74.78
+____________________________________
+java : quicksort num160000.txt 
+144.01
+143.34
+138.76
+Average time is: 142.037 : Median is: 143.34
+____________________________________
+java : quicksort num190000.txt 
+221.95
+221.54
+225.63
+Average time is: 223.04 : Median is: 221.95
+____________________________________
+java : quicksort num220000.txt 
+338.09
+349.02
+342.32
+Average time is: 343.143 : Median is: 342.32
+____________________________________
+java : quicksort num250000.txt 
+485.53
+497.86
+489.44
+Average time is: 490.943 : Median is: 489.44
+____________________________________
+java : quicksort num280000.txt 
+695.5
+705.81
+733.73
+Average time is: 711.68 : Median is: 705.81
+____________________________________
+java : quicksort num310000.txt 
+978.54
+977
+979.33
+Average time is: 978.29 : Median is: 978.54
+____________________________________
+java : quicksort num340000.txt 
+1358.83
+1354.56
+1349.44
+Average time is: 1354.28 : Median is: 1354.56
+____________________________________
+java : quicksort num370000.txt 
+1583.67
+1583.53
+1583.42
+Average time is: 1583.54 : Median is: 1583.53
+____________________________________
+C++ : ./quicksort num100000.txt 
+59.44
+59.43
+59.45
+Average time is: 59.44 : Median is: 59.44
+____________________________________
+C++ : ./quicksort num130000.txt 
+124.24
+124.34
+124.51
+Average time is: 124.363 : Median is: 124.34
+____________________________________
+C++ : ./quicksort num160000.txt 
+233.66
+233.77
+233.63
+Average time is: 233.687 : Median is: 233.66
+____________________________________
+C++ : ./quicksort num190000.txt 
+378.68
+378.63
+379.02
+Average time is: 378.777 : Median is: 378.68
+____________________________________
+C++ : ./quicksort num220000.txt 
+600.51
+600.15
+600.41
+Average time is: 600.357 : Median is: 600.41
+____________________________________
+C++ : ./quicksort num250000.txt 
+863.45
+863.86
+864.03
+Average time is: 863.78 : Median is: 863.86
+____________________________________
+C++ : ./quicksort num280000.txt 
+1233.55
+1234.01
+1234.35
+Average time is: 1233.97 : Median is: 1234.01
+____________________________________
+C++ : ./quicksort num310000.txt 
+1635.96
+1636.09
+1636.1
+Average time is: 1636.05 : Median is: 1636.09
+____________________________________
+C++ : ./quicksort num340000.txt 
+2240.06
+2239.48
+2239.77
+Average time is: 2239.77 : Median is: 2239.77
+____________________________________
+julia : quicksort.jl num100000.txt 
+1387.29
+Average time is: 1387.29 : Median is: 1387.29
+____________________________________
+julia : quicksort.jl num130000.txt 
+3041.6
+Average time is: 3041.6 : Median is: 3041.6
+____________________________________
+python : quicksort.py num100000.txt 
+4022.38
+Average time is: 4022.38 : Median is: 4022.38
+____________________________________

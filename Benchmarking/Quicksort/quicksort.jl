@@ -1,73 +1,56 @@
-function quicksort(a, s, e)
-  if s < e
-    pivot = a[e]
-	pointer = s
-	for i = s: e - 1
-		if a[i] <= pivot
-			swap(a, pointer, i)
-			pointer += 1
-		end
-	end
-	swap(a, pointer, e)
-
-	quicksort(a, s, pointer - 1)
-	quicksort(a, pointer, e)
-  end
-end
-
 function quicksortDualPivot(a, s, e)
-  if e > s
+	if e > s
 
-	  if (a[s] > a[e])
-	    swap(a, s, e)
-      end
+		if (a[s] > a[e])
+	    	swap(a, s, e)
+	    end
 
-	  leftPiv = a[s]
-	  rightPiv = a[e]
+		leftPiv = a[s]
+		rightPiv = a[e]
 
-	  leftPoi = s + 1
-	  rightPoi = e - 1
+		leftPoi = s + 1
+		rightPoi = e - 1
 
-	  curEle = leftPoi
+		curEle = leftPoi
 
-	  while curEle <= rightPoi
-	     if a[curEle] < leftPiv
-	        swap(a, curEle, leftPoi)
-	        leftPoi += 1
-	     elseif a[curEle] >= rightPiv
-	        while a[rightPoi] > rightPiv && curEle < rightPoi
-	           rightPoi -= 1
-          end
+		while curEle <= rightPoi
+	    	if a[curEle] < leftPiv
+	        	swap(a, curEle, leftPoi)
+	        	leftPoi += 1
+	    	elseif a[curEle] >= rightPiv
+	        	while a[rightPoi] > rightPiv && curEle < rightPoi
+	           		rightPoi -= 1
+        		end
 
-	        swap(a, curEle, rightPoi)
-	        rightPoi -= 1
-	        if (a[curEle] < leftPiv)
-	            swap(a, curEle, leftPoi)
-	            leftPoi += 1
-          end
+	        	swap(a, curEle, rightPoi)
+	        	rightPoi -= 1
+	        	if (a[curEle] < leftPiv)
+	            	swap(a, curEle, leftPoi)
+	            	leftPoi += 1
+          		end
+        	end
+	        curEle += 1
         end
-	       curEle += 1
-       end
-	        leftPoi -= 1
-	        rightPoi += 1
+	    leftPoi -= 1
+	    rightPoi += 1
 
-	        swap(a, s, leftPoi)
-	        swap(a, e, rightPoi)
+	    swap(a, s, leftPoi)
+	    swap(a, e, rightPoi)
 
-	        quicksortDualPivot(a, s, leftPoi - 1)
-	        quicksortDualPivot(a, leftPoi + 1, rightPoi - 1)
-	        quicksortDualPivot(a, rightPoi + 1, e)
-  end
+	    quicksortDualPivot(a, s, leftPoi - 1)
+	    quicksortDualPivot(a, leftPoi + 1, rightPoi - 1)
+	    quicksortDualPivot(a, rightPoi + 1, e)
+    end
 end
 
 function swap(a, i, j)
-  tmp = a[i]
-  a[i] = a[j]
-  a[j] = tmp
+	tmp = a[i]
+	a[i] = a[j]
+	a[j] = tmp
 end
 
-
-f = open(ARGS[2])
+#Load input
+f = open(ARGS[1])
 s = readall(f)
 ss = split(s)
 data = []
@@ -76,10 +59,21 @@ for i = 1 : length(ss)
 end
 close(f)
 
-#a = [5 3 100 -4032 8 10 -4 59 0 6]
 
-if ARGS[1] == "dualquicksort"
-	quicksortDualPivot(data, 1, length(data))
-elseif ARGS[1] == "quicksort"
-	quicksort(data, 1, length(data))
+jumpLength = 125
+i = 0
+shouldBreak = false;
+
+while true
+	i += jumpLength
+	if i > length(data)
+		i = length(data)
+		shouldBreak = true
+	end
+
+	quicksortDualPivot(data, 1, i)
+
+	if shouldBreak == true
+		break
+	end
 end
