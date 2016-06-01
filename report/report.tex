@@ -136,7 +136,7 @@ indryk virker fint her.
 \newpage
 \pagenumbering{roman}
 \section{Summary}
-Julia is a new programming language. Through tests and benchmarking it is found that Julia do some optimizations behind the scene but these optimizations does not seem as developed as Javas optimizations. In most of the tests in this report and the Project Euler solutions that was not included in the report showed that Julia is relatively fast even in this early stage of development. This is what the developers state and what seems like a lot of inspiration from Python, they managed to create an easy to learn and easy to write programming language.
+Julia is a new programming language. Through tests and benchmarking it is found that Julia does some optimizations behind the scene but these optimizations does not seem as developed as Javas optimizations. In most of the tests in this report and the Project Euler solutions that was not included in the report showed that Julia is relatively fast even in this early stage of development. This is what the developers state and with what seems like a lot of inspiration from Python, they managed to create an easy to learn and easy to write programming language.
 
 \newpage
 \tableofcontents
@@ -151,13 +151,12 @@ Julia is a new programming language. Through tests and benchmarking it is found 
 \section{Introduction}
 Java, C++ and Python are on the top ten of the most used programming languages. There are hundreds of languages, but not minding the hard competition, new languages are still created with the thought of doing better. An example of this is the relatively new programming language Julia, which has been developed with the idea to combine the best features of other languages.\\
 \\
-The purpose of this report is to find out how well Julia perform compared to some of the standard languages as of 2016. One of those languages are Python which Julia has a lot of inspiration from - syntax wise and the dynamic type system. The second language that Julia will be compared with is Java, these two does share similarities, but most of the similarities are behind the scene stuff, like garbage collection and compiler optimizations. The developers of Julia claim that Julia is as fast as C and therefore C++ is the last language that Julia will get compared with.
+The purpose of this report is to find out how well Julia perform compared to some of the standard languages as of 2016. One of those languages is Python which Julia draws a lot of inspiration from, including syntax and the dynamic type system. The second language that Julia will be compared with is Java, these two do share similarities, but most of the similarities are behind the scene mechanics, such as garbage collection and compiler optimizations. The developers of Julia claim that Julia is as fast as C. Therefore we choose C++ as the last language to compare Julia with.
 \\
-The report starts introducing Julia, Julia's background and features. Julia's introduction is followed by a brief introduction to Project Euler. Next, an explanation of the theory behind benchmarking, profiling and time measurement for the understanding of the rest of the report. The materials and methods used for benchmarking. The problems/algorithms used for benchmarking. The results, personal experiences learning Julia, discussion and conclusion. 
+The report starts introducing Julia, Julia's background and features. Julia's introduction is followed by a brief introduction to Project Euler. Next we outline our approach to benchmarking, profiling, and time measurements used in the experimental part of the project. Next op is the materials and methods used for benchmarking followed by the problems/algorithms used for benchmarking. The results, personal experiences learning Julia, discussion and conclusion will come at last. 
 
 \section{Julia}
-In this section we are going to introduce why and when Julia was created. We will show some comparisons in the syntax with Python, C++ and Java; and explain some of the features listed below.\\
-Features in Julia:
+In this section we introduce Julia and compare its syntax with the syntax of Python, C++ and Java. Julia's homepage lists the follwing as the core and crucial features of the language:
 \begin{description}
 	\item[$\cdot$] Dynamic typing and byte-related memory management
 	\item[$\cdot$] Multiple dispatch
@@ -174,7 +173,9 @@ Features in Julia:
 	\item[$\cdot$] Devectorized code is fast
 	\item[$\cdot$] Others we have not looked in to
 \end{description}
-Julia is an object-oriented programming language, which has been under development since 2009. First released in 2012 and the newest stable version of Julia is version 0.4.5. The language has been created because the developers wanted a language with all the features they like from different languages. The developers wanted the language to be open source, which means everybody can read and modify the language. One of the ideas was to make the language as simple, readable and easy to learn as possible. The language is made for high performance and scientific computations while still supporting general purpose programming. 
+We will later conclude this by a brief explanation of some of these features and concepts.\\
+\\
+Julia is an object-oriented programming language, which has been under development since 2009. First released in 2012 and the newest stable version of Julia is version 0.4.5. The language has been created because the developers wanted a language with all the features they like from other languages. The developers wanted the language to be open source, which means that everybody can read and modify the language. One of the ideas was to make the language as simple, readable and easy to learn as possible. The language is made for high performance and scientific computations while still supporting general purpose programming. 
 Programming in Julia can be done in the terminal like Python with interactive mode:
 \begin{figure}[H]
 	\centering
@@ -198,8 +199,6 @@ Writing longer programs in the terminal might not be the preferred method. Files
 The text editor Atom supports the Julia language. Atom has a package, \textbf{uber-juno}, which sets up Atom to act like an IDE, integrated development environment for Julia. However, the programmer can of course use whatever text editor he or she likes.
 
 \subsection{Syntax}
-\textit{Make examples of syntax between all the languages here}.
-
 \begin{figure}[H]
 	\begin{lstlisting}[language=python]
 	Julia:	    Python:      Java:            c++:
@@ -300,7 +299,7 @@ The text editor Atom supports the Julia language. Atom has a package, \textbf{ub
 		if i == a
 			println(a * b)
 		end
-		else if i == b
+		elseif i == b
 			println(a / b)
 		else
 			println(a + b)
@@ -359,7 +358,7 @@ The text editor Atom supports the Julia language. Atom has a package, \textbf{ub
 	\begin{subfigure}[H]{0.7\textwidth}
 		\centering
 		\begin{lstlisting}[belowskip=0.5mm]
-		int i = 0
+		i = 0
 		while i < 10
 			i += 1
 		end
@@ -369,7 +368,7 @@ The text editor Atom supports the Julia language. Atom has a package, \textbf{ub
 	\begin{subfigure}[H]{0.7\textwidth}
 		\centering
 		\begin{lstlisting}[belowskip=0.5mm]
-		int i = 0
+		i = 0
 		while (i < 10):
 			i += 1
 		\end{lstlisting}
@@ -481,7 +480,7 @@ The text editor Atom supports the Julia language. Atom has a package, \textbf{ub
 In this section we are writing about some of Julia's features.
 \subsubsection{Dynamic typing and byte-related memory management}
 Dynamic typing is a type management approach where type checks are mostly performed at runtime, as opposed to static typing, where type checks are made at compile time. Dynamic typing allows the programmer to skip the type declaration and let the dynamic type system handle it. In Julia it is possible to specify types, but mostly it is not necessary. 
-Julia makes decisions about how much memory to allocate for variables but the assigned memory size will not change. This means that if a value, that exceeds the allocated memory, is assigned to the variable after initialization, a bug will occur. Another point to notice is that the memory size can be decreased and this will be addressed later under the section Garbage Collector. However, there is a range of memory sizes to chose from when initializing a variable. Julia will by default assign 32 bits to an integer or a floating point if no more memory is needed at initialization, but it is possible to manually chose one of the following:
+Julia makes decisions about how much memory to allocate for variables, but the assigned memory size will not change. This means that if a value that exceeds the allocated memory is assigned to the variable after initialization, then a bug will occur. Another point to notice is that the memory size can be decreased and this will be addressed later under the section Garbage Collector. However, there is a range of memory sizes to chose from when initializing a variable. Julia will by default assign 32 bits to an integer or a floating point if no more memory is needed at initialization, but it is possible to manually chose one of the following:
 \begin{description}
 	\item[$\cdot$] Signed/unsigned integer - 8, 16, 32, 64 and 128 bits – Int8, UInt8, Int16, UInt16, Int32, UInt32, Int64, UInt64, Int128 and UInt128
 	\item[$\cdot$] Floating point - 16, 32 and 64 bits – Float16, Float32 and Float64
@@ -499,10 +498,7 @@ typeof(x) #Int8
 x = 4
 typeof(x) #Int32
 \end{lstlisting}
-If no certain memory size is needed but only a specific type then abstract types will come in handy. An abstract type is a form of generalization of a concrete type. For example 16, 32 and 64 bit floating points are of type AbstractFloat. This is especially useful when the programmer do not know how much memory a certain variable may need. Too little memory will result in a bug and too much memory is a waste. 
-\begin{lstlisting}
-\end{lstlisting}
-* Example *
+If no certain memory size is needed but only a specific type, then abstract types can be used. An abstract type is a form of generalization of a concrete type. For example, 16, 32 and 64 bit floating points are of type AbstractFloat. This is especially useful when the programmer do not know how much memory a certain variable may need. Too little memory will result in a bug and too much memory is a waste. 
 \subsubsection{Multiple dispatch}
 Multiple dispatch is used to determine which function to call by the type of one or more of the parsed argument(s). This is useful when two functions, with the same name, are declared:
 
@@ -517,7 +513,7 @@ end
 \end{lstlisting}
 If a variable is declared as an \textbf{Int8} and used as argument in function \textbf{a()}, then Julia will print "Int". If the variable is declared as a \textbf{Float16} and used as argument in function \textbf{a()}, Julia will print "Float". It is possible to use abstract types, so \textbf{arg1::Float16} and \textbf{arg1::Int8} could be changed to \textbf{arg1::AbstractFloat} and \textbf{arg1::AbstractInt}, which will make the function 'a' accept any type of floating point and integer.
 \subsubsection{User defined types}
-User defined types, known as composite types, gives the programmer the option to define new types in Julia. A composite type in Julia could look as the following: 
+User defined types also known as composite types, gives the programmer the option to define new types in Julia. A composite type in Julia could look as the following: 
 \begin{lstlisting}[language=python]
 type person 
 	age::Int16 
@@ -533,7 +529,7 @@ end
 Person = person(21, "Carl")
 a(Person) #Will print 21
 \end{lstlisting}
-The developers of Julia claim that user defined types are as fast and compact as built in types. 
+As seen in the above example, composite types give the programmer the option to do objected orientated programming and the developers of Julia claim that user defined types are as fast and compact as built in types. 
 
 \subsubsection{Garbage Collector}
 Julia uses a garbage collector to automatically free the memory when needed. There is no guarantee when the garbage collector will run, but it is possible to schedule garbage collection with a function call, \textbf{gc()}, and will be executed at some point. It is not possible to control exactly when to run the garbage collector, but only put it in queue. One thing to keep in mind is that once a variable is defined in Julia, it will always be present until program termination. The garbage collector does not free the memory of unreachable object, but rather reallocates memory for objects when memory size has changed. Therefore, the only way the garbage collector can free the memory is when an object has been reduced in size, for example:
@@ -628,11 +624,11 @@ In this section we explain some of the theory behind Benchmarking, profiling and
 **In computer science, benchmarking is experimental measuring of the amount of performance crammed by a particular program**. In this report an execution of a set of programs, implemented in Julia, Python, C++ and Java will be time measured. In order to get an indication of the real CPU time, multiple tests are done and the median is calculated. The median run time is considered since there can be fluctuations in run times for every test.
 
 \subsection{Profiling}
-Profiling is a way to analyze code. For example, the analysis could be measuring the memory usage, time and function calls. The analysis shows, which part of the code took the longest time or used up all memory. Profiling is often used for optimization.
+Profiling is a way to analyze code. For example, the analysis could be measuring the memory usage, time and function calls. The analysis shows, which part of the code took the longest time or used up the most memory. Profiling is often used for optimization.
 
 \subsection{Time measurement}
 \label{sec:timemeasure}
-When looking at the run time the most common terms are wall time (real time) and CPU time. Wall time is the time it took the program to terminate, from start to finish. CPU time is how much time the program used on the CPU. The time difference between wall time and CPU time comes from the fact that the program being benchmarked or profiled might get interrupted by the operating system, because other tasks needs to be handled. These tasks could be other programs, or something that the OS needs to get done. The processing time of those tasks will be included in the wall time but excluded in the CPU time. To get the run times in Unix based system, the time command is available from the terminal:
+When looking at running time of programs the most common terms are wall time (real time) and CPU time. Wall time is the time it took the program to terminate, from start to finish. CPU time is how much time the program spend on the CPU. The time difference between wall time and CPU time comes from the fact that the program being benchmarked or profiled might get interrupted by the operating system, because other tasks needs to be handled. These tasks could be other programs, or something that the OS needs to get done. The processing time of those tasks will be included in the wall time but excluded in the CPU time. To get the running time on a program in a Unix based system, the time command is available from the terminal:
 \begin{lstlisting}
 time <COMMAND>
 \end{lstlisting}
@@ -649,12 +645,12 @@ Where <COMMAND> can be any terminal command. The time command will return three 
 	\item[$\cdot$] Sys: System time is how much CPU time is spent in kernel mode.
 \end{description}
 The difference between user- and kernel mode is the following:\\
-In most memory protected systems there are some locked operations for security reasons. E.g. allocation of memory or accessing hardware requires kernel mode and cannot be done in user mode. Operations as \textbf{malloc} and reading/writing to files will be proccessed in the kernel and is counted as system time. This does not necessarily mean that all time is spent in kernel mode operating with file data, since the only time that is spent in kernel mode is writing the data from the file to memory. The rest of the operation is counted towards user time. Therefore to get the amount of time spent by the CPU, \textbf{User time} + \textbf{system time} is a good estimation. Another way to measure time spent on the CPU is to use the built in libraries. For example the \textbf{ThreadMXBean} in Java. This is especially useful for profiling.
+In most memory protected systems there are some locked operations for security reasons. E.g. allocation of memory or accessing hardware requires kernel mode and cannot be done in user mode. Operations as \textbf{malloc} and reading/writing to files will be proccessed by the kernel and is counted towards system time. This does not necessarily mean that all time is spent in kernel mode when for exampel reading a file, since the only time that is spent in kernel mode is reading the data from harddrive. The rest of the operation is counted towards user time. Therefore to get the amount of time spent by the CPU, \textbf{User time} + \textbf{system time} is a good estimation. Another way to measure time spent on the CPU is to use the built in libraries. For example the \textbf{ThreadMXBean} in Java. This is especially useful for profiling.
 
 \section{Materials and methods}
-In this section we have written how we benchmarked and with what materials/software.
+This section will address some details about the benchmarking and what material / software was used.
 \subsection{Benchmarking}
-Materials for benchmarking: \\
+Specs and language version: \\
 Lenovo W530: Intel Core i5-3320M 2.60GHz x 4, 8GB RAM, Ubuntu 16.04 64-bit\\
 MacBook (MacOne): Intel Core i5 1,4 GHz, 8 GB RAM, OS X El Capitan 10.11.5\\
 MacBook (MacTwo): Intel Core i5 1,8 GHz, 4 GB RAM, OS X El Capitan 10.11.5\\
@@ -662,10 +658,10 @@ Julia 0.4.5 \\
 Python 2.7.11+ \\
 C++11 \\
 Java 1.8.0\_92 \\\\
-Benchmarking will be done by comparing the run time of the same algorithm in different languages. In this project the run time is measured as the sum of \textbf{system} and \textbf{user} time, because the \textbf{system} and \textbf{user} time are not affected by heavy loads on the machine. All time measurement are measured using the shell '\textbf{time}' command that returns the three types of time taken for the algorithm to run. The problems will be scaled to have smaller and larger inputs. However, in some situations a large input can cause memory problems, which will be addressed in the specific problem. The memory problems is unfortunately making an upper bound for how large data is possible to pass for certain problems. A tool was created for this project that gathers the data and calculates the median of the run time. 
+Benchmarking will be done by comparing the run time of the same algorithm in different languages. In this project the run time is measured as the sum of \textbf{system} and \textbf{user} time, because the \textbf{system} and \textbf{user} time are not affected by heavy loads on the machine. All time measurement are measured using the shell '\textbf{time}' command that returns the three types of time taken for the algorithm to run. The problems will be scaled to have smaller and larger inputs. However, in some situations a large input can cause memory problems, which will be addressed in the specific problem. The memory problems is unfortunately making an upper bound for how large data is possible to pass for certain problems. The time measurement is done by a software that was developed for this project. It runs test with different inputs a few times, calculates the median prints the result. 
 
 \section{Problems}
-In this section we explain some of the problems we have been using for benchmarking.
+In this section we explain some of the problems we have been using for benchmarking. One thing to keep in mind is that Java will do a lot of optimization and the reason to why we do not stop this, is because the optimization is a part of the Julia language, it is hard to get around and extra code is needed to trick Java not to do any optimizations. The goals is to benchmark the code of an average programmer the only rule is that every programming language has to do the same kind of operations, so it is important that Java does not stop beforehand because it checks to see that the result of what it is doing will never be used. A simple way to avoid this is to print the result or some parts of the result at the very end.
 \subsection{Projecteuler 11}
 \textit{In the 20$\times$20 grid below, four numbers along a diagonal line have been marked in red. The product of these numbers is 26$\times$63$\times$78$\times$14 = 1788696. What is the greatest product of four adjacent numbers in the same direction (up, down, left, right, or diagonally) in the 20$\times$20 grid?}
 \begin{figure}[H]
@@ -706,7 +702,7 @@ Figure \ref{112} shows the loop that iterates over the matrix and calculating th
 		\label{113}
 	\end{center}
 \end{figure}
-Figure \ref{graph112} and \ref{graph111} shows the test results of euler 11, keep in mind these results include the time for reading the input file and setting up the matrix. The test was made with 20 different inputs, matrices. Starting at 1000$\times$1000, increasing with 1000 in each test, and ending with 20.000$\times$20.000. Every test was with a product of 4 numbers. “Graph number” shows how much time is used creating the matrix. Julia, Java and C++ uses most of the time reading the file and creating matrix, and the actual work on the matrix is a small part of the total runtime. Python, on the other hand, uses most of the runtime working on the matrix. The test results of euler 11 shows that Java is the fastest, Julia is second, C++ third and Python fourth and last. Java is about 2-3 times faster than Julia and C++. Almost on all inputs Python is about ten times slower than Julia. In regards to “Graph making matrix” the time for Python uses to reading the file and creating the matrix is  This problem highlights one of the weaknesses of Python, arrays/lists. With Python being much slower than the rest of the languages, it was of course necessary to dig deeper to find out why. It turns out that arrays in Python are just really slow, and there is not much to do about it, unless external packages are included to help out. A package called \textbf{Numpy} should make operations on arrays much faster. The version in Python of euler 11 was tested with Python, and the results was worse than the regular version, and \textbf{Numpy} is not taken into account. Another thing to notice is that Julia is column-major when iterating over an matrix, where as the other languages are row-major. Column-major is that each column is loaded into memory, leading to iterating over a column is faster than iterating over a row. In this test Julia was implemented as iterating over rows before columns. For that reason a version of Julia was made that was column-major, figure \ref{graphopti} shows the comparison of regular version (row major), and the optimized version (column-major). This version also makes the matrix as column-major, meaning a row reading in the input file will become a column in the matrix. The mirroring of the matrix does not matter in this problem, as the product is calculated in all directions. On smaller inputs the runtime is lower, but not insignificantly lower. However, when the input increases in size, the difference between row-major and column-major becomes higher and higher. Looking at the six largest inputs, column-major is roughly 20\% faster than row-major, increasing the gap to Python.
+Figure \ref{graph112} and \ref{graph111} shows the test results of euler 11, keep in mind these results include the time for reading the input file and setting up the matrix. The test was made with 20 different inputs, matrices. Starting at 1000$\times$1000, increasing with 1000 in each test, and ending with 20.000$\times$20.000. Every test was with a product of 4 numbers. “Graph number” shows how much time is used creating the matrix. Julia, Java and C++ uses most of the time reading the file and creating the matrix, and the actual work on the matrix is a small part of the total runtime. Python, on the other hand, uses most of the runtime working on the matrix. The test results of euler 11 shows that Java is the fastest, Julia is second, C++ third and Python fourth and last. Java is about 2-3 times faster than Julia and C++. Almost on all inputs Python is about ten times slower than Julia. In regards to “Graph making matrix” the time for Python uses to reading the file and creating the matrix is  This problem highlights one of the weaknesses of Python, arrays/lists. With Python being much slower than the rest of the languages, it was of course necessary to dig deeper to find out why. It turns out that arrays in Python are just really slow, and there is not much to do about it, unless external packages are included to help out. A package called \textbf{Numpy} should make operations on arrays much faster. The version in Python of euler 11 was tested with Python, and the results was worse than the regular version, and \textbf{Numpy} is not taken into account. Another thing to notice is that Julia is column-major when iterating over an matrix, where as the other languages are row-major. Column-major is that each column is loaded into memory, leading to iterating over a column is faster than iterating over a row. In this test Julia was implemented as iterating over rows before columns. For that reason a version of Julia was made that was column-major, figure \ref{graphopti} shows the comparison of regular version (row major), and the optimized version (column-major). This version also makes the matrix as column-major, meaning a row reading in the input file will become a column in the matrix. The mirroring of the matrix does not matter in this problem, as the product is calculated in all directions. On smaller inputs the runtime is lower, but not insignificantly lower. However, when the input increases in size, the difference between row-major and column-major becomes higher and higher. Looking at the six largest inputs, column-major is roughly 20\% faster than row-major, increasing the gap to Python.
 \subsubsection{Results}
 *****
 \begin{figure}[H]
@@ -1402,14 +1398,17 @@ Trello is a very good tool for organizing and we should have been using it from 
 	\bibitem{toplst}
 	\url{http://www.tiobe.com/tiobe\_index}
 	\bibitem{ju-why}
-	\url{http://julialang.org/blog/2012/02/why-we-created-julia}
-	\bibitem{ju-paral}
-	\url{http://docs.julialang.org/en/latest/manual/parallel-computing/}
+	\url{http://julialang.org}
 	\bibitem{ju-uni}
 	\url{http://unicode.org/standard/WhatIsUnicode.html}
 	\bibitem{ju-vec}
 	\url{http://www.cs.cornell.edu/courses/cs1112/2013fa/Exams/exam2/vectorizedCode.pdf}
-	
+	\bibitem{ju-py}
+	\url{https://www.ibm.com/developerworks/community/blogs/jfp/entry/Python_Meets_Julia_Micro_Performance?lang=en}
+	\bibitem{li-thr}
+	\url{https://www.techopedia.com/definition/24784/lightweight-thread}
+	\bibitem{user-sys}
+	\url{http://stackoverflow.com/questions/556405/what-do-real-user-and-sys-mean-in-the-output-of-time1}
 \end{thebibliography}
 
 \end{document}

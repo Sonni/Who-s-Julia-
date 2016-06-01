@@ -8,10 +8,10 @@
 \contentsline {subsubsection}{\numberline {3.2.2}Multiple dispatch}{9}{subsubsection.3.2.2}
 \contentsline {subsubsection}{\numberline {3.2.3}User defined types}{9}{subsubsection.3.2.3}
 \contentsline {subsubsection}{\numberline {3.2.4}Garbage Collector}{10}{subsubsection.3.2.4}
-\contentsline {subsubsection}{\numberline {3.2.5}Built-in package manager}{11}{subsubsection.3.2.5}
+\contentsline {subsubsection}{\numberline {3.2.5}Built-in package manager}{10}{subsubsection.3.2.5}
 \contentsline {subsubsection}{\numberline {3.2.6}Lightweight green threading}{11}{subsubsection.3.2.6}
 \contentsline {subsubsection}{\numberline {3.2.7}Meta-programming and Macros}{11}{subsubsection.3.2.7}
-\contentsline {subsubsection}{\numberline {3.2.8}Implementing code from other languages}{12}{subsubsection.3.2.8}
+\contentsline {subsubsection}{\numberline {3.2.8}Implementing code from other languages}{11}{subsubsection.3.2.8}
 \contentsline {subsubsection}{\numberline {3.2.9}Designed for parallelism and distributed computation}{12}{subsubsection.3.2.9}
 \contentsline {subsubsection}{\numberline {3.2.10}Supports Unicode}{12}{subsubsection.3.2.10}
 \contentsline {subsubsection}{\numberline {3.2.11}Devectorized code is fast}{13}{subsubsection.3.2.11}
