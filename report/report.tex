@@ -208,7 +208,6 @@ The text editor Atom supports the Julia language. Atom has a package, \textbf{ub
 	\label{variables}
 \end{figure}
 
-
 \begin{figure}[H]
 	\centering
 	\begin{subfigure}[H]{0.7\textwidth}
@@ -550,8 +549,16 @@ A thread is lightweight when it shares address space with other threads as oppos
 Green threads are threads that are scheduled not by the operating system but rather by the runtime library or the virtual machine. Green threads do not have to rely on the operating system and can be controlled much better – which means the threads are in user space and not kernel space. (See section~\ref{sec:timemeasure} for explanation of time measurement) As of Julia 0.4.5, multithreading is not available, but in the unstable version 0.5.0 an experimental support of multithreading is available. 
 
 \subsubsection{Meta-programming and Macros}
-Meta-programming is a way to write programs in programs and let them use program code as data. In Julia meta-programming can be done by defining macros. For example, the @time macro was used extensively in the project. The @time macro is a part of the Julia standard library. The @time macro takes a function as an argument and starts a timer before the code execution, stops the timer after execution and prints the time passed and memory allocated. Meta-programming and macros are known from Lisp, a programming language, and have been used in early AI research.
-**EXAMPLES HERE??**
+Meta-programming is a way to write programs in programs and let them use the code as data. In Julia meta-programming can be done by defining macros. For example, the @time macro was used extensively in the project. The @time macro is a part of the Julia standard library. The @time macro takes a function as an argument and starts a timer before the code execution, stops the timer after execution and prints the time passed and memory allocated. Meta-programming and macros are known from Lisp, a programming language, and have been used in early AI research. Figure \ref{macro} shows how to make a macro. To use this macro in a program simply write \textbf{@sayhello(Bob)} in the program, and "Hello, Bob" will be printed to the screen.
+\begin{figure}[H]
+	\begin{lstlisting}[language=python]
+	macro sayhello(name)
+		return :( println("Hello, ", $name) )
+	end
+	\end{lstlisting}
+	\caption{Making a macro}
+	\label{macro}
+\end{figure}
 
 \subsubsection{Implementing code from other languages}
 Since Julia is a newer language, there are not many written libraries yet. Julia has an import feature for both Python and C libraries to decrease this disadvantage. Import the library \textbf{PyCall} with the "\textbf{using}" operation to use Python and import Python libraries via a macro \textbf{@pyimport}. To use C libraries or coding, simply run the function \textbf{ccall()}. Another feature is to execute shell commands. Execute shell commands using \textbf{run(``)}. An example would be running \textbf{run(`echo Hello World`)}, which would return the output "Hello World".
