@@ -62,18 +62,16 @@
 		xlabel={$Input$},
 		ylabel={$Time [s]$},
 		grid=major,
-		legend entries={$Julia$,$Python$,$Java$,$c++$},
+		legend entries={$C++$},
 		legend style={at={(1,1)},anchor=north west},]
-			\addplot [box plot median] table {boxplot_data.dat};
-			\addplot [box plot box] table {boxplot_data.dat};
-			\addplot [box plot top whisker] table {boxplot_data.dat};
-			\addplot [box plot bottom whisker] table {boxplot_data.dat};
-			\addplot table {graph-julia.dat};
-			\addplot table {graph-java.dat};
+			\addplot [box plot median] table {cpp_data.dat};
+			\addplot [box plot box] table {cpp_data.dat};
+			\addplot [box plot top whisker] table {cpp_data.dat};
+			\addplot [box plot bottom whisker] table {cpp_data.dat};
 			\addplot table {graph-cpp.dat};
 		\end{axis}
 	\end{tikzpicture}
-	\caption{1 Julia, 2 C++, 3 Java}
+	\caption{C++}
 	\label{boxplot}
 \end{figure}
 \end{document}

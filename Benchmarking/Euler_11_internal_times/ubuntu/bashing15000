@@ -1,5 +1,5 @@
-declare args="1000 4"
-declare loops=5
+declare args="15000 4"
+declare loops=100
 
 echo Julia
 declare -i x=loops

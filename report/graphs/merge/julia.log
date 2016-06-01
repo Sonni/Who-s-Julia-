@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.5.29)  31 MAY 2016 12:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.5.29)  1 JUN 2016 10:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**boxplot.tex
-(./boxplot.tex
+**julia.tex
+(./julia.tex
 LaTeX2e <2016/02/01>
 Babel <3.9q> and hyphenation patterns for 81 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -456,8 +456,8 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks32
 \@floatcapt=\box39
 )
-(./boxplot.aux)
-\openout1 = `boxplot.aux'.
+No file julia.aux.
+\openout1 = `julia.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 56.
 LaTeX Font Info:    ... okay on input line 56.
@@ -471,7 +471,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 56.
 LaTeX Font Info:    ... okay on input line 56.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 56.
 LaTeX Font Info:    ... okay on input line 56.
- ABD: EveryShipout initializing macros
+ABD: EveryShipout initializing macros
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count116
@@ -539,34 +539,35 @@ ick labels; missing features). Consider writing \pgfplotsset{compat=1.13} into
 your preamble.
  on input line 56.
 
-PGFPlots: reading {boxplot_data.dat}
-PGFPlots: reading {boxplot_data.dat}
-PGFPlots: reading {boxplot_data.dat}
-PGFPlots: reading {boxplot_data.dat}
+PGFPlots: reading {julia_data.dat}
+PGFPlots: reading {julia_data.dat}
+PGFPlots: reading {julia_data.dat}
+PGFPlots: reading {julia_data.dat}
 PGFPlots: reading {graph-julia.dat}
-PGFPlots: reading {graph-java.dat}
-PGFPlots: reading {graph-cpp.dat}
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 74.
+(Font)              <7> on input line 72.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 74.
+(Font)              <5> on input line 72.
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./boxplot.aux) ) 
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./julia.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 21208 strings out of 493029
- 560695 string characters out of 6136234
- 726223 words of memory out of 5000000
- 24410 multiletter control sequences out of 15000+600000
+ 21218 strings out of 493029
+ 560957 string characters out of 6136234
+ 724223 words of memory out of 5000000
+ 24426 multiletter control sequences out of 15000+600000
  3640 words of font info for 14 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,19n,116p,721b,2219s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on boxplot.pdf (1 page, 45582 bytes).
+ 62i,19n,116p,719b,2205s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on julia.pdf (1 page, 39820 bytes).
 PDF statistics:
  27 PDF objects out of 1000 (max. 8388607)
  19 compressed objects within 1 object stream

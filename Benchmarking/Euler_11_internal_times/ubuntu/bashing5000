@@ -1,0 +1,33 @@
+declare args="5000 4"
+declare loops=100
+
+echo Julia
+declare -i x=loops
+while [ $x -gt 0 ]; do
+	julia ../euler11.jl ${args}
+	((x--))
+done
+
+echo Python
+declare -i x=loops
+while [ $x -gt 0 ]; do
+	python ../euler11.py ${args}
+	((x--))
+done
+
+echo C++
+g++ -std=c++11 ../euler11.cpp -o ../ubeuler11
+declare -i x=loops
+while [ $x -gt 0 ]; do
+	../ubeuler11 ${args}
+	((x--))
+done
+
+echo Java
+javac ../euler11.java
+declare -i x=loops
+while [ $x -gt 0 ]; do
+	java -cp ../ euler11 ${args}
+	((x--))
+done
+

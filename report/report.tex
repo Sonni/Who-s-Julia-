@@ -84,11 +84,7 @@ indryk virker fint her.
 \newpage
 \pagenumbering{roman}
 \section{Summary}
-Julia is a new programming language. Through tests and benchmarking it is found that Julia tries to do some optimizations behind the scene but these optimizations does not seem as developed as Javas optimizations. In most of the test in this report and the Project Euler solutions that was not include in the report showed that Julia is relatively fast even in this early stage of development. This is also what the developer states and with what seems like a lot of inspiration from python, they managed to create an easy to learn and write programming language.
-
-\section{Preface}
-This report has been written in May 2016 as a first year project in the Bachelor Degree of Computer Science. We thank our supervisor Michal Kotrbčík for his help and time.
-In this project we have been doing benchmarks to find out if Julia is as good as the developers claim it to be. 
+Julia is a new programming language. Through tests and benchmarking it is found that Julia do some optimizations behind the scene but these optimizations does not seem as developed as Javas optimizations. In most of the test in this report and the Project Euler solutions that was not included in the report showed that Julia is relatively fast even in this early stage of development. This is what the developer states and with what seems like a lot of inspiration from Python, they managed to create an easy to learn and write programming language.
 
 \newpage
 \tableofcontents
@@ -101,13 +97,15 @@ In this project we have been doing benchmarks to find out if Julia is as good as
 \rhead{Project 99: Who's Julia?}
 \cfoot{\thepage\ of \pageref{LastPage}}
 \section{Introduction}
-Java, C, C++, C\# and Python are on the top ten list of the most used programming languages. There are hundreds of languages, but not minding the hard competition new languages are still created with the thought of doing better. An example of this is the relativly new programming language Julia, which has been developed with the idea to combine the best features of other languages.\\
+Java, C++ and Python are on the top ten of the most used programming languages. There are hundreds of languages, but not minding the hard competition new languages are still created with the thought of doing better. An example of this is the relativly new programming language Julia, which has been developed with the idea to combine the best features of other languages.\\
 \\
-The purpose of this report is to find out how well Julia performs compared to some of the standard languages as of 2016. One of those languages are Python which Julia has a lot of inspiration from - syntax wise and the dynamic type system. The second language that Julia will be compared with is Java, those two does share similaries but most of those are behind the scene stuff like garbage collection and compiler optimizations. The developers of Julia claims that Julia is as fast as C++ and therefor C++ is the last language that Julia will get compared with.
+The purpose of this report is to find out how well Julia performs compared to some of the standard languages as of 2016. One of those languages are Python which Julia has a lot of inspiration from - syntax wise and the dynamic type system. The second language that Julia will be compared with is Java, those two does share similaries but most of those are behind the scene stuff like garbage collection and compiler optimizations. The developers of Julia claims that Julia is as fast as C and therefore C++ is the last language that Julia will get compared with.
+\\
+The report start introducing Julia and Julia's background and features. Julia's introduction is followed by a brief introduction to Project Euler. Next, an explanation of the theory behind benchmarking, profiling and time measurement for the understanding of the rest of the report. The materials and methods used benchmarking. The problems used for benchmarking. The results, personal experience with Julia, discussion and conclusion.
 
 \section{Julia}
-*in this section we* \\
-Special Features in Julia:
+In this section we are going to introduce why and when Julia was created. We will show some comparisons in the syntax with Python, C++ and Java; and explain some of the features listed below.\\
+Features in Julia:
 \begin{description}
 	\item[$\cdot$] Dynamic typing and byte-related memory management
 	\item[$\cdot$] Multiple dispatch
@@ -116,14 +114,16 @@ Special Features in Julia:
 	\item[$\cdot$] Built-in package manager
 	\item[$\cdot$] Lightweight green threading
 	\item[$\cdot$] Meta-programming and Macros
+	\item[$\cdot$] Automatic generation of efficient, specialized code for different argument types
 	\item[$\cdot$] Implementing code from other languages
 	\item[$\cdot$] Designed for parallelism and distributed computation
 	\item[$\cdot$] Supports Unicode
+	\item[$\cdot$] Elegant and extensible conversions and promotions for numeric and other types
 	\item[$\cdot$] Devectorized code is fast
 	\item[$\cdot$] Others we have not looked into
 \end{description}
-Julia is a oriented orientated programming language, which has been under development since 2009. First released in 2012 and the newest stable version of Julia is version 0.4.5.  The language has been created because the developers wanted a language with all the features they like from different languages. The developers also wanted the language to be open source, which means everybody can read and modify the language. One of the ideas was to make the language as simple, readable and easy to learn as possible. The language is made for high performance and scientific computations while still supporting general purpose programming. 
-Programming in Julia can be done in the terminal like python with interactive mode:
+Julia is a object-oriented programming language, which has been under development since 2009. First released in 2012 and the newest stable version of Julia is version 0.4.5.  The language has been created because the developers wanted a language with all the features they like from different languages. The developers also wanted the language to be open source, which means everybody can read and modify the language. One of the ideas was to make the language as simple, readable and easy to learn as possible. The language is made for high performance and scientific computations while still supporting general purpose programming. 
+Programming in Julia can be done in the terminal like Python with interactive mode:
 \begin{figure}[H]
 	\centering
 	\begin{subfigure}[H]{0.8\textwidth}
@@ -141,7 +141,7 @@ Programming in Julia can be done in the terminal like python with interactive mo
 	\caption{Julia and Python in terminal}
 \end{figure}
 
-Writing longer programs in the terminal might not be the preferred method. Files containing Julia code can be interpreted by the Julias interpreter with the following command from terminal:\\
+Writing longer programs in the terminal might not be the preferred method. Files containing Julia code can be interpreted by the Julia's interpreter with the following command from terminal:\\
 \textbf{julia test.jl}\\
 The text editor Atom supports the Julia language. Atom has a package, \textbf{uber-juno}, which sets up Atom to act like an IDE, integrated development environment for Julia.
 
@@ -426,10 +426,10 @@ The text editor Atom supports the Julia language. Atom has a package, \textbf{ub
 \end{figure}
 
 \subsection{Features}
-* In this section we *
+In this section we are writing about some of Julia's features.
 \subsubsection{Dynamic typing and byte-related memory management}
 Dynamic typing is a type management approach where type checks are mostly performed at runtime, as opposed to static typing, where type checks are made at compile time. Dynamic typing allows the programmer to skip the type declaration and let the dynamic type system handle it. In Julia it is possible to specify types, but mostly it is not necessary. 
-Julia also makes decisions about how much memory to allocate for variables but the assigned memory size will not change. This means that if a value, that exceeds the allocated memory, is assigned to the variable after initialization then an bug will occur. Another point to notice is that the memory size can be decreased and this will be addressed later under the section Garbage Collector. However, there is a range of memory sizes to chose from when initializing a variable. Julia will by default assign 32 bits to an integer or a float if no more memory is needed at initialization, but it is possible to manually chose one of the following:
+Julia also makes decisions about how much memory to allocate for variables but the assigned memory size will not change. This means that if a value, that exceeds the allocated memory, is assigned to the variable after initialization then a bug will occur. Another point to notice is that the memory size can be decreased and this will be addressed later under the section Garbage Collector. However, there is a range of memory sizes to chose from when initializing a variable. Julia will by default assign 32 bits to an integer or a float if no more memory is needed at initialization, but it is possible to manually chose one of the following:
 \begin{description}
 	\item[$\cdot$] Signed/unsigned integer – 8, 16, 32, 64 and 128 bits – Int8, UInt8, Int16, UInt16, Int32, UInt32, Int64, UInt64, Int128 and UInt128
 	\item[$\cdot$] Floats – 16, 32 and 64 bits – Float16, Float32 and Float64
@@ -499,13 +499,13 @@ Julia comes with a built in package manager, which keeps track of packages that 
 \subsubsection{Lightweight green threading}
 A thread is lightweight when it shares address space with other threads opposed to heavyweight threads, which has its own address space. If threads share the same address space the communication between them is faster and much simpler. The communication between heavyweight threads have to go through pipes or sockets. \\
 \\
-Green threads are threads that are scheduled not by the operating system but rather by the runtime library or the virtual machine. Green threads do not have to rely on the operating system and can be controlled much better – which means the threads are in user space and not kernel space. (See section~\ref{sec:timemeasure} for explanation of time measurements) As of Julia 0.4.5 multithreading is not available but in the unstable version 0.5.0 an experimental support of multithreading is available, therefore threading will be addressed no further. 
+Green threads are threads that are scheduled not by the operating system but rather by the runtime library or the virtual machine. Green threads do not have to rely on the operating system and can be controlled much better – which means the threads are in user space and not kernel space. (See section~\ref{sec:timemeasure} for explanation of time measurement) As of Julia 0.4.5 multithreading is not available but in the unstable version 0.5.0 an experimental support of multithreading is available, therefore threading will be addressed no further. 
 
 \subsubsection{Meta-programming and Macros}
 Meta-programming is a way to write programs in programs and let them use program code as data. In Julia meta-programming can be done by defining macros. For example, the @time macro was used extensively in the project. The @time macro is a part of the Julia standard library. The @time macro takes a function as an argument and starts a timer bafore the code execution and stops the timer after execution and prints the time passed and memory allocated. Meta-programming and macros are known from Lisp, a programming language, and have been used in early AI research. 
 
 \subsubsection{Implementing code from other languages}
-Since Julia is a newer language there are not many written libraries yet. Julia has an import feature for both Python and C libraries to avoid this disadvantage. Import the library PyCall with the "using" operation to use python and import Python libraries via a macro @pyimport. To use C libraries or coding, simply run the function ccall(). The programming language C is a well known and used language. Many systems are based on C, which makes C an advantage for hardware programming. Another feature is to execute shell commands. Execute shell commands using run(``). An example would be running run(`echo Hello World`), which would return the output "Hello World".
+Since Julia is a newer language there are not many written libraries yet. Julia has an import feature for both Python and C libraries to avoid this disadvantage. Import the library PyCall with the "using" operation to use Python and import Python libraries via a macro @pyimport. To use C libraries or coding, simply run the function ccall(). The programming language C is a well known and used language. Many systems are based on C, which makes C an advantage for hardware programming. Another feature is to execute shell commands. Execute shell commands using run(``). An example would be running run(`echo Hello World`), which would return the output "Hello World".
 
 \begin{figure}[H]
 		\centering
@@ -569,13 +569,14 @@ Vectorization of code is, for example, when a for loop is rewritten to sequentia
 Project Euler is a website (\url{https://projecteuler.net/}) with a huge database of mathematical and programming challenges. In this report Project Euler has been used to find challenges for testing the different programming languages.
 
 \section{Theory}
+In this section we explain some of the theory behind Benchmarking, profiling and time measurement.
 \subsection{Benchmarking}
 **In computer science, benchmarking is experimental measuring the amount of performance crammed by a particular program**. In this report we will be measuring the time it takes for a programming language to execute a set of programs implemented in Julia, Python, C++ and Java. To get an indication of the real CPU time, multiple tests are done and the median is calculated. The median run time is considered since there can be fluctuations in run times for every test.
 
 \subsection{Profiling}
 Profiling is a way to analyse code. For example, the analysis could be measuring the memory usage, time and function calls. The analysis shows, which part of the code took the longest time or used up all memory. Profiling is often used for optimization.
 
-\subsection{Time measurements}
+\subsection{Time measurement}
 \label{sec:timemeasure}
 When looking at the running time the most common terms are wall time (real time) and CPU time. Wall time is the time it took the program to terminate, from start to finish. CPU time is how much time the program used on the CPU. The time difference between wall time and CPU time comes from the fact that the program being benchmarked or profiled might get interrupted by the operating system, because other tasks needs to be handled. These tasks could be other programs, or something that the OS needs to get done. The processing time of those tasks will be included in the wall time but excluded in the CPU time. To get the run times in Unix based system, the time command is available from the terminal:
 \begin{lstlisting}
@@ -597,6 +598,7 @@ The difference between user- and kernel mode is the following:\\
 In most memory protected systems there are some locked operations for security reasons. E.g. allocation of memory or accessing hardware requires kernel mode and cannot be done in user mode. Operations as malloc and reading/writing to files will be proccessed in the kernel and this is counted as system time. This does not necessarily mean that all time is spent in kernel mode operating with file data, since the only time that is spent in kernel mode is writing the data from the file to memory. The rest of the operation is counted towards user time. Therefore to get the amount of time spent by the CPU, User time + system time is a good estimation. Another way to measure time spent on the CPU is to use the built in libraries. For example the ThreadMXBean in Java. This is especially useful for profiling.
 
 \section{Materials and methods}
+In this section we have written how we benchmarked and with what materials/software.
 \subsection{Benchmarking}
 Materials for benchmarking: \\
 Lenovo W530: Intel Core i5-3320M 2.60GHz x 4, 8GB RAM, Ubuntu 16.04 64-bit\\
@@ -606,11 +608,11 @@ Julia 0.4.5 \\
 Python 2.7.11+ \\
 C++11 \\
 Java 1.8.0\_92 \\\\
-Benchmarking will be done by comparing the running time of the same algorithm in different languages. In this project the run time is measured as the sum of system and user time, because the system and user time are not affected by heavy loads on the machine. All time measurements are measured using the shell 'time' command that returns the three types of time taken for the algorithm to run. The problems will be scaled to have smaller and larger inputs. However, in some situations a large input can cause memory problems, which will be addressed in the specific problem. The memory problems is unfortunately making an upper bound for how large data is possible to pass for certain problems. A tool created for this project gather the data and calculates the median of the run time. 
+Benchmarking will be done by comparing the running time of the same algorithm in different languages. In this project the run time is measured as the sum of system and user time, because the system and user time are not affected by heavy loads on the machine. All time measurement are measured using the shell 'time' command that returns the three types of time taken for the algorithm to run. The problems will be scaled to have smaller and larger inputs. However, in some situations a large input can cause memory problems, which will be addressed in the specific problem. The memory problems is unfortunately making an upper bound for how large data is possible to pass for certain problems. A tool created for this project gather the data and calculates the median of the run time. 
 
 \section{Problems}
+In this section we explain some of the problems we have been using for benchmarking.
 \subsection{Projecteuler 11}
-
 \textit{In the 20x20 grid below, four numbers along a diagonal line have been marked in red. The product of these numbers is 26$\times$63$\times$78$\times$14 = 1788696. What is the greatest product of four adjacent numbers in the same direction (up, down, left, right, or diagonally) in the 20x20 grid?}
 \begin{figure}[H]
 	\begin{center}
@@ -799,11 +801,23 @@ while true
 end
 \end{lstlisting}
 \subsubsection{Results}
-The fastest of the four languages is differently Java, which is kind of surprising as an expectation was that the compiler optimization would break with this kind of work in every recursive call - to check if Java was over optimizing a few elements from the sorted list was printed at the end of the program, to insure that java did not just terminate because it found that the array was not going to be used further after the sorting. Though Javas optimization is still present the optimization of Julias breaks and it has a hard time to complete the first few input. C++ seems pretty slow compared to Java but keep in mind that this is without much optimization - C++ is known for the fast speed performance when working with arrays and this is why it does manage to get almost all inputs opposed to Python, which has no recursion optimization and is really slow when working with arrays and lists.
+The fastest of the four languages is differently Java, which is kind of surprising as the expectation was that the compiler optimization would break with this kind of work in every recursive call - to check if Java was over optimizing a few elements from the sorted list was printed at the end of the program, to insure that Java did not just terminate because it found that the array was not going to be used further after the sorting. Though Javas optimization is still present, the optimization of Julia's breaks and it has a hard time to complete the first few input. C++ seems pretty slow compared to Java but keep in mind that this is without much optimization - C++ is known for the fast speed performance when working with arrays and this is why it does manage to get almost all inputs opposed to Python, which has no recursion optimization and is really slow when working with arrays and lists.
 
 \subsection{Statistics}
-* Insert introduction, results and conclusion *
+Up until now there has been tests on euler11, euler116 and Quicksort. With only three types of testing, the results will not cover every aspect of comparing different usages in a languages, for example comparing arrays, for-loops, recursion etc.. 
+Statistics was added to gain a bit broader vision on how Julia performs in different situations, since having three programs, in each language, does not cover everything. 
+In order to make statistics, a set of problems was selected from Projecteuler. While having four languages to compare, a small set of problems will quickly turn in to a larger set. \\
+** Update after testing ** \\
+Currently there is twenty problems from Projecteuler, and that becomes 80 separate programs. Testing the base case of Projecteuler, the problem as it is stated, mostly results in a run time of less than a second. No one cares if the run time of a program is 300ms, or 500ms, for this particular reason it was needed to scale the problems. A given problem was tested with ten different inputs. The first input is as stated in the original problem, and then increased nine times, giving ten results for each problem. There was set a maximum run time of five minutes for each test. Having 80 programs, the time needed for testing will get high very fast. All programs were tested three times with each input, and the median is used for the graphs shown later. 
+Starting with 80 programs, which is tested with ten different inputs and each input tested three times, resulting in 2400 programs. Keeping the amount of programs in mind, an average run time of one minute, would make the testing phase to a total of 40 hours for one computer. 
+Therefore, the testing was divided to run on three computers. The specifications of the computers can be seen in the appendix. MacOne tested eulers: 1, 4, 8, 9, 12, 13, 18 and 22. Ubuntu tested eulers: 14, 16, 19, 20 and 21. MacTwo tested eulers: 30, 31, 36, 50, 52, 76 and 112.
+One big disadvantage, and time consumer, is that the inputs had only been properly tested on the Julia versions, before making the final tests. In some cases, the other languages, opposed to Julia, had trouble going through all inputs within the time limit. All programs were implemented in Julia as the first language, and copied into Python, Java and C++. Meaning the problems are not optimized in a certain language, possibly giving an advantage Julia over the other languages.
+If a test exceeds the time limit of five minutes, it will not be included in the graphs shown.
+\\
+Some of the problems had to be altered in order to being able to handle large inputs. Problem 8, 13, 18 and 22 all reads their inputs from a .txt file, before doing any computations. The time for reading data from a file and setting up the data, is included in the run time of the tests. 
+
 \section{Personal experience with Julia}
+In this section we each wrote about our personal experience with Julia.
 \subsection{Sonni}
 Some of the design choices, in Julia, can be really frustrating for someone who is adapting to Julia. The indices starts at 1 - this could be debatable because of the statement that Julia is used in a lot of scientific computations and many programming languages made for scientific computations use 1-based indexing. But as a programmer who is used to indices starting at 0, this can cause a lot of unnecessary bugs. The developers of Julia also made unusual design choice with the for-loop syntax. A incrementing for loop looks like:
 \begin{lstlisting}[language=python]
@@ -862,11 +876,12 @@ http://radar.oreilly.com/2013/10/julias-role-in-data-science.html \\
 \section{Conclusion}
 *Is Julia a worthy competitor? Is it worth switching to Julia? Would we recommend Julia to anyone?*
 
-It can be difficult to make any conclusions by the benchmarking but it may give an idea of how Julia performs, compared to Java, Python and C++. One thing to keep in mind is that as of writing this report, Julia is in version 0.4.5 - it has yet to reach version 1.0.0 while the other languages are much older than Julia. This could mean that Julia might get even faster in the future and by the benchmarking it could look like that Julia is already performing well. The idea of the developers is clear, they are trying to make a programming language that is as easy to learn and write as python but with a compiler that optimizes code like java and both of these goals have more or less been reached by the developers. Julia was differently easy to learn and by the benchmarking it does look like that the compiler is doing okay with the optimization when it is possible. It does also feels like that the Julia developers are playing with the idea of giving the user some control over what is happening behind the scene. ‘Playing’ because this does not feel even close to done. Examples are that they are giving the user an option to allocate memory for variables manually but as soon as a new value is assign to that variable then Julia will change the memory size. Also it is not possible to free a declared variables memory entirely and the only operation the user can do with the garbage collecter is force garbage collection and disable the garbage collector. Somewhat the same story goes for the option implement code from other languages this seems kind of buggy and not complete.
+It can be difficult to make any conclusions by the benchmarking but it may give an idea of how Julia performs, compared to Java, Python and C++. One thing to keep in mind is that as of writing this report, Julia is in version 0.4.5 - it has yet to reach version 1.0.0 while the other languages are much older than Julia. This could mean that Julia might get even faster in the future and by the benchmarking it could look like that Julia is already performing well. The idea of the developers is clear, they are trying to make a programming language that is as easy to learn and write as Python but with a compiler that optimizes code like Java and both of these goals have more or less been reached by the developers. Julia was differently easy to learn and by the benchmarking it does look like that the compiler is doing okay with the optimization when it is possible. It does also feels like that the Julia developers are playing with the idea of giving the user some control over what is happening behind the scene. ‘Playing’ because this does not feel even close to done. Examples are that they are giving the user an option to allocate memory for variables manually but as soon as a new value is assign to that variable then Julia will change the memory size. Also it is not possible to free a declared variables memory entirely and the only operation the user can do with the garbage collecter is force garbage collection and disable the garbage collector. Somewhat the same story goes for the option implement code from other languages this seems kind of buggy and not complete.
 
 \newpage
 \section{Appendix}
 \subsection{Process analysis}
+This section is about our management of time and resources.
 \subsubsection{Projectmanagement, organizing workflow and organizing process of learning}
 The first thing we agreed doing was getting to know Julia for the research. We used a lot of time solving problems in Julia and trying to figure out how to get a view of what was to be done and how to organize it. We mostly communicated through facebook and created a repository on github to share project files. We gathered our solutions to Project Euler and made comparisons. Gathering information about benchmarking we mostly ran into walls of text on how to do it properly, and did not know where to start. Every time we thought we were understanding benchmarking, our supervisor taught us something new. We created a board on Trello. We made a to-do list of cards so we knew what had to be done and started handing out tasks. We communicated more with our supervisor via email as we started writing the report. The group was really good at getting the tasks, we agreed on doing, done. We should have been using more tools for organizing and we did not set any deadlines for anything. Scrum is a tool, which would have helped us a lot, but it is not that easy to learn. We should have met and worked together, several times a week, discussing our problems and goals. 
 
