@@ -8,16 +8,16 @@
 \contentsline {subsubsection}{\numberline {3.2.2}Multiple dispatch}{9}{subsubsection.3.2.2}
 \contentsline {subsubsection}{\numberline {3.2.3}User defined types}{9}{subsubsection.3.2.3}
 \contentsline {subsubsection}{\numberline {3.2.4}Garbage Collector}{10}{subsubsection.3.2.4}
-\contentsline {subsubsection}{\numberline {3.2.5}Built-in package manager}{10}{subsubsection.3.2.5}
+\contentsline {subsubsection}{\numberline {3.2.5}Built-in package manager}{11}{subsubsection.3.2.5}
 \contentsline {subsubsection}{\numberline {3.2.6}Lightweight green threading}{11}{subsubsection.3.2.6}
 \contentsline {subsubsection}{\numberline {3.2.7}Meta-programming and Macros}{11}{subsubsection.3.2.7}
-\contentsline {subsubsection}{\numberline {3.2.8}Implementing code from other languages}{11}{subsubsection.3.2.8}
+\contentsline {subsubsection}{\numberline {3.2.8}Implementing code from other languages}{12}{subsubsection.3.2.8}
 \contentsline {subsubsection}{\numberline {3.2.9}Designed for parallelism and distributed computation}{12}{subsubsection.3.2.9}
 \contentsline {subsubsection}{\numberline {3.2.10}Supports Unicode}{12}{subsubsection.3.2.10}
-\contentsline {subsubsection}{\numberline {3.2.11}Devectorized code is fast}{12}{subsubsection.3.2.11}
+\contentsline {subsubsection}{\numberline {3.2.11}Devectorized code is fast}{13}{subsubsection.3.2.11}
 \contentsline {section}{\numberline {4}Project Euler}{13}{section.4}
-\contentsline {section}{\numberline {5}Theory}{13}{section.5}
-\contentsline {subsection}{\numberline {5.1}Benchmarking}{13}{subsection.5.1}
+\contentsline {section}{\numberline {5}Theory}{14}{section.5}
+\contentsline {subsection}{\numberline {5.1}Benchmarking}{14}{subsection.5.1}
 \contentsline {subsection}{\numberline {5.2}Profiling}{14}{subsection.5.2}
 \contentsline {subsection}{\numberline {5.3}Time measurement}{14}{subsection.5.3}
 \contentsline {section}{\numberline {6}Materials and methods}{15}{section.6}
@@ -31,13 +31,13 @@
 \contentsline {subsubsection}{\numberline {7.2.2}Results}{21}{subsubsection.7.2.2}
 \contentsline {subsection}{\numberline {7.3}Dual Piviot Quicksort}{21}{subsection.7.3}
 \contentsline {subsubsection}{\numberline {7.3.1}Results}{24}{subsubsection.7.3.1}
-\contentsline {subsection}{\numberline {7.4}Statistics}{24}{subsection.7.4}
-\contentsline {section}{\numberline {8}Personal experience with Julia}{25}{section.8}
-\contentsline {subsection}{\numberline {8.1}Sonni}{25}{subsection.8.1}
-\contentsline {subsection}{\numberline {8.2}Simon}{27}{subsection.8.2}
+\contentsline {subsection}{\numberline {7.4}Statistics}{25}{subsection.7.4}
+\contentsline {section}{\numberline {8}Personal experience with Julia}{26}{section.8}
+\contentsline {subsection}{\numberline {8.1}Sonni}{26}{subsection.8.1}
+\contentsline {subsection}{\numberline {8.2}Simon}{28}{subsection.8.2}
 \contentsline {subsection}{\numberline {8.3}Asbj\IeC {\o }rn}{28}{subsection.8.3}
-\contentsline {section}{\numberline {9}Discussion}{28}{section.9}
-\contentsline {section}{\numberline {10}Conclusion}{28}{section.10}
+\contentsline {section}{\numberline {9}Discussion}{29}{section.9}
+\contentsline {section}{\numberline {10}Conclusion}{29}{section.10}
 \contentsline {section}{\numberline {11}Appendix}{30}{section.11}
 \contentsline {subsection}{\numberline {11.1}Process analysis}{30}{subsection.11.1}
 \contentsline {subsubsection}{\numberline {11.1.1}Projectmanagement, organizing workflow and organizing process of learning}{30}{subsubsection.11.1.1}
