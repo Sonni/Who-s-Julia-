@@ -15,7 +15,7 @@
 \BOOKMARK [3][-]{subsubsection.3.2.10}{Supports Unicode}{subsection.3.2}% 15
 \BOOKMARK [3][-]{subsubsection.3.2.11}{Devectorized code is fast}{subsection.3.2}% 16
 \BOOKMARK [1][-]{section.4}{Project Euler}{}% 17
-\BOOKMARK [1][-]{section.5}{Theory}{}% 18
+\BOOKMARK [1][-]{section.5}{Experimental evaluation}{}% 18
 \BOOKMARK [2][-]{subsection.5.1}{Benchmarking}{section.5}% 19
 \BOOKMARK [2][-]{subsection.5.2}{Profiling}{section.5}% 20
 \BOOKMARK [2][-]{subsection.5.3}{Time measurement}{section.5}% 21
