@@ -1,0 +1,10 @@
+python euler52.py 1000000
+python euler52.py 10000000
+python euler52.py 15000000
+python euler52.py 20000000
+python euler52.py 25000000
+python euler52.py 30000000
+python euler52.py 35000000
+python euler52.py 40000000
+python euler52.py 45000000
+python euler52.py 50000000

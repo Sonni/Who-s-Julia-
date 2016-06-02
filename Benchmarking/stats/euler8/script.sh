@@ -1,0 +1,1 @@
+python euler8.py data1.txt

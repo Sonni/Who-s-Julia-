@@ -1,0 +1,10 @@
+./euler31 200
+./euler31 1000
+./euler31 1300
+./euler31 1600
+./euler31 1900
+./euler31 2200
+./euler31 2500
+./euler31 2800
+./euler31 3100
+./euler31 3400

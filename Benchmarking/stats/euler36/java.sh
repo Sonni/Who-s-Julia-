@@ -1,0 +1,10 @@
+java euler36 1000000
+java euler36 1750000
+java euler36 2500000
+java euler36 3250000
+java euler36 4000000
+java euler36 4750000
+java euler36 5500000
+java euler36 6250000
+java euler36 7000000
+java euler36 7750000

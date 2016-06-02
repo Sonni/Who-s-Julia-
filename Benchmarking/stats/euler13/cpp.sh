@@ -1,0 +1,10 @@
+./euler13 data1.txt
+./euler13 data2.txt
+./euler13 data3.txt
+./euler13 data4.txt
+./euler13 data5.txt
+./euler13 data6.txt
+./euler13 data7.txt
+./euler13 data8.txt
+./euler13 data9.txt
+./euler13 data10.txt

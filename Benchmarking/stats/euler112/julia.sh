@@ -1,0 +1,10 @@
+julia euler112.jl 99.00
+julia euler112.jl 99.13
+julia euler112.jl 99.23
+julia euler112.jl 99.33
+julia euler112.jl 99.43
+julia euler112.jl 99.53
+julia euler112.jl 99.63
+julia euler112.jl 99.73
+julia euler112.jl 99.83
+julia euler112.jl 99.93

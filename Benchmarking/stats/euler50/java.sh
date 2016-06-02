@@ -1,0 +1,10 @@
+java euler50 1000000
+java euler50 59999999
+java euler50 89999999
+java euler50 119999999
+java euler50 149999999
+java euler50 179999999
+java euler50 209999999
+java euler50 239999999
+java euler50 269999999
+java euler50 299999999

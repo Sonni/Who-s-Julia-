@@ -1,0 +1,10 @@
+java euler31 200
+java euler31 1000
+java euler31 1300
+java euler31 1600
+java euler31 1900
+java euler31 2200
+java euler31 2500
+java euler31 2800
+java euler31 3100
+java euler31 3400

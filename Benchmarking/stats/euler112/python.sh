@@ -1,0 +1,10 @@
+python euler112.py 99.00
+python euler112.py 99.13
+python euler112.py 99.23
+python euler112.py 99.33
+python euler112.py 99.43
+python euler112.py 99.53
+python euler112.py 99.63
+python euler112.py 99.73
+python euler112.py 99.83
+python euler112.py 99.93

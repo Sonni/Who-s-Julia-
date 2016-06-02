@@ -1,0 +1,10 @@
+python euler1.py 1000
+python euler1.py 1999999999
+python euler1.py 4999999999
+python euler1.py 9999999999
+python euler1.py 10999999999
+python euler1.py 20999999999
+python euler1.py 30999999999
+python euler1.py 40999999999
+python euler1.py 50999999999
+python euler1.py 60999999999

@@ -6,15 +6,14 @@ public class euler18
 	public static void main(String[] args)
 	{
 		String file = args[0];
-		try 
+		try
 		(
 			InputStream fis = new FileInputStream(file);
-			InputStream fis2 = new FileInputStream(file);
 			InputStreamReader isr = new InputStreamReader(fis);
-			InputStreamReader isr2 = new InputStreamReader(fis2);
+			InputStreamReader isr2 = new InputStreamReader(fis);
 			BufferedReader br = new BufferedReader(isr);
 			BufferedReader br2 = new BufferedReader(isr2);
-		) 
+		)
 		{
 			String str;
 			int lines = 0;
@@ -22,7 +21,7 @@ public class euler18
 			{
 				lines += 1;
 			}
-			
+
 			ArrayList<ArrayList<Long>> rows = new ArrayList<ArrayList<Long>>();
 			ArrayList<Long> temp;
 			for(int i = 0; i < lines + 1; i++)
@@ -30,11 +29,11 @@ public class euler18
 				temp = new ArrayList<Long>();
 				for(int j = 0; j < lines + 1; j++)
 				{
-					temp.add(0l);
+					temp.add((long)0);
 				}
 				rows.add(temp);
 			}
-			
+
 			int r = 0;
 			int c;
 			while((str = br2.readLine()) != null)
@@ -43,20 +42,20 @@ public class euler18
 				str = str.trim();
 				for(String ch : str.split(" "))
 				{
-					rows.get(r).set(c, Long.parseLong(ch));
+					rows.set(r).set(c, Long.parseLong(ch));
 					c += 1;
 				}
 				r += 1;
 			}
-			
-			sum(rows, lines-1);
+
+			System.out.println(sum(rows, lines-1));
 		}
 		catch(Exception e)
 		{
 			System.out.println(e);
 		}
 	}
-	
+
 	private static long sum(ArrayList<ArrayList<Long>> data, int row)
 	{
 		int c = data.size();

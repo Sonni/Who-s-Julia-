@@ -1,0 +1,10 @@
+python euler12.py 500
+python euler12.py 700
+python euler12.py 900
+python euler12.py 1100
+python euler12.py 1300
+python euler12.py 1500
+python euler12.py 1700
+python euler12.py 1900
+python euler12.py 2100
+python euler12.py 2300

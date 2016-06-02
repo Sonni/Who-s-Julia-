@@ -1,0 +1,10 @@
+python euler31.py 200
+python euler31.py 1000
+python euler31.py 1300
+python euler31.py 1600
+python euler31.py 1900
+python euler31.py 2200
+python euler31.py 2500
+python euler31.py 2800
+python euler31.py 3100
+python euler31.py 3400

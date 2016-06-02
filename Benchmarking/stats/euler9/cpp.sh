@@ -1,0 +1,10 @@
+./euler9 1000
+./euler9 125000
+./euler9 250000
+./euler9 375000
+./euler9 500000
+./euler9 625000
+./euler9 750000
+./euler9 875000
+./euler9 1000000
+./euler9 1125000

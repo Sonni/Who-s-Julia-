@@ -1,0 +1,10 @@
+julia euler9.jl 1000
+julia euler9.jl 125000
+julia euler9.jl 250000
+julia euler9.jl 375000
+julia euler9.jl 500000
+julia euler9.jl 625000
+julia euler9.jl 750000
+julia euler9.jl 875000
+julia euler9.jl 1000000
+julia euler9.jl 1125000

@@ -1,0 +1,10 @@
+python euler20.py 100
+python euler20.py 150
+python euler20.py 160
+python euler20.py 165
+python euler20.py 166
+python euler20.py 167
+python euler20.py 168
+python euler20.py 169
+python euler20.py 170
+python euler20.py 171

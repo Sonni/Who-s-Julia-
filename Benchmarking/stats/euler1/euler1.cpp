@@ -8,19 +8,20 @@
 
 #include <iostream>
 
-void f1(long long n)
+unsigned long long f1(unsigned long long n)
 {
-    long long sum = 0;
-    for (long long i = 0; i < n; i++)
+    unsigned long long sum = 0;
+    for (unsigned long long i = 0; i < n; i++)
     {
         if (i % 3 == 0 || i % 5 == 0)
             sum += i;
     }
 
-    std::cout << sum << std::endl;
+    return sum;
 }
 
 int main(int argc, const char * argv[]) {
-    f1(atoi(argv[1]));
+  std::cout << atoll(argv[1]) << std::endl;
+    f1(atoll(argv[1]));
     return 0;
 }

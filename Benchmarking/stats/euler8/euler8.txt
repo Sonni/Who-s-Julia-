@@ -1,0 +1,186 @@
+julia : euler8.jl data1.txt 
+0.45
+0.44
+0.44
+Average time is: 0.443333 : Median is: 0.44
+____________________________________
+julia : euler8.jl data2.txt 
+13.71
+13.88
+13.63
+Average time is: 13.74 : Median is: 13.71
+____________________________________
+julia : euler8.jl data3.txt 
+25.97
+25.06
+25.49
+Average time is: 25.5067 : Median is: 25.49
+____________________________________
+julia : euler8.jl data4.txt 
+38.21
+38.62
+39.23
+Average time is: 38.6867 : Median is: 38.62
+____________________________________
+julia : euler8.jl data5.txt 
+51.03
+51.53
+51.2
+Average time is: 51.2533 : Median is: 51.2
+____________________________________
+julia : euler8.jl data6.txt 
+63.75
+62.51
+64.93
+Average time is: 63.73 : Median is: 63.75
+____________________________________
+julia : euler8.jl data7.txt 
+77.3
+75.11
+83.16
+Average time is: 78.5233 : Median is: 77.3
+____________________________________
+julia : euler8.jl data8.txt 
+93.82
+91.56
+89.74
+Average time is: 91.7067 : Median is: 91.56
+____________________________________
+julia : euler8.jl data9.txt 
+106.1
+101.05
+100.05
+Average time is: 102.4 : Median is: 101.05
+____________________________________
+julia : euler8.jl data10.txt 
+114.02
+116.51
+112.92
+Average time is: 114.483 : Median is: 114.02
+____________________________________
+java : euler8 data1.txt 
+0.2
+0.14
+0.15
+Average time is: 0.163333 : Median is: 0.15
+____________________________________
+java : euler8 data2.txt 
+4.55
+4.39
+4.43
+Average time is: 4.45667 : Median is: 4.43
+____________________________________
+java : euler8 data3.txt 
+10.11
+10.06
+9.46
+Average time is: 9.87667 : Median is: 10.06
+____________________________________
+java : euler8 data4.txt 
+15.7
+14.88
+14.96
+Average time is: 15.18 : Median is: 14.96
+____________________________________
+java : euler8 data5.txt 
+20.44
+20.2
+21.16
+Average time is: 20.6 : Median is: 20.44
+____________________________________
+java : euler8 data6.txt 
+25.18
+24.49
+24.55
+Average time is: 24.74 : Median is: 24.55
+____________________________________
+java : euler8 data7.txt 
+33.48
+32.15
+31.3
+Average time is: 32.31 : Median is: 32.15
+____________________________________
+java : euler8 data8.txt 
+38.21
+38.66
+36.78
+Average time is: 37.8833 : Median is: 38.21
+____________________________________
+java : euler8 data9.txt 
+43.87
+42.88
+40.66
+Average time is: 42.47 : Median is: 42.88
+____________________________________
+java : euler8 data10.txt 
+42.78
+40.09
+40.65
+Average time is: 41.1733 : Median is: 40.65
+____________________________________
+C++ : ./euler8 data1.txt 
+0
+0
+0
+Average time is: 0 : Median is: 0
+____________________________________
+C++ : ./euler8 data2.txt 
+17.95
+18.13
+17.74
+Average time is: 17.94 : Median is: 17.95
+____________________________________
+C++ : ./euler8 data3.txt 
+35.63
+37.59
+39.44
+Average time is: 37.5533 : Median is: 37.59
+____________________________________
+C++ : ./euler8 data4.txt 
+57.85
+58.48
+57.25
+Average time is: 57.86 : Median is: 57.85
+____________________________________
+C++ : ./euler8 data5.txt 
+75.16
+74.78
+72.57
+Average time is: 74.17 : Median is: 74.78
+____________________________________
+C++ : ./euler8 data6.txt 
+95.46
+102.73
+96.67
+Average time is: 98.2867 : Median is: 96.67
+____________________________________
+C++ : ./euler8 data7.txt 
+112.15
+112.14
+113.65
+Average time is: 112.647 : Median is: 112.15
+____________________________________
+C++ : ./euler8 data8.txt 
+134.59
+131.48
+137.28
+Average time is: 134.45 : Median is: 134.59
+____________________________________
+C++ : ./euler8 data9.txt 
+149.59
+156.49
+149.59
+Average time is: 151.89 : Median is: 149.59
+____________________________________
+C++ : ./euler8 data10.txt 
+171.16
+171.87
+172.11
+Average time is: 171.713 : Median is: 171.87
+____________________________________
+python : euler8.py data1.txt 
+0.03
+0.04
+0.03
+Average time is: 0.0333333 : Median is: 0.03
+____________________________________

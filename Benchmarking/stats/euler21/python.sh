@@ -1,0 +1,10 @@
+python euler21.py 10000
+python euler21.py 30000
+python euler21.py 50000
+python euler21.py 70000
+python euler21.py 90000
+python euler21.py 110000
+python euler21.py 120000
+python euler21.py 130000
+python euler21.py 140000
+python euler21.py 150000

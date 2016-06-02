@@ -1,0 +1,10 @@
+julia euler36.jl 1000000
+julia euler36.jl 1750000
+julia euler36.jl 2500000
+julia euler36.jl 3250000
+julia euler36.jl 4000000
+julia euler36.jl 4750000
+julia euler36.jl 5500000
+julia euler36.jl 6250000
+julia euler36.jl 7000000
+julia euler36.jl 7750000

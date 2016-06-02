@@ -1,0 +1,10 @@
+java euler9 1000
+java euler9 125000
+java euler9 250000
+java euler9 375000
+java euler9 500000
+java euler9 625000
+java euler9 750000
+java euler9 875000
+java euler9 1000000
+java euler9 1125000

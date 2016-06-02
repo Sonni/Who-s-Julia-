@@ -1,0 +1,10 @@
+julia euler13.jl data1.txt
+julia euler13.jl data2.txt
+julia euler13.jl data3.txt
+julia euler13.jl data4.txt
+julia euler13.jl data5.txt
+julia euler13.jl data6.txt
+julia euler13.jl data7.txt
+julia euler13.jl data8.txt
+julia euler13.jl data9.txt
+julia euler13.jl data10.txt

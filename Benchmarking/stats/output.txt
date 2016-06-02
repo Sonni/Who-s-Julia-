@@ -1,0 +1,242 @@
+julia : euler1.jl 1000 
+0.51
+0.52
+0.5
+Average time is: 0.51 : Median is: 0.51
+____________________________________
+julia : euler1.jl 1999999998 
+0.52
+0.52
+0.5
+Average time is: 0.513333 : Median is: 0.52
+____________________________________
+julia : euler1.jl 3999999996 
+0.47
+0.52
+0.49
+Average time is: 0.493333 : Median is: 0.49
+____________________________________
+julia : euler1.jl 7999999992 
+0.51
+0.51
+0.48
+Average time is: 0.5 : Median is: 0.51
+____________________________________
+julia : euler1.jl 15999999984 
+0.49
+0.49
+0.51
+Average time is: 0.496667 : Median is: 0.49
+____________________________________
+julia : euler1.jl 31999999968 
+0.51
+0.5
+0.48
+Average time is: 0.496667 : Median is: 0.5
+____________________________________
+julia : euler1.jl 63999999936 
+0.49
+0.49
+0.49
+Average time is: 0.49 : Median is: 0.49
+____________________________________
+julia : euler1.jl 127999999872 
+0.49
+0.49
+0.48
+Average time is: 0.486667 : Median is: 0.49
+____________________________________
+julia : euler1.jl 255999999744 
+0.51
+0.53
+0.49
+Average time is: 0.51 : Median is: 0.51
+____________________________________
+julia : euler1.jl 511999999488 
+0.52
+0.51
+0.51
+Average time is: 0.513333 : Median is: 0.51
+____________________________________
+julia : euler112/euler112.jl 99.00 
+3.23
+3.34
+3.31
+Average time is: 3.29333 : Median is: 3.31
+____________________________________
+julia : euler112/euler112.jl 99.13 
+3.68
+3.77
+3.6
+Average time is: 3.68333 : Median is: 3.68
+____________________________________
+julia : euler112/euler112.jl 99.23 
+4.37
+4.25
+4.36
+Average time is: 4.32667 : Median is: 4.36
+____________________________________
+julia : euler112/euler112.jl 99.33 
+1.29
+0.19
+0.17
+Average time is: 0.55 : Median is: 0.19
+____________________________________
+julia : euler112/euler112.jl 99.43 
+0.12
+0.17
+0.14
+Average time is: 0.143333 : Median is: 0.14
+____________________________________
+julia : euler112/euler112.jl 99.53 
+0.15
+0.14
+0.13
+Average time is: 0.14 : Median is: 0.14
+____________________________________
+julia : euler112/euler112.jl 99.63 
+0.12
+0.22
+0
+Average time is: 0.113333 : Median is: 0.12
+____________________________________
+julia : euler112/euler112.jl 99.73 
+0.02
+0.02
+0.02
+Average time is: 0.02 : Median is: 0.02
+____________________________________
+julia : euler112/euler112.jl 99.83 
+0.01
+0.02
+0.08
+Average time is: 0.0366667 : Median is: 0.02
+____________________________________
+julia : euler112/euler112.jl 99.93 
+0
+0.02
+0.02
+Average time is: 0.0133333 : Median is: 0.02
+____________________________________
+julia : euler12/euler12.jl 500 
+0.02
+0.02
+0.02
+Average time is: 0.02 : Median is: 0.02
+____________________________________
+julia : euler12/euler12.jl 700 
+0.02
+0.01
+0.02
+Average time is: 0.0166667 : Median is: 0.02
+____________________________________
+julia : euler12/euler12.jl 900 
+0.02
+1.16
+0.22
+Average time is: 0.466667 : Median is: 0.22
+____________________________________
+julia : euler12/euler12.jl 1100 
+0
+0.02
+0.02
+Average time is: 0.0133333 : Median is: 0.02
+____________________________________
+julia : euler12/euler12.jl 1300 
+0.02
+0.02
+0.02
+Average time is: 0.02 : Median is: 0.02
+____________________________________
+julia : euler12/euler12.jl 1500 
+0.02
+0.02
+0.02
+Average time is: 0.02 : Median is: 0.02
+____________________________________
+julia : euler12/euler12.jl 1700 
+0.02
+0.02
+0.02
+Average time is: 0.02 : Median is: 0.02
+____________________________________
+julia : euler12/euler12.jl 1900 
+0.02
+0.02
+0.02
+Average time is: 0.02 : Median is: 0.02
+____________________________________
+julia : euler12/euler12.jl 2100 
+0.02
+0.02
+0.01
+Average time is: 0.0166667 : Median is: 0.02
+____________________________________
+julia : euler12/euler12.jl 2300 
+0.01
+0.02
+0.02
+Average time is: 0.0166667 : Median is: 0.02
+____________________________________
+julia : euler13/euler13.jl data1.txt 
+0.02
+0.02
+0.01
+Average time is: 0.0166667 : Median is: 0.02
+____________________________________
+julia : euler13/euler13.jl data2.txt 
+0.02
+0.86
+0.69
+Average time is: 0.523333 : Median is: 0.69
+____________________________________
+julia : euler13/euler13.jl data3.txt 
+0.22
+0
+0.02
+Average time is: 0.08 : Median is: 0.02
+____________________________________
+julia : euler13/euler13.jl data4.txt 
+0.02
+0.02
+0.02
+Average time is: 0.02 : Median is: 0.02
+____________________________________
+julia : euler13/euler13.jl data5.txt 
+0.02
+0.02
+0.02
+Average time is: 0.02 : Median is: 0.02
+____________________________________
+julia : euler13/euler13.jl data6.txt 
+0.02
+0.02
+0.01
+Average time is: 0.0166667 : Median is: 0.02
+____________________________________
+julia : euler13/euler13.jl data7.txt 
+0.02
+0.02
+0.02
+Average time is: 0.02 : Median is: 0.02
+____________________________________
+julia : euler13/euler13.jl data8.txt 
+0.02
+0.02
+0.02
+Average time is: 0.02 : Median is: 0.02
+____________________________________
+julia : euler13/euler13.jl data9.txt 
+0.01
+0.02
+0.02
+Average time is: 0.0166667 : Median is: 0.02
+____________________________________
+julia : euler13/euler13.jl data10.txt 
+0.01
+0.02
+0.02
+Average time is: 0.0166667 : Median is: 0.02
+____________________________________
+julia : euler14/euler14.jl 1000000 
+0.01

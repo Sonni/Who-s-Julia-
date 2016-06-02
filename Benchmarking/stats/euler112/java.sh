@@ -1,0 +1,10 @@
+java euler112 99.00
+java euler112 99.13
+java euler112 99.23
+java euler112 99.33
+java euler112 99.43
+java euler112 99.53
+java euler112 99.63
+java euler112 99.73
+java euler112 99.83
+java euler112 99.93

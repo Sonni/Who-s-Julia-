@@ -1,0 +1,10 @@
+julia euler20.jl 100
+julia euler20.jl 150
+julia euler20.jl 160
+julia euler20.jl 165
+julia euler20.jl 166
+julia euler20.jl 167
+julia euler20.jl 168
+julia euler20.jl 169
+julia euler20.jl 170
+julia euler20.jl 171

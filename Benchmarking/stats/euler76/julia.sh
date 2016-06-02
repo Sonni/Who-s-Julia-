@@ -1,0 +1,10 @@
+julia euler76.jl 100
+julia euler76.jl 108
+julia euler76.jl 112
+julia euler76.jl 116
+julia euler76.jl 120
+julia euler76.jl 124
+julia euler76.jl 128
+julia euler76.jl 132
+julia euler76.jl 136
+julia euler76.jl 140

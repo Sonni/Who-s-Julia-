@@ -1,0 +1,10 @@
+java euler12 500
+java euler12 700
+java euler12 900
+java euler12 1100
+java euler12 1300
+java euler12 1500
+java euler12 1700
+java euler12 1900
+java euler12 2100
+java euler12 2300

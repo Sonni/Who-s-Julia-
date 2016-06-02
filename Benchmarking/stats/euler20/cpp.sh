@@ -1,0 +1,10 @@
+./euler20 100
+./euler20 150
+./euler20 160
+./euler20 165
+./euler20 166
+./euler20 167
+./euler20 168
+./euler20 169
+./euler20 170
+./euler20 171

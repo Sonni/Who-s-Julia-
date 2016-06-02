@@ -1,0 +1,10 @@
+python euler18.py data1.txt
+python euler18.py data2.txt
+python euler18.py data3.txt
+python euler18.py data4.txt
+python euler18.py data5.txt
+python euler18.py data6.txt
+python euler18.py data7.txt
+python euler18.py data8.txt
+python euler18.py data9.txt
+python euler18.py data10.txt

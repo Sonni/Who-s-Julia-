@@ -1,0 +1,10 @@
+python euler2/euler2.py 4000000
+python euler2/euler2.py 99999999
+python euler2/euler2.py 999999999
+python euler2/euler2.py 9999999999
+python euler2/euler2.py 99999999999
+python euler2/euler2.py 999999999999
+python euler2/euler2.py 9999999999999
+python euler2/euler2.py 99999999999999
+python euler2/euler2.py 999999999999999
+python euler2/euler2.py 9999999999999999

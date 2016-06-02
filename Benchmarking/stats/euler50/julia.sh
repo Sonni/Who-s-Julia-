@@ -1,0 +1,10 @@
+julia euler50.jl 1000000
+julia euler50.jl 59999999
+julia euler50.jl 89999999
+julia euler50.jl 119999999
+julia euler50.jl 149999999
+julia euler50.jl 179999999
+julia euler50.jl 209999999
+julia euler50.jl 239999999
+julia euler50.jl 269999999
+julia euler50.jl 299999999

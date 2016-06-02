@@ -1,0 +1,10 @@
+java euler13 data1.txt
+java euler13 data2.txt
+java euler13 data3.txt
+java euler13 data4.txt
+java euler13 data5.txt
+java euler13 data6.txt
+java euler13 data7.txt
+java euler13 data8.txt
+java euler13 data9.txt
+java euler13 data10.txt

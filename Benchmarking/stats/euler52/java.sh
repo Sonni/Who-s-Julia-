@@ -1,0 +1,10 @@
+java euler52 1000000
+java euler52 10000000
+java euler52 15000000
+java euler52 20000000
+java euler52 25000000
+java euler52 30000000
+java euler52 35000000
+java euler52 40000000
+java euler52 45000000
+java euler52 50000000

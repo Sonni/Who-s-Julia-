@@ -1,0 +1,10 @@
+java euler76 100
+java euler76 108
+java euler76 112
+java euler76 116
+java euler76 120
+java euler76 124
+java euler76 128
+java euler76 132
+java euler76 136
+java euler76 140
