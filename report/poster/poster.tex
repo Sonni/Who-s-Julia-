@@ -176,6 +176,7 @@ The developers wanted the language to be open source, which means that everybody
 % =========================================================
 \section{Project Euler problem 116}
 \textit{A row of five black square tiles is to have a number of its tiles replaced with coloured tiles from red(length two), green(length three), or blue(length four). If red tiles are chosen there are seven ways. If green tiles are chosen there are three ways. And if blue tiles are chosen there are two ways. Assuming that colours cannot be mixed there are $7+3+2=12$ ways of replacing the black tiles in a row measuring five units in length.}
+\hspace*{-1in}
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=1.635]{fig/1161.jpg}
@@ -185,7 +186,7 @@ The developers wanted the language to be open source, which means that everybody
 \begin{figure}[H]
 	\centering
 	\begin{lstlisting}
-	function solve(tileSize, squareSize) #m=color block size  n = black box size
+	function solve(tileSize, squareSize)
 		if tileSize > squareSize
 			return 0
 		end
@@ -210,17 +211,18 @@ The developers wanted the language to be open source, which means that everybody
 	\caption{Julia implementation}
 \end{figure}
 
+\vspace*{-1.4in}
 \begin{figure}
  \centering
- \hspace*{-0.8in}
+ \hspace*{-2.5in}
  \begin{subfigure}{0.30\textwidth}
 		\centering
-		\scalebox{.8}{
+		\scalebox{1.4}{
 		\begin{tikzpicture}
 			\begin{axis} [
-			title=Euler 116 - Julia,
-			xlabel={$Input$},
-			ylabel={$Time [s]$},
+			title=Julia,
+			xlabel={$squareSize$},
+			ylabel={$seconds$},
 			grid=major,]
 				\addplot [box plot median] table {../graphdata/euler116ub-julia-box.dat};
 				\addplot [box plot box] table {../graphdata/euler116ub-julia-box.dat};
@@ -231,14 +233,14 @@ The developers wanted the language to be open source, which means that everybody
 		\end{tikzpicture}
 		}
  \end{subfigure}
- \hspace*{0.43in}
+ \hspace*{2in}
  \begin{subfigure}{0.30\textwidth}
 		\centering
-		\scalebox{.8}{
+		\scalebox{1.4}{
 		\begin{tikzpicture}
 			\begin{axis} [
-			title=Euler 116 - Python,
-			xlabel={$Input$},
+			title=Python,
+			xlabel={$squareSize$},
 			grid=major,]
 				\addplot [box plot median] table {../graphdata/euler116ub-python-box.dat};
 				\addplot [box plot box] table {../graphdata/euler116ub-python-box.dat};
@@ -249,34 +251,16 @@ The developers wanted the language to be open source, which means that everybody
 		\end{tikzpicture}
 		}
  \end{subfigure}
- \hspace*{.43in}
- \begin{subfigure}{0.30\textwidth}
-		\centering
-		\scalebox{.8}{
-		\begin{tikzpicture}
-			\begin{axis} [
-			title=Euler 116 - Python excluded,
-			xlabel={$Test Input$},
-			grid=major,
-			legend entries={$Julia$,$Java$,$c++$},
-			legend style={at={(1,1)},anchor=north west},
-			]
-			\addplot table {../graphdata/euler116ub-julia.dat};
-			\addplot table {../graphdata/euler116ub-java.dat};
-			\addplot table {../graphdata/euler116ub-cpp.dat};
-			\end{axis}
-		\end{tikzpicture}
-		}
- \end{subfigure}%
  
- \hspace*{-0.38in}
+ \hspace*{-2.18in}
  \begin{subfigure}{0.30\textwidth}
 		\centering
-		\scalebox{1.1}{
+		\scalebox{1.4}{
 		\begin{tikzpicture}
 			\begin{axis} [
-			title=Euler 116 - Java,
-			xlabel={$Input$},
+			title=Java,
+			xlabel={$squareSize$},
+			ylabel={$seconds$},
 			grid=major,]
 				\addplot [box plot median] table {../graphdata/euler116ub-java-box.dat};
 				\addplot [box plot box] table {../graphdata/euler116ub-java-box.dat};
@@ -286,15 +270,15 @@ The developers wanted the language to be open source, which means that everybody
 			\end{axis}
 		\end{tikzpicture}
 		}
- \end{subfigure}
- \hspace*{0.08in}
+ \end{subfigure}%
+ \hspace*{1.73in}
  \begin{subfigure}{0.30\textwidth}
 		\centering
-		\scalebox{1.1}{
+		\scalebox{1.4}{
 		\begin{tikzpicture}
 			\begin{axis} [
-			title=Euler 116 - C++,
-			xlabel={$Input$},
+			title=C++,
+			xlabel={$squareSize$},
 			grid=major,]
 				\addplot [box plot median] table {../graphdata/euler116ub-cpp-box.dat};
 				\addplot [box plot box] table {../graphdata/euler116ub-cpp-box.dat};
@@ -305,14 +289,33 @@ The developers wanted the language to be open source, which means that everybody
 		\end{tikzpicture}
 		}
  \end{subfigure}
- \hspace*{.43in}
+ 
+ \hspace*{-2.5in}
  \begin{subfigure}{0.30\textwidth}
 		\centering
-		\scalebox{1.1}{
+		\scalebox{1.4}{
 		\begin{tikzpicture}
 			\begin{axis} [
-			title=Euler 116,
-			xlabel={$Test Input$},
+			title=Comparison - Python excluded,
+			xlabel={$squareSize$},
+			ylabel={$seconds$},
+			grid=major,
+			]
+			\addplot table {../graphdata/euler116ub-julia.dat};
+			\addplot table {../graphdata/euler116ub-java.dat};
+			\addplot table {../graphdata/euler116ub-cpp.dat};
+			\end{axis}
+		\end{tikzpicture}
+		}
+ \end{subfigure}
+ \hspace*{2in}
+ \begin{subfigure}{0.30\textwidth}
+		\centering
+		\scalebox{1.4}{
+		\begin{tikzpicture}
+			\begin{axis} [
+			title=Comparison,
+			xlabel={$squareSize$},
 			grid=major,
 			legend entries={$Julia$,$Java$,$c++$,$Python$},
 			legend style={at={(1,1)},anchor=north west},
@@ -339,15 +342,15 @@ The difference in time between the four languages are as expected. Python does n
 Julia and Java is close but Java is a bit faster, which is expected because of the fact that Java has been in development much longer than Julia and has a lot more optimization than Julia.
 
 \section{Pros and Cons of Julia}
+\textbf{Advantages:}
 \begin{list}{}{}
-	\item Advantages:
 	\item[$\bullet$] Easy to learn and write
 	\item[$\bullet$] Compiler optimizations
 	\item[$\bullet$] General good performance
 	\item[$\bullet$] No memory issues
 \end{list}
+\textbf{Disadvantages:}
 \begin{list}{}{}
-	\item Disadvantages:
 	\item[$\bullet$] Compiler optimization breaks in some cases
 	\item[$\bullet$] Not very flexible
 	\item[$\bullet$] Missing features and bugs / weird behaviors
