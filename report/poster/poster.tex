@@ -1,0 +1,192 @@
+\documentclass[landscape, a2]{sciposter}
+% Hentet fra http://iacs.epfl.ch/colloqnum06/poster.html
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[danish]{babel}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{listings}
+
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.45,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.30,0,0.30}
+
+\lstset{frame=tb,
+	language=Python,
+	aboveskip=4mm,
+	belowskip=5mm,
+	showstringspaces=false,
+	columns=flexible,
+	basicstyle={\small\ttfamily},
+	numbers=left,
+	numberstyle=\footnotesize,
+	keywordstyle=\color{dkgreen}\bfseries,
+	commentstyle=\color{dkgreen},
+	stringstyle=\color{mauve},
+	frame=single,
+	breaklines=true,
+	breakatwhitespace=false,
+	tabsize=4,
+	xleftmargin=0.25in
+}
+
+\lstnewenvironment{queryl}
+	{\lstset{frame=shadowbox,escapechar=`,linewidth=15cm}}
+	{}
+
+% =========================================================
+% ====== Farver og grafik øverst på siden =================
+% =========================================================
+% Definer farven på baggrunden i overskrifts boksene
+\definecolor{BoxCol}{rgb}{0.9,0.9,1}
+
+% Definer farven på tekstn i overskrifts boksene
+\definecolor{SectionCol}{rgb}{0,0,0}
+
+% Indsæt logo / billede ved siden af titlen på posteren
+\leftlogo[1.6]{fig/Trebuchet} 
+\rightlogo[1.1]{fig/sdu_segl.pdf} 
+
+% Sæt bredden af de vertikale linier mellem spalterne
+\setlength{\columnseprule}{1pt}
+
+% Sæt afstanden mellem to kolonner
+%\setlength{\columnsep}{20pt}
+
+
+% =========================================================
+% ====== Informationer om hvem der står bag posteren ======
+% =========================================================
+% Definer informationer omkring titel, forfattere og 
+% organisationen bag.
+\title{The trebuchet}
+
+% Note: only give author names, not institute
+\author{Henrik Skov Midtiby}
+ 
+% insert correct institute name
+\institute{Department of Physics and Chemistry,\\
+           University of Southern Denmark\\}
+
+% Kontakt adresse, kan udelades
+\email{henrik@midtiby.dk}  % shows author email address below institute
+
+%define conference poster is presented at (appears as footer)
+\conference{NAT 501 poster session, Juni 2007 SDU Odense}
+
+
+% =========================================================
+% ====== Start på selve indholdet af posteren =============
+% =========================================================
+\begin{document}
+
+\maketitle
+
+%%% Begin of Multicols-Enviroment
+\begin{multicols}{3}
+
+
+% =========================================================
+% ====== Første del =======================================
+% =========================================================
+\section{Introduction}
+Java, C++ and Python are on the top ten of the most used programming languages. There are hundreds of languages, but not minding the hard competition, new languages are still created with the thought of doing better. An example of this is the relatively new programming language Julia, which has been developed with the idea to combine the best features of other languages. The purpose of this project is to find out how well Julia perform compared to some of the standard languages as of 2016. One of those languages is Python which Julia draws a lot of inspiration from, including syntax and the dynamic type system. The second language that Julia will be compared with is Java, these two do share similarities, but most of the similarities are behind the scene mechanics, such as garbage collection and compiler optimizations. The developers of Julia claim that Julia is as fast as C. Therefore we choose C++ as the last language to compare Julia with. 
+\section{Julia}
+Julia is an object-oriented programming language, which has been under development since 2009. First released in 2012 and the newest stable version of Julia is version 0.4.5. The language has been created because the developers wanted a language with all the features they like from other languages. The developers wanted the language to be open source, which means that everybody can read and modify the language. One of the ideas was to make the language as simple, readable and easy to learn as possible. The language is made for high performance and scientific computations while still supporting general purpose programming.
+
+% =========================================================
+% ====== Anden del ========================================
+% =========================================================
+\section{Project Euler problem 116}
+
+\begin{figure}[H]
+\centering
+\hspace*{-0.65in}
+\begin{lstlisting}
+	function solve(tileSize, blockSize) #m=color block size  n = black box size
+		if tileSize > blockSize
+			return 0
+		end
+		solutions = 0
+	
+		for i = tileSize : blockSize
+			solutions += 1
+			solutions += solve(tileSize, blockSize-i)
+		end
+	
+		return solutions
+	end
+	
+	function calc(size)
+		result = solve(2, size) #Red tiles
+		result += solve(3, size) #Green tiles
+		result += solve(4, size) #Blue tiles
+	
+		return result
+	end
+	
+	size = parse(Int32, ARGS[1])
+	
+	calc(size)
+\end{lstlisting}
+\caption{hej}
+\end{figure}
+
+The only file you have to modify is the file poster.tex.
+
+If you compile it with pdflatex, you will be able to include bitmap
+figures (PNG, BMP and JPG) and PDF files by using the class graphicx
+(\verb!\!useclass{graphicx} at the beginning of the document and e.g.
+\verb!\!includegraphics[width=10.5cm]{./figure.png} in the document body).
+For this option, it is not possible to include EPS or PS figures.
+
+If you compile poster.tex with latex, you will be able to include
+only EPS and PS figures using the same class graphix. (The template
+poster.tex already contains an image, see how it is included).
+
+\begin{align}
+\tan(x)
+	& = \frac{\sin(x)}{\cos(x)}		\\
+\sin(x)
+	& = \int_0^{\infty} \cos(a) da
+\end{align}
+
+We suggest you use pdflatex to compile your poster, as we are 100\%
+sure that it produces nice looking posters that can be easily
+printed on plotters. 
+
+
+% =========================================================
+% ====== Afsnit ===========================================
+% =========================================================
+\section{How to compile the poster}
+\PARstart{M}{ake} sure you have both {\tt a0size.sty} and {\tt
+sciposter.cls} in yout tex path or in the \cite{somepaper} current
+directory, then run {\tt pdflatex} on this file. Voil\`a.
+
+
+\begin{thebibliography}{m}
+
+\bibitem{areference}
+An Author
+{\em A reference}.
+A paper.
+
+\bibitem{somepaper}
+An Other Author
+{\em A reference}.
+Some paper.
+
+
+\end{thebibliography}
+
+
+\end{multicols}
+
+\end{document}
+
