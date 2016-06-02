@@ -10,7 +10,23 @@
 \usepackage{graphicx}
 \usepackage{listings}
 
-\usepackage{color}
+\usepackage{epstopdf}
+\usepackage{mwe}% for example images
+
+\newcommand{\subcaption}[1]% %1 = text
+{\refstepcounter{subfig}%
+\par\vskip\abovecaptionskip
+\centerline{\textbf{(\alph{subfig})} #1}%
+\vskip\belowcaptionskip\par}
+
+% create subfigure environment
+\def\subfigure{\let\oldcaption=\caption
+\let\caption=\subcaption
+\minipage}
+\def\endsubfigure{\endminipage
+\let\caption=\oldcaption}
+
+\usepackage{xcolor}
 
 \definecolor{dkgreen}{rgb}{0,0.45,0}
 \definecolor{gray}{rgb}{0.5,0.5,0.5}
@@ -38,6 +54,61 @@
 \lstnewenvironment{queryl}
 	{\lstset{frame=shadowbox,escapechar=`,linewidth=15cm}}
 	{}
+
+
+\usepackage{pgfplots}
+\pgfplotsset{
+	compat=1.5,
+    box plot/.style={
+        /pgfplots/.cd,
+        black,
+        only marks,
+        mark=-,
+        mark size=1em,
+        /pgfplots/error bars/.cd,
+        y dir=plus,
+        y explicit,
+    },
+    box plot box/.style={
+        /pgfplots/error bars/draw error bar/.code 2 args={%
+            \draw  ##1 -- ++(1em,0pt) |- ##2 -- ++(-1em,0pt) |- ##1 -- cycle;
+        },
+        /pgfplots/table/.cd,
+        y index=2,
+        y error expr={\thisrowno{3}-\thisrowno{2}},
+        /pgfplots/box plot
+    },
+    box plot top whisker/.style={
+        /pgfplots/error bars/draw error bar/.code 2 args={%
+            \pgfkeysgetvalue{/pgfplots/error bars/error mark}%
+            {\pgfplotserrorbarsmark}%
+            \pgfkeysgetvalue{/pgfplots/error bars/error mark options}%
+            {\pgfplotserrorbarsmarkopts}%
+            \path ##1 -- ##2;
+        },
+        /pgfplots/table/.cd,
+        y index=4,
+        y error expr={\thisrowno{2}-\thisrowno{4}},
+        /pgfplots/box plot
+    },
+    box plot bottom whisker/.style={
+        /pgfplots/error bars/draw error bar/.code 2 args={%
+            \pgfkeysgetvalue{/pgfplots/error bars/error mark}%
+            {\pgfplotserrorbarsmark}%
+            \pgfkeysgetvalue{/pgfplots/error bars/error mark options}%
+            {\pgfplotserrorbarsmarkopts}%
+            \path ##1 -- ##2;
+        },
+        /pgfplots/table/.cd,
+        y index=5,
+        y error expr={\thisrowno{3}-\thisrowno{5}},
+        /pgfplots/box plot
+    },
+    box plot median/.style={
+        /pgfplots/box plot
+    }
+}
+
 
 % =========================================================
 % ====== Farver og grafik øverst på siden =================
@@ -135,6 +206,124 @@ Julia is an object-oriented programming language, which has been under developme
 	calc(size)
 \end{lstlisting}
 \caption{hej}
+\end{figure}
+
+\begin{figure}
+ \centering
+ \hspace*{-0.8in}
+ \begin{subfigure}{0.25\textwidth}
+		\centering
+		\scalebox{.6}{
+		\begin{tikzpicture}
+			\begin{axis} [
+			title=Euler 116 - Julia,
+			xlabel={$Input$},
+			ylabel={$Time [s]$},
+			grid=major,]
+				\addplot [box plot median] table {../graphdata/euler116ub-julia-box.dat};
+				\addplot [box plot box] table {../graphdata/euler116ub-julia-box.dat};
+				\addplot [box plot top whisker] table {../graphdata/euler116ub-julia-box.dat};
+				\addplot [box plot bottom whisker] table {../graphdata/euler116ub-julia-box.dat};
+				\addplot table {../graphdata/euler116ub-julia.dat};
+			\end{axis}
+		\end{tikzpicture}
+		}
+ \end{subfigure}
+ \hspace*{0.43in}
+ \begin{subfigure}{0.25\textwidth}
+		\centering
+		\scalebox{.6}{
+		\begin{tikzpicture}
+			\begin{axis} [
+			title=Euler 116 - Python,
+			xlabel={$Input$},
+			grid=major,]
+				\addplot [box plot median] table {../graphdata/euler116ub-python-box.dat};
+				\addplot [box plot box] table {../graphdata/euler116ub-python-box.dat};
+				\addplot [box plot top whisker] table {../graphdata/euler116ub-python-box.dat};
+				\addplot [box plot bottom whisker] table {../graphdata/euler116ub-python-box.dat};
+				\addplot table {../graphdata/euler116ub-python.dat};
+			\end{axis}
+		\end{tikzpicture}
+		}
+ \end{subfigure}
+ \hspace*{.43in}
+ \begin{subfigure}{0.25\textwidth}
+		\centering
+		\scalebox{.6}{
+		\begin{tikzpicture}
+			\begin{axis} [
+			title=Euler 116 - Python excluded,
+			xlabel={$Test Input$},
+			grid=major,
+			legend entries={$Julia$,$Java$,$c++$},
+			legend style={at={(1,1)},anchor=north west},
+			]
+			\addplot table {../graphdata/euler116ub-julia.dat};
+			\addplot table {../graphdata/euler116ub-java.dat};
+			\addplot table {../graphdata/euler116ub-cpp.dat};
+			\end{axis}
+		\end{tikzpicture}
+		}
+ \end{subfigure}%
+ 
+ \hspace*{-0.38in}
+ \begin{subfigure}{0.25\textwidth}
+		\centering
+		\scalebox{.6}{
+		\begin{tikzpicture}
+			\begin{axis} [
+			title=Euler 116 - Java,
+			xlabel={$Input$},
+			grid=major,]
+				\addplot [box plot median] table {../graphdata/euler116ub-java-box.dat};
+				\addplot [box plot box] table {../graphdata/euler116ub-java-box.dat};
+				\addplot [box plot top whisker] table {../graphdata/euler116ub-java-box.dat};
+				\addplot [box plot bottom whisker] table {../graphdata/euler116ub-java-box.dat};
+				\addplot table {../graphdata/euler116ub-java.dat};
+			\end{axis}
+		\end{tikzpicture}
+		}
+ \end{subfigure}
+ \hspace*{0.08in}
+ \begin{subfigure}{0.25\textwidth}
+		\centering
+		\scalebox{.6}{
+		\begin{tikzpicture}
+			\begin{axis} [
+			title=Euler 116 - C++,
+			xlabel={$Input$},
+			grid=major,]
+				\addplot [box plot median] table {../graphdata/euler116ub-cpp-box.dat};
+				\addplot [box plot box] table {../graphdata/euler116ub-cpp-box.dat};
+				\addplot [box plot top whisker] table {../graphdata/euler116ub-cpp-box.dat};
+				\addplot [box plot bottom whisker] table {../graphdata/euler116ub-cpp-box.dat};
+				\addplot table {../graphdata/euler116ub-cpp.dat};
+			\end{axis}
+		\end{tikzpicture}
+		}
+ \end{subfigure}
+ \hspace*{.43in}
+ \begin{subfigure}{0.25\textwidth}
+		\centering
+		\scalebox{.6}{
+		\begin{tikzpicture}
+			\begin{axis} [
+			title=Euler 116,
+			xlabel={$Test Input$},
+			grid=major,
+			legend entries={$Julia$,$Java$,$c++$,$Python$},
+			legend style={at={(1,1)},anchor=north west},
+			]
+			\addplot table {../graphdata/euler116ub-julia.dat};
+			\addplot table {../graphdata/euler116ub-java.dat};
+			\addplot table {../graphdata/euler116ub-cpp.dat};
+			\addplot table {../graphdata/euler116ub-python.dat};
+			\end{axis}
+		\end{tikzpicture}
+		}
+ \end{subfigure}%
+ \caption{fig}
 \end{figure}
 
 The only file you have to modify is the file poster.tex.
