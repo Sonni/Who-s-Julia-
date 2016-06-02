@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.12.7)  2 JUN 2016 12:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.12.7)  2 JUN 2016 13:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1180,6 +1180,11 @@ Overfull \hbox (132.28802pt too wide) in paragraph at lines 326--327
  [][] 
  []
 
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <29.86> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 334.
+
+Package xcolor Warning: Incompatible color definition on input line 334.
+
 
 Underfull \hbox (badness 10000) in paragraph at lines 335--340
 
@@ -1187,6 +1192,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 335--340
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 335--340
+
+ []
+
+
+LaTeX Warning: Empty `thebibliography' environment on input line 368.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 361--368
 
  []
 
@@ -1196,13 +1209,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 335--340
 ulia.png> <./fig/sdu_segl.pdf> <./fig/1161.jpg> <./fig/1162.jpg> <./fig/1163.jp
 g>] (./poster.aux) ) 
 Here is how much of TeX's memory you used:
- 25522 strings out of 493089
- 609892 string characters out of 6134842
- 1064585 words of memory out of 5000000
+ 25523 strings out of 493089
+ 609908 string characters out of 6134842
+ 1070577 words of memory out of 5000000
  28504 multiletter control sequences out of 15000+600000
- 35375 words of font info for 54 fonts, out of 8000000 for 9000
+ 38105 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 64i,23n,119p,715b,2408s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 64i,23n,119p,1599b,2408s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r
 .enc}</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.
 pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pf
@@ -1212,7 +1225,7 @@ ocal/texlive/2015/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/tex
 live/2015/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/local/texlive/20
 15/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2015/texm
 f-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on poster.pdf (1 page, 251963 bytes).
+Output written on poster.pdf (1 page, 253109 bytes).
 PDF statistics:
  55 PDF objects out of 1000 (max. 8388607)
  37 compressed objects within 1 object stream
