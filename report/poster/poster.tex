@@ -1,4 +1,4 @@
-\documentclass[landscape, a2]{sciposter}
+\documentclass[landscape, a0]{sciposter}
 % Hentet fra http://iacs.epfl.ch/colloqnum06/poster.html
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -48,12 +48,8 @@
 	breaklines=true,
 	breakatwhitespace=false,
 	tabsize=4,
-	xleftmargin=0.25in
+	xrightmargin=0.50in
 }
-
-\lstnewenvironment{queryl}
-	{\lstset{frame=shadowbox,escapechar=`,linewidth=15cm}}
-	{}
 
 
 \usepackage{pgfplots}
@@ -120,7 +116,7 @@
 \definecolor{SectionCol}{rgb}{0,0,0}
 
 % Indsæt logo / billede ved siden af titlen på posteren
-\leftlogo[1.6]{fig/Trebuchet} 
+\leftlogo[1.6]{fig/julia} 
 \rightlogo[1.1]{fig/sdu_segl.pdf} 
 
 % Sæt bredden af de vertikale linier mellem spalterne
@@ -135,20 +131,20 @@
 % =========================================================
 % Definer informationer omkring titel, forfattere og 
 % organisationen bag.
-\title{The trebuchet}
+\title{Who's Julia?}
 
 % Note: only give author names, not institute
-\author{Henrik Skov Midtiby}
+\author{Simon Knudsen, Sonni Jensen, Asbjørn Jensen}
  
 % insert correct institute name
-\institute{Department of Physics and Chemistry,\\
-           University of Southern Denmark\\}
+\institute{Department of Mathematics and Computer Science,\\
+	University of Southern Denmark\\}
 
 % Kontakt adresse, kan udelades
-\email{henrik@midtiby.dk}  % shows author email address below institute
+%\email{henrik@midtiby.dk}  % shows author email address below institute
 
 %define conference poster is presented at (appears as footer)
-\conference{NAT 501 poster session, Juni 2007 SDU Odense}
+\conference{NAT 501 poster session, Juni 2016 SDU Odense}
 
 
 % =========================================================
@@ -166,28 +162,38 @@
 % ====== Første del =======================================
 % =========================================================
 \section{Introduction}
-Java, C++ and Python are on the top ten of the most used programming languages. There are hundreds of languages, but not minding the hard competition, new languages are still created with the thought of doing better. An example of this is the relatively new programming language Julia, which has been developed with the idea to combine the best features of other languages. The purpose of this project is to find out how well Julia perform compared to some of the standard languages as of 2016. One of those languages is Python which Julia draws a lot of inspiration from, including syntax and the dynamic type system. The second language that Julia will be compared with is Java, these two do share similarities, but most of the similarities are behind the scene mechanics, such as garbage collection and compiler optimizations. The developers of Julia claim that Julia is as fast as C. Therefore we choose C++ as the last language to compare Julia with. 
+Java, C++ and Python are on the top ten of the most used programming languages. There are hundreds of languages, but not minding the hard competition, new languages are still created with the thought of doing better. An example of this is the relatively new programming language Julia, which has been developed with the idea to combine the best features of other languages.\\
+\\
+The purpose is to find out how well Julia perform compared to some of the standard languages as of 2016. Julia will be compared to Python, Java and C++. Julia draws a lot of inspiration from Python, including syntax and the dynamic type system. Julia shares similarities with Java, mostly behind the scene mechanics, such as garbage collection and compiler optimizations. C++ was chosen since the developers of Julia claim that Julia is as fast as C.
+
 \section{Julia}
-Julia is an object-oriented programming language, which has been under development since 2009. First released in 2012 and the newest stable version of Julia is version 0.4.5. The language has been created because the developers wanted a language with all the features they like from other languages. The developers wanted the language to be open source, which means that everybody can read and modify the language. One of the ideas was to make the language as simple, readable and easy to learn as possible. The language is made for high performance and scientific computations while still supporting general purpose programming.
+Julia is an object-oriented programming language, which has been under development since 2009. First released in 2012 and the newest stable version of Julia is version 0.4.5. The language has been created because the developers wanted a language with all the features they like from other languages. \\
+\\
+The developers wanted the language to be open source, which means that everybody can read and modify the language. One of the ideas was to make the language as simple, readable and easy to learn as possible. The language is made for high performance and scientific computations while still supporting general purpose programming.
 
 % =========================================================
 % ====== Anden del ========================================
 % =========================================================
 \section{Project Euler problem 116}
-
+\textit{A row of five black square tiles is to have a number of its tiles replaced with coloured tiles from red(length two), green(length three), or blue(length four). If red tiles are chosen there are seven ways. If green tiles are chosen there are three ways. And if blue tiles are chosen there are two ways. Assuming that colours cannot be mixed there are $7+3+2=12$ ways of replacing the black tiles in a row measuring five units in length.}
 \begin{figure}[H]
-\centering
-\hspace*{-0.65in}
-\begin{lstlisting}
-	function solve(tileSize, blockSize) #m=color block size  n = black box size
-		if tileSize > blockSize
+	\centering
+	\hspace{-1cm}\includegraphics[scale=0.85]{fig/1161.jpg}
+	\includegraphics{fig/1162.jpg} 
+	\includegraphics{fig/1163.jpg} 
+\end{figure}
+\begin{figure}[H]
+	\centering
+	\begin{lstlisting}
+	function solve(tileSize, squareSize) #m=color block size  n = black box size
+		if tileSize > squareSize
 			return 0
 		end
 		solutions = 0
 	
-		for i = tileSize : blockSize
+		for i = tileSize : squareSize
 			solutions += 1
-			solutions += solve(tileSize, blockSize-i)
+			solutions += solve(tileSize, squareSize-i)
 		end
 	
 		return solutions
@@ -200,12 +206,8 @@ Julia is an object-oriented programming language, which has been under developme
 	
 		return result
 	end
-	
-	size = parse(Int32, ARGS[1])
-	
-	calc(size)
-\end{lstlisting}
-\caption{hej}
+	\end{lstlisting}
+	\caption{Julia implementation}
 \end{figure}
 
 \begin{figure}
@@ -326,29 +328,20 @@ Julia is an object-oriented programming language, which has been under developme
  \caption{fig}
 \end{figure}
 
-The only file you have to modify is the file poster.tex.
-
-If you compile it with pdflatex, you will be able to include bitmap
-figures (PNG, BMP and JPG) and PDF files by using the class graphicx
-(\verb!\!useclass{graphicx} at the beginning of the document and e.g.
-\verb!\!includegraphics[width=10.5cm]{./figure.png} in the document body).
-For this option, it is not possible to include EPS or PS figures.
-
-If you compile poster.tex with latex, you will be able to include
-only EPS and PS figures using the same class graphix. (The template
-poster.tex already contains an image, see how it is included).
-
-\begin{align}
-\tan(x)
-	& = \frac{\sin(x)}{\cos(x)}		\\
-\sin(x)
-	& = \int_0^{\infty} \cos(a) da
-\end{align}
-
-We suggest you use pdflatex to compile your poster, as we are 100\%
-sure that it produces nice looking posters that can be easily
-printed on plotters. 
-
+Julia:
+\begin{list}{}{}
+	\item Advantages:
+	\item[$\bullet$] Easy to learn and write
+	\item[$\bullet$] Compiler optimizations
+	\item[$\bullet$] General good performance
+	\item[$\bullet$] No memory issues
+\end{list}
+\begin{list}{}{}
+	\item Disadvantages:
+	\item[$\bullet$] Compiler optimization breaks in some cases
+	\item[$\bullet$] Not very flexible
+	\item[$\bullet$] Missing features and bugs / weird behaviors
+\end{list}
 
 % =========================================================
 % ====== Afsnit ===========================================
