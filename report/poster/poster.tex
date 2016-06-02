@@ -140,11 +140,8 @@
 \institute{Department of Mathematics and Computer Science,\\
 	University of Southern Denmark\\}
 
-% Kontakt adresse, kan udelades
-%\email{henrik@midtiby.dk}  % shows author email address below institute
-
 %define conference poster is presented at (appears as footer)
-\conference{NAT 501 poster session, Juni 2016 SDU Odense}
+\conference{FF501 poster session, Juni 2016 SDU Odense}
 
 
 % =========================================================
@@ -357,7 +354,7 @@ Julia and Java is close but Java is a bit faster, which is expected because of t
 \end{list}
 
 \section{Conclusion}
-It can be difficult to make any conclusions by the benchmarking but it may give an idea of how Julia performs, compared to Java, Python and C++. One thing to keep in mind is that as of writing this report, Julia is in version 0.4.5 - it has yet to reach version 1.0.0 while the other languages are much older than Julia. This could mean that Julia might get even faster in the future and by the benchmarking it does look like that Julia is already performing well. The idea of the developers is clear, they are trying to make a programming language that is as easy to learn and write as Python but with a compiler that optimizes code like Java and both of these goals have more or less been reached by the developers. Julia was definitely easy to learn and by the benchmarking it does look like that the compiler is doing well with the optimization when it is possible. It does also feels like that the Julia developers are playing with the idea of giving the user some control over what is happening behind the scene. ‘Playing’ because this does not feel close to done. There are examples where they are giving the user an option to allocate memory for variables manually, but as soon as a new value is assign to that variable then Julia will change the memory size. Also it is not possible to free a declared variables memory entirely and the only operation the user can do with the garbage collector is force garbage collection and disable the garbage collector. Similarly, it seems that the option to implement code from other languages is kind of buggy and not complete. 
+It can be difficult to make any conclusions by the benchmarking but it may give an idea of how Julia performs, compared to Java, Python and C++. One thing to keep in mind is that Julia is in version 0.4.5 - it has yet to reach version 1.0.0. This could mean that Julia might get even faster in the future and by the benchmarking it does look as Julia is already performing well. \\ \\ The developers are trying to make a programming language that is as easy to learn and write as Python but with a compiler that optimizes code like Java and both of these goals have more or less been reached already. Julia was definitely easy to learn and by the benchmarking it does look like that the compiler is doing well with the optimization. It also feels like the Julia developers are playing with the idea of giving the user some control over what is happening behind the scene. ‘Playing’ because this does not feel close to done. The user can allocate memory for a variable manually, but if a new value is assigned to the variable, the memory size is also changed. It is not possible to free a declared variables memory entirely and the only operation the user can do with the garbage collector is force garbage collection and disable the garbage collector. 
 
 \begin{thebibliography}{m}
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.5.29)  2 JUN 2016 13:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.5.29)  2 JUN 2016 13:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1100,19 +1100,19 @@ File: pgflibraryplotmarks.code.tex 2015/08/03 v3.0.1a (rcs-revision 1.14)
 ))) (./poster.aux)
 \openout1 = `poster.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 153.
-LaTeX Font Info:    ... okay on input line 153.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 153.
-LaTeX Font Info:    ... okay on input line 153.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 153.
-LaTeX Font Info:    ... okay on input line 153.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 153.
-LaTeX Font Info:    ... okay on input line 153.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 153.
-LaTeX Font Info:    ... okay on input line 153.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 153.
-LaTeX Font Info:    ... okay on input line 153.
-LaTeX Font Info:    Try loading font information for T1+phv on input line 153.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 150.
+LaTeX Font Info:    ... okay on input line 150.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 150.
+LaTeX Font Info:    ... okay on input line 150.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 150.
+LaTeX Font Info:    ... okay on input line 150.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 150.
+LaTeX Font Info:    ... okay on input line 150.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 150.
+LaTeX Font Info:    ... okay on input line 150.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 150.
+LaTeX Font Info:    ... okay on input line 150.
+LaTeX Font Info:    Try loading font information for T1+phv on input line 150.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
@@ -1133,7 +1133,7 @@ File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 )
 -- Paper type set to a0.
 
-Package xcolor Warning: Incompatible color definition on input line 153.
+Package xcolor Warning: Incompatible color definition on input line 150.
 
 \GPT@outputbox=\box72
 \c@lstlisting=\count176
@@ -1144,82 +1144,82 @@ enefit from \pgfplotsset{compat=1.13} (current compat level: 1.5).
 <fig/julia.png, id=4, 2007.5pt x 1357.07pt>
 File: fig/julia.png Graphic file (type png)
  <use fig/julia.png>
-Package pdftex.def Info: fig/julia.png used on input line 155.
+Package pdftex.def Info: fig/julia.png used on input line 152.
 (pdftex.def)             Requested size: 2007.49512pt x 1357.0667pt.
 
-Overfull \hbox (151.3482pt too wide) in paragraph at lines 155--155
+Overfull \hbox (151.3482pt too wide) in paragraph at lines 152--152
  [] 
  []
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 155.
+LaTeX Font Info:    Try loading font information for U+msa on input line 152.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 155.
+LaTeX Font Info:    Try loading font information for U+msb on input line 152.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <89.16> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 155.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 152.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <43> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 155.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 152.
 
 <fig/sdu_segl.pdf, id=6, 547.66907pt x 542.23073pt>
 File: fig/sdu_segl.pdf Graphic file (type pdf)
  <use fig/sdu_segl.pdf>
-Package pdftex.def Info: fig/sdu_segl.pdf used on input line 155.
+Package pdftex.def Info: fig/sdu_segl.pdf used on input line 152.
 (pdftex.def)             Requested size: 547.66772pt x 542.2294pt.
 
-Overfull \hbox (25.22746pt too wide) in paragraph at lines 155--155
+Overfull \hbox (25.22746pt too wide) in paragraph at lines 152--152
  [] 
  []
 
 
-Overfull \hbox (10.54907pt too wide) in paragraph at lines 155--156
+Overfull \hbox (10.54907pt too wide) in paragraph at lines 152--153
 []$[]$  $[]$$[]$
  []
 
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <24.88> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 164.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 161.
 
-Underfull \hbox (badness 10000) in paragraph at lines 165--168
+Underfull \hbox (badness 10000) in paragraph at lines 162--165
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 170--173
+Underfull \hbox (badness 10000) in paragraph at lines 167--170
 
  []
 
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <24.88> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 178.
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 175.
 <fig/1161.jpg, id=7, 568.1225pt x 93.34875pt>
 File: fig/1161.jpg Graphic file (type jpg)
  <use fig/1161.jpg>
-Package pdftex.def Info: fig/1161.jpg used on input line 182.
+Package pdftex.def Info: fig/1161.jpg used on input line 179.
 (pdftex.def)             Requested size: 928.87486pt x 152.6243pt.
 
 <fig/1162.jpg, id=8, 420.57124pt x 39.14626pt>
 File: fig/1162.jpg Graphic file (type jpg)
  <use fig/1162.jpg>
-Package pdftex.def Info: fig/1162.jpg used on input line 183.
+Package pdftex.def Info: fig/1162.jpg used on input line 180.
 (pdftex.def)             Requested size: 925.25319pt x 86.1214pt.
 
 <fig/1163.jpg, id=9, 273.02pt x 33.12375pt>
 File: fig/1163.jpg Graphic file (type jpg)
  <use fig/1163.jpg>
-Package pdftex.def Info: fig/1163.jpg used on input line 184.
+Package pdftex.def Info: fig/1163.jpg used on input line 181.
 (pdftex.def)             Requested size: 600.6417pt x 72.87193pt.
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 188.
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 185.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
 LaTeX Font Info:    Font shape `T1/pcr/bx/n' in size <20.74> not available
-(Font)              Font shape `T1/pcr/b/n' tried instead on input line 190.
+(Font)              Font shape `T1/pcr/b/n' tried instead on input line 187.
 
-Overfull \hbox (26.37268pt too wide) in paragraph at lines 178--213
+Overfull \hbox (26.37268pt too wide) in paragraph at lines 175--210
      $[]$
  []
 
@@ -1229,7 +1229,7 @@ PGFPlots: reading {../graphdata/euler116ub-julia-box.dat}
 PGFPlots: reading {../graphdata/euler116ub-julia-box.dat}
 PGFPlots: reading {../graphdata/euler116ub-julia.dat}
 
-Overfull \hbox (171.27861pt too wide) in paragraph at lines 234--235
+Overfull \hbox (171.27861pt too wide) in paragraph at lines 231--232
  [][] 
  []
 
@@ -1239,7 +1239,7 @@ PGFPlots: reading {../graphdata/euler116ub-python-box.dat}
 PGFPlots: reading {../graphdata/euler116ub-python-box.dat}
 PGFPlots: reading {../graphdata/euler116ub-python.dat}
 
-Overfull \hbox (108.08948pt too wide) in paragraph at lines 252--253
+Overfull \hbox (108.08948pt too wide) in paragraph at lines 249--250
  [][] 
  []
 
@@ -1249,7 +1249,7 @@ PGFPlots: reading {../graphdata/euler116ub-java-box.dat}
 PGFPlots: reading {../graphdata/euler116ub-java-box.dat}
 PGFPlots: reading {../graphdata/euler116ub-java.dat}
 
-Overfull \hbox (145.83025pt too wide) in paragraph at lines 272--273
+Overfull \hbox (145.83025pt too wide) in paragraph at lines 269--270
  [][] 
  []
 
@@ -1259,7 +1259,7 @@ PGFPlots: reading {../graphdata/euler116ub-cpp-box.dat}
 PGFPlots: reading {../graphdata/euler116ub-cpp-box.dat}
 PGFPlots: reading {../graphdata/euler116ub-cpp.dat}
 
-Overfull \hbox (123.59117pt too wide) in paragraph at lines 290--291
+Overfull \hbox (123.59117pt too wide) in paragraph at lines 287--288
  [][] 
  []
 
@@ -1267,7 +1267,7 @@ PGFPlots: reading {../graphdata/euler116ub-julia.dat}
 PGFPlots: reading {../graphdata/euler116ub-java.dat}
 PGFPlots: reading {../graphdata/euler116ub-cpp.dat}
 
-Overfull \hbox (256.65265pt too wide) in paragraph at lines 309--310
+Overfull \hbox (256.65265pt too wide) in paragraph at lines 306--307
  [][] 
  []
 
@@ -1276,36 +1276,37 @@ PGFPlots: reading {../graphdata/euler116ub-java.dat}
 PGFPlots: reading {../graphdata/euler116ub-cpp.dat}
 PGFPlots: reading {../graphdata/euler116ub-python.dat}
 
-Overfull \hbox (248.33214pt too wide) in paragraph at lines 329--330
+Overfull \hbox (248.33214pt too wide) in paragraph at lines 326--327
  [][] 
  []
 
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <29.86> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 337.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 334.
 
-Package xcolor Warning: Incompatible color definition on input line 337.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 338--343
-
- []
+Package xcolor Warning: Incompatible color definition on input line 334.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 338--343
+Underfull \hbox (badness 10000) in paragraph at lines 335--340
 
  []
 
 
-LaTeX Warning: Empty `thebibliography' environment on input line 371.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 364--371
+Underfull \hbox (badness 10000) in paragraph at lines 335--340
 
  []
 
 
-Overfull \vbox (59.0517pt too high) has occurred while \output is active []
+Underfull \hbox (badness 10000) in paragraph at lines 357--358
 
+ []
+
+
+LaTeX Warning: Empty `thebibliography' environment on input line 368.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 361--368
+
+ []
 
 [1
 
@@ -1315,11 +1316,11 @@ u_segl.pdf> <./fig/1161.jpg> <./fig/1162.jpg> <./fig/1163.jpg>] (./poster.aux)
 Here is how much of TeX's memory you used:
  26035 strings out of 493029
  624977 string characters out of 6136234
- 1138917 words of memory out of 5000000
+ 1074915 words of memory out of 5000000
  29064 multiletter control sequences out of 15000+600000
  38105 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 64i,23n,119p,1599b,2410s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 64i,23n,119p,1275b,2410s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf
 -dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/f
@@ -1328,7 +1329,7 @@ ype1/urw/courier/ucrb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/cour
 ier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on poster.pdf (1 page, 251268 bytes).
+Output written on poster.pdf (1 page, 250996 bytes).
 PDF statistics:
  55 PDF objects out of 1000 (max. 8388607)
  37 compressed objects within 1 object stream
