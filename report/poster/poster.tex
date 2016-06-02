@@ -178,9 +178,9 @@ The developers wanted the language to be open source, which means that everybody
 \textit{A row of five black square tiles is to have a number of its tiles replaced with coloured tiles from red(length two), green(length three), or blue(length four). If red tiles are chosen there are seven ways. If green tiles are chosen there are three ways. And if blue tiles are chosen there are two ways. Assuming that colours cannot be mixed there are $7+3+2=12$ ways of replacing the black tiles in a row measuring five units in length.}
 \begin{figure}[H]
 	\centering
-	\hspace{-1cm}\includegraphics[scale=0.85]{fig/1161.jpg}
-	\includegraphics{fig/1162.jpg} 
-	\includegraphics{fig/1163.jpg} 
+	\includegraphics[scale=1.60]{fig/1161.jpg}
+	\includegraphics[scale=2.2]{fig/1162.jpg} 
+	\includegraphics[scale=2.2]{fig/1163.jpg} 
 \end{figure}
 \begin{figure}[H]
 	\centering
@@ -213,9 +213,9 @@ The developers wanted the language to be open source, which means that everybody
 \begin{figure}
  \centering
  \hspace*{-0.8in}
- \begin{subfigure}{0.25\textwidth}
+ \begin{subfigure}{0.30\textwidth}
 		\centering
-		\scalebox{.6}{
+		\scalebox{.8}{
 		\begin{tikzpicture}
 			\begin{axis} [
 			title=Euler 116 - Julia,
@@ -232,9 +232,9 @@ The developers wanted the language to be open source, which means that everybody
 		}
  \end{subfigure}
  \hspace*{0.43in}
- \begin{subfigure}{0.25\textwidth}
+ \begin{subfigure}{0.30\textwidth}
 		\centering
-		\scalebox{.6}{
+		\scalebox{.8}{
 		\begin{tikzpicture}
 			\begin{axis} [
 			title=Euler 116 - Python,
@@ -250,9 +250,9 @@ The developers wanted the language to be open source, which means that everybody
 		}
  \end{subfigure}
  \hspace*{.43in}
- \begin{subfigure}{0.25\textwidth}
+ \begin{subfigure}{0.30\textwidth}
 		\centering
-		\scalebox{.6}{
+		\scalebox{.8}{
 		\begin{tikzpicture}
 			\begin{axis} [
 			title=Euler 116 - Python excluded,
@@ -270,9 +270,9 @@ The developers wanted the language to be open source, which means that everybody
  \end{subfigure}%
  
  \hspace*{-0.38in}
- \begin{subfigure}{0.25\textwidth}
+ \begin{subfigure}{0.30\textwidth}
 		\centering
-		\scalebox{.6}{
+		\scalebox{1.1}{
 		\begin{tikzpicture}
 			\begin{axis} [
 			title=Euler 116 - Java,
@@ -288,9 +288,9 @@ The developers wanted the language to be open source, which means that everybody
 		}
  \end{subfigure}
  \hspace*{0.08in}
- \begin{subfigure}{0.25\textwidth}
+ \begin{subfigure}{0.30\textwidth}
 		\centering
-		\scalebox{.6}{
+		\scalebox{1.1}{
 		\begin{tikzpicture}
 			\begin{axis} [
 			title=Euler 116 - C++,
@@ -306,9 +306,9 @@ The developers wanted the language to be open source, which means that everybody
 		}
  \end{subfigure}
  \hspace*{.43in}
- \begin{subfigure}{0.25\textwidth}
+ \begin{subfigure}{0.30\textwidth}
 		\centering
-		\scalebox{.6}{
+		\scalebox{1.1}{
 		\begin{tikzpicture}
 			\begin{axis} [
 			title=Euler 116,
@@ -328,7 +328,17 @@ The developers wanted the language to be open source, which means that everybody
  \caption{fig}
 \end{figure}
 
-Julia:
+% =========================================================
+% ====== Afsnit ===========================================
+% =========================================================
+\section{Results of Project Euler 116}
+It is clear that the graphs are exponential increasing. Another thing to notice is that the input is only increasing by one but is still making a huge difference in the run time. One of the reasons is that the problem is solved with recursion, for every extra one bit of space added to the black box a lot more recursive calls will have to be made.\\
+\\
+The difference in time between the four languages are as expected. Python does not support any form of tail recursion optimization and the result is really slow. Java and Julia on the other hand does a good job at optimizing the recursive calls and is actually faster than C++ - keep in mind that no compiler flags were used in C++, so the default optimization level is used.\\
+\\
+Julia and Java is close but Java is a bit faster, which is expected because of the fact that Java has been in development much longer than Julia and has a lot more optimization than Julia.
+
+\section{Pros and Cons of Julia}
 \begin{list}{}{}
 	\item Advantages:
 	\item[$\bullet$] Easy to learn and write
@@ -342,14 +352,6 @@ Julia:
 	\item[$\bullet$] Not very flexible
 	\item[$\bullet$] Missing features and bugs / weird behaviors
 \end{list}
-
-% =========================================================
-% ====== Afsnit ===========================================
-% =========================================================
-\section{How to compile the poster}
-\PARstart{M}{ake} sure you have both {\tt a0size.sty} and {\tt
-sciposter.cls} in yout tex path or in the \cite{somepaper} current
-directory, then run {\tt pdflatex} on this file. Voil\`a.
 
 
 \begin{thebibliography}{m}
