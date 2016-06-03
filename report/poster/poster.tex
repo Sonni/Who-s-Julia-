@@ -158,19 +158,16 @@
 % =========================================================
 % ====== Første del =======================================
 % =========================================================
-\section{Introduction}
-Java, C++ and Python are on the top ten of the most used programming languages. There are hundreds of languages, but not minding the hard competition, new languages are still created with the thought of doing better. An example of this is the relatively new programming language Julia, which has been developed with the idea to combine the best features of other languages.\\
-\\
-The purpose is to find out how well Julia perform compared to some of the standard languages as of 2016. Julia will be compared to Python, Java and C++. Julia draws a lot of inspiration from Python, including syntax and the dynamic type system. Julia shares similarities with Java, mostly behind the scene mechanics, such as garbage collection and compiler optimizations. C++ was chosen since the developers of Julia claim that Julia is as fast as C.
-
 \section{Julia}
 Julia is an object-oriented programming language, which has been under development since 2009. First released in 2012 and the newest stable version of Julia is version 0.4.5. The language has been created because the developers wanted a language with all the features they like from other languages. \\
 \\
 The developers wanted the language to be open source, which means that everybody can read and modify the language. One of the ideas was to make the language as simple, readable and easy to learn as possible. The language is made for high performance and scientific computations while still supporting general purpose programming.
-
 % =========================================================
 % ====== Anden del ========================================
 % =========================================================
+\section{Goal}
+The goal of this project is to benchmark Julia and do speed comparison with Python, C++ and Java. The run time is measured as CPU time with the terminal command \textbf{time} and built-in profiling tools in the given language.
+\section{Syntax}
 \section{Project Euler problem 116}
 \textit{A row of five black square tiles is to have a number of its tiles replaced with coloured tiles from red(length two), green(length three), or blue(length four). If red tiles are chosen there are seven ways. If green tiles are chosen there are three ways. And if blue tiles are chosen there are two ways. Assuming that colours cannot be mixed there are $7+3+2=12$ ways of replacing the black tiles in a row measuring five units in length.}
 \hspace*{-1in}
@@ -183,15 +180,15 @@ The developers wanted the language to be open source, which means that everybody
 \begin{figure}[H]
 	\centering
 	\begin{lstlisting}
-	function solve(tileSize, squareSize)
-		if tileSize > squareSize
+	function solve(tileSize, length)
+		if tileSize > length
 			return 0
 		end
 		solutions = 0
 	
-		for i = tileSize : squareSize
+		for i = tileSize : length
 			solutions += 1
-			solutions += solve(tileSize, squareSize-i)
+			solutions += solve(tileSize, length-i)
 		end
 	
 		return solutions
