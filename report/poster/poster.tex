@@ -231,6 +231,7 @@ sum(array)
 	\includegraphics[scale=2.2]{fig/1162.jpg} 
 	\includegraphics[scale=2.2]{fig/1163.jpg} 
 \end{figure}
+\hspace*{-0.3in}
 \begin{figure}[H]
 	\centering
 	\begin{lstlisting}
@@ -269,7 +270,7 @@ sum(array)
 		\begin{tikzpicture}
 			\begin{axis} [
 			title=Julia,
-			xlabel={$squareSize$},
+			xlabel={$length$},
 			ylabel={$seconds$},
 			grid=major,]
 				\addplot [box plot median] table {../graphdata/euler116ub-julia-box.dat};
@@ -288,7 +289,7 @@ sum(array)
 		\begin{tikzpicture}
 			\begin{axis} [
 			title=Python,
-			xlabel={$squareSize$},
+			xlabel={$length$},
 			grid=major,]
 				\addplot [box plot median] table {../graphdata/euler116ub-python-box.dat};
 				\addplot [box plot box] table {../graphdata/euler116ub-python-box.dat};
@@ -307,7 +308,7 @@ sum(array)
 		\begin{tikzpicture}
 			\begin{axis} [
 			title=Java,
-			xlabel={$squareSize$},
+			xlabel={$length$},
 			ylabel={$seconds$},
 			grid=major,]
 				\addplot [box plot median] table {../graphdata/euler116ub-java-box.dat};
@@ -326,7 +327,7 @@ sum(array)
 		\begin{tikzpicture}
 			\begin{axis} [
 			title=C++,
-			xlabel={$squareSize$},
+			xlabel={$length$},
 			grid=major,]
 				\addplot [box plot median] table {../graphdata/euler116ub-cpp-box.dat};
 				\addplot [box plot box] table {../graphdata/euler116ub-cpp-box.dat};
@@ -338,35 +339,16 @@ sum(array)
 		}
  \end{subfigure}
  
- \hspace*{-2.5in}
- \begin{subfigure}{0.30\textwidth}
-		\centering
-		\scalebox{1.4}{
-		\begin{tikzpicture}
-			\begin{axis} [
-			title=Comparison - Python excluded,
-			xlabel={$squareSize$},
-			ylabel={$seconds$},
-			grid=major,
-			]
-			\addplot table {../graphdata/euler116ub-julia.dat};
-			\addplot table {../graphdata/euler116ub-java.dat};
-			\addplot table {../graphdata/euler116ub-cpp.dat};
-			\end{axis}
-		\end{tikzpicture}
-		}
- \end{subfigure}
- \hspace*{2in}
+ \hspace*{-7.00cm}
  \begin{subfigure}{0.30\textwidth}
 		\centering
 		\scalebox{1.4}{
 		\begin{tikzpicture}
 			\begin{axis} [
 			title=Comparison,
-			xlabel={$squareSize$},
+			xlabel={$length$},
+			ylabel={$seconds$},
 			grid=major,
-			legend entries={$Julia$,$Java$,$c++$,$Python$},
-			legend style={at={(1,1)},anchor=north west},
 			]
 			\addplot table {../graphdata/euler116ub-julia.dat};
 			\addplot table {../graphdata/euler116ub-java.dat};
@@ -375,7 +357,26 @@ sum(array)
 			\end{axis}
 		\end{tikzpicture}
 		}
- \end{subfigure}%
+ \end{subfigure}
+ \hspace*{4.5cm}
+ \begin{subfigure}{0.30\textwidth}
+		\centering
+		\scalebox{1.4}{
+			\begin{tikzpicture}
+			\begin{axis} [
+			title=Comparison - Python excluded,
+			xlabel={$length$},
+			grid=major,
+			legend entries={$Julia$,$Java$,$c++$,$Python$},
+			legend style={at={(1,1)},anchor=north west},
+			]
+			\addplot table {../graphdata/euler116ub-julia.dat};
+			\addplot table {../graphdata/euler116ub-java.dat};
+			\addplot table {../graphdata/euler116ub-cpp.dat};
+			\end{axis}
+			\end{tikzpicture}
+	}
+ \end{subfigure}
  %\caption{fig}
 \end{figure}
 
