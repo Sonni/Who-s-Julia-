@@ -249,10 +249,10 @@ sum(array)
 		return solutions
 	end
 	
-	function calc(size)
-		result = solve(2, size) #Red tiles
-		result += solve(3, size) #Green tiles
-		result += solve(4, size) #Blue tiles
+	function calc(length)
+		result = solve(2, length) #Red tiles
+		result += solve(3, length) #Green tiles
+		result += solve(4, length) #Blue tiles
 	
 		return result
 	end
