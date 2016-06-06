@@ -139,7 +139,7 @@
 	University of Southern Denmark\\}
 
 %define conference poster is presented at (appears as footer)
-\conference{FF501 poster session, Juni 2016 SDU Odense}
+\conference{NAT 501 poster session, June 2016 SDU Odense}
 
 
 % =========================================================
@@ -248,7 +248,7 @@ sum(array)
 	
 		return solutions
 	end
-	
+%	
 	function calc(length)
 		result = solve(2, length) #Red tiles
 		result += solve(3, length) #Green tiles
@@ -384,18 +384,18 @@ sum(array)
 % ====== Afsnit ===========================================
 % =========================================================
 \subsection{Results of Project Euler 116}
-It is clear that the graphs are exponential increasing. Another thing to notice is that the input is only increasing by one but is still making a huge difference in the run time. One of the reasons is that the problem is solved with recursion, for every extra one bit of space added to the black box a lot more recursive calls will have to be made.\\
+It is clear that the running time is increasing exponentially. Another thing to notice is that the length of input is increasing by one, but is making a huge difference in the run time. One of the reasons is that the problem is solved with recursion, for every extra one bit of space added to the black box a lot more recursive calls will have to be made.\\
 \\
-The difference in time between the four languages are as expected. Python does not support any form of tail recursion optimization and the result is really slow. Java and Julia on the other hand does a good job at optimizing the recursive calls and is actually faster than C++ - keep in mind that no compiler flags were used in C++, so the default optimization level is used.\\
+The differences in time between the four languages are as expected. Python does not support any form of tail recursion optimization and the result is really slow. Java and Julia on the other hand do a good job at optimizing the recursive calls and is actually faster than C++ - keep in mind that no compiler flags were used in C++, so the default optimization level is used.\\
 \\
-Julia and Java is close but Java is a bit faster, which is expected because of the fact that Java has been in development much longer than Julia and has a lot more optimization than Julia.
+Julia and Java are close, but Java is a bit faster, which is expected because of the fact that Java has been in development much longer than Julia and has a lot more optimization than Julia.
 
 \section{Pros and Cons of Julia}
 \textbf{Advantages:}
 \begin{list}{}{}
 	\item[$\bullet$] Julia is easy to learn and software are easily made.
 	\item[$\bullet$] Julia does good compiler optimizations, which sometimes makes Julia as fast as C++.
-	\item[$\bullet$] In overall test Julia performed very well.
+	\item[$\bullet$] Overall, Julia performed in the tests very well.
 	\item[$\bullet$] Julia was the only language that did not cause any out of memory issue at some point.
 \end{list}
 \textbf{Disadvantages:}
@@ -406,7 +406,7 @@ Julia and Java is close but Java is a bit faster, which is expected because of t
 \end{list}
 
 \section{Conclusion}
-It can be difficult to make any conclusions by the benchmarking but it may give an idea of how Julia performs, compared to Java, Python and C++. One thing to keep in mind is that Julia is in version 0.4.5 - it has yet to reach version 1.0.0. This could mean that Julia might get even faster in the future and by the benchmarking it does look as Julia is already performing well. \\ \\ The developers are trying to make a programming language that is as easy to learn and write as Python but with a compiler that optimizes code like Java and both of these goals have more or less been reached already. Julia was definitely easy to learn and by the benchmarking it does look like that the compiler is doing well with the optimization. It also feels like the Julia developers are playing with the idea of giving the user some control over what is happening behind the scene. ‘Playing’ because this does not feel close to done. The user can allocate memory for a variable manually, but if a new value is assigned to the variable, the memory size is also changed. It is not possible to free a declared variables memory entirely and the only operation the user can do with the garbage collector is force garbage collection and disable the garbage collector. 
+It can be difficult to make any conclusions by the benchmarking, but it may give an idea of how Julia performs, compared to Java, Python and C++. One thing to keep in mind is that Julia is in version 0.4.5 - it has yet to reach version 1.0.0. This could mean that Julia might get even faster in the future and by the benchmarking it does look as Julia is already performing well. \\ \\ The developers are trying to make a programming language that is as easy to learn and write as Python, but with a compiler that optimizes code like Java and both of these goals have more or less been reached already. Julia was definitely easy to learn and by the benchmarking it does look like that the compiler is doing well with the optimization. It also feels like the Julia developers are playing with the idea of giving the user some control over what is happening behind the scene. ‘Playing’ because this does not feel close to done. For example, the user can allocate memory for a variable manually, but if a new value is assigned to the variable, the memory size is also changed. It is not possible to free a declared variables memory entirely and the only operation the user can do with the garbage collector is force garbage collection and disable the garbage collector. 
 
 \begin{thebibliography}{m}
 
