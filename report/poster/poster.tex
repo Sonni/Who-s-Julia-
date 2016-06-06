@@ -348,6 +348,9 @@ sum(array)
 			title=Comparison,
 			xlabel={$length$},
 			ylabel={$seconds$},
+			legend entries={$Julia$,$Java$,$C++$,$Python$},
+%			legend style={at={(1,1)},anchor=north west},
+			legend style={at={(1.1,1.1)}},
 			grid=major,
 			]
 			\addplot table {../graphdata/euler116ub-julia.dat};
@@ -367,8 +370,6 @@ sum(array)
 			title=Comparison - Python excluded,
 			xlabel={$length$},
 			grid=major,
-			legend entries={$Julia$,$Java$,$C++$,$Python$},
-			legend style={at={(1,1)},anchor=north west},
 			]
 			\addplot table {../graphdata/euler116ub-julia.dat};
 			\addplot table {../graphdata/euler116ub-java.dat};
