@@ -1,0 +1,40 @@
+julia : euler1.jl 1000 
+0.47
+Average time is: 0.47 : Median is: 0.47
+____________________________________
+julua : euler1.jl 1999999999 
+0
+Average time is: 0 : Median is: 0
+____________________________________
+julia : euler1.jl 4999999999 
+11.69
+Average time is: 11.69 : Median is: 11.69
+____________________________________
+julia : euler1.jl 9999999999 
+22.33
+Average time is: 22.33 : Median is: 22.33
+____________________________________
+julia : euler1.jl 10999999999 
+24.41
+Average time is: 24.41 : Median is: 24.41
+____________________________________
+julia : euler1.jl 20999999999 
+47.71
+Average time is: 47.71 : Median is: 47.71
+____________________________________
+julia : euler1.jl 30999999999 
+85.88
+Average time is: 85.88 : Median is: 85.88
+____________________________________
+julia : euler1.jl 40999999999 
+156.85
+Average time is: 156.85 : Median is: 156.85
+____________________________________
+julia : euler1.jl 50999999999 
+111.69
+Average time is: 111.69 : Median is: 111.69
+____________________________________
+julia : euler1.jl 60999999999 
+137.17
+Average time is: 137.17 : Median is: 137.17
+____________________________________
