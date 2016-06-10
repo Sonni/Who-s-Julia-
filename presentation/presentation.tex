@@ -1,4 +1,4 @@
-\documentclass[t]{beamer}
+\documentclass[t, aspectratio=169]{beamer}
 \usepackage{scrextend}
 \changefontsizes{16pt}
 \usepackage[english]{babel}
@@ -33,30 +33,49 @@
 \setbeamertemplate{footline}[text line]{
 	\parbox{\linewidth}{\vspace*{-60pt}\includegraphics[height=1.352cm,width=2cm]{img/julia_200.png}\hfill\insertpagenumber\hfill\includegraphics[width=1.352cm,height=1.352cm]{img/sdu_segl.pdf}}}
 \setbeamertemplate{navigation symbols}{}
-	\section{Introduction}
-	\begin{frame}
-		\frametitle{This presentation}
-		\framesubtitle{List of content}
-		\begin{description}
-			\item[$\cdot$] Project %What is the purpose
-			\item[$\cdot$] Julia %Introduction, Syntax
-			\item[$\cdot$] Project Euler %Introduction, Use
-			\item[$\cdot$] Benchmarking %What is it, How did we use it
-			\item[$\cdot$] Result %Euler 116
-			\item[$\cdot$] Conclusion
-			\item[$\cdot$] Process %How did we do
-		\end{description}
-	\end{frame}
 	\section{Julia}
 	\begin{frame}
-		\frametitle{Julia?}
-		\framesubtitle{Who's Julia?}
-		Julia \\
-		Project Euler \\
-		Project \\
-		Process \\
-		Benchmarking \\
-		Result 
+		\frametitle{Who's Julia}
+		\begin{description}
+			\item[$\cdot$] Under development since 2009
+			\item[$\cdot$] Published 2012
+			\item[$\cdot$] Newest stable version 0.4.5
+			\item[$\cdot$] Open source
+			\item[$\cdot$] Developers' goals
+			\item[$\cdot$] Syntax
+		\end{description}
+	\end{frame}
+	\section{Essential features}
+	\begin{frame}
+		\frametitle{Essential feature in Julia}
+		\begin{description}
+			\item[$\cdot$] Dynamic type system and package manager
+			\item[$\cdot$] Calls to Python and C functions
+			\item[$\cdot$] User-defined types
+			\item[$\cdot$] Metaprogramming
+			\item[$\cdot$] Garbage Collector
+		\end{description}
+	\end{frame}
+	\section{Benchmarking}
+	\begin{frame}
+		\frametitle{Benchmarking}
+		\begin{columns}[c] % the "c" option specifies center vertical alignment
+		\column{.7\textwidth} % column designated by a command
+		\begin{description}
+			\item[$\cdot$] CPU time (user + system time)
+			\item[$\cdot$] Profiling
+		\end{description}
+		\column{.3\textwidth}
+			\includegraphics[height=1cm]{img/time.png}
+		\end{columns}
+	\end{frame}
+	\section{Results}
+	\begin{frame}
+		\frametitle{Results}
+	\end{frame}
+	\section{Conclusion}
+	\begin{frame}
+		\frametitle{Conclusion}
 	\end{frame}
 \end{document}
 

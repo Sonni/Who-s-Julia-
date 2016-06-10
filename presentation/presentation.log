@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.5.29)  8 JUN 2016 10:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.5.29)  10 JUN 2016 16:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -762,7 +762,7 @@ Package: textpos 2014/01/03 1.7j, absolute positioning of text on the page
 \TPVertModule=\dimen190
 \TP@margin=\dimen191
 \TP@absmargin=\dimen192
-Grid set 16 x 16 = 22.7622pt x 17.07166pt
+Grid set 16 x 16 = 28.45274pt x 16.00467pt
 \TPboxrulesize=\dimen193
 \TP@tbargs=\toks43
 \TP@prevdepth=\dimen194
@@ -822,12 +822,12 @@ LaTeX Font Info:    ... okay on input line 19.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: includehead includefoot 
-* h-part:(L,W,R)=(83.34627pt, 266.62273pt, 14.22636pt)
-* v-part:(T,H,B)=(0.0pt, 273.14662pt, 0.0pt)
-* \paperwidth=364.19536pt
-* \paperheight=273.14662pt
-* \textwidth=266.62273pt
-* \textheight=244.6939pt
+* h-part:(L,W,R)=(83.34627pt, 357.67145pt, 14.22636pt)
+* v-part:(T,H,B)=(0.0pt, 256.0748pt, 0.0pt)
+* \paperwidth=455.24408pt
+* \paperheight=256.0748pt
+* \textwidth=357.67145pt
+* \textheight=227.62207pt
 * \oddsidemargin=11.07628pt
 * \evensidemargin=11.07628pt
 * \topmargin=-72.26999pt
@@ -974,7 +974,7 @@ orem-dictionary/translator-theorem-dictionary-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 )
 LaTeX Info: Redefining \includegraphics on input line 19.
- (./presentation.nav) <img/julia_small.png, id=21, 513.92pt x 347.2975pt>
+ (./presentation.nav) <img/julia_small.png, id=33, 513.92pt x 347.2975pt>
 File: img/julia_small.png Graphic file (type png)
 
 <use img/julia_small.png>
@@ -985,7 +985,7 @@ Package pdftex.def Info: img/julia_small.png used on input line 28.
 LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4> not available
 (Font)              size <5> substituted on input line 28.
 
-<img/sdu_segl.pdf, id=46, 547.66907pt x 542.23073pt>
+<img/sdu_segl.pdf, id=61, 547.66907pt x 542.23073pt>
 File: img/sdu_segl.pdf Graphic file (type pdf)
  <use img/sdu_segl.pdf>
 Package pdftex.def Info: img/sdu_segl.pdf used on input line 28.
@@ -1016,30 +1016,26 @@ Overfull \hbox (1.88892pt too wide) has occurred while \output is active
  <./img/julia_small.png> <./img/sdu_segl.pdf>]
 
 LaTeX Font Warning: Font shape `OT1/cmss/bx/n' in size <16> not available
-(Font)              size <17.28> substituted on input line 45.
+(Font)              size <17.28> substituted on input line 47.
 
-LaTeX Font Info:    Calculating math sizes for size <16> on input line 45.
+LaTeX Font Info:    Calculating math sizes for size <16> on input line 47.
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <16> not available
-(Font)              size <17.28> substituted on input line 45.
+(Font)              size <17.28> substituted on input line 47.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <16> not available
-(Font)              size <17.28> substituted on input line 45.
+(Font)              size <17.28> substituted on input line 47.
 
-
-LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <13.3335> not available
-(Font)              size <14.4> substituted on input line 45.
-
-<img/julia_200.png, id=66, 200.75pt x 135.50626pt>
+<img/julia_200.png, id=87, 200.75pt x 135.50626pt>
 File: img/julia_200.png Graphic file (type png)
  <use img/julia_200.png>
-Package pdftex.def Info: img/julia_200.png used on input line 45.
+Package pdftex.def Info: img/julia_200.png used on input line 47.
 (pdftex.def)             Requested size: 56.90495pt x 38.46873pt.
 File: img/sdu_segl.pdf Graphic file (type pdf)
 
 <use img/sdu_segl.pdf>
-Package pdftex.def Info: img/sdu_segl.pdf used on input line 45.
+Package pdftex.def Info: img/sdu_segl.pdf used on input line 47.
 (pdftex.def)             Requested size: 38.4661pt x 38.46472pt.
 
 Overfull \hbox (1.88892pt too wide) has occurred while \output is active
@@ -1051,11 +1047,11 @@ Overfull \hbox (1.88892pt too wide) has occurred while \output is active
  <./img/julia_200.png>]
 File: img/julia_200.png Graphic file (type png)
  <use img/julia_200.png>
-Package pdftex.def Info: img/julia_200.png used on input line 56.
+Package pdftex.def Info: img/julia_200.png used on input line 58.
 (pdftex.def)             Requested size: 56.90495pt x 38.46873pt.
 File: img/sdu_segl.pdf Graphic file (type pdf)
  <use img/sdu_segl.pdf>
-Package pdftex.def Info: img/sdu_segl.pdf used on input line 56.
+Package pdftex.def Info: img/sdu_segl.pdf used on input line 58.
 (pdftex.def)             Requested size: 38.4661pt x 38.46472pt.
 
 Overfull \hbox (1.88892pt too wide) has occurred while \output is active
@@ -1063,6 +1059,59 @@ Overfull \hbox (1.88892pt too wide) has occurred while \output is active
  []
 
 [3
+
+] <img/time.png, id=104, 330.23375pt x 122.4575pt>
+File: img/time.png Graphic file (type png)
+ <use img/time.png>
+Package pdftex.def Info: img/time.png used on input line 71.
+(pdftex.def)             Requested size: 76.72815pt x 28.45274pt.
+File: img/julia_200.png Graphic file (type png)
+
+<use img/julia_200.png>
+Package pdftex.def Info: img/julia_200.png used on input line 71.
+(pdftex.def)             Requested size: 56.90495pt x 38.46873pt.
+File: img/sdu_segl.pdf Graphic file (type pdf)
+ <use img/sdu_segl.pdf>
+Package pdftex.def Info: img/sdu_segl.pdf used on input line 71.
+(pdftex.def)             Requested size: 38.4661pt x 38.46472pt.
+
+Overfull \hbox (1.88892pt too wide) has occurred while \output is active
+ $[]$ 
+ []
+
+[4
+
+ <./img/time.png>]
+File: img/julia_200.png Graphic file (type png)
+ <use img/julia_200.png>
+Package pdftex.def Info: img/julia_200.png used on input line 75.
+(pdftex.def)             Requested size: 56.90495pt x 38.46873pt.
+File: img/sdu_segl.pdf Graphic file (type pdf)
+ <use img/sdu_segl.pdf>
+Package pdftex.def Info: img/sdu_segl.pdf used on input line 75.
+(pdftex.def)             Requested size: 38.4661pt x 38.46472pt.
+
+Overfull \hbox (1.88892pt too wide) has occurred while \output is active
+ $[]$ 
+ []
+
+[5
+
+]
+File: img/julia_200.png Graphic file (type png)
+ <use img/julia_200.png>
+Package pdftex.def Info: img/julia_200.png used on input line 79.
+(pdftex.def)             Requested size: 56.90495pt x 38.46873pt.
+File: img/sdu_segl.pdf Graphic file (type pdf)
+ <use img/sdu_segl.pdf>
+Package pdftex.def Info: img/sdu_segl.pdf used on input line 79.
+(pdftex.def)             Requested size: 38.4661pt x 38.46472pt.
+
+Overfull \hbox (1.88892pt too wide) has occurred while \output is active
+ $[]$ 
+ []
+
+[6
 
 ]
 \tf@nav=\write6
@@ -1074,37 +1123,36 @@ Overfull \hbox (1.88892pt too wide) has occurred while \output is active
 \tf@snm=\write8
 \openout8 = `presentation.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 57.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 57.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 80.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 80.
  (./presentation.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 57.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 57.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 80.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 80.
 Package rerunfilecheck Info: File `presentation.out' has not changed.
-(rerunfilecheck)             Checksum: 21F1264B57FD18714906D4259DC20E3F;87.
+(rerunfilecheck)             Checksum: 10A8C8DE50323EEE3CB0A5E86C0179FB;227.
 
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.83997pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 57.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 80.
  ) 
 Here is how much of TeX's memory you used:
- 18370 strings out of 493029
- 348248 string characters out of 6136234
- 448919 words of memory out of 5000000
- 21454 multiletter control sequences out of 15000+600000
- 13985 words of font info for 51 fonts, out of 8000000 for 9000
+ 18384 strings out of 493029
+ 348160 string characters out of 6136234
+ 448910 words of memory out of 5000000
+ 21460 multiletter control sequences out of 15000+600000
+ 13678 words of font info for 50 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,17n,61p,920b,559s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on presentation.pdf (3 pages, 97956 bytes).
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on presentation.pdf (6 pages, 104078 bytes).
 PDF statistics:
- 103 PDF objects out of 1000 (max. 8388607)
- 81 compressed objects within 1 object stream
- 9 named destinations out of 1000 (max. 500000)
- 74 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 156 PDF objects out of 1000 (max. 8388607)
+ 130 compressed objects within 2 object streams
+ 18 named destinations out of 1000 (max. 500000)
+ 103 words of extra memory for PDF output out of 10000 (max. 10000000)
 
