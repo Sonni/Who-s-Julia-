@@ -1,0 +1,62 @@
+\documentclass[t]{beamer}
+\usepackage{scrextend}
+\changefontsizes{16pt}
+\usepackage[english]{babel}
+\usepackage{textpos}
+
+\usepackage{enumitem}
+\setlist[description]{itemsep=0mm, topsep=0mm, itemindent=-4mm}
+
+\title{Who's Julia?}
+\author[simkn15, sonje15, asjen15]{simkn15, sonje15, asjen15}
+\institute[Inst.]{\vspace*{-0.8cm}University of Southern Denmark}
+\date{\vspace*{-0.8cm}\today}
+
+\usetheme{Hannover}
+
+\setbeamertemplate{frametitle}[default][left]
+
+\begin{document}
+\setbeamertemplate{footline}[text line]{
+	\parbox{\linewidth}{\vspace*{-60pt}\hfill\includegraphics[width=1.352cm,height=1.352cm]{img/sdu_segl.pdf}}}
+
+	\begin{frame}
+		\center
+		\includegraphics[height=2.704cm,width=4cm]{img/julia_small.png}
+		\vspace*{-0.8cm}
+		\maketitle
+	\end{frame}
+	
+%Show our research
+%
+	
+\setbeamertemplate{footline}[text line]{
+	\parbox{\linewidth}{\vspace*{-60pt}\includegraphics[height=1.352cm,width=2cm]{img/julia_200.png}\hfill\insertpagenumber\hfill\includegraphics[width=1.352cm,height=1.352cm]{img/sdu_segl.pdf}}}
+\setbeamertemplate{navigation symbols}{}
+	\section{Introduction}
+	\begin{frame}
+		\frametitle{This presentation}
+		\framesubtitle{List of content}
+		\begin{description}
+			\item[$\cdot$] Project %What is the purpose
+			\item[$\cdot$] Julia %Introduction, Syntax
+			\item[$\cdot$] Project Euler %Introduction, Use
+			\item[$\cdot$] Benchmarking %What is it, How did we use it
+			\item[$\cdot$] Result %Euler 116
+			\item[$\cdot$] Conclusion
+			\item[$\cdot$] Process %How did we do
+		\end{description}
+	\end{frame}
+	\section{Julia}
+	\begin{frame}
+		\frametitle{Julia?}
+		\framesubtitle{Who's Julia?}
+		Julia \\
+		Project Euler \\
+		Project \\
+		Process \\
+		Benchmarking \\
+		Result 
+	\end{frame}
+\end{document}
+
