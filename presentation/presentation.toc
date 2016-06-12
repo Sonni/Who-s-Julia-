@@ -3,5 +3,5 @@
 \beamer@sectionintoc {1}{Julia}{2}{0}{1}
 \beamer@sectionintoc {2}{Essential features}{3}{0}{2}
 \beamer@sectionintoc {3}{Benchmarking}{4}{0}{3}
-\beamer@sectionintoc {4}{Results}{5}{0}{4}
+\beamer@sectionintoc {4}{Result}{5}{0}{4}
 \beamer@sectionintoc {5}{Conclusion}{6}{0}{5}
